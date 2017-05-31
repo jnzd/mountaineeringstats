@@ -1,0 +1,32 @@
+<?php
+$title="Profil";
+include 'header.php';
+$id = $_SESSION['id'];
+?>
+<div id="info">
+<?php
+$sql = "SELECT * FROM users WHERE id='$id'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+echo "<h1>".$row['username']."</h1>";
+
+echo "<p>".
+"Benutzername: ".$row['username']."<br>".
+"E-Mail: ".$row['email']."<br>".
+"Vorname: ".$row['first']."<br>".
+"Nachname: ".$row['last']."<br>".
+"Wohnort: ".$row['ort']."<br>".
+"PLZ: ".$row['plz']."<br>".
+"Geschlecht: ".$row['gender']."<br>".
+"Strasse: ".$row['street']."<br>".
+"Hausnummer: ".$row['strnr']."<br>".
+"Land: ".$row['country']."<br>".
+"Geburtsdatum: ".$row['birthdate']."<br>
+</p>";
+?>
+</div>
+
+
+</body>
+</html>
