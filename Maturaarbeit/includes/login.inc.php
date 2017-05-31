@@ -9,7 +9,8 @@ echo $email."<br>";
 echo $password."<br>";
 
 $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-$result = mysqli_query($conn, $sql);
+$result = $conn->query($query);
+
 if(!$row = mysqli_fetch_assoc($result)){
 	echo "E-Mail oder Passwort ist falsch";
 	echo "<a href=../start.php>Erneut probieren</a>";
