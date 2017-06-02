@@ -29,11 +29,11 @@ include '../db.php';
 	
 	if(isset($_POST['upload']) && isset($_FILES['xml'])){
 		$extension = pathinfo($_FILES['xml']['name'], PATHINFO_EXTENSION);
-		echo $extension;
+		echo $extension;//test
 		
 		if($extension == "gpx"){//zu xml aendern!!!!!
 			$path='activities/gpx/'.$_FILES['xml']['name'];
-			echo $path;
+			echo $path;//test
 			
 			$path_inc = '../'.$path;
 			copy($_FILES['xml']['tmp_name'], $path_inc);
@@ -47,9 +47,6 @@ include '../db.php';
 	
 	$sql = "INSERT INTO activities (path, sport, content) VALUES ('$path', '$sport', '$content')";
 	$result = $conn->query($sql);
-	
-	echo $sql;
-	echo $result;
 	
 	$_SESSION['message']="";
 	//header("location: ../profile.php");
