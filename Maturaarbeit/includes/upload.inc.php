@@ -3,7 +3,7 @@ include '../header.php';
 include '../db.php';
 $user_id = $_SESSION['id'];
 $sport = "";
-$xml_path = "";
+$path = "";
 
 include '../db.php';	
 	if($_POST['sport'] != "null"){
@@ -31,12 +31,12 @@ include '../db.php';
 		$extension = pathinfo($_FILES['xml']['name'], PATHINFO_EXTENSION);
 		echo $extension;
 		
-		if($extension == "JPG"){//zu xml aendern!!!!!
-			$xml_path='activities/gpx/'.$_FILES['xml']['name'];
-			echo $xml_path;
+		if($extension == "gpx"){//zu xml aendern!!!!!
+			$path='activities/gpx/'.$_FILES['xml']['name'];
+			echo $path;
 			
-			$xml_path_inc = '../'.$xml_path;
-			copy($_FILES['xml']['tmp_name'], $xml_path_inc);
+			$path_inc = '../'.$path;
+			copy($_FILES['xml']['tmp_name'], $path_inc);
 		}else{
 			$_SESSION['message']="Bitte lade eine XML Datei hoch.";
 			//header("location: ../upload.php");
@@ -45,8 +45,8 @@ include '../db.php';
 		$_SESSION['message']="Bitte lade eine Datei hoch.";
 	}	
 	
-	$sql = "INSERT INTO activities (xml_path, sport, user-id) VALUES ('$xml_path', '$sport', '$user_id')";
-	$result = mysqli_query($conn, $sql);
+	$sql = "INSERT INTO activities (path, sport, content) VALUES ('$path', '$sport', '$content')";
+	$result = $conn->query($sql);
 	
 	echo $sql;
 	echo $result;

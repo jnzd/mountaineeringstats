@@ -2,14 +2,12 @@
 //include '../header.php';
 include '../db.php';
 
-$email = $_POST['email'];
-$password = md5($_POST['password']);;
+$email = $_POST['email'];//email Eingabe speichern
+$password = md5($_POST['password']);//Passwort wird gehasht
 
-echo $email."<br>";
-echo $password."<br>";
-
+//Passwort und E-Mail mit Datenbank vergleichen
 $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-$result = $conn->query($query);
+$result = $conn->query($sql);
 
 if(!$row = mysqli_fetch_assoc($result)){
 	echo "E-Mail oder Passwort ist falsch";
