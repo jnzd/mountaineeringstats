@@ -26,10 +26,10 @@ $birthdate = $row['birthdate'];
 
 //if-Statements testen, ob die jeweiligen Angaben eingegeben wurden
 if(!empty($_POST['username'])){
-	$username = $_POST['username'];
+	$username = mysqli::escape_string ($_POST['username']);
 }
 if(!empty($_POST['email'])){
-	$email = $_POST['email'];
+	$email = mysqli::escape_string ($_POST['email']);
 }
 if(!empty($_POST['password'])){
 	if(md5($_POST['password'])==md5($_POST['confirmpassword'])){
@@ -40,25 +40,25 @@ if(!empty($_POST['password'])){
 	}
 }
 if($_POST['first'] != ""){
-	$first = $_POST['first'];
+	$first = mysqli::escape_string ($_POST['first']);
 }
 if($_POST['last'] != ""){
-	$last = $_POST['last'];
+	$last = mysqli::escape_string ($_POST['last']);
 }
 if($_POST['ort'] != ""){
-	$ort = $_POST['ort'];
+	$ort = mysqli::escape_string ($_POST['ort']);
 }
 if($_POST['plz'] != ""){
-	$plz = $_POST['plz'];
+	$plz = mysqli::escape_string ($_POST['plz']);
 }
 if($_POST['street'] != ""){
-	$street = $_POST['street'];
+	$street = mysqli::escape_string ($_POST['street']);
 }
 if($_POST['strnr'] != ""){
-	$strnr = $_POST['strnr'];
+	$strnr = mysqli::escape_string ($_POST['strnr']);
 }
 if($_POST['country'] != ""){
-	$country = $_POST['country'];
+	$country = mysqli::escape_string ($_POST['country']);
 }
 if($_POST['gender'] != "null"){
 	if($_POST['gender'] == "male"){

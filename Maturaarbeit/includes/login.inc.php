@@ -2,7 +2,7 @@
 //include '../header.php';
 include '../db.php';
 
-$email = $_POST['email'];//email Eingabe speichern
+$email = mysqli::escape_string($_POST['email']);//email Eingabe speichern
 $password = md5($_POST['password']);//Passwort wird gehasht
 
 //Passwort und E-Mail mit Datenbank vergleichen
