@@ -9,7 +9,7 @@ $password = md5($_POST['password']);//Passwort wird gehasht
 $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 $result = $conn->query($sql);
 
-if(!$row = mysqli_fetch_assoc($result)){
+if(!$row = $result->fetch_assoc()){
 	echo "E-Mail oder Passwort ist falsch";
 	echo "<a href=../start.php>Erneut probieren</a>";
 }else{
