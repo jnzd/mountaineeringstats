@@ -4,8 +4,8 @@ include '../db.php';
 
 //testet, ob die beiden Passwoerter uebereinstimmen
 if($_POST['password'] == $_POST['confirmpassword']){
-	$username = $mysqli->escape_string($_POST['username']);
-	$email = $mysqli->escape_string($_POST['email']);
+	$username = $conn->escape_string($_POST['username']);
+	$email = $conn->escape_string($_POST['email']);
 	$password = md5($_POST['password']);
 	
 	//Code zur E-Mail Bestaetigung

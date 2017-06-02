@@ -31,6 +31,7 @@
 		echo "<header>
 			<nav>
 				<ul>
+					<li><a href='map.php'>KARTE</a></li>	
 					<li><a href='main.php'>STARTSEITE</a></li>			
 					<li><a href='upload.php'>HOCHLADEN</a></li>
 					<li><a href='profile.php'><img src='".$profilepic."'height='24' width='24'></a></li>

@@ -8,18 +8,23 @@ $path = "";
 include '../db.php';	
 	if($_POST['sport'] != "null"){
 		if($_POST['sport'] == "jogging"){
+			echo 1;
 			$sport="jogging";
 		}
 		if($_POST['sport'] == "hiking"){
+			echo 2;
 			$sport="hiking";
 		}
 		if($_POST['sport'] == "biking"){
+			echo 3;
 			$sport="biking";
 		}
 		if($_POST['sport'] == "skiing"){
+			echo 4;
 			$sport="skiing";
 		}
 		if($_POST['sport'] == "climbing"){
+			echo 5;
 			$sport="climbing";
 		}
 	}else{
@@ -45,7 +50,7 @@ include '../db.php';
 		$_SESSION['message']="Bitte lade eine Datei hoch.";
 	}	
 	
-	$sql = "INSERT INTO activities (path, sport, content) VALUES ('$path', '$sport', '$content')";
+	$sql = "INSERT INTO activities (path, sport, user-id) VALUES ('$path', '$sport', '$user_id')";
 	$result = $conn->query($sql);
 	
 	$_SESSION['message']="";
