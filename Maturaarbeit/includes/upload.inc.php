@@ -50,7 +50,7 @@ include '../db.php';
 		$_SESSION['message']="Bitte lade eine Datei hoch.";
 	}	
 	
-	$sql = "INSERT INTO activities (path, sport, user-id) VALUES ('$path', '$sport', '$user_id')";
+	$sql = "INSERT INTO activities (path, sport, user_id) VALUES ('$path', '$sport', '$user_id')";
 	$result = $conn->query($sql);
 	
 	$_SESSION['message']="";
