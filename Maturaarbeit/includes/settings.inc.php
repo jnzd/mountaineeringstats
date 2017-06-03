@@ -80,7 +80,7 @@ if($_POST['gender'] != "null"){
 	$changed = true;
 }
 if(is_uploaded_file($_FILES['pic']['tmp_name'])){
-	$pic_path='profilepics/'.$id.$_FILES['pic']['name'];
+	$pic_path='profilepics/'.$id.$_FILES['pic']['name'];//$id stellt sicher, dass alle Profilbilder einen einzigartigen namen haben
 	if(preg_match("!image!", $_FILES['pic']['type'])){
 		$pic_path_inc = '../'.$pic_path;
 		copy($_FILES['pic']['tmp_name'], $pic_path_inc);

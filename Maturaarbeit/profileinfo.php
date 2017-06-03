@@ -26,7 +26,6 @@ echo "<p>".
 </p>";
 ?>
 </div>
-<p><a href="includes/delete.inc.php">Account loeschen</a></p>
 
 </body>
 </html>
