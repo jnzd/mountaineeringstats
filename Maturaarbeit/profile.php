@@ -23,7 +23,11 @@ $id = $_SESSION['id'];
 	
 	
 	<div id="profilepic">
-		<img src="<?php echo $profilepic;?>" height="120" width="120">
+		<img class="circle" src="<?php echo $profilepic;?>" height="120" width="120">
+	</div>
+	<div id="bio">
+	
+	
 	</div>
 </div>
 
@@ -32,5 +36,6 @@ $id = $_SESSION['id'];
 
 
 </div>
+
 </body>
 </html>
