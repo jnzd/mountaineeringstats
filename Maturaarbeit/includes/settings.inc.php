@@ -83,7 +83,7 @@ if(is_uploaded_file($_FILES['pic']['tmp_name'])){
 
 
 //speichert die geaenderten Angaben in der Datenbank
-$sql = "UPDATE users SET username='$username', email='$email', password='$password', first='$first', last='$last', ort='$ort', plz='$plz', street='$street', strnr='$strnr',  pic_path = '$pic_path', gender='$gender' WHERE id = '$id'";
+$sql = "UPDATE users SET username='$username', email='$email', password='$password', first='$first', last='$last', ort='$ort', plz='$plz', street='$street', strnr='$strnr',  pic_path = '$pic_path', gender='$gender', dt_modified='CURRENT_TIMESTAMP' WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
 
 //zum Testen
