@@ -14,7 +14,6 @@
 <title><?php echo $title; ?></title>
 <link href="style.css" rel="stylesheet" type="text/css"> 
 </head>
-<body>
 
 <?php	
 	if(isset($_SESSION['id'])){
@@ -31,7 +30,7 @@
 		echo "<header>
 			<nav>
 				<ul>
-					<li><a href='map.php'>KARTE</a></li>	
+					<li><a href='map.php'>KARTE</a></li>
 					<li><a href='main.php'>STARTSEITE</a></li>			
 					<li><a href='upload.php'>HOCHLADEN</a></li>
 					<li><a href='profile.php'><img class='circle' src='".$profilepic."'height='24' width='24'></a></li>
@@ -45,3 +44,4 @@
 		}
 	}
 ?>
+<body>

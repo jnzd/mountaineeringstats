@@ -24,6 +24,28 @@ include 'db.php';
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">
 	</script>
 	
+	<?php //gpx test;
+	use phpGPX\phpGPX;
+	
+	$gpx = new phpGPX();
+		
+	$file = $gpx->load('activities/example.gpx');
+		
+	foreach ($file->tracks as $track){
+		
+		// Statistics for whole track
+		$track->stats->toArray();
+		echo implode($track);
+		    
+		foreach ($track->segments as $segment)
+		{
+			// Statistics for segment of track
+			$segment->stats->toArray();
+			echo implode($segment);
+		}
+	}
+	?>
+	
 	<!-- Date test -->
 	<?php echo "<p>".date("Y-m-d H:i:s")."</p>";?>
 	
