@@ -1,6 +1,6 @@
 <?php
 //include '../header.php';
-include '../db.php';//test to commit
+include '../db.php';
 
 //testet, ob die beiden Passwoerter uebereinstimmen
 if($_POST['password'] == $_POST['confirmpassword']){
