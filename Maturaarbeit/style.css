@@ -3,7 +3,6 @@
 	padding: 0px;
 }
 h1{
-	margin-top:10px;
 	text-align: center;
 	font-family: Arial, sans-serif;
 }
@@ -82,4 +81,22 @@ p{
 #map{
 	height: 400px;
 	width: 100%;
+}
+#links{
+	float: left;
+	margin-left: 5%;
+}
+#links.a{
+	
+}
+#profilepic{
+	float: left;
+	margin-left: 20%;
+}
+#profileheader{
+	margin-top: 30px;
+}
+#profilheader.h1{
+	float: left;
+	size: 200px;
 }

@@ -30,9 +30,9 @@ include 'db.php';
 	
 	<!-- Ajax test -->
 	
-	<h1>The XMLHttpRequest Object</h1>
+	<h1>XMLHttpRequest</h1>
 
-	<p id="demo">Let AJAX change this text.</p>
+	<p id="demo">change</p>
 	
 	<button type="button" onclick="loadDoc()">Change Content</button>
 	
