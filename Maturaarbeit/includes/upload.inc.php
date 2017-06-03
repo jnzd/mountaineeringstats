@@ -49,7 +49,9 @@ include '../db.php';
 		header("location: ../upload.php");
 	}
 	
-	$sql = "INSERT INTO activities (path, sport, user_id) VALUES ('$path', '$sport', '$user_id')";
+	
+	$time = date("Y-m-d H:i:s");
+	$sql = "INSERT INTO activities (path, sport, user_id, time) VALUES ('$path', '$sport', '$user_id', '$time')";
 	$result = $conn->query($sql);
 	
 	$_SESSION['message']="";

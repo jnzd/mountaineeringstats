@@ -6,8 +6,8 @@ $id = $_SESSION['id'];
 <div id="info">
 <?php
 $sql = "SELECT * FROM users WHERE id='$id'";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
 
 echo "<h1>".$row['username']."</h1>";
 
@@ -26,7 +26,7 @@ echo "<p>".
 </p>";
 ?>
 </div>
-
+<p><a href="includes/delete.inc.php">Account loeschen</a></p>
 
 </body>
 </html>
