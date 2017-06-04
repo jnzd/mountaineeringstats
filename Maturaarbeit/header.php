@@ -1,5 +1,32 @@
 <?php
 	include 'db.php';
+	include 'vendor/sibyx/phpgpx/src/phpGPX/phpGPX.php';
+	include 'vendor/autoload.php';
+	foreach (glob("vendor/sibyx/phpgpx/src/phpGPX/Helpers/*.php") as $filename)
+	{
+		include $filename;
+	}
+	foreach (glob("vendor/sibyx/phpgpx/src/phpGPX/Models/*.php") as $filename)
+	{
+		include $filename;
+	}
+	foreach (glob("vvendor/sibyx/phpgpx/src/phpGPX/Models/Extensions/*.php") as $filename)
+	{
+		include $filename;
+	}
+	foreach (glob("vendor/sibyx/phpgpx/src/phpGPXParsers/*.php") as $filename)
+	{
+		include $filename;
+	}
+	foreach (glob("vendor/sibyx/phpgpx/src/phpGPX/Parsers/Extensions/*.php") as $filename)
+	{
+		include $filename;
+	}
+	
+	/*foreach (glob("vendor/sibyx/phpgpx/example/*.php") as $filename)
+	{
+		include $filename;
+	}*/
 	session_start();
 	if(!isset($title)){
 		$title="Home";
