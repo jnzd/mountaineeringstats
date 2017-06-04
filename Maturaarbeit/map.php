@@ -1,5 +1,5 @@
 <?php
-$title="Willkommen";
+$title="Karte";
 include 'header.php';
 include 'db.php';
 ?>

@@ -1,5 +1,5 @@
 <?php
-$title="Willkommen";
+$title="Startseite";
 include 'header.php';
 include 'db.php';
 ?>
