@@ -29,19 +29,19 @@ include 'db.php';
 	
 	$gpx = new phpGPX();
 		
-	$file = $gpx->load('activities/example.gpx');
+	$file = $gpx->load('activities/gpx/example.gpx');
 		
 	foreach ($file->tracks as $track){
 		
 		// Statistics for whole track
 		$track->stats->toArray();
-		echo implode($track);
+		print_r($track);
 		    
 		foreach ($track->segments as $segment)
 		{
 			// Statistics for segment of track
 			$segment->stats->toArray();
-			echo implode($segment);
+			//print_r($segment);
 		}
 	}
 	?>
