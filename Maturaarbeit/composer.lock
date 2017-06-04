@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "33fde405d23be10abe84881c099ad57f",
+    "content-hash": "0796031c9d4707fbc37626cb2b35c294",
     "packages": [
+        {
+            "name": "craygl/phpgpx",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Crayg/PHPGPX.git",
+                "reference": "57253cf1ea0223831fa845e9e783ca0f3213f3e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Crayg/PHPGPX/zipball/57253cf1ea0223831fa845e9e783ca0f3213f3e8",
+                "reference": "57253cf1ea0223831fa845e9e783ca0f3213f3e8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Craig Liddle",
+                    "email": "craigliddle2@gmail.com",
+                    "homepage": "http://craygl.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple GPX Parser",
+            "homepage": "https://github.com/Crayg/PHPGPX",
+            "keywords": [
+                "gps",
+                "gpx"
+            ],
+            "time": "2016-02-03 21:32:31"
+        },
         {
             "name": "monolog/monolog",
             "version": "1.0.2",
@@ -149,7 +192,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "nephre/php-dbus": 20,
-        "sibyx/phpgpx": 20
+        "sibyx/phpgpx": 20,
+        "craygl/phpgpx": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
