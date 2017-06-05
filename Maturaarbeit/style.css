@@ -3,7 +3,6 @@
 	margin: 0px;
 }
 h1{
-	text-align: center;
 	font-family: Arial, sans-serif;
 }
 h3{
@@ -11,9 +10,8 @@ h3{
 	text-align: center;
 	font-family: Arial, sans-serif;
 }
-label{
-	font-family: Arial, sans-serif;
-}
+
+/*header*/
 header{
 	width: 100%;
 	height: 60px;
@@ -42,15 +40,18 @@ nav ul li a{
 	font-size: 16px;
 	text-decoration: none;
 }
-body{
-}
 
-body form{
+/*registration*/
+#registration h1{
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+#registration form{
 	margin: auto;
 	width: 100%;
 	text-align: center;
 }
-body form input{
+#registration form input{
 	margin: 3px;
 	border: none;
 	background-color: black;
@@ -58,37 +59,119 @@ body form input{
 	padding: 3px;
 	font-size: 16px;
 }
-body form label{
-}
-body form input:submit{
+#registration form input:submit{
 	background-color: red;
 }
+
+/*login*/
+#login h1{
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+#login form{
+	margin: auto;
+	width: 100%;
+	text-align: center;
+}
+#login form input{
+	margin: 3px;
+	border: none;
+	background-color: black;
+	color: white;
+	padding: 3px;
+	font-size: 16px;
+}
+#login form label{
+	font-family: Arial, sans-serif;
+}
+#login form input:submit{
+	background-color: red;
+}
+/*upload*/
+#upload h1{
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+#upload form{
+	margin: auto;
+	width: 100%;
+	text-align: center;
+}
+#upload form input{
+	margin: 3px;
+	border: none;
+	background-color: black;
+	color: white;
+	padding: 3px;
+	font-size: 16px;
+}
+#uplad form label{
+}
+#upload form input:submit{
+	background-color: red;
+}
+
+/*Profileinstellungen*/
+#settings h1{
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+#settings form{
+	margin: auto;
+	width: 100%;
+	text-align: center;
+}
+#settings form input{
+	margin: 3px;
+	border: none;
+	background-color: black;
+	color: white;
+	padding: 3px;
+	font-size: 16px;
+}
+#settings form label{
+}
+#settings form input:submit{
+	background-color: red;
+}
+
 p{	
 	font-family: Arial, sans-serif;
 }
+
+/*profileinfo*/
 #info{
 	float: left;
 }
+
+/*google maps*/
 #map{
 	height: 400px;
 	width: 100%;
 }
-#settings{
-	
-}
+
+/*Profilseite header*/
 #profileheader{
-	align: center;
-	margin-top: 30px;
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-top: 50px;
+	position: absolute;
 }
 #profileheader h1{
 	font-family: Arial, sans-serif;
 	font-weight: lighter;
+	display: inline;
 }
-#profilepic{
+#profileheader img.circle{
+	display: inline;
+	vertical-align: top;
+	margin-right: 60px;
+	float: left;
+}
+#profileheader a{
+	display: inline;
 	
 }
+
+/*Runde Bilder*/
 .circle{
 	border-radius: 50%;
 }

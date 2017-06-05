@@ -25,39 +25,23 @@ include 'db.php';
 	</script>
 	
 	<?php //gpx test;
-	/*use phpGPX\phpGPX;
+	use phpGPX\phpGPX;
 	
 	$gpx = new phpGPX();
 		
-	$file = $gpx->load('activities/gpx/example.gpx');
+	$file = $gpx->load('activities/gpx/example2.gpx');
 		
 	foreach ($file->tracks as $track){
 		
 		// Statistics for whole track
 		$track->stats->toArray();
-		//print_r($track);
+		print_r($track);
 		    
 		foreach ($track->segments as $segment)
 		{
 			// Statistics for segment of track
 			$segment->stats->toArray();
 			//print_r($segment);
-		}
-	}*/
-	?>
-	
-	<?php
-	$GPXParser = new GPXParser();
-	
-	$xml = "activities/gpx/example.gpx";
-	
-	$gpx = $GPXParser->parseXML($xml);
-	
-	foreach ($gpx->getTracks() as $track) {
-		foreach ($track->getTrackSegments() as $trackSegment) {
-			foreach ($trackSegment->getTrackPoints() as $waypoint) {
-				echo 'Lat: ' . $waypoint->getLatitude() . ', Lon:' . $waypoint->getLongitude();
-			}
 		}
 	}
 	?>
@@ -88,5 +72,7 @@ include 'db.php';
 			xhttp.send();
 		}
 	</script>
+	<br>
+	
 </body>
 </html>
