@@ -28,5 +28,7 @@ include 'db.php';
 </form>
 <p><a href="includes/delete.inc.php">Account loeschen</a></p>
 
+<?php include footer.php; ?>
+
 </body>
 </html>

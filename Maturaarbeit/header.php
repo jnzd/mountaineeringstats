@@ -30,21 +30,17 @@
 		}
 		
 		$profilepic = $row['pic_path'];
-		echo "<div id='header'>
-				<header>
-					<nav>
-						<ul>
-							<li><a href='map.php'>KARTE</a></li>
-							<li><a href='main.php'>STARTSEITE</a></li>			
-							<li><a href='upload.php'>HOCHLADEN</a></li>
-							<li><a href='profile.php'><img class='circle' src='".$profilepic."'height='24' width='24'></a></li>
-							<li><a href='includes/logout.inc.php'>ABMELDEN</a></li>
-						</ul>
-					</nav>
-				</header>
-			</div>
-
-			<div id='body'";
+		echo "<header>
+				<nav>
+					<ul>
+						<li><a href='map.php'>KARTE</a></li>
+						<li><a href='main.php'>STARTSEITE</a></li>			
+						<li><a href='upload.php'>HOCHLADEN</a></li>
+						<li><a href='profile.php'><img class='circle' src='".$profilepic."'height='24' width='24'></a></li>
+						<li><a href='includes/logout.inc.php'>ABMELDEN</a></li>
+					</ul>
+				</nav>
+			</header>";
 	}else{
 		if($title != "Hi" && $title != "Willkommen"){
 			header("location: start.php");
