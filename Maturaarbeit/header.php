@@ -47,4 +47,7 @@
 		}
 	}
 ?>
+
+<div id="body">
+
 <body>

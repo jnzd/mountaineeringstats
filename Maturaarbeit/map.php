@@ -5,7 +5,7 @@ include 'db.php';
 ?>
 
 	<h1>Test</h1>
-	<div id="map"></div>
+	<div id="map">
 	<script>
 	function initMap() {
 		var uluru = {lat: 46.8682, lng: 8.2458};
@@ -23,6 +23,7 @@ include 'db.php';
 	<script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">
 	</script>
+	</div>
 	
 	<?php //gpx test;
 	use phpGPX\phpGPX;

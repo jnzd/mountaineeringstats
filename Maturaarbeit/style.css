@@ -33,13 +33,19 @@ nav ul li{
 }
 nav ul li img{
 	vertical-align: middle;
-	float: right;
 }
 nav ul li a{
 	color: #fff;
 	font-family:  Arial, sans-serif;
 	font-size: 16px;
 	text-decoration: none;
+}
+
+/*content*/
+#body{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*registration*/
@@ -148,7 +154,11 @@ p{
 /*google maps*/
 #map{
 	height: 400px;
-	width: 100%;
+	width: 100%%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 20%;
+	margin-top: 10%;
 }
 
 /*Profilseite header*/
