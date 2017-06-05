@@ -4,7 +4,7 @@ include 'header.php';
 include 'db.php';
 ?>
 
-	<h1>Karte</h1>
+	<h1>Test</h1>
 	<div id="map"></div>
 	<script>
 	function initMap() {
@@ -35,13 +35,13 @@ include 'db.php';
 		
 		// Statistics for whole track
 		$track->stats->toArray();
-		print_r($track);
+		//print_r($track);
 		    
 		foreach ($track->segments as $segment)
 		{
 			// Statistics for segment of track
 			$segment->stats->toArray();
-			//print_r($segment);
+			print_r($segment);
 		}
 	}
 	?>
