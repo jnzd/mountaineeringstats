@@ -30,13 +30,13 @@ include 'db.php';
 	
 	$gpx = new phpGPX();
 		
-	$file = $gpx->load('activities/gpx/example2.gpx');
+	$file = $gpx->load('activities/gpx/MorningActivity.gpx');
 		
 	foreach ($file->tracks as $track){
 		
 		// Statistics for whole track
 		$track->stats->toArray();
-		//print_r($track);
+		print_r($track);
 		    
 		foreach ($track->segments as $segment)
 		{
