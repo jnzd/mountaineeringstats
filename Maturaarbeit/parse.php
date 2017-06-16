@@ -19,87 +19,15 @@ include 'db.php';
 			print_r($segment);
 		}*/
 	}
-	?>
-  
-  <table>
-    <tr>
-      <th>number</th>
-      <th>latitude</th>
-      <th>longitude</th>
-      <th>elevation</th>
-      <th>distance</th>
-    </tr>
-    <tr>
-      <td><?php echo $track->segments->stats->points; ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-    <tr>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-    <tr>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-    <tr>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-    <tr>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-    <tr>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-    <tr>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-    <tr>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-    <tr>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-    <tr>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-    </tr>
-  </table>
 
+	foreach ($variable as $key => $value) {
+		# code...
+	}
+
+	foreach ($file->tracks as $track => $value) {
+		echo ;
+	}
+
+	?>
 </body>
 </html>
