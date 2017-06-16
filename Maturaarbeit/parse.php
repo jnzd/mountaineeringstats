@@ -30,10 +30,13 @@ include 'db.php';
 	echo "<br /><br />";
 
 	foreach ($file->tracks as $track){
-		$stat = $track->stats->toArray();
-		foreach ($stat as $stat) {
-			print_r($stat);
-			echo "<br />";
+		$segment = $track->segments;
+		foreach ($segment as $segment) {
+			$points = $segment->points;
+			foreach ($points as $points) {
+				print_r($points);
+				echo "<br /><br />";
+			}
 		}
 	}
 

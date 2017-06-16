@@ -14,8 +14,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo $title; ?></title>
-<link href="style.css" rel="stylesheet" type="text/css">
+	<title><?php echo $title; ?></title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 </head>
 
 <?php
