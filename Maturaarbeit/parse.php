@@ -20,16 +20,7 @@ include 'db.php';
 		}*/
 	}
 	?>
-
-  <table>
-    <tr>
-
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-      <td><?php  ?></td>
-
+  
   <table>
     <tr>
       <th>number</th>
