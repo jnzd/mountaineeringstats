@@ -8,26 +8,36 @@ include 'db.php';
 	use phpGPX\phpGPX;
 	$gpx = new phpGPX();
 	$file = $gpx->load('activities/gpx/example.gpx');
-	foreach ($file->tracks as $track){
+	/*foreach ($file->tracks as $track){
 		// Statistics for whole track
 		$track->stats->toArray();
 		print_r($track);
-		/*foreach ($track->segments as $segment)
+		foreach ($track->segments as $segment)
 		{
 			// Statistics for segment of track
 			$segment->stats->toArray();
 			print_r($segment);
-		}*/
+		}
+	}*/
+	foreach ($file->tracks as $track){
+		$stat = $track->stats->toArray();
+		foreach ($stat as $stat) {
+			print_r($stat);
+			echo "<br />";
+		}
 	}
 
-	foreach ($variable as $key => $value) {
-		# code...
+	echo "<br /><br />";
+
+	foreach ($file->tracks as $track){
+		$stat = $track->stats->toArray();
+		foreach ($stat as $stat) {
+			print_r($stat);
+			echo "<br />";
+		}
 	}
 
-	foreach ($file->tracks as $track => $value) {
-		echo ;
-	}
-
+	echo "<br /><br />";
 	?>
 </body>
 </html>
