@@ -1,24 +1,17 @@
 <?php
-$title="Karte";
+$title="Parser";
 include 'header.php';
 include 'db.php';
 ?>
-
-	<h1>Test</h1>
-
+	<h1>Parser</h1>
 	<?php //gpx test;
 	use phpGPX\phpGPX;
-
 	$gpx = new phpGPX();
-
-	$file = $gpx->load('activities/gpx/MorningActivity.gpx');
-
+	$file = $gpx->load('activities/gpx/example.gpx');
 	foreach ($file->tracks as $track){
-
 		// Statistics for whole track
 		$track->stats->toArray();
 		print_r($track);
-
 		foreach ($track->segments as $segment)
 		{
 			// Statistics for segment of track
@@ -28,21 +21,140 @@ include 'db.php';
 	}
 	?>
 
-	<script>
-		function loadDoc(){
-			var xhttp = new XMLHttpRequest();
-
-			xhttp.onreadystatechange = function(){
-				if (this.readyState == 4 && this.status == 200){
-					document.getElementById("demo").innerHTML = this.responseText;
-				}
-			};
-
-			xhttp.open("GET", "ajax_info.txt", true);
-			xhttp.send();
-		}
-	</script>
-	<br>
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
 
 </body>
 </html>
