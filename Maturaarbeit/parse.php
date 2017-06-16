@@ -12,147 +12,101 @@ include 'db.php';
 		// Statistics for whole track
 		$track->stats->toArray();
 		print_r($track);
-		foreach ($track->segments as $segment)
+		/*foreach ($track->segments as $segment)
 		{
 			// Statistics for segment of track
 			$segment->stats->toArray();
 			print_r($segment);
-		}
+		}*/
 	}
 	?>
 
   <table>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+
+  <table>
+    <tr>
+      <th>number</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>elevation</th>
+      <th>distance</th>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php echo $track->segments->stats->points; ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
+      <td><?php  ?></td>
     </tr>
   </table>
 
