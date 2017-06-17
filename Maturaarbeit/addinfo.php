@@ -23,44 +23,46 @@ $country = $row['country'];
 $birthdate = $row['birthdate'];
 
 ?>
-
-<form action="includes/moreinfo.inc.php" method="post">
-	<?php
-		if(!isset($first))
-		{
-			echo "<input type='text' name='first' placeholder='Vorname'><br>";
-		}
-		if(!isset($last))
-		{ 
-			echo "<input type='text' name='last' placeholder='Nachname'><br>";
-		}
-		if(!isset($ort))
-		{
-			echo "<input type='text' name='ort' placeholder='Wohnort'><br>";
-		}
-		if(!isset($plz))
-		{
-			echo "<input type='number' name='plz' placeholder='PLZ'><br>";
-		}
-		if(!isset($street))
-		{
-			echo "<input type='text' name='street' placeholder='Strasse'><br>";
-		}
-		if(!isset($streetnumber))
-		{
-			echo "<input type='number' name='streetnumber' placeholder='Hausnummer'><br>";
-		}
-		if(!isset($gender))
-		{
-			echo "<input type='text' name='gender' placeholder='Geschlecht'><br>";
-		}
-		if(!isset($profilepic))
-		{
-			echo "<input type='file' name='profilepic' placeholder='Profilbild'><br>";
-		}
-	?>	
-	<input type='submit' name='safe' value='speichern'><br><br>
-</form>
-
+<div id="settings">
+	<section id="settings">
+		<form class="settings" action="includes/moreinfo.inc.php" method="post">
+			<?php
+				if(!isset($first))
+				{
+					echo "<input type='text' name='first' placeholder='Vorname'><br>";
+				}
+				if(!isset($last))
+				{
+					echo "<input type='text' name='last' placeholder='Nachname'><br>";
+				}
+				if(!isset($ort))
+				{
+					echo "<input type='text' name='ort' placeholder='Wohnort'><br>";
+				}
+				if(!isset($plz))
+				{
+					echo "<input type='number' name='plz' placeholder='PLZ'><br>";
+				}
+				if(!isset($street))
+				{
+					echo "<input type='text' name='street' placeholder='Strasse'><br>";
+				}
+				if(!isset($streetnumber))
+				{
+					echo "<input type='number' name='streetnumber' placeholder='Hausnummer'><br>";
+				}
+				if(!isset($gender))
+				{
+					echo "<input type='text' name='gender' placeholder='Geschlecht'><br>";
+				}
+				if(!isset($profilepic))
+				{
+					echo "<input type='file' name='profilepic' placeholder='Profilbild'><br>";
+				}
+			?>
+			<input type='submit' name='safe' value='speichern'><br><br>
+		</form>
+	</section>
+</div>
 </body>
 </html>
