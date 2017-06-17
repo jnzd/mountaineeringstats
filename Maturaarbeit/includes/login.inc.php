@@ -16,13 +16,13 @@ if(!$row = $result->fetch_assoc()){
 	if(remember){//Platzhalter
 		setcookie('email', $email, 'password', $password, time()+60*60*365);
 	}
-	
+
 	session_start();
 	$_SESSION['id'] = $row['id'];
 	$_SESSION['username'] = $row['username'];
 	$_SESSION['email'] = $email;
 	$_SESSION['password'] = $password;
-	
-	header("Location: ../main.php");	
+
+	header("Location: ../index.php");	
 }
 ?>

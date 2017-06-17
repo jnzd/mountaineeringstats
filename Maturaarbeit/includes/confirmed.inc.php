@@ -13,6 +13,6 @@ if(!$row = $result->fetch_assoc()){
 	$time = date("Y-m-d H:i:s");
 	$sql = "UPDATE users SET confirmed='1', dt_created= '$time' WHERE username = '$username'";
 	$result = $conn->query($sql);
-	header("Location: ../main.php");
+	header("Location: ../index.php");
 }
 ?>

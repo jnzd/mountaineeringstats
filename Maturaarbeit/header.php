@@ -37,7 +37,7 @@
 						<li><a href='map.php'>KARTE</a></li>
 						<li><a href='parse.php'>PARSER</a></li>
 						<li><a href='feed.php'>FEED</a></li>
-						<li><a href='main.php'>STARTSEITE</a></li>
+						<li><a href='index.php'>STARTSEITE</a></li>
 						<li><a href='upload.php'>HOCHLADEN</a></li>
 						<li><a href='profile.php'><img class='circle' src='".$profilepic."'height='24' width='24'></a></li>
 						<li><a href='includes/logout.inc.php'>ABMELDEN</a></li>
