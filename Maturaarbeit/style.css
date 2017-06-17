@@ -46,10 +46,11 @@ nav{
 a:hover#menu-icon{
   border-radius: 4px 4px 0 0;
 }
-/* Alle unordered lists ohne Punkte*/
+/* Alle unsortierten Listen ohne Punkte*/
 ul{
   list-style-type: none;
 }
+/**************************************/
 nav ul li{
   font-family: 'Alegreya', sans-serif;
 	font-size: 150%;

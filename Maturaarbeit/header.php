@@ -1,13 +1,12 @@
 <?php
 	include 'db.php';
 	include 'vendor/autoload.php';
-
-	//Starte session in auf jeder Seite
+//Starte session in auf jeder Seite
 	session_start();
 	if(!isset($title)){
-		$title="Home";
+		$title='Home';
 	}
-	//Fehlermeldungen leeren
+//Fehlermeldungen leeren
 	if(!isset($_SESSION['message'])){
 		$_SESSION['message'] = "";
 	}
@@ -23,7 +22,8 @@
 
 <?php
 	if(isset($_SESSION['id'])){
-		$id = $_SESSION['id'];//setzt die id fuer die folgende sql Variable
+//setzt die id fuer die folgende sql Variable
+		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM users WHERE id='$id'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
@@ -31,41 +31,39 @@
 		if($row['confirmed']==0 && $_SERVER['REQUEST_URI'] != '/Maturaarbeit/verification.php'){
 			header("location: verification.php");
 		}
-
 		$profilepic = $row['pic_path'];
-		//Header anzeigen
-		echo "
-			<header>
-				<div class='header-inner'>
+//Header anzeigen
+		?>
+		<header>
+		  <div class="header-inner">
 <!--Website logo -->
-					<a href='index.html' id='logo'></a>
-					<form class='search' action='search.inc.php' method='post'>
-						<input type='text' name='search' placeholder='Suchen'>
-					</form>
-					<nav>
+		    <a href="index.html" id="logo"></a>
+<!--Suchleiste-->
+		    <form class="search" action="includes/search.inc.php" method="post">
+		      <input type="text" name="searchfield" placeholder="Suchen">
+		      <input type="submit" name="search" value="search">
+		    </form>
+		    <nav>
 <!-- menu fuer mobiles design -->
-						<a href='#' id='menu-icon'></a>
-						<ul>
+		      <a href="#" id="menu-icon"></a>
+		      <ul>
 <!-- Links im Header -->
-							<li><a href='map.php'>KARTE</a></li>
-							<li><a href='parse.php'>PARSER</a></li>
-							<li><a href='feed.php'>FEED</a></li>
-							<li><a href='index.php'>STARTSEITE</a></li>
-							<li><a href='upload.php'>HOCHLADEN</a></li>
-							<li><a href='profile.php'><img class='circle' src='".$profilepic."'height='24' width='24'></a></li>
-							<li><a href='includes/logout.inc.php'>ABMELDEN</a></li>
-						</ul>
-					</nav>
-				</div>
-			</header>
-		";
+		        <li><a href="map.php">KARTE</a></li>
+		        <li><a href="parse.php">PARSER</a></li>
+		        <li><a href="feed.php">FEED</a></li>
+		        <li><a href="index.php">STARTSEITE</a></li>
+		        <li><a href="upload.php">HOCHLADEN</a></li>
+		        <?php echo "<li><a href='profile.php'><img class='circle' src=".$profilepic." height='24' width='24'></a></li>"?>
+		        <li><a href="includes/logout.inc.php">ABMELDEN</a></li>
+		      </ul>
+		    </nav>
+		  </div>
+		</header>
+		<body>
+		<?php
 	}else{
-		if($title != "Hi" && $title != "Willkommen"){
-			header("location: start.php");
+		if($title != 'Hi' && $title != 'Willkommen'){
+			header('location: start.php');
 		}
 	}
 ?>
-<body>
-<form class="" action="index.html" method="post">
-
-</form>
