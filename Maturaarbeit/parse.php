@@ -34,8 +34,13 @@ include 'db.php';
 		foreach ($segment as $segment) {
 			$points = $segment->points;
 			foreach ($points as $points) {
-				print_r($points);
-				echo "<br /><br />";
+				$point=(array)$points;
+				foreach ($point as $value) {
+					if($value != null){
+						print_r($value);
+						echo "<br />";
+					}
+				}
 			}
 		}
 	}
