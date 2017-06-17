@@ -24,8 +24,8 @@ $birthdate = $row['birthdate'];
 
 ?>
 <div id="settings">
-	<section id="settings">
-		<form class="settings" action="includes/moreinfo.inc.php" method="post">
+	<section class="settings">
+		<form id="settings" action="includes/moreinfo.inc.php" method="post">
 			<?php
 				if(!isset($first))
 				{

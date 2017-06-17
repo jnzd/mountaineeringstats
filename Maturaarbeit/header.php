@@ -37,14 +37,16 @@
 		<header>
 		  <div class="header-inner">
 <!--Website logo -->
-		    <a href="index.html" id="logo"></a>
+			    <a href="index.html" id="logo"></a>
 <!--Suchleiste-->
-		    <form class="search" action="includes/search.inc.php" method="post">
-		      <input type="text" name="searchfield" placeholder="Suchen">
-		      <input type="submit" name="search" value="search">
-		    </form>
-		    <nav>
+<!--					<div id="search">
+				    <form class="search" action="includes/search.inc.php" method="post">
+				      <input type="text" name="searchfield" placeholder="Suchen">
+				      <input type="submit" name="search" value="search">
+				    </form>
+					</div>-->
 <!-- menu fuer mobiles design -->
+				<nav>
 		      <a href="#" id="menu-icon"></a>
 		      <ul>
 <!-- Links im Header -->

@@ -13,6 +13,22 @@ h3{
 	text-align: center;
 	font-family: 'Alegreya', sans-serif;
 }
+form{
+	text-align: center;
+}
+input{
+	width: auto%;
+	font-size: 16px;
+	padding: 3px;
+	margin: 5px;
+	background-color: black;
+}
+label{
+	font-family: 'Alegreya', sans-serif;
+}
+input{
+	color: white;
+}
 
 /*header*/
 header{
@@ -32,6 +48,9 @@ header{
   width: 200px;
   height: 60px;
   background: url(icons/RD.png) no-repeat center;
+}
+#search{
+	text-align: center;
 }
 nav{
 	float: right;
@@ -56,8 +75,8 @@ ul{
 /**************************************/
 nav ul li{
   font-family: 'Alegreya', sans-serif;
-	font-size: 150%;
-	margin: 10px;
+	font-size: 100%;
+	margin: 0 10px 0 10px;
 	display: inline-block;
 	foat: left;
 	line-height: 24px;
@@ -73,112 +92,33 @@ nav ul li a{
 }
 
 /*content*/
-#body{
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
+body{
+	width: 100%;
+	margin: 0 auto;
 }
 
 /*registration*/
-#registration h1{
-	text-align: center;
-	font-family: Arial, sans-serif;
-}
-#registration form{
-	margin: auto;
-	width: 100%;
-	text-align: center;
-}
-#registration form input{
-	margin: 3px;
-	border: none;
-	background-color: black;
-	color: white;
-	padding: 3px;
-	font-size: 16px;
-}
-#registration form input:submit{
-	background-color: red;
-}
+
+/*End registration*/
 
 /*login*/
-#login h1{
-	text-align: center;
-	font-family: Arial, sans-serif;
-}
-#login form{
-	margin: auto;
-	width: 100%;
-	text-align: center;
-}
-#login form input{
-	margin: 3px;
-	border: none;
-	background-color: black;
-	color: white;
-	padding: 3px;
-	font-size: 16px;
-}
-#login form label{
-	font-family: Arial, sans-serif;
-}
-#login form input:submit{
-	background-color: red;
-}
+
 /*End login*/
 
 /*upload*/
-#upload h1{
-	text-align: center;
-	font-family: Arial, sans-serif;
-}
-#upload form{
-	margin: auto;
-	width: 100%;
-	text-align: center;
-}
-#upload form input{
-	margin: 3px;
-	border: none;
-	background-color: black;
-	color: white;
-	padding: 3px;
-	font-size: 16px;
-}
-#uplad form label{
-}
-#upload form input:submit{
-	background-color: red;
-}
+
 /*End upload*/
 
 /*Profileinstellungen*/
-h1 #settings {
-	text-align: center;
-	font-family: Arial, sans-serif;
-}
-form #settings{
-	margin: auto;
-	width: 100%;
-	text-align: center;
-}
-form input #settings{
-	margin: 3px;
-	border: none;
-	background-color: black;
-	color: white;
-	padding: 3px;
-	font-size: 16px;
-}
-form label #settings{
-}
-form input:submit #settings{
-	background-color: red;
-}
+
 /*End profile settings*/
 
 p{
 	font-family: 'Alegreya', sans-serif;
+}
+a{
+	font-family: 'Alegreya', sans-serif;
+
 }
 
 /*profileinfo*/

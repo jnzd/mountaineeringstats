@@ -8,7 +8,7 @@ include 'db.php';
 		<h1>Einstellungen</h1>
 	</section>
 	<section class="settings">
-		<form class="settings" action="includes/settings.inc.php" method="post" enctype="multipart/form-data">
+		<form id="settings" action="includes/settings.inc.php" method="post" enctype="multipart/form-data">
 			<input type="text" name="username" placeholder="Benutzername"><br>
 			<input type="email" name="email" placeholder="E-Mail"><br>
 			<input type="password" name="password" placeholder="Neues Passwort"><br>
@@ -29,10 +29,10 @@ include 'db.php';
 			<input type="file" name="pic" placeholder="Profilbild"><br>
 			<input type="submit" name="safe" placeholder="speichern"><br><br>
 		</form>
-		<a href="includes/delete.inc.php">Account loeschen</a>
+		<a id="settings" href="includes/delete.inc.php">Account loeschen</a>
 	</section>
 </div>
-<?php include 'footer.php'; ?>
 
+<?php include 'footer.php'; ?>
 </body>
 </html>
