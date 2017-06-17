@@ -7,27 +7,19 @@ include 'db.php';
 	<?php //gpx test;
 	use phpGPX\phpGPX;
 	$gpx = new phpGPX();
-	$file = $gpx->load('activities/gpx/example.gpx');
-	/*foreach ($file->tracks as $track){
+	$file = $gpx->load('activities/gpx/example2.gpx');
+	foreach ($file->tracks as $track){
 		// Statistics for whole track
 		$track->stats->toArray();
 		print_r($track);
+		echo "<br /><br />";
 		foreach ($track->segments as $segment)
 		{
 			// Statistics for segment of track
 			$segment->stats->toArray();
 			print_r($segment);
 		}
-	}*/
-	foreach ($file->tracks as $track){
-		$stat = $track->stats->toArray();
-		foreach ($stat as $stat) {
-			print_r($stat);
-			echo "<br />";
-		}
 	}
-
-	echo "<br /><br />";
 
 	foreach ($file->tracks as $track){
 		$segment = $track->segments;
@@ -35,10 +27,11 @@ include 'db.php';
 			$points = $segment->points;
 			foreach ($points as $points) {
 				$point=(array)$points;
+				print_r($point);
+				echo "<br /><br />";
 				foreach ($point as $value) {
 					if($value != null){
-						print_r($value);
-						echo "<br />";
+						echo print_r($value)."<br>";
 					}
 				}
 			}
