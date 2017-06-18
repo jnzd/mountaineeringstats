@@ -75,20 +75,72 @@ foreach ($file->tracks as $track){
 
 	$index=0;
 
+	$latitude = [];
+	$longitude = [];
+	$elevation = [];
+	$time = [];
+	$magVar = [];
+	$geoidHeight = [];
+	$name = [];
+	$comment = [];
+	$description = [];
+	$source = [];
+	$links = [];
+	$symbol = [];
+	$type = [];
+	$fix = [];
+	$satellitesNumber = [];
+	$hdop = [];
+	$vdop = [];
+	$pdop = [];
+	$ageOfGpsData = [];
+	$dgpsid = [];
+	$difference = [];
+	$distance = [];
+	$extensions = [];
+	$pointType = [];
+
 	foreach ($file->tracks as $track){
 		$segment = $track->segments;
 			foreach ($segment as $segment) {
 			$points = $segment->points;
 			foreach ($points as $points) {
-				$latitude = [
-					$index => $point->latitude,
-				];
+				array_push($latitude, $points->latitude);
+				array_push($longitude, $points->longitude);
+				array_push($elevation, $points->elevation);
+				array_push($time, $points->time);
+				array_push($magVar, $points->magVar);
+				array_push($geoidHeight, $points->geoidHeight);
+				array_push($name, $points->name);
+				array_push($comment, $points->comment);
+				array_push($source, $points->source);
+				array_push($links, $points->links);
+				array_push($symbol, $points->symbol);
+				array_push($type, $points->type);
+				array_push($fix, $points->fix);
+				array_push($satellitesNumber, $points->satellitesNumber);
+				array_push($hdop, $points->hdop);
+				array_push($vdop, $points->vdop);
+				array_push($ageOfGpsData, $points->ageOfGpsData);
+				array_push($dgpsid, $points->dgpsid);
+				array_push($difference, $points->difference);
+				array_push($distance, $points->distance);
+
+				$index++;
 			}
 		}
 	}
 	print_r($latitude);
 	echo "<br />";
-//start full table----------------------------------------
+	print_r($longitude);
+	echo "<br />";
+	print_r($elevation);
+	echo "<br />";
+	print_r($time);
+	echo "<br />";
+	print_r($distance);
+	echo "<br />";
+//-------------------------------------------------------
 	echo "<table>";
 //setup table header--------------------------------------
 	echo "<tr>
