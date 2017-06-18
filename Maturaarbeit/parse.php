@@ -73,12 +73,11 @@ foreach ($file->tracks as $track){
 //end stats-table-----------------------------------------
 	echo "<br /><br /><br />";
 
-	$index=0;
-
-	$latitude = [];
-	$longitude = [];
-	$elevation = [];
-	$time = [];
+	//define empty arrays
+	$latitude = [];//imprtant
+	$longitude = [];//imprtant
+	$elevation = [];//important
+	$time = [];//important
 	$magVar = [];
 	$geoidHeight = [];
 	$name = [];
@@ -95,8 +94,8 @@ foreach ($file->tracks as $track){
 	$pdop = [];
 	$ageOfGpsData = [];
 	$dgpsid = [];
-	$difference = [];
-	$distance = [];
+	$difference = [];//maybe important
+	$distance = [];//important
 	$extensions = [];
 	$pointType = [];
 
@@ -104,6 +103,7 @@ foreach ($file->tracks as $track){
 		$segment = $track->segments;
 			foreach ($segment as $segment) {
 			$points = $segment->points;
+			//fill data arrays
 			foreach ($points as $points) {
 				array_push($latitude, $points->latitude);
 				array_push($longitude, $points->longitude);
@@ -121,12 +121,13 @@ foreach ($file->tracks as $track){
 				array_push($satellitesNumber, $points->satellitesNumber);
 				array_push($hdop, $points->hdop);
 				array_push($vdop, $points->vdop);
+				array_push($pdop, $points->pdop);
 				array_push($ageOfGpsData, $points->ageOfGpsData);
 				array_push($dgpsid, $points->dgpsid);
 				array_push($difference, $points->difference);
 				array_push($distance, $points->distance);
-
-				$index++;
+				array_push($extensions, $points->extensions);
+				//array_push($pointType, $points->pointType);//fatal error...
 			}
 		}
 	}
