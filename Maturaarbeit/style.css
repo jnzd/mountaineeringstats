@@ -47,8 +47,8 @@ header{
 #logo{
   margin: 20px;
   float: left;
-  width: 200px;
-  height: 60px;
+  width: auto;
+  height: auto;
   background: url(icons/RD.png) no-repeat center;
 }
 #search{
@@ -145,4 +145,7 @@ a{
 /*Runde Bilder*/
 .circle{
 	border-radius: 50%;
+}
+table, th, td {
+    border: 1px solid black;
 }
