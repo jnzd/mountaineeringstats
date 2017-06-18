@@ -7,8 +7,10 @@ include 'db.php';
 	<?php
 	use phpGPX\phpGPX;
 	$gpx = new phpGPX();
-	$file = $gpx->load('activities/gpx/example.gpx');
+	$file = $gpx->load('activities/gpx/example2.gpx');
 //file loaded-------------------------------------------------
+
+//stats as variables--------------
 foreach ($file->tracks as $track){
 	$stat = $track->stats;
 	$distance = $stat->distance;
@@ -35,6 +37,7 @@ foreach ($file->tracks as $track){
 	echo "finishedAt: ".$finishedAt."<br />";
 	echo "duration: ".$duration."<br />";
 }
+//stats as variables finished---------------------------------
 //------------------------------------------------------------
 	echo "<table>";
 	echo "<tr>
@@ -69,7 +72,23 @@ foreach ($file->tracks as $track){
 	echo "</table>";
 //end stats-table-----------------------------------------
 	echo "<br /><br /><br />";
-//start full table
+
+	$index=0;
+
+	foreach ($file->tracks as $track){
+		$segment = $track->segments;
+			foreach ($segment as $segment) {
+			$points = $segment->points;
+			foreach ($points as $points) {
+				$latitude = [
+					$index => $point->latitude,
+				];
+			}
+		}
+	}
+	print_r($latitude);
+	echo "<br />";
+//start full table----------------------------------------
 	echo "<table>";
 //setup table header--------------------------------------
 	echo "<tr>
