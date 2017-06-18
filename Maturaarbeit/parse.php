@@ -4,24 +4,74 @@ include 'header.php';
 include 'db.php';
 ?>
 	<h1>Parser</h1>
-	<?php //gpx test;
+	<?php
 	use phpGPX\phpGPX;
 	$gpx = new phpGPX();
 	$file = $gpx->load('activities/gpx/example.gpx');
-	/*foreach ($file->tracks as $track){
-		// Statistics for whole track
-		$track->stats->toArray();
-		print_r($track);
-		echo "<br /><br />";
-		foreach ($track->segments as $segment)
-		{
-			// Statistics for segment of track
-			$segment->stats->toArray();
-			print_r($segment);
-		}
-	}*/
-	$count=0;
+//file loaded-------------------------------------------------
+foreach ($file->tracks as $track){
+	$stat = $track->stats;
+	$distance = $stat->distance;
+	$averageSpeed = $stat->averageSpeed;
+	$averagePace = $stat->averagePace;
+	$minAltitude = $stat->minAltitude;
+	$maxAltitude = $stat->maxAltitude;
+	$startedAt = "";
+	foreach ($stat->startedAt as $start){
+		$startedAt .= strval($start)."-";
+	}
+	$finishedAt = "";
+	foreach ($stat->finishedAt as $finish){
+		$finishedAt .= strval($finish)."-";
+	}
+	$duration =	$stat->duration;
+
+	echo "distance: ".$distance."<br />";
+	echo "averageSpeed: ".$averageSpeed."<br />";
+	echo "averagePace: ".$averagePace."<br />";
+	echo "minAltitude: ".$minAltitude."<br />";
+	echo "maxAltitude: ".$maxAltitude."<br />";
+	echo "startedAt: ".$startedAt."<br />";
+	echo "finishedAt: ".$finishedAt."<br />";
+	echo "duration: ".$duration."<br />";
+}
+//------------------------------------------------------------
 	echo "<table>";
+	echo "<tr>
+		<th>distance</th>
+		<th>averageSpeed</th>
+		<th>averagePace</th>
+		<th>minAltitude</th>
+		<th>maxAltitude</th>
+		<th>startedAt</th>
+		<th>finishedAt</th>
+		<th>duration</th>
+	</tr>";
+	foreach ($file->tracks as $track){
+		$stats = $track->stats;
+		$stat=(array)$stats;
+		echo "<tr>";
+		foreach ($stat as $result){
+			if(gettype($result)=='object'){
+				$results=(array)$result;
+				unset($result);
+				$result = "";
+				foreach ($results as $results){
+					$result .= strval($results)."-";
+				}
+			}else{
+				$data = $result;
+			}
+			echo "<td>".print_r($result, true)."</td>";
+		}
+		echo "</tr>";
+	}
+	echo "</table>";
+//end stats-table-----------------------------------------
+	echo "<br /><br /><br />";
+//start full table
+	echo "<table>";
+//setup table header--------------------------------------
 	echo "<tr>
 		<th>latitude</th>
 		<th>longitude</th>
@@ -48,6 +98,7 @@ include 'db.php';
 		<th>extensions</th>
 		<th>pointType</th>
 	</tr>";
+//table header complete
 	foreach ($file->tracks as $track){
 		$segment = $track->segments;
 			foreach ($segment as $segment) {
@@ -56,7 +107,6 @@ include 'db.php';
 				$point=(array)$points;
 				echo "<tr>";
 				foreach ($point as $value) {
-					$count++;
 					if(gettype($value)=='object'){
 						$values=(array)$value;
 						unset($value);
@@ -69,7 +119,7 @@ include 'db.php';
 						$data = print_r($value, true);
 						echo "<td>".$data."</td>";
 					}else{
-						echo "<td>_</td>";
+						echo "<td>-</td>";
 					}
 				}
 				echo "</tr>";
@@ -78,39 +128,7 @@ include 'db.php';
 	}
 	echo "</table>";
 	echo "<br /><br />";
-
-
-	/*$counter = 0;
-	foreach ($file->tracks as $track){
-		//echo "<br /> key1: ".key($track)."<br /><br />";
-		$segment = $track->segments;
-			//echo "<br /> key2: ".key($segment)."<br /><br />";
-			foreach ($segment as $segment) {
-			$points = $segment->points;
-			foreach ($points as $points) {
-				//echo "<br /> key3: ".key($points)."<br /><br />";
-				$point=(array)$points;
-				$counter++;
-				echo $counter."<br />";
-				foreach ($point as $value) {
-					if(!empty($value)){
-						//print_r(array_keys($point));
-						if(gettype($value)=='object'){
-							$values=(array)$value;
-							unset($value);
-							$value = "";
-							foreach ($values as $values) {
-								$value .= strval($values)."_";
-							}
-						}
-						echo print_r($value)."<br>";
-					}
-				}
-				echo $counter."<br />";
-				echo "<br>";
-			}
-		}
-	}*/
+//Table complete--------------------------------------------
 	?>
 </body>
 </html>
