@@ -60,7 +60,7 @@ foreach ($file->tracks as $track){
 				unset($result);
 				$result = "";
 				foreach ($results as $results){
-					$result .= strval($results)."-";
+					$result .= strval($results)." ";
 				}
 			}else{
 				$data = $result;
@@ -184,7 +184,7 @@ foreach ($file->tracks as $track){
 						unset($value);
 						$value = "";
 						foreach ($values as $values) {
-							$value .= strval($values)."_";
+							$value .= strval($values)." ";
 						}
 					}
 					if(!empty($value)){

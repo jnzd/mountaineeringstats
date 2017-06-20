@@ -55,14 +55,14 @@ include 'db.php';
 
 			var runCoordinates = [];
 			for(i=0; i<latitude.lenght; i++){
-			runCoordinates.push({lat: latitude[i], lng: longitude[i]});
+			runCoordinates.push(lat: latitude[i], lng: longitude[i]);
 			}
 
-			var runCoordinates = [
-            {lat: latitude[i], lng: longitude[i]},
-            {lat: 46.867, lng: 8.856},
-            {lat: 46.867	,lng: 8.856}
-        ];
+			/*var runCoordinates = [
+            {lat: 46.867456, lng: 8.856134},
+            {lat: 46.867567, lng: 8.856543},
+            {lat: 46.867564, lng: 8.856674}
+      ];*/
 
       var run = new google.maps.Polyline({
         path: runCoordinates,

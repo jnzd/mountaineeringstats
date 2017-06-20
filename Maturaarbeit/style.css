@@ -129,12 +129,8 @@ a{
 
 /*google maps*/
 #map{
-	height: 400px;
+	height: 800px;
 	width: 100%%;
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-bottom: 2%;
-	margin-top: 2%;
 }
 /*end google maps*/
 
@@ -147,5 +143,10 @@ a{
 	border-radius: 50%;
 }
 table, th, td {
-    border: 1px solid black;
+  border-collapse: collapse;
+  border: 1px solid;
+	font-family: 'Alegreya', sans-serif;
+}
+th, td{
+	padding: 4px;
 }
