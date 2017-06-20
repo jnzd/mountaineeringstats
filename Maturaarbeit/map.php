@@ -9,7 +9,7 @@ include 'db.php';
 	<?php //gpx test;
 		use phpGPX\phpGPX;
 		$gpx = new phpGPX();
-		$file = $gpx->load('activities/gpx/example2.gpx');
+		$file = $gpx->load('activities/gpx/example.gpx');
 
 		//define empty arrays
 		$latitude = [];//imprtant
@@ -48,18 +48,21 @@ include 'db.php';
     // Brisbane, Australia.
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: {lat: 46.86, lng: 8.8},
-        mapTypeId: 'terrain'
+        zoom: 10,
+        center: {lat: 46.867733, lng: 8.8561171},
+        mapTypeId: 'roadmap'
       });
 
 			var runCoordinates = [];
-			document.write(latitude.length);
 			for(i=0; i<latitude.lenght; i++){
-				document.write(i);
-				runCoordinates.push({lat: latitude[i], lng: longitude[i]});
+			runCoordinates.push({lat: latitude[i], lng: longitude[i]});
 			}
-			document.write(runCoordinates);
+
+			var runCoordinates = [
+            {lat: latitude[i], lng: longitude[i]},
+            {lat: 46.867, lng: 8.856},
+            {lat: 46.867	,lng: 8.856}
+        ];
 
       var run = new google.maps.Polyline({
         path: runCoordinates,
@@ -68,7 +71,7 @@ include 'db.php';
         strokeOpacity: 1.0,
         strokeWeight: 4
       });
-      flightPath.setMap(map);
+      run.setMap(map);
     }
   </script>
 
