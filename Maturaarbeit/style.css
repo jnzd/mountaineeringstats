@@ -21,13 +21,13 @@ input{
 	font-size: 16px;
 	padding: 3px;
 	margin: 5px;
-	background-color: black;
+	background-color: #222222;
 }
 label{
 	font-family: 'Alegreya', sans-serif;
 }
 input{
-	color: white;
+	color: #fcfcfc;
 	text-align: center;
 }
 
@@ -36,8 +36,8 @@ header{
 	width: 100%;
 	height: 60px;
 	background-color: #222222;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 #header-inner{
   max-width: 1200px;
@@ -87,7 +87,7 @@ nav ul li img{
 	vertical-align: middle;
 }
 nav ul li a{
-	color: #fff;
+	color: #fcfcfc;
 	font-family:  Arial, sans-serif;
 	font-size: 16px;
 	text-decoration: none;

@@ -37,15 +37,15 @@ include 'db.php';
 				}
 			}
 		}
+		print_r($lat_js);
+		print_r($long_js);
 	?>
   <div id="map"></div>
   <script>
-		var latitude = <?php echo $lat_js; ?>;
-		var longitude = <?php echo $long_js; ?>;
-
-    // This example creates a 2-pixel-wide red polyline showing the path of William
-    // Kingsford Smith's first trans-Pacific flight between Oakland, CA, and
-    // Brisbane, Australia.
+		var lat = <?php echo $lat_js; ?>;
+		var lng = <?php echo $long_js; ?>;
+		console.log(lat);
+		console.log(lng);
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
@@ -53,30 +53,32 @@ include 'db.php';
         mapTypeId: 'roadmap'
       });
 
-			var runCoordinates = [];
-			for(i=0; i<latitude.lenght; i++){
-			runCoordinates.push(lat: latitude[i], lng: longitude[i]);
+			var trackCoordinates = [];
+			var length = lat.length
+			for(i=0; i<length; i++){
+				var point = new google.maps.LatLng(lat[i],lng[i]);
+				trackCoordinates.push(point);
 			}
-
-			/*var runCoordinates = [
+			console.log(trackCoordinates);
+			/*var trackCoordinates = [
             {lat: 46.867456, lng: 8.856134},
             {lat: 46.867567, lng: 8.856543},
             {lat: 46.867564, lng: 8.856674}
       ];*/
 
-      var run = new google.maps.Polyline({
-        path: runCoordinates,
+      var track = new google.maps.Polyline({
+        path: trackCoordinates,
         geodesic: true,
         strokeColor: 'red',
         strokeOpacity: 1.0,
         strokeWeight: 4
       });
-      run.setMap(map);
+      track.setMap(map);
     }
   </script>
 
 	<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">
 	</script>
 	</div>
 </body>
