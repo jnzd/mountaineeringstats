@@ -6,7 +6,7 @@ include 'db.php';
 
 	<h1>Test</h1>
 
-	<?php //gpx test;
+	<?php
 		use phpGPX\phpGPX;
 		$gpx = new phpGPX();
 		$file = $gpx->load('activities/gpx/example.gpx');
@@ -32,39 +32,48 @@ include 'db.php';
 					array_push($difference, $points->difference);
 					array_push($distance, $points->distance);
 
+//php arrays to javascript arrays
 					$lat_js = json_encode($latitude);
 					$long_js = json_encode($longitude);
 				}
 			}
 		}
-		print_r($lat_js);
-		print_r($long_js);
 	?>
   <div id="map"></div>
   <script>
+//set javascript arrays
 		var lat = <?php echo $lat_js; ?>;
 		var lng = <?php echo $long_js; ?>;
-		console.log(lat);
-		console.log(lng);
+
+		Array.prototype.max = function() {
+			return Math.max.apply(null, this);
+		};
+		Array.prototype.min = function() {
+			return Math.min.apply(null, this);
+		};
+
+		var latMax = lat.max();
+		var latMin = lat.min();
+		var lngMax = lng.max();
+		var lngMin = lng.min();
+
+		var centerLat = (latMax + latMin)/2;
+		var centerLng = (lngMax + lngMin)/2;
+
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
-        center: {lat: 46.867733, lng: 8.8561171},
+        center: {lat: centerLat, lng: centerLng},
         mapTypeId: 'roadmap'
       });
 
+//create array of latlng objects from arrays
 			var trackCoordinates = [];
-			var length = lat.length
+			var length = lat.length;
 			for(i=0; i<length; i++){
 				var point = new google.maps.LatLng(lat[i],lng[i]);
 				trackCoordinates.push(point);
 			}
-			console.log(trackCoordinates);
-			/*var trackCoordinates = [
-            {lat: 46.867456, lng: 8.856134},
-            {lat: 46.867567, lng: 8.856543},
-            {lat: 46.867564, lng: 8.856674}
-      ];*/
 
       var track = new google.maps.Polyline({
         path: trackCoordinates,
