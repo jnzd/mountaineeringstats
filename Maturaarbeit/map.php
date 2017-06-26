@@ -39,7 +39,7 @@ include 'db.php';
 			}
 		}
 	?>
-  <div id="map"></div>
+  <div id="map">
   <script>
 //set javascript arrays
 		var lat = <?php echo $lat_js; ?>;
@@ -60,9 +60,17 @@ include 'db.php';
 		var centerLat = (latMax + latMin)/2;
 		var centerLng = (lngMax + lngMin)/2;
 
+		console.log(latMax);
+		console.log(latMin);
+		console.log(lngMax);
+		console.log(lngMin);
+		console.log(centerLat);
+		console.log(centerLng);
+
+
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
+        zoom: 12,
         center: {lat: centerLat, lng: centerLng},
         mapTypeId: 'roadmap'
       });
@@ -74,11 +82,12 @@ include 'db.php';
 				var point = new google.maps.LatLng(lat[i],lng[i]);
 				trackCoordinates.push(point);
 			}
+			console.log(trackCoordinates);
 
       var track = new google.maps.Polyline({
         path: trackCoordinates,
         geodesic: true,
-        strokeColor: 'red',
+        strokeColor: '#66a0ff',
         strokeOpacity: 1.0,
         strokeWeight: 4
       });
