@@ -203,7 +203,7 @@ foreach ($file->tracks as $track){
 //Table complete--------------------------------------------
 	?>
 	<!-- <script src="../node_modules/chartjs/Chart.js"></script> -->
-	<canvas id="myChart" width="400" height="400"></canvas>
+	<canvas class="chart" id="myChart" width="400" height="400"></canvas>
 	<script>
 		var ctx = document.getElementById("myChart");
 		var myChart = new Chart(ctx, {

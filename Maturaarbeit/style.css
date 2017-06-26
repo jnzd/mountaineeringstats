@@ -150,3 +150,6 @@ table, th, td {
 th, td{
 	padding: 4px;
 }
+canvas.chart{
+	background: #222222;
+}
