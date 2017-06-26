@@ -19,7 +19,7 @@
 <!-- Google maps polyline meta -->
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 <!-- chartjs -->
-	<script src="../node_modules/chartjs/Chart.js"></script>
+	<script src="../node_modules/chartjs/chart.js"></script>
 </head>
 
 <?php
