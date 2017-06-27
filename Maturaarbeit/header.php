@@ -18,8 +18,6 @@
 	<link href="style.css" rel="stylesheet" type="text/css">
 <!-- Google maps polyline meta -->
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-<!-- chartjs -->
-	<script src="../node_modules/chartjs/chart.js"></script>
 </head>
 
 <?php
