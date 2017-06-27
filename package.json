@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jonasdegelo/matura#readme",
   "dependencies": {
-    "chartjs": "^0.3.24"
-  }
+    "chartjs": "^0.3.24",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {}
 }
