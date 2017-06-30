@@ -99,5 +99,6 @@ include 'db.php';
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">
 	</script>
 	</div>
+</div>
 </body>
 </html>

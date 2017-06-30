@@ -20,6 +20,7 @@
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 </head>
 
+<body>
 <?php
 	if(isset($_SESSION['id'])){
 //setzt die id fuer die folgende sql Variable
@@ -60,7 +61,7 @@
 		    </nav>
 		  </div>
 		</header>
-		<body>
+		<div id="content">
 		<?php
 	}else{
 		if($title != 'Hi' && $title != 'Willkommen'){

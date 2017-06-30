@@ -3,6 +3,8 @@ $title="Parser";
 include 'header.php';
 include 'db.php';
 ?>
+	<!-- close content, because the table is too wide -->
+	</div>
 	<h1>Parser</h1>
 	<?php
 	use phpGPX\phpGPX;
