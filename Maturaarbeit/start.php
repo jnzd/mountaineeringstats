@@ -5,9 +5,13 @@ if(isset($_SESSION['id'])){
 	header("location: main.php");
 }
 
-echo $_SESSION['message'];
 ?>
-
+<div id="error">
+	<?php
+		//$_SESSION['message'] = "test";
+		echo $_SESSION['message'];
+	?>
+</div>
 <div id="registration">
 	<h1>Registrieren</h1>
 	<!-- Registrierungsformular -->
