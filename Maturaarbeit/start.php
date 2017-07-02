@@ -5,7 +5,7 @@ if(isset($_SESSION['id'])){
 	header("location: main.php");
 }
 ?>
-	<h1>Registrieren</h1>
+	<h1 class="start">Registrieren</h1>
 	<div id="error">
 		<?php
 		if(isset($_SESSION['registrationError'])){
@@ -23,9 +23,9 @@ if(isset($_SESSION['id'])){
 		<input type="submit" name="registrieren" value="registrieren">
 	</form>
 </div>
-
+<br><br>
 <div id="login">
-	<h1>Anmelden</h1>
+	<h1 class="start">Anmelden</h1>
 	<div id="error">
 		<?php
 		if(isset($_SESSION['loginError'])){

@@ -7,10 +7,14 @@
 }#error{
 	text-align: center;
 	font-family: 'Alegreya', sans-serif;
+	padding: 4px;
 
 }
 h1{
 	font-family: 'Alegreya', sans-serif;
+}
+h1.start{
+	text-align: center;
 }
 h3{
 	margin-top:10px;
