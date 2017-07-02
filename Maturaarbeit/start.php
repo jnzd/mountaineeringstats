@@ -4,16 +4,16 @@ include 'header.php';
 if(isset($_SESSION['id'])){
 	header("location: main.php");
 }
-
 ?>
-<div id="error">
-	<?php
-		//$_SESSION['message'] = "test";
-		echo $_SESSION['message'];
-	?>
-</div>
-<div id="registration">
 	<h1>Registrieren</h1>
+	<div id="error">
+		<?php
+		if(isset($_SESSION['registrationError'])){
+			echo $_SESSION['registrationError'];
+		}
+		?>
+	</div>
+	<div id="registration">
 	<!-- Registrierungsformular -->
 	<form action= "includes/registration.inc.php" method="POST">
 		<input type="text" name="username" placeholder="Benutzername"><br>
@@ -26,11 +26,18 @@ if(isset($_SESSION['id'])){
 
 <div id="login">
 	<h1>Anmelden</h1>
+	<div id="error">
+		<?php
+		if(isset($_SESSION['loginError'])){
+			echo $_SESSION['loginError'];
+		}
+		?>
+	</div>
 	<!-- Anmeldeformular -->
 	<form action= "includes/login.inc.php" method="post">
 		<input type="email" name="email" placeholder="E-Mail"><br>
 		<input type="password" name="password" placeholder="Passwort"><br>
-		<input type="checkbox" name="remember" value="remmber"><label>Angemeldet bleiben</label><br>
+		<!--<input type="checkbox" name="remember" value="remmber"><label>Angemeldet bleiben</label><br>-->
 		<input type="submit" name="anmelden" value="anmelden"><br><br>
 	</form>
 </div>
