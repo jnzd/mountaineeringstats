@@ -4,7 +4,14 @@
 	padding: 0;
 	margin: 0;
 	border: 0;
-}#error{
+}
+#error{
+	text-align: center;
+	font-family: 'Alegreya', sans-serif;
+	padding: 4px;
+	font-size: 24px;
+}
+#uploadError{
 	text-align: center;
 	font-family: 'Alegreya', sans-serif;
 	padding: 4px;
@@ -16,7 +23,6 @@
     height: 100%;
     width: 100%;
 }
-
 .middle {
     display: table-cell;
     vertical-align: middle;

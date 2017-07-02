@@ -1,9 +1,13 @@
 <?php
 include 'header.php';
 include 'db.php';
-
-echo $_SESSION['message'];
 ?>
+
+<div id="uploadError">
+	<?php
+		echo $_SESSION['uploadError'];
+	?>
+</div>
 
 <h1>Hochladen</h1>
 <div id="upload">
