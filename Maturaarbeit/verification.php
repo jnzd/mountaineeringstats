@@ -8,12 +8,12 @@ if(isset($_SESSION['id'])){
 	$confirm_code = $row['confirm_code'];
 	$confirm_link = "/Maturaarbeit/includes/confirmed.inc.php?username=".$username."&code=".$confirm_code;
 	//$confirm_link = "/includes/confirmed.inc.php?username=".$username."&code=".$confirm_code;
-	
+
 	echo $_SESSION['message'];
 
 	echo "<h1>Verify</h1>";
 	echo "<p>Bestaetige deine E-Mail Adresse</p>";
-	echo "<a href=".$confirm_link.">"E-Mail Adresse bestätigen</a><br>";
+	echo "<a href=".$confirm_link.">E-Mail Adresse bestätigen</a><br>";
 }
 ?>
 

@@ -1,2 +1,1 @@
-ssh -f mounqytg@server163.web-hosting.com -p21098 -L 3306:localhost
-:3306 -N
+ssh -f mounqytg@server163.web-hosting.com -p21098 -L 3306:localhost:3306 -N
