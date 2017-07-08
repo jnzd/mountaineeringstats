@@ -30,6 +30,7 @@
 		$row = mysqli_fetch_assoc($result);
 		$username = $row['username'];
 		if($row['confirmed']==0 && $_SERVER['REQUEST_URI'] != '/Maturaarbeit/verification.php'){
+		//if($row['confirmed']==0 && $_SERVER['REQUEST_URI'] != '/verification.php'){
 			header("location: verification.php");
 		}
 		$profilepic = $row['pic_path'];

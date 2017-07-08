@@ -9,7 +9,7 @@ include 'db.php';
 	<?php
 	use phpGPX\phpGPX;
 	$gpx = new phpGPX();
-	$file = $gpx->load('activities/gpx/example2.gpx');
+	$file = $gpx->load('activities/gpx/afternoon_run.gpx');
 //file loaded-------------------------------------------------
 
 //stats as variables--------------

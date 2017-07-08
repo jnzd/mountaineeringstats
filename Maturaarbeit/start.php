@@ -2,7 +2,7 @@
 $title = "Hi";//Titel der Seite
 include 'header.php';
 if(isset($_SESSION['id'])){
-	header("location: main.php");
+	header("location: index.php");
 }
 ?>
 

@@ -51,6 +51,7 @@ if($_POST['password'] != $_POST['confirmpassword']){
 			$_SESSION['registrationError'] = "Dieser Benutzername wird bereits verwendet";
 			header("Location: ../start.php");
 		}
+#######################################################################################################################
 		//Code zur E-Mail Bestaetigung
 		$confirm_code = md5($username);
 		//speichert die entsprechenden Angaben in der Datenbank
@@ -73,6 +74,7 @@ if($_POST['password'] != $_POST['confirmpassword']){
 		$_SESSION['registrationError'] = "";
 		//Weiterleitung zur verification-Seite
 		header("Location: ../verification.php");
+#######################################################################################################################
 	}
 }
 ?>
