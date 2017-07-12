@@ -3,8 +3,15 @@ $title="Feed";
 include 'header.php';
 include 'db.php';
 ?>
+
+	<canvas class="chart" id="myChart" width="400" height="400"></canvas>
+	<script src="../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../node_modules/chartjs/chart.js"></script>
+	<script src="javascript/linechart.js"></script>
+
+	<!--
 	<h1>Feed</h1>
-	<!-- Ajax test -->
+	<!-- Ajax test ->
   <h1>XMLHttpRequest</h1>
 	<p>change</p>
 	<button type="button" onclick="loadDoc()">Change Content</button>
@@ -21,5 +28,6 @@ include 'db.php';
 		}
 	</script>
 	<br>
+	-->
 </body>
 </html>

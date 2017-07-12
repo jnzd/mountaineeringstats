@@ -204,9 +204,5 @@ foreach ($file->tracks as $track){
 	echo "<br /><br />";
 //Table complete--------------------------------------------
 	?>
-		<canvas class="chart" id="myChart" width="400" height="400"></canvas>
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../node_modules/chartjs/chart.js"></script>
-		<script src="javascript/linechart.js"></script>
 </body>
 </html>
