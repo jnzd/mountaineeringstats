@@ -1,0 +1,25 @@
+{
+  "name": "bin",
+  "version": "1.0.0",
+  "description": "n/a",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonasdegelo/matura.git"
+  },
+  "author": "Jonas Degelo",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jonasdegelo/matura/issues"
+  },
+  "homepage": "https://github.com/jonasdegelo/matura#readme",
+  "dependencies": {
+    "chart.js": "^2.6.0",
+    "chartjs": "^0.3.24",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {}
+}

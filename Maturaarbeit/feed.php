@@ -10,7 +10,6 @@ include 'db.php';
 
 	<!--
 	<h1>Feed</h1>
-	<!-- Ajax test ->
   <h1>XMLHttpRequest</h1>
 	<p>change</p>
 	<button type="button" onclick="loadDoc()">Change Content</button>
