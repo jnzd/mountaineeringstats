@@ -188,7 +188,6 @@ th, td{
 	padding: 4px;
 }
 canvas.chart{
-	background: #222222;
 
 	moz-user-select: none;
 	webkit-user-select: none;

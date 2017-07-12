@@ -5,8 +5,7 @@ include 'db.php';
 ?>
 
 	<canvas class="chart" id="myChart" width="400" height="400"></canvas>
-	<script src="../node_modules/jquery/dist/jquery.js"></script>
-	<script src="../node_modules/chartjs/chart.js"></script>
+	<script src="path/to/chartjs/dist/Chart.js"></script>
 	<script src="javascript/linechart.js"></script>
 
 	<!--
