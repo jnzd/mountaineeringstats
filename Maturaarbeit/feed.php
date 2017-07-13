@@ -4,13 +4,14 @@ include 'header.php';
 include 'db.php';
 ?>
 
+
 	<canvas class="chart" id="myChart" width="400" height="400"></canvas>
-	<script src="path/to/chartjs/dist/Chart.js"></script>
+	<script src="node_modules/chart.js/dist/Chart.js"></script>
 	<script src="javascript/linechart.js"></script>
 
 	<!--
 	<h1>Feed</h1>
-  <h1>XMLHttpRequest</h1>
+  	<h1>XMLHttpRequest</h1>
 	<p>change</p>
 	<button type="button" onclick="loadDoc()">Change Content</button>
 	<script>

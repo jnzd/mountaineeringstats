@@ -1,49 +1,19 @@
 <?php
-$title="Karte";
-include 'header.php';
-include 'db.php';
+	$title="Karte";
+	include 'header.php';
+	include 'db.php';
 ?>
-
 	<h1>Test</h1>
-
-	<?php
-		use phpGPX\phpGPX;
-		$gpx = new phpGPX();
-		$file = $gpx->load('activities/gpx/afternoon_run.gpx');
-
-		//define empty arrays
-		$latitude = [];//imprtant
-		$longitude = [];//imprtant
-		$elevation = [];//important
-		$time = [];//important
-		$difference = [];//maybe important
-		$distance = [];//important
-
-		foreach ($file->tracks as $track){
-			$segment = $track->segments;
-				foreach ($segment as $segment) {
-				$points = $segment->points;
-				//fill data arrays
-				foreach ($points as $points) {
-					array_push($latitude, $points->latitude);
-					array_push($longitude, $points->longitude);
-					array_push($elevation, $points->elevation);
-					array_push($time, $points->time);
-					array_push($difference, $points->difference);
-					array_push($distance, $points->distance);
-
-//php arrays to javascript arrays
-					$lat_js = json_encode($latitude);
-					$long_js = json_encode($longitude);
-				}
-			}
-		}
-	?>
+	<?php gpx('activities/gpx/afternoon_run.gpx'); ?>
   <div id="map">
   <script>
 //set javascript arrays
-		var lat = <?php echo $lat_js; ?>;
-		var lng = <?php echo $long_js; ?>;
+		var lat = <?php
+								echo $lat_js;
+							?>;
+		var lng = <?php
+								echo $long_js;
+							?>;
 
 		Array.prototype.max = function() {
 			return Math.max.apply(null, this);
@@ -67,14 +37,12 @@ include 'db.php';
 		console.log(centerLat);
 		console.log(centerLng);
 
-
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: {lat: centerLat, lng: centerLng},
         mapTypeId: 'roadmap'
       });
-
 //create array of latlng objects from arrays
 			var trackCoordinates = [];
 			var length = lat.length;
@@ -94,7 +62,6 @@ include 'db.php';
       track.setMap(map);
     }
   </script>
-
 	<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">
 	</script>

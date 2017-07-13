@@ -1,6 +1,11 @@
 <?php
 	include 'db.php';
 	include 'vendor/autoload.php';
+	/*foreach (glob("parsers/*.php") as $filename)
+	{
+	    include $filename;
+	}*/
+	include 'parse.gpx.php';
 //Starte session in auf jeder Seite
 	session_start();
 	if(!isset($title)){
