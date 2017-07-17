@@ -1,7 +1,6 @@
 <?php
-  //include '../vendor/autoload.php';
+  include 'vendor/autoload.php';
   function gpx($location){
-    use phpGPX\phpGPX;
     $gpx = new phpGPX();
     $file = $gpx->load('../'.$location);
 

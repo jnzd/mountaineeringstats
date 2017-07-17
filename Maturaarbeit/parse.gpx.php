@@ -1,8 +1,9 @@
 <?php
+  include 'vendor/autoload.php';
+  use phpGPX\phpGPX;
   function gpx($location){
-    use phpGPX\phpGPX;
     $gpx = new phpGPX();
-    $file = $gpx->load('../'.$location);
+    $file = $gpx->load($location);
 
     //define empty arrays
     $latitude = [];//imprtant
@@ -31,5 +32,7 @@
         }
       }
     }
+    return $lat_js;
+    //return $long_js;
   }
 ?>

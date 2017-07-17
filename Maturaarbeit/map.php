@@ -3,17 +3,46 @@
 	include 'header.php';
 	include 'db.php';
 ?>
-	<h1>Test</h1>
-	<?php gpx('activities/gpx/afternoon_run.gpx'); ?>
+	<?php
+	use phpGPX\phpGPX;
+	$gpx = new phpGPX();
+	$file = $gpx->load('activities/gpx/afternoon_run.gpx');
+
+	//define empty arrays
+	$latitude = [];//imprtant
+	$longitude = [];//imprtant
+	$elevation = [];//important
+	$time = [];//important
+	$difference = [];//maybe important
+	$distance = [];//important
+
+	foreach ($file->tracks as $track){
+		$segment = $track->segments;
+			foreach ($segment as $segment) {
+			$points = $segment->points;
+			//fill data arrays
+			foreach ($points as $points) {
+				array_push($latitude, $points->latitude);
+				array_push($longitude, $points->longitude);
+				array_push($elevation, $points->elevation);
+				array_push($time, $points->time);
+				array_push($difference, $points->difference);
+				array_push($distance, $points->distance);
+
+//php arrays to javascript arrays
+				$lat_js = json_encode($latitude);
+				$long_js = json_encode($longitude);
+			}
+		}
+	}
+	?>
   <div id="map">
+		<?php	//echo $lat_js; ?>
+		<?php //echo $long_js; ?>
   <script>
 //set javascript arrays
-		var lat = <?php
-								echo $lat_js;
-							?>;
-		var lng = <?php
-								echo $long_js;
-							?>;
+		var lat = <?php echo $lat_js; ?>;
+		var lng = <?php echo $long_js; ?>;
 
 		Array.prototype.max = function() {
 			return Math.max.apply(null, this);
