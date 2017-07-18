@@ -3,9 +3,12 @@ include '../header.php';
 include '../db.php';
 $_SESSION['uploadError'] = "";
 $user_id = $_SESSION['id'];
+$username = $_SESSION['username'];
 $sport = "";
 $path = "";
+$type = "";
 $content = "";
+$time = date("Y-m-d H:i:s");
 
 include '../db.php';
 	if($_POST['sport'] != "null"){
@@ -34,11 +37,10 @@ include '../db.php';
 
 	if(isset($_POST['upload']) && isset($_FILES['xml'])){
 		$extension = pathinfo($_FILES['xml']['name'], PATHINFO_EXTENSION);
-		echo $extension;//test
 
 		if($extension == "gpx"){
 			$type = "gpx";
-			$path='activities/gpx/'.$_FILES['xml']['name'];
+			$path='activities/gpx/'.$username.$time;
 			echo $path;//test
 
 			$path_inc = '../'.$path;
@@ -51,13 +53,11 @@ include '../db.php';
 		}
 	}else{
 		$_SESSION['uploadError']="Bitte lade eine Datei hoch.";
-		header("location: ../upload.php");
+		//header("location: ../upload.php");
 	}
-
-	$time = date("Y-m-d H:i:s");
 	$sql = "INSERT INTO activities (sport,type, user_id, time, path) VALUES ($sport','$type','$user_id','$time',$path)";
 	$result = $conn->query($sql);
 
 	$_SESSION['uploadError']="";
-	header("location: ../profile.php");
+	//header("location: ../profile.php");
 ?>
