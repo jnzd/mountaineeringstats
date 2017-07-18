@@ -5,7 +5,9 @@ include 'db.php';
 
 <div id="uploadError">
 	<?php
-		echo $_SESSION['uploadError'];
+		if(isset($_SESSION['uploadError'])){
+			echo $_SESSION['uploadError'];
+		}
 	?>
 </div>
 
@@ -17,8 +19,9 @@ include 'db.php';
 			<option value="jogging">Joggen</option>
 			<option value="hiking">Wandern</option>
 			<option value="biking">Biken</option>
-			<option value="skiing">Ski</option>
-			<option value="climbing">Klettern</option>
+			<option value="skiing">Skifahren</option>
+			<option value="skitour">Skitour</option>
+			<option value="hochtour">Hochtour</option>
 		</select><br>
 		<input type="hidden" name="MAX_FILE_SIZE" value="50000000"><br> <!-- Maximal 50 Megabyte -->
 		<input type="file" name="xml" id="xml" placeholder="Aktivitaeten-Datei"><br>

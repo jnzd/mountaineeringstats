@@ -1,6 +1,7 @@
 <?php
 include '../header.php';
 include '../db.php';
+$_SESSION['uploadError'] = "";
 $user_id = $_SESSION['id'];
 $sport = "";
 $path = "";
@@ -20,11 +21,14 @@ include '../db.php';
 		if($_POST['sport'] == "skiing"){
 			$sport="skiing";
 		}
-		if($_POST['sport'] == "climbing"){
-			$sport="climbing";
+		if($_POST['sport'] == "hochtour"){
+			$sport="hochtour";
+		}
+		if($_POST['sport'] == "skitour"){
+			$sport="skitour";
 		}
 	}else{
-		$_SESSION['uploadError']="Bitte waehle eine Sportart aus";
+		$_SESSION['uploadError']="Bitte wähle eine Sportart aus";
 		header("loacation: ../upload.php");
 	}
 
@@ -32,7 +36,8 @@ include '../db.php';
 		$extension = pathinfo($_FILES['xml']['name'], PATHINFO_EXTENSION);
 		echo $extension;//test
 
-		if($extension == "gpx"){//zu xml aendern!!!!!
+		if($extension == "gpx"){
+			$type = "gpx";
 			$path='activities/gpx/'.$_FILES['xml']['name'];
 			echo $path;//test
 
@@ -49,11 +54,10 @@ include '../db.php';
 		header("location: ../upload.php");
 	}
 
-
 	$time = date("Y-m-d H:i:s");
-	$sql = "INSERT INTO activities (path, sport, user_id, time) VALUES ('$path', '$sport', '$user_id', '$time')";
+	$sql = "INSERT INTO activities (sport,type, user_id, time, path) VALUES ($sport','$type','$user_id','$time',$path)";
 	$result = $conn->query($sql);
 
 	$_SESSION['uploadError']="";
-	//header("location: ../profile.php");
+	header("location: ../profile.php");
 ?>
