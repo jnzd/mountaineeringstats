@@ -9,6 +9,7 @@ $path = "";
 $type = "";
 $content = "";
 $time = date("Y-m-d H:i:s");
+$dateTime = date("Y-m-d-H-i-s");
 
 include '../db.php';
 	if($_POST['sport'] != "null"){
@@ -40,9 +41,7 @@ include '../db.php';
 
 		if($extension == "gpx"){
 			$type = "gpx";
-			$path='activities/gpx/'.$username.$time;
-			echo $path;//test
-
+			$path='activities/'.$type.'/'.$username.$dateTime.'.'.$extension;
 			$path_inc = '../'.$path;
 			copy($_FILES['xml']['tmp_name'], $path_inc);
 			$file = simplexml_load_file($path_inc);
@@ -53,11 +52,11 @@ include '../db.php';
 		}
 	}else{
 		$_SESSION['uploadError']="Bitte lade eine Datei hoch.";
-		//header("location: ../upload.php");
+		header("location: ../upload.php");
 	}
 	$sql = "INSERT INTO activities (sport,type, user_id, time, path) VALUES ($sport','$type','$user_id','$time',$path)";
 	$result = $conn->query($sql);
 
 	$_SESSION['uploadError']="";
-	//header("location: ../profile.php");
+	header("location: ../profile.php");
 ?>

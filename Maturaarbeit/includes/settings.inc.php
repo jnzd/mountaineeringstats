@@ -80,15 +80,15 @@ if($_POST['gender'] != "null"){
 	$changed = true;
 }
 if(is_uploaded_file($_FILES['pic']['tmp_name'])){
-	$pic_path='profilepics/'.$id.$_FILES['pic']['name'];//$id stellt sicher, dass alle Profilbilder einen einzigartigen namen haben
+	$extension = pathinfo($_FILES['pic']['name'], PATHINFO_EXTENSION);
+	$pic_path='profilepics/'.$username.$extension;
 	if(preg_match("!image!", $_FILES['pic']['type'])){
 		$pic_path_inc = '../'.$pic_path;
 		copy($_FILES['pic']['tmp_name'], $pic_path_inc);
 		if($pic_path_old != "profilepics/standard.png"){
-			echo "hey";
 			unlink('../'.$pic_path_old);
 			$changed = true;
-		}		
+		}
 	}else{
 		$_SESSION['message'] = "Datei ist kein Bild.";
 	}
