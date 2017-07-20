@@ -9,7 +9,7 @@ $path = "";
 $type = "";
 $content = "";
 $time = date("Y-m-d H:i:s");
-$dateTime = date("Y-m-d-H-i-s");
+$dateTime = date("Y-m-d-H-i-s");//for file names, because file names can't contain colons
 
 include '../db.php';
 	if($_POST['sport'] != "null"){
@@ -32,13 +32,13 @@ include '../db.php';
 			$sport="skitour";
 		}
 	}else{
-		$_SESSION['uploadError']="Bitte wähle eine Sportart aus";
-		header("loacation: ../upload.php");
+		$_SESSION['uploadError']="Keine Sportart ausgewählt";
+		header("Location: ../upload.php");
+		exit;
 	}
 
-	if(isset($_POST['upload']) && isset($_FILES['xml'])){
+	//if(isset($_POST['upload']) && isset($_FILES['xml'])){
 		$extension = pathinfo($_FILES['xml']['name'], PATHINFO_EXTENSION);
-
 		if($extension == "gpx"){
 			$type = "gpx";
 			$path='activities/'.$type.'/'.$username.$dateTime.'.'.$extension;
@@ -47,16 +47,24 @@ include '../db.php';
 			$file = simplexml_load_file($path_inc);
 			echo $file;
 		}else{
-			$_SESSION['uploadError']="Bitte lade eine XML Datei hoch.";
-			header("location: ../upload.php");
+			$_SESSION['uploadError']="Datei ist nicht im GPX Format oder keine Datei ausgewählt";
+			/*if(isset($_SESSION['uploadError'])){
+				$_SESSION['uploadError']="Datei ist nicht im GPX Format oder keine Datei ausgewählt";
+			}else{
+				$_SESSION['uploadError'].="<br />Datei ist nicht im GPX Format oder keine Datei ausgewählt";
+			}*/
+			echo $_SESSION['uploadError'];
+			header("Location: ../upload.php");
+			exit;
 		}
-	}else{
-		$_SESSION['uploadError']="Bitte lade eine Datei hoch.";
-		header("location: ../upload.php");
-	}
-	$sql = "INSERT INTO activities (sport,type, user_id, time, path) VALUES ($sport','$type','$user_id','$time',$path)";
-	$result = $conn->query($sql);
+	/*}else{
+		$_SESSION['uploadError']="Keine Datei ausgewählt";
+		echo $_SESSION['uploadError'];
+		header("Location: ../upload.php");
+	}*/
+	$sql = "INSERT INTO activities (sport,type,user_id,time,path) VALUES ($sport','$type','$user_id','$time',$path)";
+	$result = mysqli_query($conn, $sql);
 
 	$_SESSION['uploadError']="";
-	header("location: ../profile.php");
+	header("Location: ../profile.php");
 ?>

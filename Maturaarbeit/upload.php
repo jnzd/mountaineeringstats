@@ -2,7 +2,7 @@
 include 'header.php';
 include 'db.php';
 ?>
-
+<h1>GPX Upload</h1>
 <div id="uploadError">
 	<?php
 		if(isset($_SESSION['uploadError'])){
@@ -10,8 +10,6 @@ include 'db.php';
 		}
 	?>
 </div>
-
-<h1>Hochladen</h1>
 <div id="upload">
 	<form action="includes/upload.inc.php" method="post" enctype="multipart/form-data">
 		<select name="sport">

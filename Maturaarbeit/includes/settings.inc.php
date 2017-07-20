@@ -7,7 +7,7 @@ $sql = "SELECT * FROM users WHERE id='$id'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
-//Speichert die jetzigen Angaben aus der Datenbank
+//safes the current database entries
 $username = $row['username'];
 $email = $row['email'];
 $password = $row['password'];
@@ -26,7 +26,7 @@ $time = $row['dt_modified'];
 
 $changed = false;
 
-//if-Statements testen, ob die jeweiligen Angaben eingegeben wurden
+//if-Statements check wether certain changes were entered or not
 if(!empty($_POST['username'])){
 	$username = $conn->escape_string ($_POST['username']);
 	$changed = true;
@@ -97,13 +97,9 @@ if($changed){
 	$time = date("Y-m-d H:i:s");
 }
 
-
-//speichert die geaenderten Angaben in der Datenbank
+//writes changed user details into database
 $sql = "UPDATE users SET username='$username', email='$email', password='$password', first='$first', last='$last', ort='$ort', plz='$plz', street='$street', strnr='$strnr',  pic_path = '$pic_path', gender='$gender', dt_modified='$time' WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
-
-//zum Testen
-echo "<a href='../profile.php'>profile</a>";
 
 header("Location: ../profile.php");
 ?>
