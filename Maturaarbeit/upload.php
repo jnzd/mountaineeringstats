@@ -1,4 +1,5 @@
 <?php
+$title="GPX Upload";
 include 'header.php';
 include 'db.php';
 ?>

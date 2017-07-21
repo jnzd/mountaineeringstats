@@ -5,11 +5,11 @@ $_SESSION['uploadError'] = "";
 $user_id = $_SESSION['id'];
 $username = $_SESSION['username'];
 $sport = "";
-$path = "";
+$actPath = "";
 $type = "";
 $content = "";
-$time = date("Y-m-d H:i:s");
-$dateTime = date("Y-m-d-H-i-s");//for file names, because file names can't contain colons
+$actTime = date("Y-m-d H:i:s");
+$dateTime = date("Y-m-d-H-i-s");//for file names, because file names can't contain :
 
 include '../db.php';
 	if($_POST['sport'] != "null"){
@@ -41,10 +41,10 @@ include '../db.php';
 		$extension = pathinfo($_FILES['xml']['name'], PATHINFO_EXTENSION);
 		if($extension == "gpx"){
 			$type = "gpx";
-			$path='activities/'.$type.'/'.$username.$dateTime.'.'.$extension;
-			$path_inc = '../'.$path;
-			copy($_FILES['xml']['tmp_name'], $path_inc);
-			$file = simplexml_load_file($path_inc);
+			$actPath='activities/'.$type.'/'.$username.$dateTime.'.'.$extension;
+			$actPath_inc = '../'.$actPath;
+			copy($_FILES['xml']['tmp_name'], $actPath_inc);
+			$file = simplexml_load_file($actPath_inc);
 			echo $file;
 		}else{
 			$_SESSION['uploadError']="Datei ist nicht im GPX Format oder keine Datei ausgewählt";
@@ -62,7 +62,7 @@ include '../db.php';
 		echo $_SESSION['uploadError'];
 		header("Location: ../upload.php");
 	}*/
-	$sql = "INSERT INTO activities (sport,type,user_id,time,path) VALUES ($sport','$type','$user_id','$time',$path)";
+	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath) VALUES ('$sport', '$type', '$user_id', '$actTime', '$actPath')";
 	$result = mysqli_query($conn, $sql);
 
 	$_SESSION['uploadError']="";
