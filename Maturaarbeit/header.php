@@ -23,17 +23,20 @@
 
 <body>
 <?php
-	if(isset($_SESSION['id'])){
+	if(isset($_SESSION['id']){
 //setzt die id fuer die folgende sql Variable
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM users WHERE id='$id'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		$username = $row['username'];
-		if($row['confirmed']==0 && ($_SERVER['REQUEST_URI'] != '/verification.php' || $_SERVER['REQUEST_URI'] != '/confirmed.php'){
+		if($row['confirmed']==0 && $_SERVER['REQUEST_URI'] != '/verification.php'){
 		//if($row['confirmed']==0 && $_SERVER['REQUEST_URI'] != '/verification.php'){
-			header("location: verification.php");
-			exit;
+			if(substr($_SERVER['REQUEST_URI'],0,14) == '/confirmed.php'){
+				header('Location: includes/confirmed.inc.php');
+			}else{
+				header("Location: verification.php");
+			}
 		}
 		$profilepic = $row['pic_path'];
 //Header anzeigen
