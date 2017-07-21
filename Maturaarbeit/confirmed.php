@@ -1,5 +1,5 @@
 <?php
-$title = "Erfolgreich registriert";
+//$title = "Erfolgreich registriert";
 include 'header.php';
 ?>
 

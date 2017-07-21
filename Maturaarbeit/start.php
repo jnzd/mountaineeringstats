@@ -23,7 +23,7 @@ if(isset($_SESSION['id'])){
 					<input class="start" type="text" name="username" placeholder="Benutzername"><br>
 					<input class="start" type="email" name="email" placeholder="E-Mail"><br>
 					<input class="start" type="password" name="password" placeholder="Passwort"><br>
-					<input class="start" type="password" name="confirmpassword" placeholder="Passwort bestaetigen"><br>
+					<input class="start" type="password" name="confirmpassword" placeholder="Passwort bestätigen"><br>
 					<input class="start" type="submit" name="registrieren" value="registrieren">
 				</form>
 			</div>

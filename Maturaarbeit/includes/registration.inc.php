@@ -58,10 +58,10 @@ if($_POST['password'] != $_POST['confirmpassword']){
 		$sql = "INSERT INTO users (username, email, password, confirm_code)	VALUES ('$username', '$email', '$password', '$confirm_code')";
 		$result = mysqli_query($conn, $sql);
 		//E-Mail Nachricht
-		$message = "Bitte bestaetige deine E-Mailadresse mit dem folgenden link: mountaineeringstats.com/confirmed.php?username = $username&code=$confirm_code";
+		$message = "Bitte bestaetige deine E-Mailadresse mit dem folgenden link: https://mountaineeringstats.com/includes/confirmed.inc.php?username=".$username."&code=".$confirm_code;
 
 		//versendet E-Mail
-		//mail($email,"E-Mail-Bestaetigung", $registrationError_email);
+		mail($email,"E-Mail-Bestaetigung", $message);
 		$sql = "SELECT * FROM users WHERE email='$email'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
