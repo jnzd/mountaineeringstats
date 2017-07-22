@@ -1,9 +1,7 @@
 <?php
 $title = "Willkommen";
 include 'header.php';
-include 'includes/confirmed.inc.php';
 ?>
-
 <h1>E-Mail Adresse bestätigt</h1>
 
 <div class="outer">

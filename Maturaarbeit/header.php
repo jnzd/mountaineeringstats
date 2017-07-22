@@ -38,7 +38,6 @@
 			$time = date("Y-m-d H:i:s");
 			$sql = "UPDATE users SET confirmed='1', dt_created= '$time' WHERE username = '$username'";
 			$result = $conn->query($sql);
-			echo "success";
 			header("Location: confirmed.php");
 		}
 	}elseif(isset($_SESSION['id'])){
