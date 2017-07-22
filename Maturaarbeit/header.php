@@ -19,7 +19,29 @@
 
 <body>
 <?php
-	if(isset($_SESSION['id'])){
+//confirmation link
+	if(substr($_SERVER['REQUEST_URI'],0,14) == '/confirmed.php'){
+		$username = $_GET['username'];
+		$confirm_code = $_GET['code'];
+		$sql = "SELECT * FROM users WHERE username='$username' AND confirm_code='$confirm_code'";
+		$result = $conn->query($sql);
+//Confirmation link invalid
+		if(!$row = $result->fetch_assoc()){
+			echo $sql;
+			echo "<br />";
+			echo $username;
+			echo "<br />";
+			echo $confirm_code;
+			header("Location: index.php");
+//confirmation link valid
+		}else{
+			$time = date("Y-m-d H:i:s");
+			$sql = "UPDATE users SET confirmed='1', dt_created= '$time' WHERE username = '$username'";
+			$result = $conn->query($sql);
+			echo "success";
+			header("Location: confirmed.php");
+		}
+	}elseif(isset($_SESSION['id'])){
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM users WHERE id='$id'";
 		$result = mysqli_query($conn, $sql);
@@ -27,9 +49,7 @@
 		$username = $row['username'];
 		if($row['confirmed']==0 && $_SERVER['REQUEST_URI']!='/verification.php'){
 			header("Location: verification.php");
-			/*if(substr($_SERVER['REQUEST_URI'],0,14) == '/confirmed.php'){
-				header('Location: includes/confirmed.inc.php');
-			}else{
+			/*else{
 				header("Location: verification.php");
 			}*/
 		}

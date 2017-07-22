@@ -11,6 +11,7 @@ if(isset($_SESSION['id'])){
 
 	echo $_SESSION['message'];
 	echo "<p>Bestaetige deine E-Mail Adresse</p>";
+	echo "<a href="">E-Mail erneut senden</a><br>";
 	echo "<a href=".$confirm_link.">E-Mail Adresse bestätigen</a><br>";
 }
 ?>
