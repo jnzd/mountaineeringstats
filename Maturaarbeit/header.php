@@ -5,11 +5,7 @@
 //Starte session in auf jeder Seite
 	session_start();
 	if(!isset($title)){
-		$title='Home';
-	}
-//Fehlermeldungen leeren
-	if(!isset($_SESSION['message'])){
-		$_SESSION['message'] = "";
+		$title='Mountaineeringstats';
 	}
 ?>
 <!DOCTYPE html>
@@ -23,20 +19,19 @@
 
 <body>
 <?php
-	if(isset($_SESSION['id']){
-//setzt die id fuer die folgende sql Variable
+	if(isset($_SESSION['id'])){
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM users WHERE id='$id'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		$username = $row['username'];
-		if($row['confirmed']==0 && $_SERVER['REQUEST_URI'] != '/verification.php'){
-		//if($row['confirmed']==0 && $_SERVER['REQUEST_URI'] != '/verification.php'){
-			if(substr($_SERVER['REQUEST_URI'],0,14) == '/confirmed.php'){
+		if($row['confirmed']==0 && $_SERVER['REQUEST_URI']!='/verification.php'){
+			header("Location: verification.php");
+			/*if(substr($_SERVER['REQUEST_URI'],0,14) == '/confirmed.php'){
 				header('Location: includes/confirmed.inc.php');
 			}else{
 				header("Location: verification.php");
-			}
+			}*/
 		}
 		$profilepic = $row['pic_path'];
 //Header anzeigen
