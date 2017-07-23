@@ -9,7 +9,7 @@ $id = $_SESSION['id'];
 	<img class="circle" src="<?php echo $profilepic;?>" height="120" width="120">
 
 	<h1>
-	<?php 
+	<?php
 		$sql = "SELECT * FROM users WHERE id='$id'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
@@ -19,17 +19,17 @@ $id = $_SESSION['id'];
 	<a href='settings.php'><img src="icons/gear.png" height="24" width="24"></a>
 	<a href='profileinfo.php'><img src="icons/info.png" height="24" width="24"></a>
 
-	
+
 	<div id="bio">
-	
+
 	</div>
-	
+
 </div>
 
 <div id="feed">
-
-
-
+	<?php
+		include "includes/profilefeed.inc.php";
+	?>
 </div>
 
 </body>
