@@ -28,7 +28,7 @@ $id = $_SESSION['id'];
 
 <div id="feed">
 	<?php
-		include "includes/profilefeed.inc.php";
+		include 'includes/profilefeed.inc.php';
 	?>
 </div>
 
