@@ -9,10 +9,8 @@ if(isset($_SESSION['id'])){
 	$confirm_link = "/includes/confirmed.inc.php?username=".$username."&code=".$confirm_code;
 	//$confirm_link = "/includes/confirmed.inc.php?username=".$username."&code=".$confirm_code;
 
-	echo $_SESSION['message'];
-	echo "<p>Bestaetige deine E-Mail Adresse</p>";
-	echo "<a href="">E-Mail erneut senden</a><br>";
-	echo "<a href=".$confirm_link.">E-Mail Adresse bestätigen</a><br>";
+	echo "<p>Bestätige deine E-Mail Adresse</p>";
+	echo "<a href='includes/confirmed.inc.php'>E-Mail erneut senden</a><br>";
 }
 ?>
 
