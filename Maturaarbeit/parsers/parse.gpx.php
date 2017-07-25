@@ -25,12 +25,13 @@
           array_push($elevation, $points->elevation);
           array_push($time, $points->time);
           array_push($difference, $points->difference);
-          array_push($distance, $points->distance);
-
-  //php arrays to javascript arrays
-          $lat_js = json_encode($latitude);
-          $long_js = json_encode($longitude);
         }
+        array_push($distance, $points->distance);
+        //php arrays to javascript arrays
+        $lat_js = json_encode($latitude);
+        $long_js = json_encode($longitude);
+        $elvation_js = json_encode($elevation);
+        $distance_js = json_encode($distance);
         echo $lat_js;
         echo $long_js;
       }
