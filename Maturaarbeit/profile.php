@@ -3,8 +3,6 @@ $title="Profil";
 include 'header.php';
 $id = $_SESSION['id'];
 ?>
-
-
 <div id="profileheader">
 	<img class="circle" src="<?php echo $profilepic;?>" height="120" width="120">
 
@@ -18,7 +16,6 @@ $id = $_SESSION['id'];
 	</h1>
 	<a href='settings.php'><img src="icons/gear.png" height="24" width="24"></a>
 	<a href='profileinfo.php'><img src="icons/info.png" height="24" width="24"></a>
-
 
 	<div id="bio">
 

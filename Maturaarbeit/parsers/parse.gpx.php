@@ -32,9 +32,13 @@
         $long_js = json_encode($longitude);
         $elvation_js = json_encode($elevation);
         $distance_js = json_encode($distance);
-        echo $lat_js;
-        echo $long_js;
+        //echo $lat_js;
+        //echo $long_js;
+        include 'includes/map.inc.php';
       }
     }
   }
 ?>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">
+</script>

@@ -19,14 +19,17 @@
     $result->free();
 
     foreach($rows as $row) {
+      $actid = $row['id'];
+      $path = $row['path'];
       gpx($row['actPath']);
       foreach($row as $activity){
         echo $activity."<br />";
       }
+      echo $actid;
+      echo "<a href='includes/deleteAct.inc.php'>Aktivität löschen</a>";
       echo "<br />";
     }
   }else{
     echo "not logged in";
   }
-
 ?>
