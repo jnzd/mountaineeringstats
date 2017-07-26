@@ -26,6 +26,7 @@
         echo $activity."<br />";
       }
       echo $actid;
+      echo "<br />";
       echo "<a href='includes/deleteAct.inc.php'>Aktivität löschen</a>";
       echo "<br />";
     }
