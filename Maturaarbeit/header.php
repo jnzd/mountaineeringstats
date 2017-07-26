@@ -70,9 +70,6 @@
 		      <a href="#" id="menu-icon"></a>
 		      <ul>
 <!-- Links im Header -->
-		        <li><a href="map.php">KARTE</a></li>
-		        <li><a href="parse.php">PARSER</a></li>
-		        <li><a href="feed.php">FEED</a></li>
 		        <li><a href="index.php">STARTSEITE</a></li>
 		        <li><a href="upload.php">HOCHLADEN</a></li>
 		        <?php echo "<li><a href='profile.php'><img class='circle' src=".$profilepic." height='24' width='24'></a></li>"?>
