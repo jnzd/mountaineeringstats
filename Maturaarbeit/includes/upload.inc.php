@@ -10,7 +10,6 @@ $type = "";
 $content = "";
 $actTime = date("Y-m-d H:i:s");
 $dateTime = date("Y-m-d-H-i-s");//for file names, because file names can't contain :
-
 include '../db.php';
 	if($_POST['sport'] != "null"){
 		if($_POST['sport'] == "jogging"){

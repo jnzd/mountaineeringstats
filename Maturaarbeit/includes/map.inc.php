@@ -5,7 +5,6 @@
 //set javascript arrays
   var lat = <?php echo $lat_js; ?>;
   var lng = <?php echo $long_js; ?>;
-
   Array.prototype.max = function() {
     return Math.max.apply(null, this);
   };

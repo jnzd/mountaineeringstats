@@ -7,7 +7,7 @@ $sql = "SELECT * FROM users WHERE id='$id'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
-//safes the current database entries
+//stores the current database entries
 $username = $row['username'];
 $email = $row['email'];
 $password = $row['password'];

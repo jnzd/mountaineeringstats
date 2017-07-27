@@ -2,8 +2,6 @@
 <?php
   //session_start();
   if(isset($_SESSION['id'])){
-    //include '../db.php';
-    //include '../parsers/parse.gpx.php';
     include 'parsers/parse.gpx.php';
     $id = $_SESSION['id'];
     function resultToArray($result) {

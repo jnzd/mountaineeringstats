@@ -17,7 +17,7 @@ if(isset($_SESSION['id'])){
 	$sql = "SELECT * FROM users WHERE email='$email'";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
-//Weiterleitung zur verification-Seite
+//Weiterleitung zu verification.php
 	header("Location: ../verification.php");
 }else{
 	header("Location: ../index.php");

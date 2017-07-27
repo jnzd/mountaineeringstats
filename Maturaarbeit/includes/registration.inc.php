@@ -34,7 +34,7 @@ if($_POST['password'] != $_POST['confirmpassword']){
 }else{
 	$query = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'");
 	if(mysqli_num_rows($query)>0){//email
-		//if username and email are used-----------------------------------------------------------------------------------
+		//if username and email are used-----------------------------------------------------------------------------------------
 		$query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username'");
 		if(mysqli_num_rows($query)>0){//username
 			$_SESSION['registrationError'] = "Dieser Benutzername und diese E-Mail werden bereits verewendet";
