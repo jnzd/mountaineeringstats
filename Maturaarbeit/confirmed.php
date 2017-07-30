@@ -1,7 +1,14 @@
 <?php
 $title = "Willkommen";
-include 'header.php';
+//include 'header.php';
 ?>
+<html>
+<head>
+	<title>E-Mail Adresse wurde bestätigt</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
 <h1>E-Mail Adresse bestätigt</h1>
 
 <div class="outer">
@@ -27,8 +34,6 @@ include 'header.php';
     </div>
   </div>
 </div>
-
-<a href="https://www.Mountaineeringstats.com">Startseite</a>
 
 </body>
 </html>

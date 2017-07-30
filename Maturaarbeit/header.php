@@ -20,7 +20,7 @@
 <body>
 <?php
 //confirmation link
-	if(substr($_SERVER['REQUEST_URI'],0,14) == '/confirmed.php'){
+	/*if(substr($_SERVER['REQUEST_URI'],0,14) == '/confirmed.php'){
 		$username = $_GET['username'];
 		$confirm_code = $_GET['code'];
 		$sql = "SELECT * FROM users WHERE username='$username' AND confirm_code='$confirm_code'";
@@ -41,7 +41,7 @@
 			header("Location: confirmed.php");
 			exit;
 		}
-	}elseif(isset($_SESSION['id'])){
+	}else*/if(isset($_SESSION['id'])){
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM users WHERE id='$id'";
 		$result = mysqli_query($conn, $sql);
