@@ -2,7 +2,7 @@
 <?php
   //session_start();
   if(isset($_SESSION['id'])){
-    include 'parsers/parse.gpx.php';
+    include 'parsers/parse.preview.gpx.php';
     $id = $_SESSION['id'];
     function resultToArray($result) {
       $rows = array();
