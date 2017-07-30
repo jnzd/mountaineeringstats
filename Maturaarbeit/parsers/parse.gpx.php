@@ -34,7 +34,7 @@
         $distance_js = json_encode($distance);
         //echo $lat_js;
         //echo $long_js;
-        include 'includes/map.inc.php';
+        //include 'includes/map.inc.php';
       }
     }
   }

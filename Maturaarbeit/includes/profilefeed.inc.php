@@ -17,14 +17,15 @@
     $result->free();
 
     foreach($rows as $row) {
+      $title = $row['title'];
       $actid = $row['id'];
+      $sport = $row['sport'];
       $path = $row['path'];
+      $type = $row['type'];
+      $actTime = $row['actTime'];
+      $description = $row['description'];
+      echo "<a href=''>".$title."</a><br />";
       gpx($row['actPath']);
-      foreach($row as $activity){
-        echo $activity."<br />";
-      }
-      echo $actid;
-      echo "<br />";
       echo "<a href='includes/deleteAct.inc.php'>Aktivität löschen</a>";
       echo "<br />";
     }
