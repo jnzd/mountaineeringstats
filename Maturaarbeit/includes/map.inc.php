@@ -1,10 +1,9 @@
-<div id="map<?php echo $actid; ?>" class"mapPreview">
-  <?php	//echo $lat_js; ?>
-  <?php //echo $long_js; ?>
+<div id="map">
 <script>
 //set javascript arrays
   var lat = <?php echo $lat_js; ?>;
   var lng = <?php echo $long_js; ?>;
+
   Array.prototype.max = function() {
     return Math.max.apply(null, this);
   };
@@ -28,7 +27,7 @@
   console.log(centerLng);
 
   function initMap() {
-    var map = new google.maps.Map(document.getElementById("map<?php echo $actid; ?>"), {
+    var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 12,
       center: {lat: centerLat, lng: centerLng},
       mapTypeId: 'roadmap'
@@ -52,8 +51,4 @@
     track.setMap(map);
   }
 </script>
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">
-</script>
-</div>
 </div>

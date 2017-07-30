@@ -4,7 +4,7 @@ include 'header.php';
 $id = $_SESSION['id'];
 ?>
 <div id="profileheader">
-	<img class="circle" src="<?php echo $profilepic;?>" height="120" width="120">
+	<a href="profile.php"><img class="circle" src="<?php echo $profilepic;?>" height="120" width="120"></a>
 
 	<h1>
 	<?php

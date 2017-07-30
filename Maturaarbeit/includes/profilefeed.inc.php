@@ -20,7 +20,7 @@
       $title = $row['title'];
       $actid = $row['id'];
       $sport = $row['sport'];
-      $path = $row['path'];
+      $path = $row['actPath'];
       $type = $row['type'];
       $actTime = $row['actTime'];
       $filename = $row['filename'];
