@@ -1,6 +1,6 @@
 <?php
 $title = "Willkommen";
-//include 'header.php';
+include '../db.php';
 $username = $_GET['username'];
 $confirm_code = $_GET['code'];
 $sql = "SELECT * FROM users WHERE username='$username' AND confirm_code='$confirm_code'";
@@ -19,6 +19,6 @@ if(!$row = $result->fetch_assoc()){
   $sql = "UPDATE users SET confirmed='1', dt_created= '$time' WHERE username = '$username'";
   $result = $conn->query($sql);
   session_start();
-  header("Location: confirmed.php");
+  header("Location: ../confirmed.php");
 }
 ?>
