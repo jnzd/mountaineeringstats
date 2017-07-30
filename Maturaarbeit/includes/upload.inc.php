@@ -46,7 +46,7 @@ include '../db.php';
 			if(isset($_POST['title'])){
 				$title=$_POST['title'];
 				if(isset($_POST['description'])){
-					$description="$_POST['description']";
+					$description=$_POST['description'];
 				}else{
 					$description="";
 				}
