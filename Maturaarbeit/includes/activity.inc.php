@@ -1,23 +1,22 @@
 <?php
-include '../db.php';
-$username = $_GET['id'];
-$confirm_code = $_GET['code'];
-$sql = "SELECT * FROM users WHERE username='$username' AND confirm_code='$confirm_code'";
-$result = $conn->query($sql);
-//Confirmation link invalid
-if(!$row = $result->fetch_assoc()){
-  echo $sql;
-  echo "<br />";
-  echo $username;
-  echo "<br />";
-  echo $confirm_code;
-  header("Location: index.php");
-//confirmation link valid
-}else{
-  $time = date("Y-m-d H:i:s");
-  $sql = "UPDATE users SET confirmed='1', dt_created= '$time' WHERE username = '$username'";
-  $result = $conn->query($sql);
-  session_start();
-  header("Location: ../confirmed.php");
-}
+include 'db.php';
+include 'parsers/parse.gpx.php';
+session_start();
+$name = $_GET['name'];
+$sql = "SELECT * FROM activities WHERE filename='$name'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+$title = $row['title'];
+$actid = $row['id'];
+$sport = $row['sport'];
+$path = $row['path'];
+$type = $row['type'];
+$actTime = $row['actTime'];
+$description = $row['description'];
+echo "<h1>".$title."</h1><br />";
+echo "<p>".$description."</p><br />";
+gpx($row['actPath']);
+echo "<a href='includes/deleteAct.inc.php'>Aktivität löschen</a>";
+echo "<br />";
 ?>

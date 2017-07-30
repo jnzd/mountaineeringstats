@@ -23,8 +23,9 @@
       $path = $row['path'];
       $type = $row['type'];
       $actTime = $row['actTime'];
+      $filename = $row['filename'];
       $description = $row['description'];
-      echo "<h1><a clas='actTitle' href='../activity.php?id=".$filename."'>".$title."</a></h1><br />";
+      echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1><br />";
       echo "<p>".$description."</p><br />";
       gpx($row['actPath']);
       echo "<a href='includes/deleteAct.inc.php'>Aktivität löschen</a>";
