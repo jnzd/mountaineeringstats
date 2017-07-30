@@ -40,6 +40,7 @@ include '../db.php';
 		if($extension == "gpx"){
 			$type = "gpx";
 			$actPath='activities/'.$type.'/'.$username.$dateTime.'.'.$extension;
+			$filename='$username.$dateTime.'.'.$extension;'
 			$actPath_inc = '../'.$actPath;
 			copy($_FILES['xml']['tmp_name'], $actPath_inc);
 			$file = simplexml_load_file($actPath_inc);
@@ -61,7 +62,7 @@ include '../db.php';
 			header("Location: ../upload.php");
 			exit;
 		}
-	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description) VALUES ('$sport', '$type', '$user_id', '$actTime', '$actPath', '$title', '$description')";
+	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description, filename) VALUES ('$sport', '$type', '$user_id', '$actTime', '$actPath', '$title', '$description', '$filename')";
 	$result = mysqli_query($conn, $sql);
 
 	$_SESSION['uploadError']="";

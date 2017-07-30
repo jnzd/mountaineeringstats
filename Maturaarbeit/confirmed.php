@@ -9,12 +9,11 @@ $title = "Willkommen";
 </head>
 
 <body>
-<h1>E-Mail Adresse bestätigt</h1>
-
 <div class="outer">
   <div class="middle">
     <div class="inner">
 			<div id="login">
+        <h1 class="start">E-Mail Adresse bestätigt</h1><br>
 				<h1 class="start">Anmelden</h1>
 				<div id="error">
 					<?php

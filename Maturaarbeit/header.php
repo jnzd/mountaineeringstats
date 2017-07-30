@@ -18,7 +18,8 @@
 </head>
 
 <body>
-<?phpif(isset($_SESSION['id'])){
+<?php
+		if(isset($_SESSION['id'])){
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM users WHERE id='$id'";
 		$result = mysqli_query($conn, $sql);
