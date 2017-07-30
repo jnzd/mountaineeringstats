@@ -1,5 +1,4 @@
 <?php
-$title = "Willkommen";
 include '../db.php';
 $username = $_GET['username'];
 $confirm_code = $_GET['code'];
