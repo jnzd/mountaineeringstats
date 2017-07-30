@@ -35,7 +35,6 @@ include '../db.php';
 		header("Location: ../upload.php");
 		exit;
 	}
-
 	//if(isset($_POST['upload']) && isset($_FILES['xml'])){
 		$extension = pathinfo($_FILES['xml']['name'], PATHINFO_EXTENSION);
 		if($extension == "gpx"){
@@ -44,24 +43,25 @@ include '../db.php';
 			$actPath_inc = '../'.$actPath;
 			copy($_FILES['xml']['tmp_name'], $actPath_inc);
 			$file = simplexml_load_file($actPath_inc);
-			echo $file;
+			if(isset($_POST['title'])){
+				$title=$_POST['title'];
+				if(isset($_POST['description'])){
+					$description="$_POST['description']";
+				}else{
+					$description="";
+				}
+			}else{
+				$_SESSION['uploadError']="Kein Titel gewählt";
+				header("Location: ../upload.php");
+				exit;
+			}
 		}else{
 			$_SESSION['uploadError']="Datei ist nicht im GPX Format oder keine Datei ausgewählt";
-			/*if(isset($_SESSION['uploadError'])){
-				$_SESSION['uploadError']="Datei ist nicht im GPX Format oder keine Datei ausgewählt";
-			}else{
-				$_SESSION['uploadError'].="<br />Datei ist nicht im GPX Format oder keine Datei ausgewählt";
-			}*/
 			echo $_SESSION['uploadError'];
 			header("Location: ../upload.php");
 			exit;
 		}
-	/*}else{
-		$_SESSION['uploadError']="Keine Datei ausgewählt";
-		echo $_SESSION['uploadError'];
-		header("Location: ../upload.php");
-	}*/
-	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath) VALUES ('$sport', '$type', '$user_id', '$actTime', '$actPath')";
+	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description) VALUES ('$sport', '$type', '$user_id', '$actTime', '$actPath', '$title', '$description')";
 	$result = mysqli_query($conn, $sql);
 
 	$_SESSION['uploadError']="";
