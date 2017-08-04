@@ -39,6 +39,6 @@
     }
   }
 ?>
-<script async defer
+<!--<script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">
-</script>
+</script>-->

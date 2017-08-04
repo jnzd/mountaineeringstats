@@ -1,4 +1,3 @@
-<div id="map">
 <script>
 //set javascript arrays
   var lat = <?php echo $lat_js; ?>;
@@ -51,4 +50,3 @@
     track.setMap(map);
   }
 </script>
-</div>

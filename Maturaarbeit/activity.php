@@ -27,6 +27,11 @@ $id = $_SESSION['id'];
   <?php
     include 'includes/activity.inc.php';
   ?>
+	<div id="map"></div>
+	<?php
+	echo "<a href='includes/deleteAct.inc.php'>Aktivität löschen</a>";
+	echo "<br />";
+	?>
 </div>
 
 </body>
