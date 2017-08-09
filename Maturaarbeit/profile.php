@@ -20,7 +20,6 @@ $id = $_SESSION['id'];
 	<div id="bio">
 
 	</div>
-
 </div>
 
 <div id="feed">
