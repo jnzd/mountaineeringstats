@@ -1,13 +1,12 @@
 <?php
-  $publicUser = $_SESSION['publicUser'];
   $sql = "SELECT * FROM users WHERE username='$publicUser'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
   $title=$row['username'];
   $id = $row['id'];
 ?>
-<img class="circle" src="<?php echo $row['pic_path'];?>" height="120" width="120">
 <div id="profileheader">
+  <img class="circle" src="<?php echo $row['pic_path'];?>" height="120" width="120">
 	<h1>
 	<?php
 		echo $publicUser;
@@ -43,11 +42,9 @@
         $actTime = $row['actTime'];
         $filename = $row['filename'];
         $description = $row['description'];
-        echo "<h1><a class='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1><br />";
+        echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."'>".$title."</a></h1><br />";
         echo "<p>".$description."</p><br />";
         gpx($row['actPath']);
-        echo "<a href='includes/deleteAct.inc.php'>Aktivität löschen</a>";
-        echo "<br />";
       }
     }else{
       echo "<h2>Dieser User hat noch keine Aktivitäten hochgeladen</h2>";
