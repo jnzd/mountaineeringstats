@@ -42,12 +42,12 @@
         $actTime = $row['actTime'];
         $filename = $row['filename'];
         $description = $row['description'];
-        echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."'>".$title."</a></h1><br />";
+        echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$username."'>".$title."</a></h1><br />";
         echo "<p>".$description."</p><br />";
         gpx($row['actPath']);
       }
     }else{
-      echo "<h2>Dieser User hat noch keine Aktivitäten hochgeladen</h2>";
+      echo "<br /><h2>Dieser User hat noch keine Aktivitäten hochgeladen</h2>";
     }
   ?>
   </div>

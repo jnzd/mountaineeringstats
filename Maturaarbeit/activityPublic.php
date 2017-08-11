@@ -1,18 +1,18 @@
 <?php
+$username=$_GET['username'];
 	//$title="";
 	include 'header.php';
-  $publicUser = $_SESSION['publicUser'];
-  $sql = "SELECT * FROM users WHERE username='$publicUser'";
+  $sql = "SELECT * FROM users WHERE username='$username'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
   $title=$row['username'];
   $id = $row['id'];
 ?>
 <div id="profileheader">
-  <img class="circle" src="<?php echo $row['pic_path'];?>" height="120" width="120">
+  <a href="<?php echo $username;?>"><img class="circle" src="<?php echo $row['pic_path'];?>" height="120" width="120"></a>
 	<h1>
 	<?php
-		echo $publicUser;
+		echo $username;
 	?>
 	</h1>
 	<div id="bio">
