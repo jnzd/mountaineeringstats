@@ -4,6 +4,9 @@
   $row = $result->fetch_assoc();
   $title=$row['username'];
   $id = $row['id'];
+  if($id == $_SESSION['id']){
+    header("Location: profile.php");
+  }
 ?>
 <div id="profileheader">
   <img class="circle" src="<?php echo $row['pic_path'];?>" height="120" width="120">
@@ -12,6 +15,30 @@
 		echo $publicUser;
 	?>
 	</h1>
+  <div id="followButton">
+    <?php
+      $followingID = $_SESSION['id'];
+      $followedID = $row['id'];
+      $followingID00followedID = $followingID."00".followedID;
+      $followSearch = "SELECT * FROM followers WHERE followingID00followedID='$followingID00followedID'";
+      $resultFollowers = $conn->query($followSearch);
+      $rowFollowers = $resultFollowers->fetch_assoc();
+      $rownrFollowers = $resultFollowers->num_rows;
+      if($rownrFollowers>0){
+        echo "<button type='button' onclick='unfollow()'>Abonniert</button>";
+      }else{
+        echo "<button type='button' onclick='follow()'>Folgen</button>";
+      }
+    ?>
+    <script>
+      function follow() {
+
+      }
+      function unfollow() {
+
+      }
+    </script>
+  </div>
 	<div id="bio">
 
 	</div>
