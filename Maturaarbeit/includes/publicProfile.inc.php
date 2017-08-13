@@ -13,7 +13,7 @@
 	<h1>
 	<?php
 		echo $publicUser;
-	?>
+  ?>
 	</h1>
   <div id="followButton">
     <?php
