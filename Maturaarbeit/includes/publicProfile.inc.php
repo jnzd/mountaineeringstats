@@ -19,7 +19,9 @@
     <?php
       $followingID = $_SESSION['id'];
       $followedID = $row['id'];
-      $followingID00followedID = $followingID."00".followedID;
+      $followingUser = $_SESSION['username'];
+      $followedUser = $row['username'];
+      $followingID00followedID = $followingID."00".$followedID;
       $followSearch = "SELECT * FROM followers WHERE followingID00followedID='$followingID00followedID'";
       $resultFollowers = $conn->query($followSearch);
       $rowFollowers = $resultFollowers->fetch_assoc();
@@ -30,12 +32,27 @@
         echo "<button type='button' onclick='follow()'>Folgen</button>";
       }
     ?>
+    <script src="node_modules\jquery\dist\jquery.js"></script>
     <script>
       function follow() {
-
+        $.ajax({
+          type:'post',
+          url:'includes/follow.inc.php',
+          complete: function (response) {
+            $('#followButton').html('<button type="button" onclick="unfollow()">Abonniert</button>');
+          },
+        });
+        return false;
       }
       function unfollow() {
-
+        $.ajax({
+          type:'post',
+          url:'includes/unfollow.inc.php',
+          complete: function (response) {
+            $('#followButton').html('<button type="button" onclick="follow()">Folgen</button>');
+          }
+        });
+        return false;
       }
     </script>
   </div>
