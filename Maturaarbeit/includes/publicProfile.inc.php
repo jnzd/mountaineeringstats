@@ -37,6 +37,13 @@
       function follow() {
         $.ajax({
           type:'post',
+          /*data:{
+            followingID: <?php echo $followingID; ?>,
+            followedID: <?php echo $followedID; ?>,
+            followingID00followedID: <?php echo $followingID00followedID; ?>,
+            followingUser: <?php echo $followingUser; ?>,
+            followedUser: <?php echo $followedUser; ?>
+          }*/
           url:'includes/follow.inc.php',
           complete: function (response) {
             $('#followButton').html('<button type="button" onclick="unfollow()">Abonniert</button>');
