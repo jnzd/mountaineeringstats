@@ -14,6 +14,9 @@
 	<?php
 		echo $publicUser;
   ?>
+git filter-branch --force --index-filter \
+"git rm --cached --ignore-unmatch '.ftpconfig'" \
+--prune-empty --tag-name-filter cat -- --all
 	</h1>
   <div id="followButton">
     <?php
