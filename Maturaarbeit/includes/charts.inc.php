@@ -1,8 +1,15 @@
 <?php
     
 ?>
-<canvas class="chart" id="myChart" width="400" height="400"></canvas>
-<script src="node_modules/chart.js/dist/Chart.js"></script>
+<canvas class="chart" id="canvas" width="400" height="400"></canvas>
+<script src="node_modules/chart.js/dist/Chart.bundle.js"></script>
+<script src="node_modules/chart.js/samples/utils.js"></script>
+<!--<script src="node_modules/chart.js/dist/Chart.js"></script>-->
+<button id="randomizeData">Randomize Data</button>
+<button id="addDataset">Add Dataset</button>
+<button id="removeDataset">Remove Dataset</button>
+<button id="addData">Add Data</button>
+<button id="removeData">Remove Data</button>
 <script>
 	var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	var config = {
@@ -27,7 +34,7 @@
 				label: "My Second dataset",
 				fill: false,
 				backgroundColor: window.chartColors.blue,
-				borderColor: window.chartColors.blue,
+				//borderColor: window.chartColors.blue,
 				data: [
 					randomScalingFactor(),
 					randomScalingFactor(),
