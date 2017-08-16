@@ -8,7 +8,9 @@ include 'db.php';
 	include 'vendor/autoload.php';
 	use phpGPX\phpGPX;
 	$gpx = new phpGPX();
-	$file = $gpx->load('activities/gpx/Afternoon_Run.gpx');
+  //$file = $gpx->load('activities/gpx/Afternoon_Run.gpx');
+  $file = $gpx->load('activities/gpx/jonasdegelo2017-07-23-17-16-47.gpx');
+  
 	//define empty arrays
 	$latitude = [];//imprtant
 	$longitude = [];//imprtant
@@ -27,24 +29,31 @@ include 'db.php';
 				array_push($latitude, $points->latitude);
 				array_push($longitude, $points->longitude);
 				array_push($elevation, $points->elevation);
-				array_push($dateTime, $points->time);
-				$times = $points->time;
-				array_push($time, $times->date);
+        array_push($dateTime, $points->time);
+        //echo $points->time->date;
+				//array_push($time, $times->date);
 				array_push($difference, $points->difference);
-			}
-			array_push($distance, $points->distance);
-			print_r($time);
-			print_r($dateTime);
-			//php arrays to javascript arrays
-			$lat_js = json_encode($latitude);
-			$long_js = json_encode($longitude);
-			$elvation_js = json_encode($elevation);
-			$distance_js = json_encode($distance);
+      }
+      //print_r($dateTime);
+      //var_dump($time);
+      //array_push($distance, $points->distance);
+      //var_dump($distance);      
+      $lat_js = json_encode($latitude);
+      $long_js = json_encode($longitude);
+      $elvation_js = json_encode($elevation);
+      $distance_js = json_encode($distance);
 		}
-	}
+  }
+  foreach($dateTime as $moment){
+    $date = $moment->format('Y-m-d H:i:s');
+    //$date = $moment->date;
+    array_push($time, $date);
+    //echo $date;
+  }
+  print_r($time);
 ?>
 
-	<canvas class="chart" id="myChart" width="400" height="400"></canvas>
+<!---	<canvas class="chart" id="myChart" width="400" height="400"></canvas>
 	<script src="node_modules/chart.js/dist/Chart.js"></script>
 	<script>
     var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -164,6 +173,6 @@ include 'db.php';
       });
       window.myLine.update();
     });
-  </script>
+  </script>-->
 </body>
 </html>

@@ -14,12 +14,7 @@
 	<?php
 		echo $publicUser;
   ?>
-<<<<<<< HEAD
-git filter-branch --force --index-filter \
-"git rm --cached --ignore-unmatch '.ftpconfig'" \
---prune-empty --tag-name-filter cat -- --all
-=======
->>>>>>> 49db9cacc94d36e1afbafdec252fcd96352989b6
+
 	</h1>
   <div id="followButton">
     <?php
@@ -43,13 +38,6 @@ git filter-branch --force --index-filter \
       function follow() {
         $.ajax({
           type:'post',
-          /*data:{
-            followingID: <?php echo $followingID; ?>,
-            followedID: <?php echo $followedID; ?>,
-            followingID00followedID: <?php echo $followingID00followedID; ?>,
-            followingUser: <?php echo $followingUser; ?>,
-            followedUser: <?php echo $followedUser; ?>
-          }*/
           url:'includes/follow.inc.php',
           complete: function (response) {
             $('#followButton').html('<button type="button" onclick="unfollow()">Abonniert</button>');

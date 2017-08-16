@@ -31,6 +31,7 @@
         $long_js = json_encode($longitude);
         $elvation_js = json_encode($elevation);
         $distance_js = json_encode($distance);
+        include 'includes/charts.inc.php';
         include 'includes/map.inc.php';
       }
     }
