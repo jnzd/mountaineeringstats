@@ -40,35 +40,35 @@
 			}]
 		},
 		options: {
-			responsive: true,
-			title:{
-				display:true,
-				text:'Chart.js Line Chart'
-			},
-			tooltips: {
-				mode: 'index',
-				intersect: false,
-			},
-			hover: {
-				mode: 'nearest',
-				intersect: true
-			},
-			scales: {
-				xAxes: [{
-					display: true,
-					scaleLabel: {
-						display: true,
-						labelString: 'Month'
-					}
-				}],
-				yAxes: [{
-					display: true,
-					scaleLabel: {
-						display: true,
-						labelString: 'Value'
-					}
-				}]
-			}
+				responsive: true,
+				title:{
+						display:true,
+						text:'Chart.js Line Chart'
+				},
+				tooltips: {
+						mode: 'index',
+						intersect: false,
+				},
+				hover: {
+						mode: 'nearest',
+						intersect: true
+				},
+				scales: {
+						xAxes: [{
+								display: true,
+								scaleLabel: {
+										display: true,
+										labelString: 'Month'
+								}
+						}],
+						yAxes: [{
+								display: true,
+								scaleLabel: {
+										display: true,
+										labelString: 'Value'
+								}
+						}]
+				}
 		}
 	};
 	window.onload = function() {
@@ -81,7 +81,7 @@
 				return randomScalingFactor();
 			});
 		});
-			window.myLine.update();
+		window.myLine.update();
 	});
 	var colorNames = Object.keys(window.chartColors);
 	document.getElementById('addDataset').addEventListener('click', function() {

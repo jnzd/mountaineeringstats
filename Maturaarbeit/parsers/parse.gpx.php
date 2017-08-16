@@ -24,8 +24,6 @@
           array_push($longitude, $points->longitude);
           array_push($elevation, $points->elevation);
           array_push($dateTime, $points->time);
-          //echo $points->time->date;
-          //array_push($time, $times->date);
           array_push($difference, $points->difference);
         }     
         $lat_js = json_encode($latitude);
