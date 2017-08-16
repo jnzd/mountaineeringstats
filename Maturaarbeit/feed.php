@@ -33,11 +33,7 @@ include 'db.php';
         //echo $points->time->date;
 				//array_push($time, $times->date);
 				array_push($difference, $points->difference);
-      }
-      //print_r($dateTime);
-      //var_dump($time);
-      //array_push($distance, $points->distance);
-      //var_dump($distance);      
+      }     
       $lat_js = json_encode($latitude);
       $long_js = json_encode($longitude);
       $elvation_js = json_encode($elevation);
@@ -46,11 +42,8 @@ include 'db.php';
   }
   foreach($dateTime as $moment){
     $date = $moment->format('Y-m-d H:i:s');
-    //$date = $moment->date;
     array_push($time, $date);
-    //echo $date;
   }
-  print_r($time);
 ?>
 
 <!---	<canvas class="chart" id="myChart" width="400" height="400"></canvas>

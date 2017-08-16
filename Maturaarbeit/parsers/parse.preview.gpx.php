@@ -5,12 +5,12 @@
   function gpx($location){
     $gpx = new phpGPX();
     $file = $gpx->load($location);
-
     //define empty arrays
     $latitude = [];//imprtant
     $longitude = [];//imprtant
     $elevation = [];//important
-    $time = [];//important
+    $dateTime = [];//important
+    $time = [];
     $difference = [];//maybe important
     $distance = [];//important
 
@@ -23,20 +23,23 @@
           array_push($latitude, $points->latitude);
           array_push($longitude, $points->longitude);
           array_push($elevation, $points->elevation);
-          array_push($time, $points->time);
+          array_push($dateTime, $points->time);
+          //echo $points->time->date;
+          //array_push($time, $times->date);
           array_push($difference, $points->difference);
-        }
-        array_push($distance, $points->distance);
-        //php arrays to javascript arrays
+        }     
         $lat_js = json_encode($latitude);
         $long_js = json_encode($longitude);
         $elvation_js = json_encode($elevation);
         $distance_js = json_encode($distance);
-        //echo $lat_js;
-        //echo $long_js;
-        //include 'includes/map.inc.php';
       }
     }
+    foreach($dateTime as $moment){
+      $date = $moment->format('Y-m-d H:i:s');
+      array_push($time, $date);
+    }
+    include 'includes/charts.preview.inc.php';
+    include 'includes/map.preview.inc.php';
   }
 ?>
 <!--<script async defer
