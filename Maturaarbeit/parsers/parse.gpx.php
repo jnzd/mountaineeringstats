@@ -28,7 +28,7 @@
         }     
         $lat_js = json_encode($latitude);
         $long_js = json_encode($longitude);
-        $elvation_js = json_encode($elevation);
+        $elevation_js = json_encode($elevation);
         $distance_js = json_encode($distance);
       }
     }
