@@ -18,7 +18,7 @@
 	console.log(elevationMin);
 	var difference = elevationMax-elevationMin;
 	var yAxisMin = Math.round((elevationMin-difference/10)/10)*10;
-	var yAxisMax = Math.round((elevationMax+difference/10/10)/10)*10;
+	var yAxisMax = Math.round((elevationMax+difference/10)/10)*10;
 	var height = yAxisMax-yAxisMin;
 	console.log(yAxisMax);
 	console.log(yAxisMin);
@@ -26,6 +26,7 @@
 	var ctx = document.getElementById("elevation").getContext('2d');
 	var elevationChart = new Chart(ctx, {
 		type: 'line',
+		labels: time,
     data: {
 			datasets: [{
 				label: "elevation",
@@ -41,6 +42,12 @@
 						min: yAxisMin,
 						max: yAxisMax,
 						stepSize: 50
+					}
+				}],
+				xAxes: [{
+					ticks: {
+						beginAtZero: true,
+						max: elevation.length
 					}
 				}]
 			}
