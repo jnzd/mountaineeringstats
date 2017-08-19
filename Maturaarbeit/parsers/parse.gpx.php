@@ -30,12 +30,14 @@
         $long_js = json_encode($longitude);
         $elevation_js = json_encode($elevation);
         $distance_js = json_encode($distance);
+        echo $elevation_js."<br>";
       }
     }
     foreach($dateTime as $moment){
       $date = $moment->format('Y-m-d H:i:s');
       array_push($time, $date);
     }
+    $time_js = json_encode($time);
     include 'includes/charts.inc.php';
     include 'includes/map.inc.php';
   }

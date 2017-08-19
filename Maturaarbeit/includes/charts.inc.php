@@ -1,99 +1,49 @@
 <?php
     
 ?>
-<canvas class="chart" id="elevation" width="400" height="400"></canvas>
+<canvas class="chart" id="elevation" width="10000" height="10000"></canvas>
 <script src="node_modules/chart.js/dist/Chart.js"></script>
 <script>
-	console.log(<?php echo $elevation_js; ?>);
 	var elevation = <?php echo $elevation_js; ?>;
+	var time = <?php echo $time_js; ?>;
+	Array.prototype.max = function() {
+    return Math.max.apply(null, this);
+  };
+  Array.prototype.min = function() {
+    return Math.min.apply(null, this);
+  };
+	var elevationMax = elevation.max();
+	var elevationMin = elevation.min();
+	console.log(elevationMax);
+	console.log(elevationMin);
+	var difference = elevationMax-elevationMin;
+	var yAxisMin = Math.round((elevationMin-difference/10)/10)*10;
+	var yAxisMax = Math.round((elevationMax+difference/10/10)/10)*10;
+	var height = yAxisMax-yAxisMin;
+	console.log(yAxisMax);
+	console.log(yAxisMin);
+	console.log(elevation);
 	var ctx = document.getElementById("elevation").getContext('2d');
 	var elevationChart = new Chart(ctx, {
-    type: 'line',
+		type: 'line',
     data: {
 			datasets: [{
-				//label: "elevation",
-				backgroundColor: "#a8a8a8",
+				label: "elevation",
 				borderColor: "#919191",
 				data: elevation,
 			}]
 		},
-    options: {
-			responsive: true,
-			scales: {
-				xAxes: [{
-					display: true,
-				}],
-			}
-		}
-	});
-	/*var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-			labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-			datasets: [{
-				label: '# of Votes',
-				data: [12, 19, 3, 5, 2, 3],
-				backgroundColor: [
-					'rgba(255, 99, 132, 0.2)',
-					'rgba(54, 162, 235, 0.2)',
-					'rgba(255, 206, 86, 0.2)',
-					'rgba(75, 192, 192, 0.2)',
-					'rgba(153, 102, 255, 0.2)',
-					'rgba(255, 159, 64, 0.2)'
-				],
-				borderColor: [
-					'rgba(255,99,132,1)',
-					'rgba(54, 162, 235, 1)',
-					'rgba(255, 206, 86, 1)',
-					'rgba(75, 192, 192, 1)',
-					'rgba(153, 102, 255, 1)',
-					'rgba(255, 159, 64, 1)'
-				],
-				borderWidth: 1
-			}]
-    },
-    options: {
+		options: {
 			scales: {
 				yAxes: [{
 					ticks: {
-						beginAtZero:true
+						beginAtZero: false,
+						min: yAxisMin,
+						max: yAxisMax,
+						stepSize: 50
 					}
 				}]
 			}
     }
-	});*/
-	/*var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-			labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-			datasets: [{
-				label: '# of Votes',
-				data: [12, 19, 3, 5, 2, 3],
-				backgroundColor: [
-					'rgba(255, 99, 132, 0.2)',
-					'rgba(54, 162, 235, 0.2)',
-					'rgba(255, 206, 86, 0.2)',
-					'rgba(75, 192, 192, 0.2)',
-					'rgba(153, 102, 255, 0.2)',
-				],
-				borderColor: [
-					'rgba(255,99,132,1)',
-					'rgba(54, 162, 235, 1)',
-					'rgba(255, 206, 86, 1)',
-					'rgba(75, 192, 192, 1)',
-					'rgba(153, 102, 255, 1)',
-				],
-				borderWidth: 1
-		}]
-	},
-	options: {
-		scales: {
-			yAxes: [{
-				ticks: {
-					beginAtZero:true
-				}
-			}]
-		}
-	}
-});*/
+	});
 </script>
