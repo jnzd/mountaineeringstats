@@ -29,7 +29,7 @@ include 'db.php';
 			<input type="file" name="pic" placeholder="Profilbild"><br>
 			<input type="submit" name="safe" placeholder="speichern"><br><br>
 		</form>
-		<a id="settings" href="includes/delete.inc.php">Account loeschen</a>
+		<a id="settings" href="includes/delete.inc.php">Account löschen</a>
 	</section>
 </div>
 
