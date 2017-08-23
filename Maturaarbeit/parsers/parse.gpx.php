@@ -37,7 +37,7 @@
       array_push($time, $date);
     }
     $time_js = json_encode($time);
-    $values=array("latitude"=>$lat_js,"longitude"=>$long_js,"elevation"=>$elevation_js,"distance"=>$distance_js,"time"=>$time_js);
+    $values=array("latitude"=>$lat_js,"longitude"=>$long_js,"elevation"=>$elevation_js,"distance"=>$distance_js,"time"=>$time_js,"latitudePHP"=>$latitude,"longitudePHP"=>$longitude);
     //print_r($values);
     return $values;
   }
