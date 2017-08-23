@@ -40,7 +40,7 @@ if(!empty($_POST['password'])){
 		$changed = true;
 	}
 	else{
-		$_SESSION['message'] = "Passwoerter stimmen nicht ueberein. Passwort konnte nicht aktualisiert werden.";
+		$_SESSION['message'] = "Passwörter stimmen nicht ueberein. Passwort konnte nicht aktualisiert werden.";
 	}
 }
 if($_POST['first'] != ""){

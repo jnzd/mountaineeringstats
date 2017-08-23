@@ -15,7 +15,16 @@ $actTime = $row['actTime'];
 $description = $row['description'];
 echo "<h1>".$title."</h1><br />";
 echo "<p>".$description."</p><br />";
-gpx($row['actPath']);
+$values = gpx($row['actPath']);
+
+$lat_js = $values['latitude'];
+$long_js = $values['longitude'];
+$elevation_js = $values['elevation'];
+$distance_js = $values['distance'];
+$time_js = $values['time'];
+
+include 'includes/charts.inc.php';
+include 'includes/map.inc.php';
 ?>
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s&callback=initMap">

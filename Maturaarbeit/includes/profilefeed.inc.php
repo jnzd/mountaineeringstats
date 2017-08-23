@@ -2,7 +2,7 @@
 <?php
   //session_start();
   if(isset($_SESSION['id'])){
-    include 'parsers/parse.preview.gpx.php';
+    include 'parsers/parse.gpx.php';
     $id = $_SESSION['id'];
     function resultToArray($result) {
       $rows = array();
@@ -28,10 +28,6 @@
       echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1><br />";
       echo "<p>".$description."</p><br />";
       gpx($row['actPath']);
-      echo "<a href='includes/deleteAct.inc.php'>Aktivität löschen</a>";
-      echo "<br />";
     }
-  }else{
-    echo "not logged in";
   }
 ?>

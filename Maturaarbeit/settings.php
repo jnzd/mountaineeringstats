@@ -12,7 +12,7 @@ include 'db.php';
 			<input type="text" name="username" placeholder="Benutzername"><br>
 			<input type="email" name="email" placeholder="E-Mail"><br>
 			<input type="password" name="password" placeholder="Neues Passwort"><br>
-			<input type="password" name="confirmpassword" placeholder="Bestaetige neues Passwort"><br>
+			<input type="password" name="confirmpassword" placeholder="Bestätige neues Passwort"><br>
 			<input type="text" name="first" placeholder="Vorname"><br>
 			<input type="text" name="last" placeholder="Nachname"><br>
 			<input type="text" name="ort" placeholder="Wohnort"><br>

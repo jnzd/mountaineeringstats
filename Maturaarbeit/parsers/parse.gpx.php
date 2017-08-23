@@ -25,12 +25,11 @@
           array_push($elevation, $points->elevation);
           array_push($dateTime, $points->time);
           array_push($difference, $points->difference);
-        }     
+        }
         $lat_js = json_encode($latitude);
         $long_js = json_encode($longitude);
         $elevation_js = json_encode($elevation);
         $distance_js = json_encode($distance);
-        echo $elevation_js."<br>";
       }
     }
     foreach($dateTime as $moment){
@@ -38,8 +37,9 @@
       array_push($time, $date);
     }
     $time_js = json_encode($time);
-    include 'includes/charts.inc.php';
-    include 'includes/map.inc.php';
+    $values=array("latitude"=>$lat_js,"longitude"=>$long_js,"elevation"=>$elevation_js,"distance"=>$distance_js,"time"=>$time_js);
+    //print_r($values);
+    return $values;
   }
 ?>
 
