@@ -5,16 +5,15 @@ if(isset($matches[0])){
 	$last_word = $matches[0];
 	$sql = "SELECT * FROM users WHERE username='$last_word'";
 	$result = $conn->query($sql);
-	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	$rownr = $result->num_rows;
-	$publicUser=$row['username'];
 }
 $title="mountaineeringstats";
 include 'header.php';
 if(isset($rownr)){
 	if($rownr>0){
 		$row = $result->fetch_assoc();
+		$publicUser = $last_word;
 		include 'includes/publicProfile.inc.php';
 	}else{
 		echo "<h1>Willkommen</h1>

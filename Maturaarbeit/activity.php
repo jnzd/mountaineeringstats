@@ -18,7 +18,7 @@ $id = $_SESSION['id'];
 	<a href='profileinfo.php'><img src="icons/info.png" height="24" width="24"></a>
 
 	<div id="bio">
-
+		
 	</div>
 
 </div>
