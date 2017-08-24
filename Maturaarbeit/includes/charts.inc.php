@@ -32,6 +32,7 @@
 			labels: time,
 			datasets: [
 				{
+					radius: 0,
 					label: "Höhe",
 					borderColor: "#919191",
 					data: elevation
@@ -39,6 +40,8 @@
 			]
 		},
 		options: {
+			//pointRadius: 0,
+			//pointHitRadius: 5,
 			scales: {
 				yAxes: [
 					{

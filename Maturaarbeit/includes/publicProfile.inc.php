@@ -8,22 +8,10 @@
   }
 ?>
 <div id="profileheader">
-  <img class="circle" src="<?php echo $row['pic_path'];?>" height="120" width="120">
-	<h1>
-    <?php
-      echo $publicUser;
-    ?>
-	</h1>
-  <div id="followButton">
   <?php
-    include 'followButton.inc.php';
+    include 'includes/profileheaderPublic.inc.php';
   ?>
 </div>
-	<div id="bio">
-
-	</div>
-</div>
-
 <div id="feed">
   <?php
     include 'parsers/parse.gpx.php';
