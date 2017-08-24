@@ -29,7 +29,7 @@ $id = $_SESSION['id'];
   ?>
 	<div id="map"></div>
 	<?php
-	echo "<a href='includes/deleteAct.inc.php'>Aktivität löschen</a>";
+	echo "<a href='includes/deleteAct.inc.php?name=".$_GET['name']."'>Aktivität löschen</a>";
 	echo "<br />";
 	?>
 </div>
