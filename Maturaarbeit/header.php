@@ -38,7 +38,7 @@
 <!--Suchleiste-->
 					<div id="search">
 				    <form class="search" action="includes/search.inc.php" method="post">
-				      <input type="text" name="searchfield" placeholder="Suchen">
+				      <input type="text" name="search" placeholder="Suchen">
 				     </form>
 					</div>
 <!-- menu fuer mobiles design -->
