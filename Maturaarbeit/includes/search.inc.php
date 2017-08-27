@@ -1,4 +1,4 @@
 <?php
-//voruebergehend
-header("location: ../index.php");
+	//voruebergehend
+	header("location: ../index.php");
 ?>

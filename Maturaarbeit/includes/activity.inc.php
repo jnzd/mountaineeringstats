@@ -15,6 +15,7 @@
   $description = $row['description'];
   echo "<h1>".$title."</h1><br />";
   echo "<p>".$description."</p><br />";
+  echo "<a href='editAct.php?name=".$_GET['name']."'>Edit</a>";  
   $values = gpx($row['actPath']);
 
   $lat_js = $values['latitude'];

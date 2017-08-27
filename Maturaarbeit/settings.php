@@ -15,11 +15,11 @@ include 'db.php';
 			<input type="password" name="confirmpassword" placeholder="Bestätige neues Passwort"><br>
 			<input type="text" name="first" placeholder="Vorname"><br>
 			<input type="text" name="last" placeholder="Nachname"><br>
-			<input type="text" name="ort" placeholder="Wohnort"><br>
+			<!--<input type="text" name="ort" placeholder="Wohnort"><br>
 			<input type="number" name="plz" placeholder="PLZ"><br>
 			<input type="text" name="street" placeholder="Strasse"><br>
 			<input type="number" name="strnr" placeholder="Hausnummer"><br>
-			<input type="text" name="country" placeholder="Land"><br>
+			<input type="text" name="country" placeholder="Land"><br>-->
 			<select name="gender">
 				<option selected="selected" value="null">Geschlecht</option>
 				<option value="male">maennlich</option>
