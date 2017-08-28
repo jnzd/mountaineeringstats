@@ -1,8 +1,8 @@
-<div id='comment'>
-  <form id="settings" action="includes/settings.inc.php" method="post" enctype="multipart/form-data">
+<div id="comment">
+  <form id="comment" action="comment()" method="post" enctype="multipart/form-data">
     <input type="text" name="comment" placeholder="Kommentar hinzufügen"><br>
     <input type="hidden" name="" value=""><br> 
-    <input type="submit" name="send" placeholder="kommentieren" onclick="comment()"><br><br>
+    <input type="submit" name="send" placeholder="kommentieren" value="kommentieren"><br>
   </form>
 </div>
 <?php
@@ -16,8 +16,8 @@
         datatype: 'json',
         data: {
           userID: '<?php echo $userID; ?>',
-          actID: '<?php echo $actID; ?>',
-          text: '<?php echo $userID; ?>'
+          actID: '<?php echo $actid; ?>',
+          text: '<?php echo $_POST['comment']; ?>'
         }
       });
       return false;

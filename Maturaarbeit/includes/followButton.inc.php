@@ -9,9 +9,9 @@
   $rowFollowers = $resultFollowers->fetch_assoc();
   $rownrFollowers = $resultFollowers->num_rows;
   if($rownrFollowers>0){
-    echo "<button type='button' onclick='unfollow()'>Abonniert</button>";
+    echo "<div id='likeButton'><button type='button' onclick='unfollow()'>Abonniert</button></div>";
   }else{
-    echo "<button type='button' onclick='follow()'>Folgen</button>";
+    echo "<div id='likeButton'><button type='button' onclick='follow()'>Folgen</button></div>";
   }
 ?>
 <script src="node_modules\jquery\dist\jquery.js"></script>
@@ -29,7 +29,7 @@
         followingID00followedID: '<?php echo $followingID00followedID; ?>'
       },
       complete: function (response) {
-        $('#followButton').html('<button type="button" onclick="unfollow()">Abonniert</button>');
+        $('#likeButton').html('<button type="button" onclick="unfollow()">Abonniert</button>');
       },
     });
     return false;
@@ -43,7 +43,7 @@
         followingID00followedID: '<?php echo $followingID00followedID; ?>'
       },
       complete: function (response) {
-        $('#followButton').html('<button type="button" onclick="follow()">Folgen</button>');
+        $('#likeButton').html('<button type="button" onclick="follow()">Folgen</button>');
       }
     });
     return false;
