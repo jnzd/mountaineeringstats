@@ -5,5 +5,5 @@
   $userID00actID = $userID."00".$actID;
   
 	$sql = "INSERT INTO likes (userID, actID, userID00actID)	VALUES ('$userID', '$actID', '$userID00actID')";
-	$result = $conn->query($sql);//  scriptconsole.log()
+	$result = $conn->query($sql);
 ?>

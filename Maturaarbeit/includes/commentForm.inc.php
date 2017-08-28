@@ -1,8 +1,7 @@
 <div id="comment">
-  <form id="comment" action="comment()" method="post" enctype="multipart/form-data">
+  <form id="comment" action="javascript:comment()" method="post" enctype="multipart/form-data">
     <input type="text" name="comment" placeholder="Kommentar hinzufügen"><br>
     <input type="hidden" name="" value=""><br> 
-    <input type="submit" name="send" placeholder="kommentieren" value="kommentieren"><br>
   </form>
 </div>
 <?php
@@ -17,7 +16,7 @@
         data: {
           userID: '<?php echo $userID; ?>',
           actID: '<?php echo $actid; ?>',
-          text: '<?php echo $_POST['comment']; ?>'
+          //comment: '<?php echo $_POST['comment']; ?>'
         }
       });
       return false;
