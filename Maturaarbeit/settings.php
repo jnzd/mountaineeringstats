@@ -18,6 +18,7 @@
 		<h1>Einstellungen</h1>
 	</section>
 	<section class="settings">
+		<a href="profile.php">Zurück</a>
 		<form id="settings" action="includes/settings.inc.php" method="post" enctype="multipart/form-data">
 			<input type="text" name="username" placeholder="Benutzername" value="<?php echo $username; ?>"><br>
 			<input type="email" name="email" placeholder="E-Mail" value="<?php echo $email; ?>"><br>

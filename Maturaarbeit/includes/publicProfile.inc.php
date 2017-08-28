@@ -53,7 +53,9 @@
         */
 
         echo "40.737102,-73.990318|40.749825,-73.987963|40.752946,-73.987384|40.755823,-73.986397";
-        echo "&sensor=false&key=AIzaSyA4g-swM5ElPgnAUJPg27C8Gwi3-kANoTg' height='150'>";
+        echo "&sensor=false&key=AIzaSyA4g-swM5ElPgnAUJPg27C8Gwi3-kANoTg' height='150'><br>";
+        include 'includes/commentForm.inc.php';
+
       }
     }else{
       echo "<br /><h2>Dieser User hat noch keine Aktivitäten hochgeladen</h2>";
