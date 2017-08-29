@@ -1,6 +1,7 @@
 <?php
+  session_start();
 	include '../db.php';
-	$userID = $_POST['userID'];
+	$userID = $_SESSION['id'];
   $actID = $_POST['actID'];
   $commentText = $_POST['commentText'];
   
