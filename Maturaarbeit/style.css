@@ -195,13 +195,13 @@ canvas.chart{
 	webkit-user-select: none;
 	ms-user-select: none;
 }
-#comment{
+#commentForm{
 	display: inline;
 }
-#comment input{
+#commentForm input{
 	display: inline;
 }
-#comment form{
+#commentForm form{
 	display: inline;
 }
 #commentLine{

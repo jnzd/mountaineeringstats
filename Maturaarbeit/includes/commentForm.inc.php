@@ -1,4 +1,4 @@
-<div id="comment">
+<div id="commentForm">
   <form id="commentForm" action="includes/comment.inc.php" method="post" enctype="multipart/form-data">
     <input type="text" id="commentText" name="commentText" placeholder="Kommentar hinzufügen" autocomplete="off"><br>
     <input type="hidden" id="actID" name="actID" value="<?php echo $actid;?>">
@@ -28,8 +28,9 @@
     var posting = $.post( url, { commentText, userID: '<?php echo $_SESSION['id']; ?>', actID} );
     
     /* Alerts the results */
+    var divID = '#comments'+actID;
     posting.done(function( data ) {
-      $('#comments'+actID).append('<div id="commentLine"><p class="comment"><b>'+username+' </b>'+commentText+'</p></div>');
+      $(divID).append('<div id="commentLine"><p class="comment"><b>'+username+' </b>'+commentText+'</p></div>');
     });
   });
 </script>
