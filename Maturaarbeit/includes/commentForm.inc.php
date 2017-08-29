@@ -1,6 +1,6 @@
 <div id="comment">
   <form id="commentForm" action="includes/comment.inc.php" method="post" enctype="multipart/form-data">
-    <input type="text" id="commentText" name="commentText" placeholder="Kommentar hinzufügen"><br>
+    <input type="text" id="commentText" name="commentText" placeholder="Kommentar hinzufügen" autocomplete="off"><br>
   </form>
 </div>
 <?php
@@ -19,17 +19,18 @@
 
     /* Send the data using post with element id name and name2*/
     var commentText = $('#commentText').val();
+    var actID = <?php echo $actid; ?>;
     var username = "<?php 
        $sql = "SELECT * FROM users WHERE id='$userID'";
        $result = $conn->query($sql);
        $row = $result->fetch_assoc();
        echo $row['username'];
     ?>";
-    var posting = $.post( url, { commentText, userID: '<?php echo $userID; ?>', actID: '<?php echo $actid; ?>'} );
-
+    var posting = $.post( url, { commentText, userID: '<?php echo $userID; ?>', actID} );
+    
     /* Alerts the results */
     posting.done(function( data ) {
-      $('#comments').html('<div id="commentLine"><p class="commentName">'+username+': <p class="commentText">'+commentText+'</p></div>');
+      $('#comments'+actID).append('<div id="commentLine"><p class="comment"><b>'+username+' </b>'+commentText+'</p></div>');
     });
   });
 </script>

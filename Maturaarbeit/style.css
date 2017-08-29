@@ -52,7 +52,7 @@ form{
 	text-align: center;
 }
 input{
-	width: auto%;
+	width: auto;
 	font-size: 16px;
 	padding: 3px;
 	margin: 5px;
@@ -116,7 +116,7 @@ nav ul li{
 	font-size: 100%;
 	margin: 0 10px 0 10px;
 	display: inline-block;
-	foat: left;
+	/*float: left;*/
 	line-height: 24px;
 }
 nav ul li img{
@@ -170,7 +170,7 @@ a{
 /*google maps*/
 #map{
 	height: 800px;
-	width: 100%%;
+	width: 100%;
 }
 /*end google maps*/
 
