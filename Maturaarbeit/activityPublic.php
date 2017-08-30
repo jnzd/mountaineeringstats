@@ -19,7 +19,6 @@
   <?php
     include 'includes/activityPublic.inc.php';
   ?>
-	<div id="map"></div>
 </div>
 
 </body>

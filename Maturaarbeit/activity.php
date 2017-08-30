@@ -13,7 +13,6 @@ $id = $_SESSION['id'];
   <?php
     include 'includes/activity.inc.php';
   ?>
-	<div id="map"></div>
 </div>
 
 </body>

@@ -1,3 +1,4 @@
+<div id="map"></div>
 <script>
 //set javascript arrays
   var lat = <?php echo $lat_js; ?>;
