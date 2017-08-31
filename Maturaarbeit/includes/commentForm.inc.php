@@ -1,4 +1,4 @@
-<div id="commentForm">
+<div id="commentForm<?php echo $actid; ?>">
   <form id="commentForm" action="includes/comment.inc.php" method="post" enctype="multipart/form-data">
     <input type="text" id="commentText" name="commentText" placeholder="Kommentar hinzufügen" autocomplete="off"><br>
     <input type="hidden" id="actID" name="actID" value="<?php echo $actid;?>">
@@ -7,7 +7,8 @@
 
 <script type='text/javascript'>
   /* attach a submit handler to the form */
-  $("#commentForm").submit(function(event) {
+  var actID = "<?php echo $actid; ?>";
+  $("#commentForm"+actID).submit(function(event) {
 
     /* stop form from submitting normally */
     event.preventDefault();
@@ -18,7 +19,7 @@
 
     /* Send the data using post with element id name and name2*/
     var commentText = $('#commentText').val();
-    var actID = $('#actID').val();
+    //var actID = $('#actID').val();
     var username = "<?php 
        $sql = "SELECT * FROM users WHERE id='$userID'";
        $result = $conn->query($sql);
