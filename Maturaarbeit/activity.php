@@ -14,6 +14,6 @@ $id = $_SESSION['id'];
     include 'includes/activity.inc.php';
   ?>
 </div>
-
-</body>
-</html>
+<?php
+  include 'footer.php';
+?>

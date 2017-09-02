@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" href="icons/logo.png">
 	<title><?php echo $title; ?></title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 <!-- Google maps polyline meta -->
@@ -34,20 +35,19 @@
 		<header>
 		  <div class="header-inner">
 <!--Website logo -->
-			    <a href="index.php" id="logo"></a>
+			    <a href="index.php" id="logo"><img src="icons/logo.png" height="24" width="24"></a>
 <!--Suchleiste-->
 					<div id="search">
 				    <form class="search" action="includes/search.inc.php" method="post">
-				      <input type="text" name="search" placeholder="Suchen">
-				     </form>
+				    	<input type="text" name="search" placeholder="Suchen">
+				    </form>
 					</div>
-<!-- menu fuer mobiles design -->
+<!-- menu for mobile design -->
 				<nav>
 		      <a href="#" id="menu-icon"></a>
 		      <ul>
 <!-- Links im Header -->
-		        <li><a href="index.php">STARTSEITE</a></li>
-		        <li><a href="upload.php">HOCHLADEN</a></li>
+		        <li><a href="upload.php"><img src="icons/upload.png" height="24" width="24"></a></li>
 		        <?php echo "<li><a href='profile.php'><img class='circle' src=".$profilepic." height='24' width='24'></a></li>"?>
 		        <li><a href="includes/logout.inc.php">ABMELDEN</a></li>
 		      </ul>

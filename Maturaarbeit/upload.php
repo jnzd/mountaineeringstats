@@ -29,6 +29,6 @@ include 'db.php';
 		<input class="upload" type="submit" name="upload" value="hochladen"><br><br>
 	</form>
 </div>
-
-</body>
-</html>
+<?php
+  include 'footer.php';
+?>

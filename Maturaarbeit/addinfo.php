@@ -64,5 +64,7 @@ $birthdate = $row['birthdate'];
 		</form>
 	</section>
 </div>
-</body>
-</html>
+
+<?php
+	include 'footer.php';
+?>

@@ -202,6 +202,7 @@ foreach ($file->tracks as $track){
 	echo "</table>";
 	echo "<br /><br />";
 //Table complete--------------------------------------------
-	?>
-</body>
-</html>
+?>
+<?php
+  include 'footer.php';
+?>

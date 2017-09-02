@@ -13,7 +13,6 @@ if(isset($_SESSION['id'])){
 	echo "<a href='includes/confirmation.inc.php'>E-Mail erneut senden</a><br>";
 }
 ?>
-
-
-</body>
-</html>
+<?php
+  include 'footer.php';
+?>

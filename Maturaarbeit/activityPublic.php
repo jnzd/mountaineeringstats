@@ -20,6 +20,6 @@
     include 'includes/activityPublic.inc.php';
   ?>
 </div>
-
-</body>
-</html>
+<?php
+  include 'footer.php';
+?>

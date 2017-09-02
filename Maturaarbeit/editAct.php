@@ -26,7 +26,6 @@
 		<input class="upload" type="submit" name="safe" value="speichern"><br><br>
 	</form>
 </div>
-
-<?php include 'footer.php'; ?>
-</body>
-</html>
+<?php
+  include 'footer.php';
+?>

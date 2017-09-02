@@ -48,6 +48,6 @@ if(isset($_SESSION['id'])){
     </div>
   </div>
 </div>
-
-</body>
-</html>
+<?php
+  include 'footer.php';
+?>

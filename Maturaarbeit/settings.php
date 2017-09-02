@@ -43,7 +43,6 @@
 		<a id="settings" href="includes/delete.inc.php">Account löschen</a>
 	</section>
 </div>
-
-<?php include 'footer.php'; ?>
-</body>
-</html>
+<?php
+  include 'footer.php';
+?>

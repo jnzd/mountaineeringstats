@@ -14,6 +14,6 @@ $id = $_SESSION['id'];
 		include 'includes/profilefeed.inc.php';
 	?>
 </div>
-
-</body>
-</html>
+<?php
+  include 'footer.php';
+?>

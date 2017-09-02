@@ -85,7 +85,6 @@ header{
   float: left;
   width: auto;
   height: auto;
-  background: url(icons/RD.png) no-repeat center;
 }
 #search{
 	text-align: center;
@@ -95,7 +94,7 @@ nav{
 	padding: 0;
 }
 header form{
-
+	display: inline;
 }
 #menu-icon{
   display: hidden;
@@ -206,4 +205,13 @@ canvas.chart{
 }
 #commentLine{
 	display: inline;
+}
+footer{
+	width: 100%;
+	height: 60px;
+	background-color: #222222;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	bottom: 0;
 }
