@@ -18,17 +18,22 @@
       $rows = resultToArray($result);
       $result->free();
       foreach($rows as $row) {
-        $followedUser = $row['followedUser'];
-        $sql .= " OR user_id='$followedUser'";
+        $followedID = $row['followedID'];
+        $sql .= " OR user_id='$followedID'";
       }
     }
-    echo $sql;
     $result = $conn->query($sql);
     $rownr = $result->num_rows;
     if($rownr>0){
       $rows = resultToArray($result);
       $result->free();
       foreach($rows as $row) {
+        $userID=$row['user_id'];
+        $sqlUser = "SELECT * FROM users WHERE id='$userID'";
+        $resultUser = $conn->query($sqlUser);
+        $rowUser = $resultUser->fetch_assoc();
+        $username = $rowUser['username'];
+        $picPath = $rowUser['pic_path'];
         $title = $row['title'];
         $actid = $row['id'];
         $sport = $row['sport'];
@@ -37,12 +42,7 @@
         $actTime = $row['actTime'];
         $filename = $row['filename'];
         $description = $row['description'];
-
-        $userID=$row['user_id'];
-        $sqlUser = "SELECT * FROM users WHERE id='$userID'";
-        $resultUser = $conn->query($sqlUser);
-        $rowUser = $resultUser->fetch_assoc();
-        $username = $rowUser['username'];
+        echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";        
         if($userId = $_SESSION['id']){
           echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1><br />";
         }else{
