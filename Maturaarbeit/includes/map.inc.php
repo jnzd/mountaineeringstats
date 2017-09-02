@@ -21,9 +21,11 @@
 
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 12,
-      center: {lat: centerLat, lng: centerLng},
-      mapTypeId: 'roadmap'
+      //zoom: 12,
+      //center: {lat: centerLat, lng: centerLng},
+      center: new google.maps.LatLng(0, 0),
+      zoom: 0,
+      mapTypeId: 'terrain'
     });
 //create array of latlng objects from arrays
     var trackCoordinates = [];
@@ -39,6 +41,12 @@
       strokeOpacity: 1.0,
       strokeWeight: 4
     });
+    var latlngbounds = new google.maps.LatLngBounds();
+			for (var i = 0; i < trackCoordinates.length; i++) {
+				latlngbounds.extend(trackCoordinates[i]);
+			}
+    map.fitBounds(latlngbounds);
     track.setMap(map);
   }
+
 </script>
