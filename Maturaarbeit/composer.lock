@@ -4,19 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0796031c9d4707fbc37626cb2b35c294",
+    "content-hash": "e36a83d7b9025e40bba90f701dcda0fa",
     "packages": [
         {
             "name": "craygl/phpgpx",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Crayg/PHPGPX.git",
+                "url": "https://github.com/LiddleDev/PHPGPX.git",
                 "reference": "57253cf1ea0223831fa845e9e783ca0f3213f3e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Crayg/PHPGPX/zipball/57253cf1ea0223831fa845e9e783ca0f3213f3e8",
+                "url": "https://api.github.com/repos/LiddleDev/PHPGPX/zipball/57253cf1ea0223831fa845e9e783ca0f3213f3e8",
                 "reference": "57253cf1ea0223831fa845e9e783ca0f3213f3e8",
                 "shasum": ""
             },
@@ -48,6 +48,51 @@
                 "gpx"
             ],
             "time": "2016-02-03 21:32:31"
+        },
+        {
+            "name": "emcconville/google-map-polyline-encoding-tool",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/emcconville/google-map-polyline-encoding-tool.git",
+                "reference": "10f6554ee1a4425b9c441713d54a3c03c811725b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/emcconville/google-map-polyline-encoding-tool/zipball/10f6554ee1a4425b9c441713d54a3c03c811725b",
+                "reference": "10f6554ee1a4425b9c441713d54a3c03c811725b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*",
+                "satooshi/php-coveralls": "dev-master",
+                "squizlabs/php_codesniffer": "2.0.0a2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Polyline.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU"
+            ],
+            "authors": [
+                {
+                    "name": "Eric McConville",
+                    "email": "emcconville@emcconville.com"
+                }
+            ],
+            "description": "A simple class to handle polyline-encoding for Google Maps",
+            "keywords": [
+                "google",
+                "maps"
+            ],
+            "time": "2016-06-01 11:03:28"
         },
         {
             "name": "monolog/monolog",
@@ -193,7 +238,8 @@
     "stability-flags": {
         "nephre/php-dbus": 20,
         "sibyx/phpgpx": 20,
-        "craygl/phpgpx": 20
+        "craygl/phpgpx": 20,
+        "emcconville/google-map-polyline-encoding-tool": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
