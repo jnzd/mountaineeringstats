@@ -16,16 +16,10 @@ if(isset($rownr)){
 		$publicUser = $last_word;
 		include 'includes/publicProfile.inc.php';
 	}else{
-		echo "<h1>Willkommen</h1>
-		<div id='feed'>";
-			//display news feed
-		echo "</div>";
+		include "includes/feed.inc.php";
 	}
 }else{
-	echo "<h1>Willkommen</h1>
-	<div id='feed'>";
-		//display news feed
-	echo "</div>";
+	include "includes/feed.inc.php";
 }
 ?>
 <?php
