@@ -54,6 +54,7 @@
 		    </nav>
 		  </div>
 		</header>
+		<div id="con">
 		<div id="content">
 		<?php
 	}else{
