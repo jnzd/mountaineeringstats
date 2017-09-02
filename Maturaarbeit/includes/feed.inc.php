@@ -8,7 +8,7 @@
       }
       return $rows;
     }
-    $id=$_SESSION['id'];
+    $id = $_SESSION['id'];
     $sql = "SELECT * FROM followers WHERE followingID='$id'";
     $result = $conn->query($sql);
     $rownr = $result->num_rows; 
@@ -43,7 +43,7 @@
         $filename = $row['filename'];
         $description = $row['description'];
         echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";        
-        if($userId = $_SESSION['id']){
+        if($userID == $_SESSION['id']){
           echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1><br />";
         }else{
           echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$username."'>".$title."</a></h1><br />";
