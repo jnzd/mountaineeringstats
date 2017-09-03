@@ -11,8 +11,9 @@
       $sql = "SELECT * FROM users WHERE id='$userID'";
       $result = $conn->query($sql);
       $row = $result->fetch_assoc();
+      $usernameComment = $row['username'];
       
-      echo '<div id="commentLine"><p class="comment"><b>'.$username.' </b>'.$commentText.'</p></div>';
+      echo '<div id="commentLine"><p class="comment"><b>'.$usernameComment.' </b>'.$commentText.'</p></div>';
     }
   }
 ?>
