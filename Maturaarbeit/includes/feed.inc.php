@@ -60,7 +60,7 @@
         }
         $encodedCoords = Polyline::encode($track);
         echo "<img src='http://maps.googleapis.com/maps/api/staticmap?size=400x400&path=color:#79abfc|weight:5|enc".$encodedCoords."&sensor=false&key=AIzaSyA4g-swM5ElPgnAUJPg27C8Gwi3-kANoTg' height='150'><br>";*/
-        echo "<div id='comments".$actid."'>comments".$actid;
+        echo "<div id='comments".$actid."'>";
         include 'includes/displayComments.inc.php';
         echo "</div>";
         include 'includes/likeButton.inc.php';

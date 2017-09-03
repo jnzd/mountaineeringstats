@@ -26,8 +26,8 @@
         $actTime = $row['actTime'];
         $filename = $row['filename'];
         $description = $row['description'];
-        echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1><br />";
-        echo "<p>".$description."</p><br />";
+        echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
+        echo "<p>".$description."</p>";
         $values = gpx($row['actPath']);
         $latitude = $values['latitudePHP'];
         $longitude = $values['longitudePHP'];
