@@ -42,7 +42,7 @@
         $actTime = $row['actTime'];
         $filename = $row['filename'];
         $description = $row['description'];
-        echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";        
+        echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";
         if($userID == $_SESSION['id']){
           echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1><br />";
         }else{
