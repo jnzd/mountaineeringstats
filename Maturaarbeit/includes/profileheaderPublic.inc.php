@@ -5,9 +5,9 @@
   ?>
 </h1>
 <div id="followButton">
-<?php
-  include 'followButton.inc.php';
-?>
+  <?php
+    include 'followButton.inc.php';
+  ?>
 </div>
 <div id="bio">
 
