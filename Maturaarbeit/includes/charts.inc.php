@@ -2,7 +2,7 @@
     
 ?>
 <canvas class="chart" id="elevation" ></canvas>
-<canvas class="chart" id="speed" ></canvas>
+<!--<canvas class="chart" id="speed" ></canvas>-->
 <script src="node_modules/chart.js/dist/Chart.js"></script>
 <script>
 
