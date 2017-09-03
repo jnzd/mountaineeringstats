@@ -1,4 +1,5 @@
 <div id="commentForm<?php echo $actid; ?>">
+  commentForm<?php echo $actid; ?>
   <form id="commentForm" action="includes/comment.inc.php" method="post" enctype="multipart/form-data">
     <input type="text" id="commentText" name="commentText" placeholder="Kommentar hinzufügen" autocomplete="off"><br>
     <input type="hidden" id="actID" name="actID" value="<?php echo $actid;?>">
@@ -10,14 +11,11 @@
   var actID = "<?php echo $actid; ?>";
 	console.log(actID);
   $("#commentForm"+actID).submit(function(event) {
-
     /* stop form from submitting normally */
     event.preventDefault();
-
     /* get the action attribute from the <form action=""> element */
     var $form = $( this ),
         url = $form.attr( 'action' );
-
     /* Send the data using post with element id name and name2*/
     var commentText = $('#commentText').val();
     var actID = $('#actID').val();

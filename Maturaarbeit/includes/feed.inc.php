@@ -44,11 +44,11 @@
         $description = $row['description'];
         echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";
         if($userID == $_SESSION['id']){
-          echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1><br />";
+          echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
         }else{
-          echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$username."'>".$title."</a></h1><br />";
+          echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$username."'>".$title."</a></h1>";
         }
-        echo "<p>".$description."</p><br />";
+        echo "<p>".$description."</p>";
         $values = gpx($row['actPath']);
         $latitude = $values['latitudePHP'];
         $longitude = $values['longitudePHP'];        
@@ -60,7 +60,7 @@
         }
         $encodedCoords = Polyline::encode($track);
         echo "<img src='http://maps.googleapis.com/maps/api/staticmap?size=400x400&path=color:#79abfc|weight:5|enc".$encodedCoords."&sensor=false&key=AIzaSyA4g-swM5ElPgnAUJPg27C8Gwi3-kANoTg' height='150'><br>";*/
-        echo "<div id='comments".$actid."'>";
+        echo "<div id='comments".$actid."'>comments".$actid;
         include 'includes/displayComments.inc.php';
         echo "</div>";
         include 'includes/likeButton.inc.php';
