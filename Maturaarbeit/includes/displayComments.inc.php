@@ -9,16 +9,19 @@
       $commentText = $row['text'];
       $userID = $row['userID'];
       $commentID = $row['commentID'];
+      echo "commentID: ".$commentID;
       $sql = "SELECT * FROM users WHERE id='$userID'";
       $result = $conn->query($sql);
       $row = $result->fetch_assoc();
       $usernameComment = $row['username'];
       $commentUserID = $row['id'];
       
-      echo '<div id="commentLine"><p class="comment"><b>'.$usernameComment.' </b>'.$commentText.'</p>';
+      echo '<div id="commentLine"><p class="comment"><b>'.$usernameComment.' </b>'.$commentText;
       if($commentUserID == $_SESSION['id']){
         $url = $_SERVER['REQUEST_URI'];
-        echo "<a href='includes/deleteComment.inc.php?id='.$commentID.'>löschen</a>";
+        echo " <a href='includes/deleteComment.inc.php?id='.$commentID.'>löschen</a></p>";
+      }else{
+        echo '</p>';
       }
       echo "</div>";
     }

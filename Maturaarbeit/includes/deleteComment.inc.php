@@ -3,6 +3,6 @@
   $commentID = $_GET['id'];
   //$url = $_GET['url'];
   $sql = "DELETE FROM comments WHERE commentID='$commentID'";
-  $result = mysqli_query($conn, $sql);
+  $result = $conn->query($sql);
   header("location: ../index.php");
 ?>
