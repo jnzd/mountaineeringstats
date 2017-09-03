@@ -1,6 +1,7 @@
 <div id="feed">
   <?php
     include 'parsers/parse.gpx.php';
+    require 'vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
     function resultToArray($result) {
       $rows = array();
       while($row = $result->fetch_assoc()) {
@@ -52,14 +53,16 @@
         $values = gpx($row['actPath']);
         $latitude = $values['latitudePHP'];
         $longitude = $values['longitudePHP'];        
-        /*$track = [];
+        $track = [];
+        $i = 0;
         foreach($latitude as $lat){
-          foreach($longitude as $long){
-            array_push($track, array($lat,$long));
-          }
+          array_push($track, array($lat,$longitude[$i]));
+          $i++;
         }
         $encodedCoords = Polyline::encode($track);
-        echo "<img src='http://maps.googleapis.com/maps/api/staticmap?size=400x400&path=color:#79abfc|weight:5|enc".$encodedCoords."&sensor=false&key=AIzaSyA4g-swM5ElPgnAUJPg27C8Gwi3-kANoTg' height='150'><br>";*/
+        $latCenter = (max($latitude)+min($latitude))/2;
+        $longCenter = (max($longitude)+min($longitude))/2;
+        echo "<img src='http://maps.googleapis.com/maps/api/staticmap?size=400x400&path=color:#79abfc|weight:5&enc".$encodedCoords."&center=".$latCenter.",".$longCenter."&zoom=10sensor=false&key=AIzaSyA4g-swM5ElPgnAUJPg27C8Gwi3-kANoTg><br>";
         echo "<div id='comments".$actid."'>";
         include 'includes/displayComments.inc.php';
         echo "</div>";
