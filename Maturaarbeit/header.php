@@ -35,13 +35,13 @@
 		<header>
 		  <div class="header-inner">
 <!--Website logo -->
-			    <a href="index.php" id="logo"><img src="icons/logo.png" height="24" width="24"></a>
+				<a href="index.php" id="logo"><img src="icons/logo.png" height="24" width="24"></a>
 <!--Suchleiste-->
-					<div id="search">
-				    <form class="search" action="includes/search.inc.php" method="post">
-				    	<input type="text" name="search" placeholder="Suchen">
-				    </form>
-					</div>
+				<div id="search">
+					<form class="search" action="includes/search.inc.php" method="post">
+						<input type="text" name="search" placeholder="Suchen">
+					</form>
+				</div>
 <!-- menu for mobile design -->
 				<nav>
 		      <a href="#" id="menu-icon"></a>

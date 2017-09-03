@@ -1,4 +1,4 @@
 <?php
-	//voruebergehend
-	header("location: ../search.php?search=".$_POST['search']);
+	$search = $_POST['search'];
+	header("location: ../search.php?search=".$search);
 ?>
