@@ -8,12 +8,19 @@
     foreach($rows as $row) {
       $commentText = $row['text'];
       $userID = $row['userID'];
+      $commentID = $row['commentID'];
       $sql = "SELECT * FROM users WHERE id='$userID'";
       $result = $conn->query($sql);
       $row = $result->fetch_assoc();
       $usernameComment = $row['username'];
+      $commentUserID = $row['id'];
       
-      echo '<div id="commentLine"><p class="comment"><b>'.$usernameComment.' </b>'.$commentText.'</p></div>';
+      echo '<div id="commentLine"><p class="comment"><b>'.$usernameComment.' </b>'.$commentText.'</p>';
+      if($commentUserID == $_SESSION['id']){
+        $url = $_SERVER['REQUEST_URI'];
+        echo "<a href='includes/deleteComment.inc.php?id='.$commentID.'>löschen</a>";
+      }
+      echo "</div>";
     }
   }
 ?>
