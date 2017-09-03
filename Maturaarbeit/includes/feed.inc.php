@@ -62,7 +62,7 @@
         $encodedCoords = Polyline::encode($track);
         $latCenter = (max($latitude)+min($latitude))/2;
         $longCenter = (max($longitude)+min($longitude))/2;
-        echo "<img src='http://maps.googleapis.com/maps/api/staticmap?size=400x400&path=color:#79abfc|weight:5&enc".$encodedCoords."&center=".$latCenter.",".$longCenter."&zoom=10sensor=false&key=AIzaSyA4g-swM5ElPgnAUJPg27C8Gwi3-kANoTg><br>";
+        echo "<img src='https://maps.googleapis.com/maps/api/staticmap?size=400x400&center=".$latCenter.",".$longCenter."&zoom=14&path=weight:3%7Ccolor:blue%7Cenc:".$encodedCoords."&key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s'><br>";
         echo "<div id='comments".$actid."'>";
         include 'includes/displayComments.inc.php';
         echo "</div>";

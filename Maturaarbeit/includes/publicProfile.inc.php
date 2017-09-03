@@ -1,4 +1,5 @@
 <?php
+  require 'vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
   $sql = "SELECT * FROM users WHERE username='$publicUser'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
@@ -40,20 +41,18 @@
         echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$publicUser."'>".$title."</a></h1>";
         echo "<p>".$description."</p>";
         $values = gpx($row['actPath']);
-        //echo "<img src='https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=AIzaSyA4g-swM5ElPgnAUJPg27C8Gwi3-kANoTg' height='150'>";
-
-        echo "<img src='http://maps.googleapis.com/maps/api/staticmap?size=400x400&path=color:#79abfc|weight:5|";
-        
-        /*
+        $latitude = $values['latitudePHP'];
+        $longitude = $values['longitudePHP'];        
+        $track = [];
+        $i = 0;
         foreach($latitude as $lat){
-          foreach($longitude as $long){
-            echo $lat.",".$long."|";
-          }
+          array_push($track, array($lat,$longitude[$i]));
+          $i++;
         }
-        */
-
-        echo "40.737102,-73.990318|40.749825,-73.987963|40.752946,-73.987384|40.755823,-73.986397";
-        echo "&sensor=false&key=AIzaSyA4g-swM5ElPgnAUJPg27C8Gwi3-kANoTg' height='150'><br>";
+        $encodedCoords = Polyline::encode($track);
+        $latCenter = (max($latitude)+min($latitude))/2;
+        $longCenter = (max($longitude)+min($longitude))/2;
+        echo "<img src='https://maps.googleapis.com/maps/api/staticmap?size=400x400&center=".$latCenter.",".$longCenter."&zoom=14&path=weight:3%7Ccolor:blue%7Cenc:".$encodedCoords."&key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s'><br>";
         echo "<div id='comments".$actid."'>";
         include 'includes/displayComments.inc.php';
         echo "</div>";
