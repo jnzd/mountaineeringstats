@@ -233,3 +233,6 @@ footer div.iconCredit{
 footer a{
 	color: #cecece;
 }
+#followednr{
+	float: right;
+}

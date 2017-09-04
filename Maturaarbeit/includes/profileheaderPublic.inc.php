@@ -1,9 +1,9 @@
 <a href="<?php echo $row['username'];?>"><img class="circle" src="<?php echo $row['pic_path'];?>" height="120" width="120"></a>
-<h1>
-  <?php
-    echo $publicUser;
-  ?>
-</h1>
+<?php
+  $userID = $row['id'];
+  include 'includes/followerNumbers.inc.php';
+  echo "<h1>".$publicUser."</h1>";
+?>
 <div id="followButton">
   <?php
     include 'followButton.inc.php';
