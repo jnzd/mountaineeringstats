@@ -32,15 +32,31 @@
         $distance_js = json_encode($distance);
       }
     }
+
+    function remove_outliers($dataset, $magnitude = 1) {      
+      $count = count($dataset);
+      // Calculate the mean
+      $mean = array_sum($dataset) / $count;
+      // Calculate standard deviation and times by magnitude
+      $deviation = sqrt(array_sum(array_map("sd_square", $dataset, array_fill(0, $count, $mean))) / $count) * $magnitude; 
+      // Return filtered array of values that lie within $mean +- $deviation.
+      return array_filter($dataset, function($x) use ($mean, $deviation) { return ($x <= $mean + $deviation && $x >= $mean - $deviation); }); 
+    }
+    function sd_square($x, $mean) {
+      return pow($x - $mean, 2);
+    } 
+
     $length = count($difference);
     $i = 1;
     $speed = [];
     while($i<$length){
       $timeInterval = $dateTime[$i]->diff($dateTime[$i-1]);
-      $speedkmh = ($difference[$i]/$timeInterval)*3.6;
+      $timeIntervalSec = time($timeInterval);
+      $speedkmh = ($difference[$i]/$timeIntervalSec)*3.6;
       array_push($speed, $speedkmh);
       $i++;
     }
+    remove_outliers($speed);
     $speed_js = json_encode($speed);
     foreach($dateTime as $moment){
       $date = $moment->format('Y-m-d H:i:s');
