@@ -30,8 +30,7 @@
         echo "<p>".$description."</p>";
         $values = gpx($row['actPath']);
         include 'includes/staticMap.inc.php';
-        include 'includes/displayComments.inc.php';        
-        echo"</div>";
+        include 'includes/displayComments.inc.php';
         include 'includes/likeButton.inc.php';
         include 'includes/commentForm.inc.php';
       }
