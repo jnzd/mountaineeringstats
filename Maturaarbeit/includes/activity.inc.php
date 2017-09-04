@@ -17,12 +17,16 @@
   echo "<p>".$description."</p><br />";
   echo "<a href='editAct.php?name=".$_GET['name']."'>Edit</a>";  
   $values = gpx($row['actPath']);
-
   $lat_js = $values['latitude'];
   $long_js = $values['longitude'];
   $elevation_js = $values['elevation'];
   $distance_js = $values['distance'];
   $time_js = $values['time'];
+  $speed_js = $values['speed'];
+  $longitude = $values['longitudePHP'];
+  $latitude = $values['latitudePHP'];
+  $dateTime = $values['dateTime'];
+  $distance = $values['distancePHP'];
 
   include 'includes/charts.inc.php';
   include 'includes/map.inc.php';

@@ -32,12 +32,22 @@
         $distance_js = json_encode($distance);
       }
     }
+    $length = count($difference);
+    $i = 1;
+    $speed = [];
+    while($i<$length){
+      $timeInterval = $dateTime[$i]->diff($dateTime[$i-1]);
+      $speedkmh = ($difference[$i]/$timeInterval)*3.6;
+      array_push($speed, $speedkmh);
+      $i++;
+    }
+    $speed_js = json_encode($speed);
     foreach($dateTime as $moment){
       $date = $moment->format('Y-m-d H:i:s');
       array_push($time, $date);
     }
     $time_js = json_encode($time);
-    $values=array("latitude"=>$lat_js,"longitude"=>$long_js,"elevation"=>$elevation_js,"distance"=>$distance_js,"time"=>$time_js,"latitudePHP"=>$latitude,"longitudePHP"=>$longitude);
+    $values=array("latitude"=>$lat_js,"longitude"=>$long_js,"elevation"=>$elevation_js,"distance"=>$distance_js,"time"=>$time_js,"latitudePHP"=>$latitude,"longitudePHP"=>$longitude,"dateTime"=>$dateTime,"distancePHP"=>$distance,"speed"=>$speed_js);
     //print_r($values);
     return $values;
   }

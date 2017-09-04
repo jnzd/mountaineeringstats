@@ -2,12 +2,13 @@
     
 ?>
 <canvas class="chart" id="elevation" ></canvas>
-<!--<canvas class="chart" id="speed" ></canvas>-->
+<canvas class="chart" id="speed" ></canvas>
 <script src="node_modules/chart.js/dist/Chart.js"></script>
 <script>
 
 	var elevation = <?php echo $elevation_js; ?>;
 	var time = <?php echo $time_js; ?>;
+	var speed = <?php echo $speed_js; ?>;
 
 	Array.prototype.max = function() {
     return Math.max.apply(null, this);
@@ -72,8 +73,8 @@
 			}
     }
 	});
-
-	/*
+	console.log(elevation);
+	console.log(speed);
 	var ctx2 = document.getElementById("speed");
 	var elevationChart = new Chart(ctx2, {
 		type: 'line',
@@ -81,6 +82,7 @@
 			labels: time,
 			datasets: [
 				{
+					radius: 0,
 					label: "Geschwindigkeit",
 					borderColor: "#919191",
 					data: speed
@@ -94,10 +96,10 @@
 						display: true,
 						scaleLabel: {
 							display: true,
-							labelString: 'Meter über Meer'
+							labelString: 'km/h'
 						},
 						ticks: {
-							//beginAtZero: false,
+							beginAtZero: true,
 							//stepSize: 50
 						}
 					}
@@ -111,12 +113,11 @@
 						},
 						ticks: {
 							min: time[0],
-							max: time[time.length-1]
+							max: time[time.length-2]
 						}
 					}
 				]
 			}
     }
 	});
-	*/
 </script>
