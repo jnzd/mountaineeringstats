@@ -66,6 +66,9 @@
 						display: true,
 						labelString: 'km/h'
 					},
+					gridLines:{
+						display:false
+					},
 					ticks: {
 						beginAtZero: true
 					}
