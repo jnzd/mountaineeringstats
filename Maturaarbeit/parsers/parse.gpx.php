@@ -51,10 +51,10 @@
       array_push($speed, $speedkmh);
       $i++;
     }
-    $speedSorted = asort($speed);
-    $median = $speedSorted[count($speedSorted)/2];
+    //$speedSorted = asort($speed);
+    //$median = $speedSorted[count($speedSorted)/2];
     $speedCleared = array_filter($speed, "bigger_than");
-    $speed_js = json_encode($speedCleared);
+    $speed_js = json_encode($speed);
     foreach($dateTime as $moment){
       $date = $moment->format('Y-m-d H:i:s');
       array_push($time, $date);

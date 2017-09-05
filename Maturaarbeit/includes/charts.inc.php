@@ -73,8 +73,12 @@
 			}
     }
 	});
+
 	console.log(elevation);
 	console.log(speed);
+	console.log(speed.length);
+	console.log(elevation.length);
+	console.log(time.length);
 	var ctx2 = document.getElementById("speed");
 	var elevationChart = new Chart(ctx2, {
 		type: 'line',
@@ -112,8 +116,8 @@
 							labelString: 'Zeit'
 						},
 						ticks: {
-							min: time[0],
-							max: time[time.length-2]
+							//min: time[0],
+							//max: time[speed.length-1]
 						}
 					}
 				]
