@@ -35,14 +35,14 @@
 					radius: 0,
 					yAxisID: 'A',
 					label: "Höhe",
-					borderColor: "#919191",
+					borderColor: "#333333",
 					data: elevation
 				},
 				{
 					radius: 0,
 					yAxisID: 'B',
 					label: "Geschwindigkeit",
-					borderColor: "#919191",
+					borderColor: "#adadad",
 					data: speed
 				}
 			]
