@@ -2,7 +2,6 @@
     
 ?>
 <canvas class="chart" id="elevation" ></canvas>
-<canvas class="chart" id="speed" ></canvas>
 <script src="node_modules/chart.js/dist/Chart.js"></script>
 <script>
 
@@ -34,9 +33,17 @@
 			datasets: [
 				{
 					radius: 0,
+					yAxisID: 'A',
 					label: "Höhe",
 					borderColor: "#919191",
 					data: elevation
+				},
+				{
+					radius: 0,
+					yAxisID: 'B',
+					label: "Geschwindigkeit",
+					borderColor: "#919191",
+					data: speed
 				}
 			]
 		},
@@ -44,19 +51,25 @@
 			//pointRadius: 0,
 			//pointHitRadius: 5,
 			scales: {
-				yAxes: [
-					{
+				yAxes: [{
+					id: 'A',
+					display: true,
+					scaleLabel: {
 						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Meter über Meer'
-						},
-						ticks: {
-							//beginAtZero: false,
-							//stepSize: 50
-						}
+						labelString: 'Meter über Meer'
 					}
-				],
+				}, {
+					id: 'B',
+					position: 'right',
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'km/h'
+					},
+					ticks: {
+						beginAtZero: true
+					}
+				}],
 				xAxes: [
 					{
 						display: true,
@@ -67,57 +80,6 @@
 						ticks: {
 							min: time[0],
 							max: time[time.length-1]
-						}
-					}
-				]
-			}
-    }
-	});
-
-	console.log(elevation);
-	console.log(speed);
-	console.log(speed.length);
-	console.log(elevation.length);
-	console.log(time.length);
-	var ctx2 = document.getElementById("speed");
-	var elevationChart = new Chart(ctx2, {
-		type: 'line',
-    data: {
-			labels: time,
-			datasets: [
-				{
-					radius: 0,
-					label: "Geschwindigkeit",
-					borderColor: "#919191",
-					data: speed
-				}
-			]
-		},
-		options: {
-			scales: {
-				yAxes: [
-					{
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'km/h'
-						},
-						ticks: {
-							beginAtZero: true,
-							//stepSize: 50
-						}
-					}
-				],
-				xAxes: [
-					{
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Zeit'
-						},
-						ticks: {
-							//min: time[0],
-							//max: time[speed.length-1]
 						}
 					}
 				]
