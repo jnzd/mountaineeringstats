@@ -2,6 +2,13 @@
   include 'vendor/autoload.php';
   use phpGPX\phpGPX;
   //include '../vendor/autoload.php';
+  function bigger_than($testValue){
+    if($testValue > 60){
+      return false;
+    }else{
+      return true;
+    }
+  }
   function gpx($location){
     $gpx = new phpGPX();
     $file = $gpx->load($location);
@@ -45,8 +52,8 @@
     }
     $speedSorted = asort($speed);
     $median = $speedSorted[count($speedSorted)/2];
-    $speedCleared = array_filter($speed, $speed.">".$median*5);
-    $speed_js = json_encode($speed);
+    $speedCleared = array_filter($speed, "bigger_than";
+    $speed_js = json_encode($speedCleared);
     foreach($dateTime as $moment){
       $date = $moment->format('Y-m-d H:i:s');
       array_push($time, $date);
