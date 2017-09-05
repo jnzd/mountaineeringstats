@@ -44,15 +44,16 @@
     $i = 1;
     $speed = [];
     while($i<$length){
-      $timeInterval = $dateTime[$i]->diff($dateTime[$i-1]);
-      $timeIntervalSec = $timeInterval->format("%s");
-      $speedkmh = ($difference[$i]/$timeIntervalSec)*3.6;
+      $a = $dateTime[$i]->getTimestamp();
+      $b = $dateTime[$i-1]->getTimestamp();
+      $timeInterval = $a - $b;
+      $speedkmh = ($difference[$i]/$timeInterval)*3.6;
       array_push($speed, $speedkmh);
       $i++;
     }
     $speedSorted = asort($speed);
     $median = $speedSorted[count($speedSorted)/2];
-    $speedCleared = array_filter($speed, "bigger_than";
+    $speedCleared = array_filter($speed, "bigger_than");
     $speed_js = json_encode($speedCleared);
     foreach($dateTime as $moment){
       $date = $moment->format('Y-m-d H:i:s');
