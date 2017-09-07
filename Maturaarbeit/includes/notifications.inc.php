@@ -1,12 +1,12 @@
 <?php
   $id = $_SESSION['id'];
   $sqlNotifications = "SELECT * FROM followers WHERE followedID='$id' AND messageChecked='0'";
-  $result = $conn->query($sql);
-  $rownr = $result->num_rows;
-  if($rownr>0){
-    $rows = resultToArray($result);
-    $result->free();
-    foreach($rows as $row) {
+  $resultNotifications = $conn->query($sqlNotifications);
+  $rownrNotifications = $resultNotifications->num_rows;
+  if($rownrNotifications>0){
+    $notifications = resultToArray($resultNotifications);
+    $resultNotifications->free();
+    foreach($notifications as $notification) {
       echo $row['message'];
       echo "<br>";
     }

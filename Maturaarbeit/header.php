@@ -49,10 +49,15 @@
 		      <ul>
 <!-- Links im Header -->
 						<li><a href="upload.php"><img src="icons/upload.png" height="24" width="24"></a></li>
-						<li><a href="notifications()">BENACHRICHTIGUNGEN</a></li>
-
+						<li><a href="javascript:notifications();" class="dropbtn"><?php 
+							if($notifications == true){
+								echo "<img src='icons/notifications.png' height='24' width='24'>";
+							}else{
+								echo "<img src='icons/noNotifications.png' height='24' width='24'>";
+							}
+						?>
+						</a></li>
 						<div class="dropdown">
-							<button onclick="myFunction()" class="dropbtn">Dropdown</button>
 							<div id="dropdown" class="dropdown-content">
 								<?php include 'includes/notifications.inc.php';?>
 							</div>
