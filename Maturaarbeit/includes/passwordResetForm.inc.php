@@ -13,5 +13,4 @@
     //$_SESSION['id'] = $id;
     header("location: ../index.php");
   }
-
 ?>
