@@ -60,8 +60,10 @@ if($_POST['password'] != $_POST['confirmpassword']){
 		//email message
 		$message = "Bitte bestätige deine E-Mailadresse mit dem folgenden link: https://mountaineeringstats.com/includes/confirming.inc.php?username=".$username."&code=".$confirm_code;
 		//send email
-		$headers = 'From: noreply@mountaineeringstats.com';
-		mail($email,"E-Mail Bestätigung", $message, $headers);
+    $header = "From: noreply@mountaineeringstats.com\r\n";
+    $header .= "Mime-Version: 1.0\r\n";
+    $header .= "Content-type: text/plain; charset=utf-8";
+		mail($email,"E-Mail Bestätigung", $message, $header);
 		$sql = "SELECT * FROM users WHERE email='$email'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
