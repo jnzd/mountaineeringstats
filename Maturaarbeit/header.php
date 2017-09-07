@@ -50,6 +50,7 @@
 <!-- Links im Header -->
 						<li><a href="upload.php"><img src="icons/upload.png" height="24" width="24"></a></li>
 						<li><a href="javascript:notifications();" class="dropbtn"><?php 
+							include "includes/checkNotifications.inc.php";
 							if($notifications == true){
 								echo "<img src='icons/notifications.png' height='24' width='24'>";
 							}else{
