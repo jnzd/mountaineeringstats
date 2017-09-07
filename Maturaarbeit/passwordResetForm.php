@@ -2,7 +2,11 @@
   $title = "Hi";
   include 'header.php';
   include 'db.php';
-  $id = $_GET['id'];
+  if(isset($_GET['id'])){
+    $id = $_GET['id'];
+  }else{
+    header("location: ../index.php");
+  }
   $sql = "SELECT * FROM users WHERE id='$id'";
   $result = $conn->query($sql);
   $rownr = $result->num_rows;

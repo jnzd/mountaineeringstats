@@ -10,7 +10,7 @@
     
     $_SESSION['error'] = "";
     $sql = "UPDATE users SET password='$password' WHERE id='$id'";
-    $_SESSION['id'] = $id;
+    //$_SESSION['id'] = $id;
     header("location: ../index.php");
   }
 
