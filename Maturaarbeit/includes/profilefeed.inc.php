@@ -4,13 +4,6 @@
   if(isset($_SESSION['id'])){
     include 'parsers/parse.gpx.php';
     $id = $_SESSION['id'];
-    function resultToArray($result) {
-      $rows = array();
-      while($row = $result->fetch_assoc()) {
-          $rows[] = $row;
-      }
-      return $rows;
-    }
     $sql = "SELECT * FROM activities WHERE user_id='$id'";
     $result = $conn->query($sql);
     $rownr = $result->num_rows;

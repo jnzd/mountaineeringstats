@@ -2,13 +2,6 @@
   <?php
     include 'parsers/parse.gpx.php';
     require 'vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
-    function resultToArray($result) {
-      $rows = array();
-      while($row = $result->fetch_assoc()) {
-          $rows[] = $row;
-      }
-      return $rows;
-    }
     $id = $_SESSION['id'];
     $sql = "SELECT * FROM followers WHERE followingID='$id'";
     $result = $conn->query($sql);

@@ -16,13 +16,6 @@
 <div id="feed">
   <?php
     include 'parsers/parse.gpx.php';
-    function resultToArray($result) {
-      $rows = array();
-      while($row = $result->fetch_assoc()) {
-          $rows[] = $row;
-      }
-      return $rows;
-    }
     $sql = "SELECT * FROM activities WHERE user_id='$id'";
     $result = $conn->query($sql);
     $rownr = $result->num_rows;
