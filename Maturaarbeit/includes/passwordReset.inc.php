@@ -19,6 +19,7 @@
     mail($email,"Passwort Zurücksetzen", $message, $header);
     header("location: ../start.php");
   }else{
-    echo "<p>Diese E-Mail Adresse ist nicht registriert.</p>";
+    $_SESSION['error'] = "Diese E-Mail Adresse ist nicht registriert";
+    header("location: ../passwordReset.php");
   }
 ?>
