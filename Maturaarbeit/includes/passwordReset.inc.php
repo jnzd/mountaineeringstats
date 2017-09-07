@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include '../db.php';
   $email = $_POST['email'];
   $sql = "SELECT * FROM users WHERE email='$email'";
@@ -17,6 +18,8 @@
     $header .= "Mime-Version: 1.0\r\n";
     $header .= "Content-type: text/plain; charset=utf-8";
     mail($email,"Passwort Zurücksetzen", $message, $header);
+    $_SESSION['error'] = "";
+    $_SESSION['registrationError'] = "E-Mail wurde versandt";
     header("location: ../start.php");
   }else{
     $_SESSION['error'] = "Diese E-Mail Adresse ist nicht registriert";

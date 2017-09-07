@@ -3,18 +3,22 @@
   include 'header.php';
   include 'db.php';
   $id = $_GET['id'];
-  $sql = "SELECT * FROM users WHERE id='$id'"
+  $sql = "SELECT * FROM users WHERE id='$id'";
   $result = $conn->query($sql);
   $rownr = $result->num_rows;
   if($rownr == 0){
     echo "fehlerhafter Link";
   }else{
     $row = $result->fetch_assoc();
+    $_SESSION['userID'] = $id;
+    $email = $row['email'];
 ?>
   <div class="outer">
     <div class="middle">
       <div class="inner">
-        <h1>Passwort vergessen</h1>
+			<h1 class="start">Mountaineeringstats</h1>
+        <h1 class="start">Passwort vergessen</h1>
+        <p>Passwort für <?php echo $email; ?> zurücksetzen</p>
         <div id="error">
           <?php
             if(isset($_SESSION['error'])){

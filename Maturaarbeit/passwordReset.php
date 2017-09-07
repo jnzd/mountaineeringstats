@@ -6,7 +6,8 @@
 <div class="outer">
   <div class="middle">
     <div class="inner">
-      <h1>Passwort vergessen</h1>
+			<h1 class="start">Mountaineeringstats</h1>
+      <h1 class="start">Passwort vergessen</h1>
       <div id="error">
         <?php
           if(isset($_SESSION['error'])){
