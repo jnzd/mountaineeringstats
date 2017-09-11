@@ -7,9 +7,9 @@
     $_SESSION['error'] = "Passwörter stimmen nicht überein";
     header("location: ../passwordResetForm.php?id=".$id);
   }else{
-    
     $_SESSION['error'] = "";
-    $sql = "UPDATE users SET password='$password' WHERE id='$id'";
+    $sql = "UPDATE users SET password='$password', resetHash=NULL WHERE id='$id'";
+    $result = $conn->query($sql);
     //$_SESSION['id'] = $id;
     header("location: ../index.php");
   }

@@ -22,72 +22,73 @@
 <body>
 <?php
 		if(isset($_SESSION['id'])){
-		$id = $_SESSION['id'];
-		$sql = "SELECT * FROM users WHERE id='$id'";
-		$result = mysqli_query($conn, $sql);
-		$row = mysqli_fetch_assoc($result);
-		$username = $row['username'];
-		if($row['confirmed']==0 && $_SERVER['REQUEST_URI']!='/verification.php'){
-			header("Location: verification.php");
-		}
-		$profilepic = $row['pic_path'];
+			$id = $_SESSION['id'];
+			$sql = "SELECT * FROM users WHERE id='$id'";
+			$result = mysqli_query($conn, $sql);
+			$row = mysqli_fetch_assoc($result);
+			$username = $row['username'];
+			if($row['confirmed']==0 && $_SERVER['REQUEST_URI']!='/verification.php'){
+				header("Location: verification.php");
+			}
+			if(isset($_SESSION['id'])&&$_SERVER['REQUEST_URI']=='/passwordResetForm.php'){
+				header("location: index.php");
+			}
+			$profilepic = $row['pic_path'];
 //Header anzeigen
-		?>
-		<header>
-		  <div class="header-inner">
+			?>
+			<header>
+				<div class="header-inner">
 <!--Website logo -->
-				<a href="index.php" id="logo"><img src="icons/logo.png" height="24" width="24"></a>
+					<a href="index.php" id="logo"><img src="icons/logo.png" height="24" width="24"></a>
 <!--Suchleiste-->
-				<div id="search">
-					<form class="search" action="includes/search.inc.php" method="post">
-						<input type="text" name="search" placeholder="Suchen">
-					</form>
-				</div>
+					<div id="search">
+						<form class="search" action="includes/search.inc.php" method="post">
+							<input type="text" name="search" placeholder="Suchen">
+						</form>
+					</div>
 <!-- menu for mobile design -->
-				<nav>
-		      <a href="#" id="menu-icon"></a>
-		      <ul>
+					<nav>
+						<a href="#" id="menu-icon"></a>
+						<ul>
 <!-- Links im Header -->
-						<li><a href="upload.php"><img src="icons/upload.png" height="24" width="24"></a></li>
-						<!--<li><a href="javascript:notifications();" class="dropbtn"><?php 
-							/*include "includes/checkNotifications.inc.php";
-							if($notifications == true){
-								echo "<img src='icons/notifications.png' height='24' width='24'>";
-							}else{
-								echo "<img src='icons/noNotifications.png' height='24' width='24'>";
-							}*/
-						?>
-						</a></li>
-						<div class="dropdown">
-							<div id="dropdown" class="dropdown-content">
-								<?php //include 'includes/notifications.inc.php';?>
+							<li><a href="upload.php"><img src="icons/upload.png" height="24" width="24"></a></li>
+							<!--<li><a href="javascript:notifications();" class="dropbtn"><?php 
+								/*include "includes/checkNotifications.inc.php";
+								if($notifications == true){
+									echo "<img src='icons/notifications.png' height='24' width='24'>";
+								}else{
+									echo "<img src='icons/noNotifications.png' height='24' width='24'>";
+								}*/
+							?>
+							</a></li>
+							<div class="dropdown">
+								<div id="dropdown" class="dropdown-content">
+									<?php //include 'includes/notifications.inc.php';?>
+								</div>
 							</div>
-						</div>
 
-						<script>
-						/* When the user clicks on the link, 
-						toggle between hiding and showing the dropdown content */
-						function notifications() {
-								document.getElementById("myDropdown").classList.toggle("show");
-						}
+							<script>
+							/* When the user clicks on the link, 
+							toggle between hiding and showing the dropdown content */
+							function notifications() {
+									document.getElementById("myDropdown").classList.toggle("show");
+							}
 
-						// Close the dropdown if the user clicks outside of it
-						window.onclick = function(event) {
-							if (!event.target.matches('.dropbtn')) {
+							// Close the dropdown if the user clicks outside of it
+							window.onclick = function(event) {
+								if (!event.target.matches('.dropbtn')) {
 
-								var dropdowns = document.getElementsByClassName("dropdown-content");
-								var i;
-								for (i = 0; i < dropdowns.length; i++) {
-									var openDropdown = dropdowns[i];
-									if (openDropdown.classList.contains('show')) {
-										openDropdown.classList.remove('show');
+									var dropdowns = document.getElementsByClassName("dropdown-content");
+									var i;
+									for (i = 0; i < dropdowns.length; i++) {
+										var openDropdown = dropdowns[i];
+										if (openDropdown.classList.contains('show')) {
+											openDropdown.classList.remove('show');
+										}
 									}
 								}
 							}
-						}
-						</script>-->
-
-
+							</script>-->
 		        <?php echo "<li><a href='profile.php'><img class='circle' src=".$profilepic." height='24' width='24'></a></li>"?>
 		        <li><a href="includes/logout.inc.php">ABMELDEN</a></li>
 		      </ul>
