@@ -7,8 +7,12 @@
     $notification = resultToArray($resultNotifications);
     $resultNotifications->free();
     foreach($notification as $notification) {
-      echo $notification['message'];
-      echo "<br>";
+      echo "<li><a href='".$notification['followingUser']."'>";
+      echo $notification['followingUser']." hat dich abonniert";
+      echo "</a></li>";
+      $followersID = $notification['followingID00followedID'];
+      $sql = "UPDATE followers SET messageChecked=1 WHERE followingID00followedID='$followersID'";
+      $result = $conn->query($sql);
     }
   }
 ?>

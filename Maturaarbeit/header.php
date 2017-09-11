@@ -67,29 +67,6 @@
 									<?php include 'includes/notifications.inc.php';?>
 								</div>
 							</div>
-
-							<script>
-							/* When the user clicks on the link, 
-							toggle between hiding and showing the dropdown content */
-							function notifications() {
-									document.getElementById("myDropdown").classList.toggle("show");
-							}
-
-							// Close the dropdown if the user clicks outside of it
-							window.onclick = function(event) {
-								if (!event.target.matches('.dropbtn')) {
-
-									var dropdowns = document.getElementsByClassName("dropdown-content");
-									var i;
-									for (i = 0; i < dropdowns.length; i++) {
-										var openDropdown = dropdowns[i];
-										if (openDropdown.classList.contains('show')) {
-											openDropdown.classList.remove('show');
-										}
-									}
-								}
-							}
-							</script>
 						<li><a href="profile.php"><img class="circle" src="<?php echo $profilepic; ?>" height="24" width="24"></a></li>
 		        <li><a href="includes/logout.inc.php">ABMELDEN</a></li>
 		      </ul>
