@@ -43,38 +43,35 @@
 		//display header if logged in and confirmed
 		?>
 		<header>
-			<div class="header-inner">
-				<!--Logo-->
-				<div class="logo">
-					<a href="index.php" class="logo"><img src="icons/logo.png" height="24" width="24"></a>
-				</div>
-				<!--searchbar-->
-				<div id="search">
-					<form class="search" action="includes/search.inc.php" method="post">
-						<input type="text" name="search" placeholder="Suchen">
-					</form>
-				</div>
-				<!--menu for mobile design-->
-				<nav>
-					<a href="#" id="menu-icon"></a>
-					<ul>
-						<!--navigation links-->
-						<li><a href="upload.php"><img src="icons/upload.png" height="24" width="24"></a></li>
-						<li><a href="javascript:notifications();" class="dropbtn"><?php 
-							include "includes/checkNotifications.inc.php";
-							if($notifications == true){
-								echo "<img src='icons/notifications.png' height='24' width='24'>";
-							}else{
-								echo "<img src='icons/noNotifications.png' height='24' width='24'>";
-							}
-						?>
-						</a></li>
-						<?php include 'includes/notifications.inc.php';?>
-						<li><a href="profile.php"><img class="circle" src="<?php echo $profilepic; ?>" height="24" width="24"></a></li>
-		        <li><a href="includes/logout.inc.php">ABMELDEN</a></li>
-		      </ul>
-		    </nav>
-		  </div>
+			<!--Logo-->
+			<div class="logo">
+				<a href="index.php" class="logo"><img src="icons/logo.png" height="30" width="30"></a>
+			</div>
+			<!--searchbar-->
+			<div class="search">
+				<form class="search" action="includes/search.inc.php" method="post">
+					<input class="search" type="text" name="search" placeholder="Suchen">
+				</form>
+			</div>
+			<!--menu for mobile design-->
+			<nav>
+				<ul>
+					<!--navigation links-->
+					<li><a href="upload.php"><img src="icons/upload.png" height="30" width="30"></a></li>
+					<li><a href="javascript:notifications();" class="dropbtn"><?php 
+						include "includes/checkNotifications.inc.php";
+						if($notifications == true){
+							echo "<img src='icons/notifications.png' height='30' width='30'>";
+						}else{
+							echo "<img src='icons/noNotifications.png' height='30' width='30'>";
+						}
+					?>
+					</a></li>
+					<?php include 'includes/notifications.inc.php';?>
+					<li><a href="profile.php"><img class="circle" src="<?php echo $profilepic; ?>" height="30" width="30"></a></li>
+					<li><a href="includes/logout.inc.php">ABMELDEN</a></li>
+				</ul>
+			</nav>
 		</header>
 		<!-- open divs -->
 		<div id="con">

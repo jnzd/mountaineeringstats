@@ -21,37 +21,31 @@ header{
 	padding: 0;
 }
 .logo{
-	display: inline;
+	display: inline-block;
+	height: 60px;
+	width: auto;
 }
 .search{
- display: inline;
-}
-form.search{
-	text-align: center;
-	display: inline;
+	display: inline-block;
+	width: auto;
+	padding: 0;
 }
 a.logo{
   margin: 20px;
-  float: left;
-  width: auto;
-  height: auto;
+	display: inline-block;
+	height: 60px;
+	width: auto;
 }
 nav{
-	float: right;
+	display: inline-block;
+	height: 60px;
+	width: auto;
 	padding: 0;
-}
-a#menu-icon{
-  display: hidden;
-  width: 40px;
-  height: 40px;
-  background: url(icons/nav.png) center;
-}
-a:hover#menu-icon{
-  border-radius: 4px 4px 0 0;
 }
 /* Alle unsortierten Listen ohne Punkte*/
 ul{
-  list-style-type: none;
+	list-style-type: none;
+	padding: 0;
 }
 /**************************************/
 nav ul li{
@@ -59,6 +53,8 @@ nav ul li{
 	font-size: 100%;
 	margin: 0 10px 0 10px;
 	display: inline-block;
+	height: 60px;
+	width: auto;
 	/*float: left;*/
 	line-height: 24px;
 }
@@ -67,9 +63,12 @@ nav ul li img{
 }
 nav ul li a{
 	color: #fcfcfc;
-	font-family:  Arial, sans-serif;
+  font-family: 'Alegreya', sans-serif;
 	font-size: 16px;
 	text-decoration: none;
+	display: inline-block;
+	height: 60px;
+	width: auto;
 }
 
 
