@@ -1,9 +1,10 @@
 <?php
+	//include important files
 	include 'db.php';
 	include 'vendor/autoload.php';
 	include 'includes/resultToArray.inc.php';
   use phpGPX\phpGPX;
-//Starte session in auf jeder Seite
+	//start session on every page
 	session_start();
 	if(!isset($title)){
 		$title='Mountaineeringstats';
@@ -15,44 +16,50 @@
 	<link rel="icon" href="icons/logo.png">
 	<title><?php echo $title; ?></title>
 	<link href="style.css" rel="stylesheet" type="text/css">
-<!-- Google maps polyline meta -->
+	<!-- Google maps polyline meta -->
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 </head>
 
 <body>
 <?php
+	//check if logged in
 	if(isset($_SESSION['id'])){
+		//if yes
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM users WHERE id='$id'";
-		$result = mysqli_query($conn, $sql);
-		$row = mysqli_fetch_assoc($result);
+		$result = $conn->query($sql);
+		$row = $result->fetch_assoc();
+		//retrieve data about user from database
 		$username = $row['username'];
+		$profilepic = $row['pic_path'];
+		//check if account has been confirmed
 		if($row['confirmed']==0 && $_SERVER['REQUEST_URI']!='/verification.php'){
 			header("Location: verification.php");
 		}
+		//check if logged in, but url is from password reset, which is a contradiction...
 		if(isset($_SESSION['id'])&&$_SERVER['REQUEST_URI']=='/passwordResetForm.php'){
 			header("location: index.php");
 		}
-		$profilepic = $row['pic_path'];
-//Header anzeigen
+		//display header if logged in and confirmed
 		?>
 		<header>
 			<div class="header-inner">
-<!--Website logo -->
-				<a href="index.php" id="logo"><img src="icons/logo.png" height="24" width="24"></a>
-<!--Suchleiste-->
+				<!--Logo-->
+				<div class="logo">
+					<a href="index.php" class="logo"><img src="icons/logo.png" height="24" width="24"></a>
+				</div>
+				<!--searchbar-->
 				<div id="search">
 					<form class="search" action="includes/search.inc.php" method="post">
 						<input type="text" name="search" placeholder="Suchen">
 					</form>
 				</div>
-<!-- menu for mobile design -->
+				<!--menu for mobile design-->
 				<nav>
 					<a href="#" id="menu-icon"></a>
 					<ul>
-<!-- Links im Header -->
+						<!--navigation links-->
 						<li><a href="upload.php"><img src="icons/upload.png" height="24" width="24"></a></li>
-
 						<li><a href="javascript:notifications();" class="dropbtn"><?php 
 							include "includes/checkNotifications.inc.php";
 							if($notifications == true){
@@ -69,10 +76,12 @@
 		    </nav>
 		  </div>
 		</header>
+		<!-- open divs -->
 		<div id="con">
 		<div id="content">
 		<?php
 	}else{
+		//if not logged in
 		if($title != 'Hi' && $title != 'Willkommen'){
 			header('location: start.php');
 		}
