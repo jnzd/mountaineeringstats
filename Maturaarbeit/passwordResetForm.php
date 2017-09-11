@@ -2,12 +2,13 @@
   $title = "Hi";
   include 'header.php';
   include 'db.php';
-  if(isset($_GET['id'])){
+  if(isset($_GET['code'])&& isset($_GET['id'])){
+    $code = $_GET['code'];
     $id = $_GET['id'];
   }else{
     header("location: ../index.php");
   }
-  $sql = "SELECT * FROM users WHERE id='$id'";
+  $sql = "SELECT * FROM users WHERE id='$id' AND resetHash='$code'";
   $result = $conn->query($sql);
   $rownr = $result->num_rows;
   if($rownr == 0){

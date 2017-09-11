@@ -66,7 +66,6 @@ if($_POST['password'] != $_POST['confirmpassword']){
 			} while ($rnd >= $range);
 			return $min + $rnd;
 		}
-
 		function getToken($length=32){
 			$token = "";
 			$codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
