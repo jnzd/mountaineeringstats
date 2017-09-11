@@ -52,18 +52,19 @@
 						<ul>
 <!-- Links im Header -->
 							<li><a href="upload.php"><img src="icons/upload.png" height="24" width="24"></a></li>
-							<!--<li><a href="javascript:notifications();" class="dropbtn"><?php 
-								/*include "includes/checkNotifications.inc.php";
+
+							<li><a href="javascript:notifications();" class="dropbtn"><?php 
+								include "includes/checkNotifications.inc.php";
 								if($notifications == true){
 									echo "<img src='icons/notifications.png' height='24' width='24'>";
 								}else{
 									echo "<img src='icons/noNotifications.png' height='24' width='24'>";
-								}*/
+								}
 							?>
 							</a></li>
 							<div class="dropdown">
 								<div id="dropdown" class="dropdown-content">
-									<?php //include 'includes/notifications.inc.php';?>
+									<?php include 'includes/notifications.inc.php';?>
 								</div>
 							</div>
 
@@ -88,8 +89,8 @@
 									}
 								}
 							}
-							</script>-->
-		        <?php echo "<li><a href='profile.php'><img class='circle' src=".$profilepic." height='24' width='24'></a></li>"?>
+							</script>
+						<li><a href="profile.php"><img class="circle" src="<?php echo $profilepic; ?>" height="24" width="24"></a></li>
 		        <li><a href="includes/logout.inc.php">ABMELDEN</a></li>
 		      </ul>
 		    </nav>
