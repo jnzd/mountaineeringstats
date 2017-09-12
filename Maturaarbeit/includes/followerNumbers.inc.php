@@ -7,5 +7,23 @@
   $result = $conn->query($sql);
   $followersnr = $result->num_rows; 
 ?>
-<div id="followingnr"><p><b><?php echo $followingnr; ?></b><br>abonniert</p></div>
-<div id="followernr"><p><b><?php echo $followersnr; ?></b><br>Abonnenten</p></div>
+<div class="profileStats">
+  <div class="followingnr">
+    <p>
+      <b>
+        <?php echo $followingnr; ?>
+      </b>
+      <br>
+      Abonniert
+    </p>
+  </div>
+  <div class="followernr">
+    <p>
+      <b>
+        <?php echo $followersnr; ?>
+      </b>
+      <br>
+      Abonnenten
+    </p>
+  </div>
+</div>

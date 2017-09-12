@@ -9,7 +9,8 @@ html,
 body {
    margin:0;
    padding:0;
-   height:100%;
+	 height:100%;
+	 background-color: #F4F4F4;
 }
 /*** header ***/
 header{
@@ -93,13 +94,31 @@ input.search{
 .dropdown:hover .dropbtn {
 	background-color: #222222;
 }
-/*** feed ***/
-.feed{
-
-}
 .activityPreview{
-	box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
-	margin: 32px;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 15px;
+	margin: 32px 0 32px 0;
+}
+/*** profile header ***/
+.profileheader{
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+.profileStats{
+	display: inline-block;
+}
+.followingnr{
+	display: inline-block;
+	margin-right: auto;
+}
+.followernr{
+	display: inline-block;
+	margin-left: auto;
+}
+.username{
+	display: inline-block;
+	margin-top: auto;
 }
 /******************************************************************/
 #error{
@@ -261,7 +280,4 @@ footer div.iconCredit{
 }
 footer a{
 	color: #cecece;
-}
-#followednr{
-	float: right;
 }

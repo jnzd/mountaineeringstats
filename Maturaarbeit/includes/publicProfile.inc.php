@@ -7,12 +7,8 @@
   if($id == $_SESSION['id']){
     header("Location: profile.php");
   }
+  include 'includes/profileheaderPublic.inc.php';
 ?>
-<div class="profileheader">
-  <?php
-    include 'includes/profileheaderPublic.inc.php';
-  ?>
-</div>
 <div class="feed">
   <?php
     include 'parsers/parse.gpx.php';

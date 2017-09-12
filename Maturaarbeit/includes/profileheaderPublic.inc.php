@@ -1,14 +1,16 @@
-<a href="<?php echo $row['username'];?>"><img class="circle" src="<?php echo $row['pic_path'];?>" height="120" width="120"></a>
-<?php
-  $userID = $row['id'];
-  include 'includes/followerNumbers.inc.php';
-  echo "<h1>".$publicUser."</h1>";
-?>
-<div id="followButton">
+<div class="profileheader">
+  <a href="<?php echo $row['username'];?>"><img class="circle" src="<?php echo $row['pic_path'];?>" height="120" width="120"></a>
   <?php
-    include 'followButton.inc.php';
+    $userID = $row['id'];
+    echo "<h1 class='username'>".$publicUser."</h1>";
+    include 'includes/followerNumbers.inc.php';
   ?>
-</div>
-<div id="bio">
+  <div class="followButton" id="followButton">
+    <?php
+      include 'followButton.inc.php';
+    ?>
+  </div>
+  <div class="bio">
 
+  </div>
 </div>
