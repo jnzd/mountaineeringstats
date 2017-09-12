@@ -43,21 +43,22 @@
 		//display header if logged in and confirmed
 		?>
 		<header>
-			<!--Logo-->
-			<div class="logo">
-				<a href="index.php" class="logo"><img src="icons/logo.png" height="30" width="30"></a>
-			</div>
-			<!--searchbar-->
-			<div class="search">
-				<form class="search" action="includes/search.inc.php" method="post">
-					<input class="search" type="text" name="search" placeholder="Suchen">
-				</form>
-			</div>
-			<!--menu for mobile design-->
+			<!--navigation links-->
 			<ul class="header">
-				<!--navigation links-->
-				<li><a href="upload.php"><img src="icons/upload.png" height="30" width="30"></a></li>
-				<li><a href="javascript:notifications();" class="dropbtn"><?php 
+				<!--Logo-->
+				<li class="left">
+					<a href="index.php" class="logo"><img src="icons/logo.png" height="30" width="30"></a>
+				</li>
+				<!--searchbar-->
+				<li class="center">
+					<form class="search" action="includes/search.inc.php" method="post">
+						<input class="search" type="text" name="search" placeholder="Suchen">
+					</form>
+				</li>
+				<!-- upload button -->
+				<li class="right"><a href="upload.php"><img src="icons/upload.png" height="30" width="30"></a></li>
+				<!-- notification dropdown -->
+				<li class="right"><a href="javascript:notifications();" class="dropbtn"><?php 
 					include "includes/checkNotifications.inc.php";
 					if($notifications){
 						echo "<img src='icons/notifications.png' height='30' width='30'>";
@@ -67,7 +68,7 @@
 				?>
 				</a></li>
 				<?php include 'includes/notifications.inc.php';?>
-				
+				<!-- profile dropdown -->
 				<li>
 					<div class="dropdown"><a class="dropbtn" href="profile.php"><img class="circle" src="<?php echo $profilepic; ?>" height="30" width="30"></a>
 						<div class="dropdown-content">
@@ -77,8 +78,9 @@
 						</div>
 					</div>
 				</li>
-				<li><a href="includes/logout.inc.php">ABMELDEN</a></li>
 			</ul>
+
+			
 		</header>
 		<!-- open divs -->
 		<div id="con">

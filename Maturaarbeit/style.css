@@ -20,27 +20,19 @@ header{
 	margin: 0;
 	padding: 0;
 }
-.logo{
-	display: inline-block;
-	height: 60px;
-	width: auto;
-}
-.search{
-	display: inline-block;
-	width: auto;
-	height: 20px;
-	padding: 0;
-}
-a.logo{
-  margin: 20px;
-	display: inline-block;
-	height: 60px;
-	width: auto;
-}
 ul.header{
 	display: inline-block;
 	list-style-type: none;
 	padding: 0;
+}
+li.left{
+	float: left;
+}
+li.center{
+
+}
+li.righ{
+	float: right;
 }
 /**************************************/
 ul li{
@@ -67,9 +59,7 @@ ul li a{
 }
 /*** Profile dropdown ***/
 .dropbtn {
-	background-color: #4CAF50;
 	color: white;
-	padding: 16px;
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
