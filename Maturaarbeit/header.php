@@ -58,7 +58,7 @@
 				<!-- upload button -->
 				<li class="right"><a href="upload.php"><img src="icons/upload.png" height="30" width="30"></a></li>
 				<!-- notification dropdown -->
-				<li class="right"><a href="javascript:notifications();" class="dropbtn"><?php 
+				<li><a href="javascript:notifications();" class="dropbtn"><?php 
 					include "includes/checkNotifications.inc.php";
 					if($notifications){
 						echo "<img src='icons/notifications.png' height='30' width='30'>";
@@ -72,9 +72,9 @@
 				<li>
 					<div class="dropdown"><a class="dropbtn" href="profile.php"><img class="circle" src="<?php echo $profilepic; ?>" height="30" width="30"></a>
 						<div class="dropdown-content">
-							<a href="profile.php">Profil</a>
-							<a href="includes/logout.inc.php">Abmelden</a>
-							<a href="settings.php">Einstellungen</a>
+							<a class="dropdwn" href="profile.php">Profil</a>
+							<a class="dropdwn" href="includes/logout.inc.php">Abmelden</a>
+							<a class="dropdwn" href="settings.php">Einstellungen</a>
 						</div>
 					</div>
 				</li>

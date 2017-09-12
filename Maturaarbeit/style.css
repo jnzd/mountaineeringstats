@@ -20,22 +20,30 @@ header{
 	padding: 0;
 }
 ul.header{
-	display: inline-block;
+	display: flex;
 	height: 60px;
 	list-style-type: none;
-	padding: 0;
+	padding: 15px 0 0 0;
 }
 ul.header li{
   font-family: 'Alegreya', sans-serif;
 	font-size: 100%;
 	margin: 0 10px 0 10px;
 	display: inline-block;
-	height: 60px;
 }
-ul.header li a{
+ul.header li.right{
+  margin-left: auto;
+}
+ul.header li.left{
+  margin-right: auto;
+}
+ul.header li.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+ul.header li a.dropdwn{
 	color: #fcfcfc;
   font-family: 'Alegreya', sans-serif;
-	width: auto;
 }
 /*** Profile dropdown ***/
 .dropbtn {
@@ -53,7 +61,7 @@ ul.header li a{
 	position: absolute;
 	background-color: #222222;
 	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 16px 24px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 }
 .dropdown-content a {
@@ -67,6 +75,8 @@ ul.header li a{
 }
 .dropdown:hover .dropdown-content {
 	display: block;
+	right: 0;
+	left: auto;
 }
 .dropdown:hover .dropbtn {
 	background-color: #222222;
