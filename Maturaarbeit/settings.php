@@ -17,7 +17,7 @@
 	<h1 class="settingsTitle">Einstellungen</h1>
 	 <div class="settingsForm">
 		<a class="settings" href="profile.php">Zurück</a>
-		<form id="settings" action="includes/settings.inc.php" method="post" enctype="multipart/form-data">
+		<form class="settings" action="includes/settings.inc.php" method="post" enctype="multipart/form-data">
 			<input type="text" name="username" placeholder="Benutzername" value="<?php echo $username; ?>"><br>
 			<input type="email" name="email" placeholder="E-Mail" value="<?php echo $email; ?>"><br>
 			<input type="password" name="password" placeholder="Neues Passwort"><br>
