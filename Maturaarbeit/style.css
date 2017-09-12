@@ -136,17 +136,14 @@ a.actTitle:link {
 	text-decoration: none;
 	color: black;
 }
-
 a.actTitle:visited {
 	text-decoration: none;
 	color: black;
 }
-
 a.actTitle:hover {
 	text-decoration: none;
 	color: #696969;
 }
-
 a.actTitle:active {
 	text-decoration: none;
 	color: #696969;
@@ -162,9 +159,31 @@ a.actTitle:active {
 	background-color: white;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	padding: 15px;
-	margin: 32px 0 32px 0;
 }
-/******************************************************************/
+form.settings{
+
+}
+a.settings:link {
+	text-decoration: none;
+	color: black;
+}
+a.settings:visited {
+	text-decoration: none;
+	color: black;
+}
+a.settings:hover {
+	text-decoration: none;
+	color: #696969;
+}
+a.settings:active {
+	text-decoration: none;
+	color: #696969;
+}
+a.delete{
+	margin-left: auto;
+	margin-right: auto;
+}
+/*** Registration and other stuff ***/
 #error{
 	text-align: center;
 	font-family: 'Alegreya', sans-serif;
@@ -240,21 +259,6 @@ body{
 	min-height:100%;
 	position:relative;
 }
-/*registration*/
-
-/*End registration*/
-
-/*login*/
-
-/*End login*/
-
-/*upload*/
-
-/*End upload*/
-
-/*Profileinstellungen*/
-
-/*End profile settings*/
 
 p{
 	font-family: 'Alegreya', sans-serif;
@@ -263,33 +267,14 @@ a{
 	font-family: 'Alegreya', sans-serif;
 
 }
-
-/*profileinfo*/
-
-/*end profileinfo */
-
-/*google maps*/
+/*** google maps ***/
 #map{
 	height: 800px;
 	width: 100%;
 }
-/*end google maps*/
-
-/*Profilseite header*/
-
-/*End profile page*/
-
 /*Runde Bilder*/
 .circle{
 	border-radius: 50%;
-}
-table, th, td {
-  border-collapse: collapse;
-  border: 1px solid;
-	font-family: 'Alegreya', sans-serif;
-}
-th, td{
-	padding: 4px;
 }
 canvas.chart{
 	moz-user-select: none;
