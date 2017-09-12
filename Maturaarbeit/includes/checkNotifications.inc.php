@@ -5,5 +5,7 @@
   $rownrNotifications = $resultNotifications->num_rows;
   if($rownrNotifications>0){
     $notifications = true;
+  }else{
+    $notifications = false;
   }
 ?>

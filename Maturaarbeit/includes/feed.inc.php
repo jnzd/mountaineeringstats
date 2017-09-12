@@ -37,15 +37,23 @@
         $actTime = $row['actTime'];
         $filename = $row['filename'];
         $description = $row['description'];
+        echo "<div class='actHeader'>";
+        echo "<div class='profilePicture'>";
         echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";
+        echo "</div>";
+        echo "<div class='actName'>";
         if($userID == $_SESSION['id']){
           echo "<h1><a class='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
         }else{
           echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$username."'>".$title."</a></h1>";
         }
         echo "<p>".$description."</p>";
+        echo "</div>";
+        echo "</div>";
         $values = gpx($row['actPath']);
+        echo "<div class='staticMap'>";
         include 'includes/staticMap.inc.php';
+        echo "</div>";
         echo "<div id='comments".$actid."'>";
         include 'includes/displayComments.inc.php';
         echo "</div>";

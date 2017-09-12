@@ -148,6 +148,16 @@ a.actTitle:active {
 	text-decoration: none;
 	color: #696969;
 }
+.actHeader{
+	margin-bottom: 15px;
+}
+.profilePicture{
+	display: inline-block;
+	margin-right: 20px;
+}
+.actName{
+	display: inline-block;
+}
 /*** settings ***/
 .settingsForm{
 	background-color: white;

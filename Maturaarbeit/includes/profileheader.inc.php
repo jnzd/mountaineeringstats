@@ -15,7 +15,6 @@
       include 'includes/followerNumbers.inc.php';
     ?>
     <a href='settings.php'><img src="icons/gear.png" height="24" width="24"></a>
-    <a href='profileinfo.php'><img src="icons/info.png" height="24" width="24"></a>
 
     <div class="bio">
 
