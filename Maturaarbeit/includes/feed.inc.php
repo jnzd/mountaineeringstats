@@ -22,6 +22,7 @@
       $rows = resultToArray($result);
       $result->free();
       foreach($rows as $row) {
+        echo "<div class='activityPreview'>";
         $userID=$row['user_id'];
         $sqlUser = "SELECT * FROM users WHERE id='$userID'";
         $resultUser = $conn->query($sqlUser);
@@ -50,6 +51,7 @@
         echo "</div>";
         include 'includes/likeButton.inc.php';
         include 'includes/commentForm.inc.php';
+        echo "</div>";
       }
     }
   ?>

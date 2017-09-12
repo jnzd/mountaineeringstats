@@ -93,6 +93,14 @@ input.search{
 .dropdown:hover .dropbtn {
 	background-color: #222222;
 }
+/*** feed ***/
+.feed{
+
+}
+.activityPreview{
+	box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+	margin: 32px;
+}
 /******************************************************************/
 #error{
 	text-align: center;

@@ -8,12 +8,12 @@
     header("Location: profile.php");
   }
 ?>
-<div id="profileheader">
+<div class="profileheader">
   <?php
     include 'includes/profileheaderPublic.inc.php';
   ?>
 </div>
-<div id="feed">
+<div class="feed">
   <?php
     include 'parsers/parse.gpx.php';
     $sql = "SELECT * FROM activities WHERE user_id='$id'";
@@ -23,6 +23,7 @@
       $rows = resultToArray($result);
       $result->free();
       foreach($rows as $row) {
+        echo "<div class='activityPreview'>";
         $title = $row['title'];
         $actid = $row['id'];
         $sport = $row['sport'];
@@ -40,7 +41,7 @@
         echo "</div>";
         include 'includes/likeButton.inc.php';
         include 'includes/commentForm.inc.php';
-
+        echo "</div>";
       }
     }else{
       echo "<br /><h2>Dieser User hat noch keine Aktivitäten hochgeladen</h2>";

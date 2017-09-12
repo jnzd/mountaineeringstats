@@ -11,6 +11,7 @@
       $rows = resultToArray($result);
       $result->free();
       foreach($rows as $row) {
+        echo "<div class='activityPreview'>";
         $title = $row['title'];
         $actid = $row['id'];
         $sport = $row['sport'];
@@ -26,6 +27,7 @@
         include 'includes/displayComments.inc.php';
         include 'includes/likeButton.inc.php';
         include 'includes/commentForm.inc.php';
+        echo "</div>";
       }
     }else{
       echo "<p>Du hast noch keine Aktivitäten hochgeladen</p>";
