@@ -54,24 +54,31 @@
 				</form>
 			</div>
 			<!--menu for mobile design-->
-			<nav>
-				<ul>
-					<!--navigation links-->
-					<li><a href="upload.php"><img src="icons/upload.png" height="30" width="30"></a></li>
-					<li><a href="javascript:notifications();" class="dropbtn"><?php 
-						include "includes/checkNotifications.inc.php";
-						if($notifications){
-							echo "<img src='icons/notifications.png' height='30' width='30'>";
-						}else{
-							echo "<img src='icons/noNotifications.png' height='30' width='30'>";
-						}
-					?>
-					</a></li>
-					<?php include 'includes/notifications.inc.php';?>
-					<li><a href="profile.php"><img class="circle" src="<?php echo $profilepic; ?>" height="30" width="30"></a></li>
-					<li><a href="includes/logout.inc.php">ABMELDEN</a></li>
-				</ul>
-			</nav>
+			<ul class="header">
+				<!--navigation links-->
+				<li><a href="upload.php"><img src="icons/upload.png" height="30" width="30"></a></li>
+				<li><a href="javascript:notifications();" class="dropbtn"><?php 
+					include "includes/checkNotifications.inc.php";
+					if($notifications){
+						echo "<img src='icons/notifications.png' height='30' width='30'>";
+					}else{
+						echo "<img src='icons/noNotifications.png' height='30' width='30'>";
+					}
+				?>
+				</a></li>
+				<?php include 'includes/notifications.inc.php';?>
+				
+				<li>
+					<div class="dropdown"><a class="dropbtn" href="profile.php"><img class="circle" src="<?php echo $profilepic; ?>" height="30" width="30"></a>
+						<div class="dropdown-content">
+							<a href="profile.php">Profil</a>
+							<a href="includes/logout.inc.php">Abmelden</a>
+							<a href="settings.php">Einstellungen</a>
+						</div>
+					</div>
+				</li>
+				<li><a href="includes/logout.inc.php">ABMELDEN</a></li>
+			</ul>
 		</header>
 		<!-- open divs -->
 		<div id="con">
