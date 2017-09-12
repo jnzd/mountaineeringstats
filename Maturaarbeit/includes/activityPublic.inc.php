@@ -29,13 +29,6 @@
   
   include 'includes/charts.inc.php';
   include 'includes/map.inc.php';
-  function resultToArray($result) {
-    $rows = array();
-    while($row = $result->fetch_assoc()) {
-        $rows[] = $row;
-    }
-    return $rows;
-  }
   include 'includes/displayComments.inc.php';
   include 'includes/likeButton.inc.php';
   include 'includes/commentForm.inc.php';
