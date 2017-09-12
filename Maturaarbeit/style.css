@@ -102,23 +102,33 @@ input.search{
 }
 /*** profile header ***/
 .profileheader{
-	margin-top: 32px;
-	margin-bottom: 32px;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 15px;
+	margin: 32px 0 32px 0;
+}
+.profilepicture{
+	display: inline-block;
+	margin-right: 20px;
+}
+.profileInfo{
+	display: inline-block;
 }
 .profileStats{
 	display: inline-block;
 }
 .followingnr{
 	display: inline-block;
+	padding: 5px;
 	margin-right: auto;
 }
 .followernr{
 	display: inline-block;
+	padding: 5px;
 	margin-left: auto;
 }
 .username{
-	display: inline-block;
-	margin-top: auto;
+	
 }
 /******************************************************************/
 #error{
