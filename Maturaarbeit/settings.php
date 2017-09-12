@@ -13,11 +13,9 @@
 	$first = $row['first'];
 	$last = $row['last'];
 ?>
-<div id="settings">
-	<section id="title">
-		<h1>Einstellungen</h1>
-	</section>
-	<section class="settings">
+<div class="settings">
+	<h1 class="settingsTitle">Einstellungen</h1>
+	 <div class="settingsForm">
 		<a href="profile.php">Zurück</a>
 		<form id="settings" action="includes/settings.inc.php" method="post" enctype="multipart/form-data">
 			<input type="text" name="username" placeholder="Benutzername" value="<?php echo $username; ?>"><br>
@@ -41,7 +39,7 @@
 			<input type="submit" name="safe" placeholder="speichern"><br><br>
 		</form>
 		<a id="settings" href="includes/delete.inc.php">Account löschen</a>
-	</section>
+	</div>
 </div>
 <?php
   include 'footer.php';

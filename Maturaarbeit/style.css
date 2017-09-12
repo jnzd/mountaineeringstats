@@ -151,6 +151,19 @@ a.actTitle:active {
 	text-decoration: none;
 	color: #696969;
 }
+/*** settings ***/
+.settings{
+
+}
+.settingsTitle{
+
+}
+.settingsForm{
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 15px;
+	margin: 32px 0 32px 0;
+}
 /******************************************************************/
 #error{
 	text-align: center;
