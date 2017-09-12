@@ -4,14 +4,6 @@
   include 'header.php';
   include 'db.php';
   
-  function resultToArray($result) {
-    $rows = array();
-    while($row = $result->fetch_assoc()) {
-        $rows[] = $row;
-    }
-    return $rows;
-  }
-
   $searchLength = strlen($search);
   $sql = "SELECT * FROM users WHERE SUBSTRING(username,1,$searchLength)='$search'";
   $result = $conn->query($sql);

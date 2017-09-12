@@ -60,7 +60,7 @@
 					<li><a href="upload.php"><img src="icons/upload.png" height="30" width="30"></a></li>
 					<li><a href="javascript:notifications();" class="dropbtn"><?php 
 						include "includes/checkNotifications.inc.php";
-						if($notifications == true){
+						if($notifications){
 							echo "<img src='icons/notifications.png' height='30' width='30'>";
 						}else{
 							echo "<img src='icons/noNotifications.png' height='30' width='30'>";
