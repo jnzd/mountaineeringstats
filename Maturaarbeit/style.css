@@ -45,6 +45,18 @@ ul.header li a.dropdwn{
 	color: #fcfcfc;
   font-family: 'Alegreya', sans-serif;
 }
+/*** Searchbar ***/
+form.search{
+	text-align: center;
+}
+input.search{
+	width: auto;
+	font-size: 16px;
+	padding: 7px 0px 7px 0px;
+	background-color: black;
+	color: #fcfcfc;
+	text-align: center;
+}
 /*** Profile dropdown ***/
 .dropbtn {
 	color: #fcfcfc;
