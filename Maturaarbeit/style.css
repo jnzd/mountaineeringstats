@@ -27,6 +27,7 @@ ul.header{
 	padding: 15px 0 0 0;
 }
 ul.header li{
+	display: inline-block;
   font-family: 'Alegreya', sans-serif;
 	font-size: 100%;
 	margin: 0 10px 0 10px;
@@ -94,12 +95,6 @@ input.search{
 .dropdown:hover .dropbtn {
 	background-color: #222222;
 }
-.activityPreview{
-	background-color: white;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	padding: 15px;
-	margin: 32px 0 32px 0;
-}
 /*** profile header ***/
 .profileheader{
 	background-color: white;
@@ -129,6 +124,32 @@ input.search{
 }
 .username{
 	
+}
+/*** feed ***/
+.activityPreview{
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 15px;
+	margin: 32px 0 32px 0;
+}
+a.actTitle:link {
+	text-decoration: none;
+	color: black;
+}
+
+a.actTitle:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a.actTitle:hover {
+	text-decoration: none;
+	color: #696969;
+}
+
+a.actTitle:active {
+	text-decoration: none;
+	color: #696969;
 }
 /******************************************************************/
 #error{
@@ -202,7 +223,10 @@ body{
 	margin: auto;
 	padding-bottom:60px;
 }
-
+#con {
+	min-height:100%;
+	position:relative;
+}
 /*registration*/
 
 /*End registration*/
@@ -259,22 +283,23 @@ canvas.chart{
 	webkit-user-select: none;
 	ms-user-select: none;
 }
-#commentForm{
-	display: inline;
+/*** social buttons ***/
+.commentForm{
+	display: inline-block;
 }
-#commentForm input{
-	display: inline;
+.commentForm form{
+	display: inline-block;
 }
-#commentForm form{
-	display: inline;
+.commentForm input{
+	display: inline-block;
 }
 #commentLine{
 	display: inline;
 }
-#con {
-	min-height:100%;
-	position:relative;
+.likeButton{
+	display: inline-block;
 }
+/*** footer ***/
 footer{
 	position:absolute;
 	width: 100%;

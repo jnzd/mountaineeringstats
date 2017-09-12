@@ -20,7 +20,7 @@
         $actTime = $row['actTime'];
         $filename = $row['filename'];
         $description = $row['description'];
-        echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
+        echo "<h1><a class='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
         echo "<p>".$description."</p>";
         $values = gpx($row['actPath']);
         include 'includes/staticMap.inc.php';

@@ -5,9 +5,9 @@
   $rowLikes = $resultLikes->fetch_assoc();
   $rownr = $resultLikes->num_rows;
   if($rownr>0){
-    echo "<div id='likeButton'><button type='button' onclick='unlike()'>Gefällt mir nicht mehr</button></div>";
+    echo "<div class='likeButton' id='likeButton'><button type='button' onclick='unlike()'>Gefällt mir nicht mehr</button></div>";
   }else{
-    echo "<div id='likeButton'><button type='button' onclick='like()'>Gefällt mir</button></div>";
+    echo "<div class='likeButton' id='likeButton'><button type='button' onclick='like()'>Gefällt mir</button></div>";
   }
 ?>
 <script src="node_modules\jquery\dist\jquery.js"></script>

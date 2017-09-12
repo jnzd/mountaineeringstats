@@ -39,7 +39,7 @@
         $description = $row['description'];
         echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";
         if($userID == $_SESSION['id']){
-          echo "<h1><a clas='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
+          echo "<h1><a class='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
         }else{
           echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$username."'>".$title."</a></h1>";
         }
