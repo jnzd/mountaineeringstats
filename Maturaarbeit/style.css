@@ -4,6 +4,7 @@
 	padding: 0;
 	margin: 0;
 	border: 0;
+	font-family: 'Alegreya', sans-serif;	
 }
 html,
 body {
@@ -11,6 +12,70 @@ body {
    padding:0;
 	 height:100%;
 	 background-color: #F4F4F4;
+}
+h3{
+	margin-top:10px;
+	text-align: center;
+}
+form{
+	text-align: center;
+}
+input{
+	width: auto;
+	font-size: 16px;
+	padding: 3px;
+	margin: 5px;
+	background-color: #222222;
+	color: #fcfcfc;
+	text-align: center;
+}
+/***login/registration page ***/
+body.start{
+	background-image: url("icons/background.jpg");
+	background-size: 100% auto;
+  z-index: -1;
+}
+.error{
+	text-align: center;
+	padding: 4px;
+	font-size: 24px;
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+		width: 100%;
+		z-index: 0;
+}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+h1.start{
+	text-align: center;
+	font-size: 80px;
+}
+input.start{
+	font-size: 24px;
+}
+/*** content ***/
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+#content{
+	width: 960px;
+	margin: auto;
+	padding-bottom:60px;
+}
+#con {
+	min-height:100%;
+	position:relative;
 }
 /*** header ***/
 header{
@@ -28,7 +93,6 @@ ul.header{
 }
 ul.header li{
 	display: inline-block;
-  font-family: 'Alegreya', sans-serif;
 	font-size: 100%;
 	margin: 0 10px 0 10px;
 	display: inline-block;
@@ -45,7 +109,6 @@ ul.header li.center{
 }
 ul.header li a.dropdwn{
 	color: #fcfcfc;
-  font-family: 'Alegreya', sans-serif;
 }
 /*** Searchbar ***/
 form.search{
@@ -122,9 +185,6 @@ input.search{
 	padding: 5px;
 	margin-left: auto;
 }
-.username{
-	
-}
 /*** feed ***/
 .activityPreview{
 	background-color: white;
@@ -193,90 +253,6 @@ a.delete{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	padding: 15px;
 }
-/*** Registration and other stuff ***/
-#error{
-	text-align: center;
-	font-family: 'Alegreya', sans-serif;
-	padding: 4px;
-	font-size: 24px;
-}
-#uploadError{
-	text-align: center;
-	font-family: 'Alegreya', sans-serif;
-	padding: 4px;
-	font-size: 24px;
-}
-.outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-.middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-.inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
-}
-h1{
-	font-family: 'Alegreya', sans-serif;
-}
-h2{
-	font-family: 'Alegreya', sans-serif;
-}
-h1.start{
-	text-align: center;
-	font-size: 80px;
-}
-h3{
-	margin-top:10px;
-	text-align: center;
-	font-family: 'Alegreya', sans-serif;
-}
-form{
-	text-align: center;
-}
-input{
-	width: auto;
-	font-size: 16px;
-	padding: 3px;
-	margin: 5px;
-	background-color: #222222;
-	color: #fcfcfc;
-	text-align: center;
-}
-input.start{
-	font-size: 24px;
-}
-label{
-	font-family: 'Alegreya', sans-serif;
-}
-
-/*content*/
-body{
-	width: 100%;
-	margin: 0 auto;
-}
-#content{
-	width: 960px;
-	margin: auto;
-	padding-bottom:60px;
-}
-#con {
-	min-height:100%;
-	position:relative;
-}
-
-p{
-	font-family: 'Alegreya', sans-serif;
-}
-a{
-	font-family: 'Alegreya', sans-serif;
-
-}
 /*** google maps ***/
 #map{
 	height: 800px;
@@ -318,7 +294,6 @@ footer{
 	bottom: 0;
 }
 footer div.iconCredit{	
-	font-family: 'Alegreya', sans-serif;
 	color: #fcfcfc;
 }
 footer a{

@@ -20,7 +20,6 @@
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 </head>
 
-<body>
 <?php
 	//check if logged in
 	if(isset($_SESSION['id'])){
@@ -34,6 +33,7 @@
 		$profilepic = $row['pic_path'];
 		//check if account has been confirmed
 		if($row['confirmed']==0 && $_SERVER['REQUEST_URI']!='/verification.php'){
+			echo "<body>";
 			header("Location: verification.php");
 		}
 		//check if logged in, but url is from password reset, which is a contradiction...
@@ -42,6 +42,7 @@
 		}
 		//display header if logged in and confirmed
 		?>
+		<body>
 		<header>
 			<!--navigation links-->
 			<ul class="header">

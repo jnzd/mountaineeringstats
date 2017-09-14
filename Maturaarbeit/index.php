@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 preg_match("/[^\/]+$/", $_SERVER['REQUEST_URI'], $matches);
-if(isset($matches[0])){
+if(isset($_SESSION['id']) & isset($matches[0])){
 	$last_word = $matches[0];
 	$sql = "SELECT * FROM users WHERE username='$last_word'";
 	$result = $conn->query($sql);
@@ -10,7 +10,7 @@ if(isset($matches[0])){
 }
 $title="mountaineeringstats";
 include 'header.php';
-if(isset($rownr)){
+if(isset($_SESSION['id']) & isset($rownr)){
 	if($rownr>0){
 		$row = $result->fetch_assoc();
 		$publicUser = $last_word;

@@ -4,7 +4,7 @@ include 'header.php';
 include 'db.php';
 ?>
 <h1>GPX Upload</h1>
-<div id="uploadError">
+<div class="Error">
 	<?php
 		if(isset($_SESSION['uploadError'])){
 			echo $_SESSION['uploadError'];
