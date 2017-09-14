@@ -37,6 +37,26 @@ body.start{
 	background-position: center; 
   z-index: -1;
 }
+/*** mobile design ***/
+@media only screen and (orientation: portrait) {
+	body.start {
+		background-image: url("icons/background.jpg");
+		background-size: auto 100%;
+	}
+	body{
+		width: 100%;
+		margin: 0 auto;
+	}
+	#content{
+		width: 960px;
+		margin: auto;
+		padding-bottom:60px;
+	}
+	#con {
+		min-height:100%;
+		position:relative;
+	}
+}
 .error{
 	text-align: center;
 	padding: 4px;
@@ -264,6 +284,7 @@ a.delete{
 .circle{
 	border-radius: 50%;
 }
+/*** chartjs ***/
 canvas.chart{
 	moz-user-select: none;
 	webkit-user-select: none;
