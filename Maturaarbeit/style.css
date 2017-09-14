@@ -6,8 +6,7 @@
 	border: 0;
 	font-family: 'Alegreya', sans-serif;	
 }
-html,
-body {
+html, body {
    margin:0;
    padding:0;
 	 height:100%;
@@ -33,6 +32,9 @@ input{
 body.start{
 	background-image: url("icons/background.jpg");
 	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
   z-index: -1;
 }
 .error{
