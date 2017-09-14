@@ -30,23 +30,35 @@ input{
 }
 /***login/registration page ***/
 body.start{
-	background-image: url("icons/background.jpg");
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center; 
-  z-index: -1;
+	background: url(icons/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 /*** mobile design ***/
-@media only screen and (orientation: portrait) {
+@media only screen and (max-aspect-ratio: 4/3){
 	body.start {
-		background-image: url("icons/background.jpg");
 		background-size: auto 100%;
 	}
 	body{
 		width: 100%;
 		margin: 0 auto;
 	}
+}
+@media screen and (max-width: 959px){
+	#content{
+		width: 100%;
+		margin: auto;
+		padding-bottom:60px;
+	}
+	#con {
+		min-height:100%;
+		position:relative;
+	}
+}
+/*** desktop ***/
+@media only screen and (min-width: 960px){
 	#content{
 		width: 960px;
 		margin: auto;
