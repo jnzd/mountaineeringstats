@@ -8,5 +8,5 @@
 	$sql = "INSERT INTO comments (userID, actID, text)	VALUES ('$userID', '$actID', '$commentText')";
 	$result = $conn->query($sql);
 	$url = $_POST['url'];
-	header("location: ..".$url);
+	//header("location: ..".$url);
 ?>
