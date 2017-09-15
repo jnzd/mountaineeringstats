@@ -30,7 +30,7 @@ if(isset($_SESSION['id'])){
 				</div>
 				<br><br>
 				<div id="login">
-					<h1 class="start">Anmelden</h1>
+					<h1 class="start bright">Anmelden</h1>
 					<div class="error">
 						<?php
 						if(isset($_SESSION['loginError'])){
@@ -45,7 +45,7 @@ if(isset($_SESSION['id'])){
 						<!--<input type="checkbox" name="remember" value="remmber"><label>Angemeldet bleiben</label><br>-->
 						<input class="start" type="submit" name="anmelden" value="anmelden"><br><br>
 					</form>
-					<a href="passwordReset.php">Passwort vergessen</a>
+					<a class="start" href="passwordReset.php">Passwort vergessen</a>
 				</div>
 			</div>
 		</div>

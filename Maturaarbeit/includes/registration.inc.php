@@ -80,26 +80,21 @@ if($_POST['password'] != $_POST['confirmpassword']){
 		$confirm_code = md5($confirmSeed);
 		//safes code to db
 		$sql = "INSERT INTO users (username, email, password, confirm_code)	VALUES ('$username', '$email', '$password', '$confirm_code')";
-		$result = mysqli_query($conn, $sql);
+		$result = $conn->query($sql);
 		//email message
 		$message = "Bitte bestätige deine E-Mailadresse mit dem folgenden link: https://mountaineeringstats.com/includes/confirming.inc.php?username=".$username."&code=".$confirm_code;
-		//send email
     $header = "From: noreply@mountaineeringstats.com\r\n";
     $header .= "Mime-Version: 1.0\r\n";
     $header .= "Content-type: text/plain; charset=utf-8";
+		//send email
 		mail($email,"E-Mail Bestätigung", $message, $header);
 		$sql = "SELECT * FROM users WHERE email='$email'";
-		$result = mysqli_query($conn, $sql);
-		$row = mysqli_fetch_assoc($result);
-
+		$result = $conn->query($sql);
+		$row = $result->fetch_assoc();
 		$_SESSION['id'] = $row['id'];
-		$_SESSION['username'] = $row['username'];
-		$_SESSION['email'] = $email;
-		$_SESSION['password'] = $password;
 		//empties error messages
 		$_SESSION['registrationError'] = "";
 		header("Location: ../verification.php");
-#######################################################################################################################
 	}
 }
 ?>

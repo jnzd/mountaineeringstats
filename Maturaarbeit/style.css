@@ -35,17 +35,9 @@ body.start{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+	text-align: center;
 }
 /*** mobile design ***/
-@media only screen and (max-aspect-ratio: 4/3){
-	body.start {
-		background-size: auto 100%;
-	}
-	body{
-		width: 100%;
-		margin: 0 auto;
-	}
-}
 @media screen and (max-width: 959px){
 	#content{
 		width: 100%;
@@ -94,8 +86,27 @@ h1.start{
 	text-align: center;
 	font-size: 80px;
 }
+h1.bright{
+	color: #EBEBEB;
+}
 input.start{
 	font-size: 24px;
+}
+a.start:link {
+	text-decoration: none;
+	color: #D5D5D5;
+}
+a.start:visited {
+	text-decoration: none;
+	color: #D5D5D5;
+}
+a.start:hover {
+	text-decoration: none;
+	color: #EBEBEB;
+}
+a.start:active {
+	text-decoration: none;
+	color: #EBEBEB;
 }
 /*** content ***/
 body{
