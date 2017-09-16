@@ -5,6 +5,10 @@
 <script>
 function postComment(actid){
   var commentText=document.getElementById("comment"+actid).value;
+  /***
+  *check wether the textbox is empty
+  *.trim is needed in case a user only entered spaces, which should not be posted
+  ***/
   if(jQuery.trim(commentText).length>0){
     var username='<?php 
       $id=$_SESSION['id'];
@@ -15,7 +19,6 @@ function postComment(actid){
       echo $username; 
     ?>';
     var actid=actid;
-    //ajax script
     $.ajax({
       type:'post',
       url:'includes/comment.inc.php',
@@ -23,10 +26,9 @@ function postComment(actid){
       data: {
         id: '<?php echo $_SESSION['id']; ?>',
         actid: actid,
-        commentText: commentText,
-        username: username
+        commentText: commentText
       },
-      complete: function () {
+      complete: function(){
         //display comment
         $("#comments"+actid).append("<div id='commentLine'><p class='comment'><b>"+username+"</b> "+commentText);
         //clear textbox

@@ -10,7 +10,7 @@
 <div class="profileStats">
   <div class="followingnr">
     <p>
-      <b>
+      <b id="followingnr">
         <?php echo $followingnr; ?>
       </b>
       <br>
@@ -19,9 +19,7 @@
   </div>
   <div class="followernr">
     <p>
-      <b>
-        <?php echo $followersnr; ?>
-      </b>
+      <b id="followernr"><?php echo $followersnr; ?></b>
       <br>
       Abonnenten
     </p>

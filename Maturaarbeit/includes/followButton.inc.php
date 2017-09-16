@@ -17,7 +17,8 @@
   ?>
   <script src="node_modules\jquery\dist\jquery.js"></script>
   <script>
-    function follow() {
+    function follow(){
+      var followernr = parseInt(document.getElementById('followernr').textContent)+1;
       $.ajax({
         type:'post',
         url:'includes/follow.inc.php',
@@ -29,13 +30,17 @@
           followedUser: '<?php echo $followedUser; ?>',
           followingID00followedID: '<?php echo $followingID00followedID; ?>'
         },
-        complete: function () {
+        complete: function(){
+          //change followbutton
           $('#followButton').html('<button type="button" onclick="unfollow()">Abonniert</button>');
+          //update followercount
+          $('#followernr').html(followernr);
         },
       });
       return false;
     }
-    function unfollow() {
+    function unfollow(){
+      var followernr = parseInt(document.getElementById('followernr').textContent)-1;
       $.ajax({
         type:'post',
         url:'includes/unfollow.inc.php',
@@ -43,8 +48,11 @@
         data: {
           followingID00followedID: '<?php echo $followingID00followedID; ?>'
         },
-        complete: function () {
+        complete: function(){
+          //change followbutton
           $('#followButton').html('<button type="button" onclick="follow()">Folgen</button>');
+          //update followercount
+          $('#followernr').html(followernr);
         }
       });
       return false;

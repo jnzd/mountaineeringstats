@@ -12,7 +12,7 @@
 ?>
 <script src="node_modules\jquery\dist\jquery.js"></script>
 <script>
-  function like() {
+  function like(){
     $.ajax({
       type:'post',
       url:'includes/like.inc.php',
@@ -21,13 +21,13 @@
         userID: '<?php echo $userID; ?>',
         actID: '<?php echo $actid; ?>'
       },
-      complete: function (response) {
+      complete: function(){
         $('#likeButton').html("<button type='button' onclick='unlike()'>Gefällt mir nicht mehr</button>");
       },
     });
     return false;
   }
-  function unlike() {
+  function unlike(){
     $.ajax({
       type:'post',
       url:'includes/unlike.inc.php',
@@ -36,7 +36,7 @@
         userID: '<?php echo $userID; ?>',
         actID: '<?php echo $actid; ?>'
       },
-      complete: function (response) {
+      complete: function(){
         $('#likeButton').html("<button type='button' onclick='like()'>Gefällt mir</button>");
       }
     });
