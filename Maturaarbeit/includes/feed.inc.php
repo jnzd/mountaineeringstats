@@ -54,6 +54,7 @@
         echo "<div class='staticMap'>";
         include 'includes/staticMap.inc.php';
         echo "</div>";
+        //link comment section to according activity with actid
         echo "<div id='comments".$actid."'>";
         include 'includes/displayComments.inc.php';
         echo "</div>";

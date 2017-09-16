@@ -13,8 +13,7 @@
       $result = $conn->query($sql);
       $row = $result->fetch_assoc();
       $usernameComment = $row['username'];
-      $commentUserID = $row['id'];
-      
+      $commentUserID = $row['id'];      
       echo '<div id="commentLine"><p class="comment"><b>'.$usernameComment.' </b>'.$commentText;
       if($commentUserID == $_SESSION['id']){
         $url = $_SERVER['REQUEST_URI'];
