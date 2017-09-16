@@ -1,7 +1,7 @@
 <?php
-$title="Profil";
-include 'header.php';
-$id = $_SESSION['id'];
+	$title="Profil";
+	include 'header.php';
+	$id = $_SESSION['id'];
 ?>
 <?php
 	include 'includes/profileheader.inc.php';

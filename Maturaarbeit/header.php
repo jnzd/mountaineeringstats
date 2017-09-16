@@ -16,11 +16,8 @@
 	<link rel="icon" href="icons/logo.png">
 	<title><?php echo $title; ?></title>
 	<link href="style.css" rel="stylesheet" type="text/css">
-	<!-- Google maps polyline meta -->
-	<!--<meta name="viewport" content="initial-scale=1.0, user-scalable=no">-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <?php
 	//check if logged in
 	if(isset($_SESSION['id'])){
@@ -80,11 +77,8 @@
 						</div>
 					</div>
 				</li>
-			</ul>
-
-			
+			</ul>			
 		</header>
-		<!-- open divs -->
 		<div id="con">
 		<div id="content">
 		<?php
