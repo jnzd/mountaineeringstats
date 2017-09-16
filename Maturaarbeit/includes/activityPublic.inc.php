@@ -12,9 +12,13 @@
   $type = $row['type'];
   $actTime = $row['actTime'];
   $description = $row['description'];
+  echo "<div class='actHeader'>";
+  echo "<div class='title'>";
   echo "<h1>".$title."</h1><br />";
+  echo "</div>";
   include 'includes/icons.inc.php';
   echo "<p>".$description."</p><br />";
+  echo "</div>";
   $values = gpx($row['actPath']);
   $lat_js = $values['latitude'];
   $long_js = $values['longitude'];

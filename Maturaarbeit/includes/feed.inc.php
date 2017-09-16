@@ -42,11 +42,13 @@
         echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";
         echo "</div>";
         echo "<div class='actName'>";
+        echo "<div class='title'>";
         if($userID == $_SESSION['id']){
           echo "<h1><a class='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
         }else{
           echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$username."'>".$title."</a></h1>";
         }
+        echo "</div>";
         include 'includes/icons.inc.php';
         echo "<p>".$description."</p>";
         echo "</div>";

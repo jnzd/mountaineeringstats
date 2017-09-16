@@ -253,6 +253,7 @@ a.actTitle:active {
 }
 .actHeader{
 	margin-bottom: 15px;
+	display: flex;
 }
 .profilePicture{
 	display: inline-block;
@@ -261,8 +262,13 @@ a.actTitle:active {
 .actName{
 	display: inline-block;
 }
+.title{
+	display: inline-block;
+}
 .sportIcon{
 	display: inline-block;
+	margin-left: auto;
+	margin-right: 0;
 }
 /*** social buttons ***/
 textarea.commentBox{

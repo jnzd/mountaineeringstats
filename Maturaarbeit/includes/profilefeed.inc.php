@@ -20,9 +20,13 @@
         $actTime = $row['actTime'];
         $filename = $row['filename'];
         $description = $row['description'];
+        echo "<div class='actHeader'>";
+        echo "<div class='title'>";
         echo "<h1><a class='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
+        echo "</div>";
         include 'includes/icons.inc.php';
         echo "<p>".$description."</p>";
+        echo "</div>";
         $values = gpx($row['actPath']);
         include 'includes/staticMap.inc.php';
         include 'includes/displayComments.inc.php';
