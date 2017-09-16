@@ -1,3 +1,6 @@
+<script>
+	console.log(accessed);
+</script>
 <?php
   session_start();
 	include '../db.php';
@@ -7,3 +10,6 @@
 	$sql = "INSERT INTO comments (userID, actID, commentText)	VALUES ('$id', '$actid', '$commentText')";
 	$result = $conn->query($sql);
 ?>
+<script>
+	console.log(accessed);
+</script>

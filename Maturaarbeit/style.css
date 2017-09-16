@@ -1,5 +1,4 @@
 @import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
-
 *{
 	padding: 0;
 	margin: 0;
@@ -31,10 +30,10 @@ input{
 /***login/registration page ***/
 body.start{
 	background: url(icons/background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	text-align: center;
 }
 /*** mobile design ***/
@@ -132,9 +131,9 @@ header{
 }
 ul.header{
 	display: flex;
-	height: 60px;
+	height: 45px;
 	list-style-type: none;
-	padding: 15px 0 0 0;
+	padding-top: 15px;
 }
 ul.header li{
 	display: inline-block;
@@ -162,7 +161,6 @@ form.search{
 input.search{
 	width: auto;
 	font-size: 16px;
-	padding: 7px 0px 7px 0px;
 	background-color: black;
 	color: #fcfcfc;
 	text-align: center;
@@ -263,6 +261,27 @@ a.actTitle:active {
 .actName{
 	display: inline-block;
 }
+/*** social buttons ***/
+textarea.commentBox{
+	line-height: 1;
+	font-size: 12px;
+	border: none;
+}
+.commentForm{
+	display: inline-block;
+}
+.commentForm form{
+	display: inline-block;
+}
+.commentForm input{
+	display: inline-block;
+}
+#commentLine{
+	display: inline;
+}
+.likeButton{
+	display: inline-block;
+}
 /*** settings ***/
 .settingsForm{
 	background-color: white;
@@ -303,7 +322,7 @@ a.delete{
 	height: 800px;
 	width: 100%;
 }
-/*Runde Bilder*/
+/*** round images ***/
 .circle{
 	border-radius: 50%;
 }
@@ -312,22 +331,6 @@ canvas.chart{
 	moz-user-select: none;
 	webkit-user-select: none;
 	ms-user-select: none;
-}
-/*** social buttons ***/
-.commentForm{
-	display: inline-block;
-}
-.commentForm form{
-	display: inline-block;
-}
-.commentForm input{
-	display: inline-block;
-}
-#commentLine{
-	display: inline;
-}
-.likeButton{
-	display: inline-block;
 }
 /*** footer ***/
 footer{

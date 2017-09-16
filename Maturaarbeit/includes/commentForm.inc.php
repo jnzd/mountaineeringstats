@@ -1,10 +1,13 @@
 <div id="commentForm<?php echo $actid; ?>" class="commentForm">
-  <textarea id="comment<?php echo $actid; ?>"></textarea>
+  <textarea class="commentBox" id="comment<?php echo $actid; ?>" placeholder="Kommentar schreiben" rows="1"></textarea>
   <button type="button" onclick="postComment(<?php echo $actid; ?>)">Kommentieren</button>
 </div>
 <script>
-  function postComment(actid){
-    //define variables
+function postComment(actid){
+  //define variables
+  var commentText=document.getElementById("comment"+actid).value;
+
+  if(jQuery.trim(commentText).length>0){
     var username='<?php 
       $id=$_SESSION['id'];
       $sql="SELECT * FROM users WHERE id='$id'";
@@ -13,10 +16,7 @@
       $usernam=$rowUser['username'];
       echo $username; 
     ?>';
-    var commentText=document.getElementById("comment"+actid).value;
-    console.log(commentText);
     var actid=actid;
-    console.log(actid);
     //ajax script
     $.ajax({
       type:'post',
@@ -34,4 +34,5 @@
       },
     });
   }
+}
 </script>
