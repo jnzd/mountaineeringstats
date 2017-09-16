@@ -19,28 +19,8 @@
       $rows = resultToArray($result);
       $result->free();
       foreach($rows as $row) {
-        echo "<div class='activityPreview'>";
-        $title = $row['title'];
-        $actid = $row['id'];
-        $sport = $row['sport'];
-        $path = $row['actPath'];
-        $type = $row['type'];
-        $actTime = $row['actTime'];
-        $filename = $row['filename'];
-        $description = $row['description'];
-        echo "<div class='actHeader'>";
-        echo "<div class='title'>";
-        echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$publicUser."'>".$title."</a></h1>";
-        echo "</div>";
-        include 'includes/icons.inc.php';
-        echo "<p>".$description."</p>";
-        echo "</div>";
-        $values = gpx($row['actPath']);
-        include 'includes/staticMap.inc.php';
-        include 'includes/displayComments.inc.php';
-        include 'includes/likeButton.inc.php';
-        include 'includes/commentForm.inc.php';
-        echo "</div>";
+        $activityLink = "../activityPublic.php?name=".$filename."&username=".$publicUser;
+        include 'activityPreview.inc.php';
       }
     }else{
       echo "<br /><h2>Dieser User hat noch keine Aktivitäten hochgeladen</h2>";
