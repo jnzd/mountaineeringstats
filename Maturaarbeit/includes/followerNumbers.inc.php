@@ -21,7 +21,13 @@
     <p>
       <b id="followernr"><?php echo $followersnr; ?></b>
       <br>
-      Abonnenten
+      <?php
+        if($followersnr==1){
+          echo "Abonnent";
+        }else{
+          echo "Abonnenten";
+        }
+      ?>
     </p>
   </div>
 </div>
