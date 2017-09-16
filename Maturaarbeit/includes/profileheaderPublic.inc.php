@@ -7,12 +7,8 @@
       $userID = $row['id'];
       echo "<h1 class='username'>".$publicUser."</h1>";
       include 'includes/followerNumbers.inc.php';
+      include 'followButton.inc.php';
     ?>
-    <div class="followButton" id="followButton">
-      <?php
-        include 'followButton.inc.php';
-      ?>
-    </div>
     <div class="bio">
 
     </div>

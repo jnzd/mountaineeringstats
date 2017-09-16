@@ -6,7 +6,6 @@
 function postComment(actid){
   //define variables
   var commentText=document.getElementById("comment"+actid).value;
-
   if(jQuery.trim(commentText).length>0){
     var username='<?php 
       $id=$_SESSION['id'];
@@ -28,11 +27,12 @@ function postComment(actid){
         commentText: commentText,
         username: username
       },
-      complete: function (response) {
+      complete: function () {
         $("#comments"+actid).append("<div id='commentLine'><p class='comment'><b>"+username+"</b> "+commentText);
         document.getElementById("comment"+actid).value="";
       },
     });
   }
+  return false;
 }
 </script>

@@ -19,9 +19,7 @@
       echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";
       echo "<h1><a href='".$username."'>".$username."</a></h1>";
       if($_SESSION['id'] != $userID){
-        echo "<div id='followButton'>";
         include 'includes/followButton.inc.php';
-        echo "</div>";
       }
     }
   }
