@@ -21,6 +21,7 @@
         $filename = $row['filename'];
         $description = $row['description'];
         echo "<h1><a class='actTitle' href='../activity.php?name=".$filename."'>".$title."</a></h1>";
+        include 'includes/icons.inc.php';
         echo "<p>".$description."</p>";
         $values = gpx($row['actPath']);
         include 'includes/staticMap.inc.php';

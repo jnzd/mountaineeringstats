@@ -47,6 +47,7 @@
         }else{
           echo "<h1><a class='actTitle' href='../activityPublic.php?name=".$filename."&username=".$username."'>".$title."</a></h1>";
         }
+        include 'includes/icons.inc.php';
         echo "<p>".$description."</p>";
         echo "</div>";
         echo "</div>";

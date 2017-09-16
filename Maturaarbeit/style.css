@@ -261,6 +261,9 @@ a.actTitle:active {
 .actName{
 	display: inline-block;
 }
+.sportIcon{
+	display: inline-block;
+}
 /*** social buttons ***/
 textarea.commentBox{
 	line-height: 1;

@@ -5,7 +5,6 @@
   $sql = "SELECT * FROM activities WHERE filename='$name'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_assoc($result);
-
   $title = $row['title'];
   $actid = $row['id'];
   $sport = $row['sport'];
@@ -14,6 +13,7 @@
   $actTime = $row['actTime'];
   $description = $row['description'];
   echo "<h1>".$title."</h1><br />";
+  include 'includes/icons.inc.php';
   echo "<p>".$description."</p><br />";
   echo "<a href='editAct.php?name=".$_GET['name']."'>Edit</a>";  
   $values = gpx($row['actPath']);
