@@ -1,7 +1,7 @@
 <?php
 	include 'db.php';
 	preg_match("/[^\/]+$/", $_SERVER['REQUEST_URI'], $matches);
-	if(isset($_SESSION['id']) & isset($matches[0])){
+	if(isset($matches[0])){
 		$last_word = $matches[0];
 		$sql = "SELECT * FROM users WHERE username='$last_word'";
 		$result = $conn->query($sql);
