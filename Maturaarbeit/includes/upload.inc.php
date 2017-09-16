@@ -30,6 +30,9 @@ if($_POST['sport'] != "null"){
 	if($_POST['sport'] == "skitour"){
 		$sport="skitour";
 	}
+	if($_POST['sport'] == "snowboard"){
+		$sport="snowboard";
+	}
 }else{
 	$_SESSION['uploadError']="Keine Sportart ausgewählt";
 	header("Location: ../upload.php");

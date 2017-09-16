@@ -21,6 +21,7 @@ include 'db.php';
 			<option value="hiking">Wandern</option>
 			<option value="biking">Biken</option>
 			<option value="skiing">Skifahren</option>
+			<option value="snowboard">Snowboard</option>
 			<option value="skitour">Skitour</option>
 			<option value="hochtour">Hochtour</option>
 		</select><br>
