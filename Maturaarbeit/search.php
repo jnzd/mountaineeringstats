@@ -18,14 +18,10 @@
       $userID = $row['id'];
       echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";
       echo "<h1><a href='".$username."'>".$username."</a></h1>";
-      if($_SESSION['id'] != $userID){
+      /*if($_SESSION['id'] != $userID){
         include 'includes/followButton.inc.php';
-      }
+      }*/
     }
   }
-
-?>
-
-<?php
   include 'footer.php';
 ?>

@@ -32,9 +32,7 @@
         echo "<p>".$description."</p>";
         $values = gpx($row['actPath']);
         include 'includes/staticMap.inc.php';
-        echo "<div id='comments".$actid."'>";
         include 'includes/displayComments.inc.php';
-        echo "</div>";
         include 'includes/likeButton.inc.php';
         include 'includes/commentForm.inc.php';
         echo "</div>";

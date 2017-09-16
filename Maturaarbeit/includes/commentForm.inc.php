@@ -4,7 +4,6 @@
 </div>
 <script>
 function postComment(actid){
-  //define variables
   var commentText=document.getElementById("comment"+actid).value;
   if(jQuery.trim(commentText).length>0){
     var username='<?php 
@@ -28,7 +27,9 @@ function postComment(actid){
         username: username
       },
       complete: function () {
+        //display comment
         $("#comments"+actid).append("<div id='commentLine'><p class='comment'><b>"+username+"</b> "+commentText);
+        //clear textbox
         document.getElementById("comment"+actid).value="";
       },
     });

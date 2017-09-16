@@ -51,13 +51,9 @@
         echo "</div>";
         echo "</div>";
         $values = gpx($row['actPath']);
-        echo "<div class='staticMap'>";
         include 'includes/staticMap.inc.php';
-        echo "</div>";
         //link comment section to according activity with actid
-        echo "<div id='comments".$actid."'>";
         include 'includes/displayComments.inc.php';
-        echo "</div>";
         include 'includes/likeButton.inc.php';
         include 'includes/commentForm.inc.php';
         echo "</div>";

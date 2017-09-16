@@ -26,7 +26,6 @@
   $latitude = $values['latitudePHP'];
   $dateTime = $values['dateTime'];
   $distance = $values['distancePHP'];
-  
   include 'includes/charts.inc.php';
   include 'includes/map.inc.php';
   include 'includes/displayComments.inc.php';

@@ -7,7 +7,7 @@
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	if($id == $row['id']){
-		//header("location: profile.php");
+		header("location: profile.php");
 	}else{
 		include 'includes/publicProfile.inc.php';
 		include 'footer.php';
