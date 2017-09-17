@@ -4,7 +4,7 @@
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
   $pic_path = $row['pic_path'];
-  if($pic_path != profilepics/standard.png){
+  if($pic_path != "profilepics/standard.png"){
     unlink($pic_path);
   }
   //remove useer from database

@@ -1,7 +1,7 @@
 <?php
   session_start();
   include '../db.php';
-  $email = $_POST['email'];
+  $email = $conn->real_escape_string($_POST['email']);
   $sql = "SELECT * FROM users WHERE email='$email'";
   $result = $conn->query($sql);
   $rownr = $result->num_rows; 

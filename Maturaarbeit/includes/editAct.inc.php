@@ -1,6 +1,6 @@
 <?php
   include '../db.php';
-  $name = $_POST['name'];
+  $name = $conn->real_escape_string($_POST['name']);
   $sql = "SELECT * FROM activities WHERE filename='$name'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
@@ -29,16 +29,15 @@
   if(isset($_POST['title'])){
     $title=$_POST['title'];
     if(isset($_POST['description'])){
-      $description=$_POST['description'];
+      $description=$conn->real_escape_string($_POST['description']);
     }else{
       $description="";
     }
   }else{
-    
+    $title=$row['title'];
   }
   $sql = "UPDATE activities SET title='$title', description='$description', sport='$sport' WHERE filename = '$name'";
-  $result = mysqli_query($conn, $sql);
-
+  $result = $conn->query($sql);
 	$_SESSION['uploadError']="";
 	header("Location: ../activity.php?name=".$name);
 ?>

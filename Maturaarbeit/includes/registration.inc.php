@@ -3,8 +3,8 @@
 include '../db.php';
 session_start();
 $_SESSION['registrationError'] = "";
-$username = $conn->escape_string($_POST['username']);
-$email = $conn->escape_string($_POST['email']);
+$username = $conn->real_escape_string($_POST['username']);
+$email = $conn->real_escape_string($_POST['email']);
 $password = md5($_POST['password']);
 
 if($_POST['password'] != $_POST['confirmpassword']){
