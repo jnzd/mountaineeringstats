@@ -4,5 +4,5 @@
   $actID = $_POST['actID'];
   $userID00actID = $userID."00".$actID;
   $sql = "DELETE FROM likes WHERE userID00actID='$userID00actID'";
-  $result = mysqli_query($conn, $sql);
+  $result = $conn->query($sql);
 ?>

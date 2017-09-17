@@ -5,7 +5,7 @@
   $rowLikes = $resultLikes->fetch_assoc();
   $liked = $resultLikes->num_rows;
 ?>
-<div class="likeButton" id="likeButton">
+<div class="likeButton" id="likeButton<?php echo $actid; ?>">
   <?php
     if($liked>0){
       echo "<button type='button' onclick='unlike(".$actid.")'>Gefällt mir nicht mehr</button>";
@@ -26,7 +26,7 @@
         actID: actid
       },
       complete: function(){
-        $('#likeButton').html("<button type='button' onclick='unlike("+actid+")'>Gefällt mir nicht mehr</button>");
+        $('#likeButton'+actid).html("<button type='button' onclick='unlike("+actid+")'>Gefällt mir nicht mehr</button>");
       },
     });
     return false;
@@ -41,7 +41,7 @@
         actID: actid
       },
       complete: function(){
-        $('#likeButton').html("<button type='button' onclick='like("+actid+")'>Gefällt mir</button>");
+        $('#likeButton'+actid).html("<button type='button' onclick='like("+actid+")'>Gefällt mir</button>");
       }
     });
     return false;

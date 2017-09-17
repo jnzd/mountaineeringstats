@@ -18,9 +18,6 @@
         $usernam=$rowUser['username'];
         echo $username; 
       ?>';
-      console.log(actid);
-      console.log(commentText);
-      console.log('<?php echo $_SESSION['id']; ?>');
       $.ajax({
         type: 'post',
         url: 'includes/comment.inc.php',
