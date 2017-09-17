@@ -16,7 +16,7 @@
         $result=$conn->query($sql);
         $rowUser=$result->fetch_assoc();
         $usernam=$rowUser['username'];
-        echo $username; 
+        echo $username;
       ?>';
       $.ajax({
         type: 'post',

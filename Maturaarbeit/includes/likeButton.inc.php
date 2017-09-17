@@ -14,7 +14,6 @@
     }
   ?>
 </div>
-<script src="node_modules\jquery\dist\jquery.js"></script>
 <script>
   function like(actid){
     $.ajax({
@@ -22,10 +21,11 @@
       url:'includes/like.inc.php',
       datatype: 'json',
       data: {
-        userID: '<?php echo $userID; ?>',
-        actID: actid
+        userid: '<?php echo $userID; ?>',
+        actid: actid
       },
       complete: function(){
+        //switch like button
         $('#likeButton'+actid).html("<button type='button' onclick='unlike("+actid+")'>Gefällt mir nicht mehr</button>");
       },
     });
@@ -37,10 +37,11 @@
       url:'includes/unlike.inc.php',
       datatype: 'json',
       data: {
-        userID: '<?php echo $userID; ?>',
-        actID: actid
+        userid: '<?php echo $userID; ?>',
+        actid: actid
       },
       complete: function(){
+        //switch like button
         $('#likeButton'+actid).html("<button type='button' onclick='like("+actid+")'>Gefällt mir</button>");
       }
     });

@@ -17,6 +17,7 @@
 	<title><?php echo $title; ?></title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="node_modules\jquery\dist\jquery.js"></script>
 </head>
 <?php
 	//check if logged in

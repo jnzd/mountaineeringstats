@@ -19,6 +19,7 @@
       $rows = resultToArray($result);
       $result->free();
       foreach($rows as $row) {
+        $filename = $row['filename'];
         $activityLink = "../activityPublic.php?name=".$filename."&username=".$publicUser;
         include 'activityPreview.inc.php';
       }
@@ -26,4 +27,4 @@
       echo "<br /><h2>Dieser User hat noch keine Aktivitäten hochgeladen</h2>";
     }
   ?>
-  </div>
+</div>
