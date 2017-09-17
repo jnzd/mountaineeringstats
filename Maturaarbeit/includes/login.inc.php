@@ -3,7 +3,7 @@
 include '../db.php';
 session_start();
 $_SESSION['loginError']= "";
-$email = $conn->escape_string($_POST['email']);//email Eingabe speichern
+$email = $conn->real_escape_string($_POST['email']);//email Eingabe speichern
 $password = md5($_POST['password']);//Passwort wird gehasht
 //Passwort und E-Mail mit Datenbank vergleichen
 $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";

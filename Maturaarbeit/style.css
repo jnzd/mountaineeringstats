@@ -27,7 +27,7 @@ input{
 	color: #fcfcfc;
 	text-align: center;
 }
-/***login/registration page ***/
+/*** login/registration page ***/
 body.start{
 	background: url(icons/background.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
