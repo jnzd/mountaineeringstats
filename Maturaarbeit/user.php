@@ -1,6 +1,6 @@
 <?php
 	$publicUser = $_GET['user'];
-	$title = "Profil | ".$username;
+	$title = "Profil | ".$publicUser;
 	include 'header.php';
 	$id = $_SESSION['id'];
 	$sql = "SELECT * FROM users WHERE username='$publicUser'";

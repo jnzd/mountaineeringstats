@@ -3,11 +3,11 @@
   $likeCheck = "SELECT * FROM likes WHERE userID='$userID' AND actID='$actid'";
   $resultLikes = $conn->query($likeCheck);
   $rowLikes = $resultLikes->fetch_assoc();
-  $rownr = $resultLikes->num_rows;
+  $liked = $resultLikes->num_rows;
 ?>
 <div class="likeButton" id="likeButton">
   <?php
-    if($rownr>0){
+    if($liked>0){
       echo "<button type='button' onclick='unlike(".$actid.")'>Gefällt mir nicht mehr</button>";
     }else{
       echo "<button type='button' onclick='like(".$actid.")'>Gefällt mir</button>";
