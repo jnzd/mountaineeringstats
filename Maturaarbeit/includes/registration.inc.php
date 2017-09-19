@@ -6,53 +6,126 @@ $_SESSION['registrationError'] = "";
 $username = $conn->real_escape_string($_POST['username']);
 $email = $conn->real_escape_string($_POST['email']);
 $password = md5($_POST['password']);
-
+/**
+ * validation for registration input
+ */
 if($_POST['password'] != $_POST['confirmpassword']){
-	$query = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'");
-	if(mysqli_num_rows($query)>0){//email
-		//if both username and email are used and the passwords don't match------------------------------------------------
-		$query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username'");
-		if(mysqli_num_rows($query)>0){//username
+	/**
+	 * passwords don't match
+	 * check for further errors
+	 * => check if email is already used
+	 */
+	$sql = "SELECT * FROM users WHERE email='$email'";
+	$result = $conn->query($sql);
+	$num = $result->num_rows;
+	if($num>0){
+		/**
+		 * passwords don't match
+		 * email is already used
+		 * => check if username is already used
+		 */
+		$sql = "SELECT * FROM users WHERE username='$username'";
+		$result = $conn->query($sql);
+		$num = $result->num_rows;
+		if($num>0){
+			/**
+		 * passwords don't match
+		 * email is already used
+		 * username is already used
+		 * => set error message
+		 * => reload page
+		 */
 			$_SESSION['registrationError'] = "Die Passwörter stimmen nicht überein und diese E-Mail Adresse sowie dieser Benutzername werden bereits verwendet";
 			header("Location: ../start.php");
-			//if the email is used and the passwords don't match----------------------------------------------------------------
 		}else{
+			/**
+		 * passwords don't match
+		 * email is already used
+		 * => set error message
+		 * => reload page
+		 */
 			$_SESSION['registrationError'] = "Die Passwörter stimmen nicht überein und diese E-Mail Adresse wird bereits verwendet";
 			header("Location: ../start.php");
 		}
 	}else{
-		//if the username is used and the passwords don't match---------------------------------------------------------------
-		$query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username'");
-		if(mysqli_num_rows($query)>0){//username
+		/**
+		 * passwords don't match
+		 * check for further errors
+		 * => check if username is already used
+		 */
+		$sql = "SELECT * FROM users WHERE username='$username'";
+		$result = $conn->query($sql);
+		$num = $result->num_rows;
+		if($num>0){
+			/**
+			* passwords don't match
+			* username is already used
+			* => set error message
+			* => reload page
+			*/
 			$_SESSION['registrationError'] = "Dieser Benutzername wird bereits verwendet und die Passwörter stimmen nicht überein";
 			header("Location: ../start.php");
 		}
 	}
-//if only the passwords don't match-------------------------------------------------------------------------------------------
+	/**
+		* passwords don't match
+		* => set error message
+		* => reload page
+		*/
 	$_SESSION['registrationError'] = "Die Passwörter stimmen nicht überein";
 	header("Location: ../start.php");
 }else{
-	$query = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'");
-	if(mysqli_num_rows($query)>0){//email
-		//if username and email are used-----------------------------------------------------------------------------------------
-		$query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username'");
-		if(mysqli_num_rows($query)>0){//username
+	/**
+	 * check if email is already used
+	 */
+	$sql = "SELECT * FROM users WHERE email='$email'";
+	$result = $conn->query($sql);
+	$num = $result->num_rows;
+	if($num>0){
+		/**
+		 * email is already used
+		 * => check if username is already used
+		 */
+		$sql = "SELECT * FROM users WHERE username='$username'";
+		$result = $conn->query($sql);
+		$num = $result->num_rows;
+		if($num>0){
+			/**
+			 * email is already used
+			 * username is already used
+			 * => set error message
+			 * => reload page
+			 */
 			$_SESSION['registrationError'] = "Dieser Benutzername und diese E-Mail werden bereits verewendet";
 			header("Location: ../start.php");
-			//if the email is used---------------------------------------------------------------------------------------------
 		}else{
+			/**
+			 * email is already used
+			 * => set error message
+			 * => reload page
+			 */
 			$_SESSION['registrationError'] = "Diese E-Mail Adresse wird bereits verwendet";
 			header("Location: ../start.php");
 		}
 	}else{
-		//if the username is used-------------------------------------------------------------------------------------------
-		$query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username'");
-		if(mysqli_num_rows($query)>0){//username
+		/**
+		 * => check if username is already used
+		 */
+		$sql = "SELECT * FROM users WHERE username='$username'";
+		$result = $conn->query($sql);
+		$num = $result->num_rows;
+		if($num>0){
+			/**
+			 * username is already used
+			 * => set error message
+			 * => reload page
+			 */
 			$_SESSION['registrationError'] = "Dieser Benutzername wird bereits verwendet";
 			header("Location: ../start.php");
 		}
-#######################################################################################################################
-		//confirmation code
+		/**
+		 * set confirmation code
+		 */
 		function crypto_rand_secure($min, $max) {
 			$range = $max - $min;
 			if ($range < 0) return $min; // not so random...
@@ -78,21 +151,28 @@ if($_POST['password'] != $_POST['confirmpassword']){
 		}
 		$confirmSeed = getToken();
 		$confirm_code = md5($confirmSeed);
-		//safes code to db
+		/**
+		 * write code to database
+		 */
 		$sql = "INSERT INTO users (username, email, password, confirm_code)	VALUES ('$username', '$email', '$password', '$confirm_code')";
 		$result = $conn->query($sql);
-		//email message
+		/**
+		 * set email message
+		 * send email
+		 */
 		$message = "Bitte bestätige deine E-Mailadresse mit dem folgenden link: https://mountaineeringstats.com/includes/confirming.inc.php?username=".$username."&code=".$confirm_code;
     $header = "From: noreply@mountaineeringstats.com\r\n";
     $header .= "Mime-Version: 1.0\r\n";
     $header .= "Content-type: text/plain; charset=utf-8";
-		//send email
 		mail($email,"E-Mail Bestätigung", $message, $header);
 		$sql = "SELECT * FROM users WHERE email='$email'";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 		$_SESSION['id'] = $row['id'];
-		//empties error messages
+		/**
+		 * clear error message
+		 * redirect to verification page
+		 */
 		$_SESSION['registrationError'] = "";
 		header("Location: ../verification.php");
 	}

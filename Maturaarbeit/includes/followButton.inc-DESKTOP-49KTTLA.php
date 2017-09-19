@@ -1,9 +1,5 @@
 <div class="followButton" id="followButton">
   <?php
-    /**
-     * check if logged in user already follows the respective person
-     * display follow or unfollow button accordingly
-     */
     $followingID = $_SESSION['id'];
     $followedID = $row['id'];
     $followingUser = $_SESSION['username'];
@@ -34,10 +30,8 @@
           followingID00followedID: '<?php echo $followingID00followedID; ?>'
         },
         complete: function(){
-          /**
-           * change followbutton
-           * update followercount
-           */
+          //change followbutton
+          //update followercount
           $('#followButton').html('<button type="button" onclick="unfollow()">Abonniert</button>');
           $('#followernr').html(followernr);
         },
@@ -54,11 +48,9 @@
           followingID00followedID: '<?php echo $followingID00followedID; ?>'
         },
         complete: function(){
-          /**
-           * change followbutton
-           * update followercount
-           */
+          //change followbutton
           $('#followButton').html('<button type="button" onclick="follow()">Folgen</button>');
+          //update followercount
           $('#followernr').html(followernr);
         }
       });

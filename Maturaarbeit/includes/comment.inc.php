@@ -1,6 +1,9 @@
 <?php
 	include '../db.php';
-	// real escape string to prevent mysql injections
+	/**
+	 * receive comment from form
+	 * write comment to database
+	 */
 	$id = $_POST['id'];
   $actid = $_POST['actid'];
   $commentText = $conn->real_escape_string($_POST['commentText']);
