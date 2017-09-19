@@ -12,6 +12,9 @@
         <div id="error">
           <?php
             if(isset($_SESSION['error'])){
+              /**
+               * display form error from previous try
+               */
               echo $_SESSION['error'];
             }
           ?>

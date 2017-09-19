@@ -3,6 +3,7 @@
 	 * include this file on every page
 	 * include important files
 	 * start session
+	 * set default title
 	 */
 	include 'db.php';
 	include 'vendor/autoload.php';
@@ -10,7 +11,7 @@
   use phpGPX\phpGPX;
 	session_start();
 	if(!isset($title)){
-		$title='Mountaineeringstats';
+		$title='mountaineeringstats';
 	}
 ?>
 <!DOCTYPE html>

@@ -1,6 +1,9 @@
 <?php
-	$title = "mountaineeringstats | Wilkommen";//Titel der Seite
+	$title = "mountaineeringstats | Wilkommen";
 	include 'header.php';
+	/**
+	 * redirect to main page if user is already logged in
+	 */
 	if(isset($_SESSION['id'])){
 		header("location: index.php");
 	}
@@ -13,6 +16,9 @@
 				<h1 class="start">Registrieren</h1>
 				<div id="error">
 					<?php
+					/**
+					 * output registration error from previous try
+					 */
 					if(isset($_SESSION['registrationError'])){
 						echo $_SESSION['registrationError'];
 					}
@@ -33,6 +39,9 @@
 					<h1 class="start bright">Anmelden</h1>
 					<div class="error">
 						<?php
+						/**
+						 * output login error from previous try
+						 */
 						if(isset($_SESSION['loginError'])){
 							echo $_SESSION['loginError'];
 						}
