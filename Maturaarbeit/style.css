@@ -29,6 +29,8 @@ input{
 }
 /*** login/registration page ***/
 .startBackground{
+	height: 100%;
+	width: 100%;
 	background: url(icons/background.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
