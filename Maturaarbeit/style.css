@@ -49,6 +49,31 @@ input{
 		min-height:100%;
 		position:relative;
 	}
+	.error{
+		text-align: center;
+		padding: 4px;
+		font-size: 24px;
+	}
+	.outer {
+			display: table;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			z-index: 0;
+	}
+	.middle {
+			display: table-cell;
+			vertical-align: middle;
+	}
+	.inner {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+	}
+	h1.start{
+		text-align: center;
+		font-size: 10vw;
+	}
 }
 /*** desktop ***/
 @media only screen and (min-width: 960px){
@@ -61,31 +86,31 @@ input{
 		min-height:100%;
 		position:relative;
 	}
-}
-.error{
-	text-align: center;
-	padding: 4px;
-	font-size: 24px;
-}
-.outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-		width: 100%;
-		z-index: 0;
-}
-.middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-.inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
-}
-h1.start{
-	text-align: center;
-	font-size: 80px;
+	.error{
+		text-align: center;
+		padding: 4px;
+		font-size: 24px;
+	}
+	.outer {
+			display: table;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			z-index: 0;
+	}
+	.middle {
+			display: table-cell;
+			vertical-align: middle;
+	}
+	.inner {
+			margin-left: auto;
+			margin-right: auto;
+			width: 960px;
+	}
+	h1.start{
+		text-align: center;
+		font-size: 80px;
+	}
 }
 h1.bright{
 	color: #EBEBEB;
