@@ -40,6 +40,11 @@ input{
 }
 /*** mobile design ***/
 @media screen and (max-width: 959px){
+	/*** general setup ***/
+	body{
+		width: 100%;
+		margin: 0 auto;
+	}
 	#content{
 		width: 100%;
 		margin: auto;
@@ -49,6 +54,7 @@ input{
 		min-height:100%;
 		position:relative;
 	}
+	/*** centered start pages layout ***/
 	.error{
 		text-align: center;
 		padding: 4px;
@@ -73,6 +79,267 @@ input{
 	h1.start{
 		text-align: center;
 		font-size: 10vw;
+	}
+	h1.bright{
+		color: #EBEBEB;
+	}
+	input.start{
+		font-size: 24px;
+	}
+	a.start:link {
+		text-decoration: none;
+		color: #D5D5D5;
+	}
+	a.start:visited {
+		text-decoration: none;
+		color: #D5D5D5;
+	}
+	a.start:hover {
+		text-decoration: none;
+		color: #EBEBEB;
+	}
+	a.start:active {
+		text-decoration: none;
+		color: #EBEBEB;
+	}
+	/*** header ***/
+	header{
+		width: 100%;
+		height: 60px;
+		background-color: #222222;
+		margin: 0;
+		padding: 0;
+	}
+	ul.header{
+		display: flex;
+		height: 45px;
+		list-style-type: none;
+		padding-top: 15px;
+	}
+	ul.header li{
+		display: inline-block;
+		font-size: 100%;
+		margin: 0 10px 0 10px;
+		display: inline-block;
+	}
+	ul.header li.right{
+		margin-left: auto;
+	}
+	ul.header li.left{
+		margin-right: auto;
+	}
+	ul.header li.center{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	ul.header li a.dropdwn{
+		color: #fcfcfc;
+	}
+	/*** Searchbar ***/
+	form.search{
+		text-align: center;
+	}
+	input.search{
+		width: auto;
+		font-size: 16px;
+		background-color: black;
+		color: #fcfcfc;
+		text-align: center;
+	}
+	/*** Profile dropdown ***/
+	.dropbtn {
+		color: #fcfcfc;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	}
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #222222;
+		min-width: 160px;
+		box-shadow: 0px 16px 24px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+	.dropdown-content a {
+		color: #fcfcfc;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	.dropdown-content a:hover {
+		background-color: black
+	}
+	.dropdown:hover .dropdown-content {
+		display: block;
+		right: 0;
+		left: auto;
+	}
+	.dropdown:hover .dropbtn {
+		background-color: #222222;
+	}
+	/*** profile header ***/
+	.profileheader{
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 15px;
+		margin: 32px 0 32px 0;
+	}
+	.profilepicture{
+		display: inline-block;
+		margin-right: 20px;
+	}
+	.profileInfo{
+		display: inline-block;
+	}
+	.profileStats{
+		display: inline-block;
+	}
+	.followingnr{
+		display: inline-block;
+		padding: 5px;
+		margin-right: auto;
+	}
+	.followernr{
+		display: inline-block;
+		padding: 5px;
+		margin-left: auto;
+	}
+	/*** feed ***/
+	.activityPreview{
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 25px;
+		margin: 32px 0 32px 0;
+	}
+	.staticMap{
+		max-width: calc(100vw - 50px);
+	}
+	a.actTitle:link {
+		text-decoration: none;
+		color: black;
+	}
+	a.actTitle:visited {
+		text-decoration: none;
+		color: black;
+	}
+	a.actTitle:hover {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.actTitle:active {
+		text-decoration: none;
+		color: #696969;
+	}
+	.actHeader{
+		margin-bottom: 15px;
+		display: flex;
+	}
+	.profilePicture{
+		display: inline-block;
+		margin-right: 20px;
+	}
+	.actName{
+		display: inline-block;
+	}
+	.title{
+		display: inline-block;
+	}
+	.sportIcon{
+		display: inline-block;
+		margin-left: auto;
+		margin-right: 0;
+	}
+	/*** social buttons ***/
+	textarea.commentBox{
+		line-height: 1;
+		font-size: 12px;
+		border: none;
+	}
+	.commentForm{
+		display: inline-block;
+	}
+	.commentForm form{
+		display: inline-block;
+	}
+	.commentForm input{
+		display: inline-block;
+	}
+	#commentLine{
+		display: inline;
+	}
+	.likeButton{
+		display: inline-block;
+	}
+	/*** settings ***/
+	.settingsForm{
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 15px;
+	}
+	form.settings{
+	
+	}
+	a.settings:link {
+		text-decoration: none;
+		color: black;
+	}
+	a.settings:visited {
+		text-decoration: none;
+		color: black;
+	}
+	a.settings:hover {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.settings:active {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.delete{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*** upload ***/
+	.upload{
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 15px;
+	}
+	/*** google maps ***/
+	#map{
+		height: 800px;
+		width: 100%;
+	}
+	/*** round images ***/
+	.circle{
+		border-radius: 50%;
+	}
+	/*** chartjs ***/
+	canvas.chart{
+		moz-user-select: none;
+		webkit-user-select: none;
+		ms-user-select: none;
+	}
+	/*** footer ***/
+	footer{
+		position:absolute;
+		width: 100%;
+		height: 60px;
+		background-color: #222222;
+		margin: 0;
+		padding: 0;
+		bottom: 0;
+	}
+	footer div.iconCredit{	
+		color: #fcfcfc;
+	}
+	footer a{
+		color: #cecece;
 	}
 }
 /*** desktop ***/
@@ -111,276 +378,276 @@ input{
 		text-align: center;
 		font-size: 80px;
 	}
-}
-h1.bright{
-	color: #EBEBEB;
-}
-input.start{
-	font-size: 24px;
-}
-a.start:link {
-	text-decoration: none;
-	color: #D5D5D5;
-}
-a.start:visited {
-	text-decoration: none;
-	color: #D5D5D5;
-}
-a.start:hover {
-	text-decoration: none;
-	color: #EBEBEB;
-}
-a.start:active {
-	text-decoration: none;
-	color: #EBEBEB;
-}
-/*** content ***/
-body{
-	width: 100%;
-	margin: 0 auto;
-}
-#content{
-	width: 960px;
-	margin: auto;
-	padding-bottom:60px;
-}
-#con {
-	min-height:100%;
-	position:relative;
-}
-/*** header ***/
-header{
-	width: 100%;
-	height: 60px;
-	background-color: #222222;
-	margin: 0;
-	padding: 0;
-}
-ul.header{
-	display: flex;
-	height: 45px;
-	list-style-type: none;
-	padding-top: 15px;
-}
-ul.header li{
-	display: inline-block;
-	font-size: 100%;
-	margin: 0 10px 0 10px;
-	display: inline-block;
-}
-ul.header li.right{
-  margin-left: auto;
-}
-ul.header li.left{
-  margin-right: auto;
-}
-ul.header li.center{
-	margin-left: auto;
-	margin-right: auto;
-}
-ul.header li a.dropdwn{
-	color: #fcfcfc;
-}
-/*** Searchbar ***/
-form.search{
-	text-align: center;
-}
-input.search{
-	width: auto;
-	font-size: 16px;
-	background-color: black;
-	color: #fcfcfc;
-	text-align: center;
-}
-/*** Profile dropdown ***/
-.dropbtn {
-	color: #fcfcfc;
-	font-size: 16px;
-	border: none;
-	cursor: pointer;
-}
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #222222;
-	min-width: 160px;
-	box-shadow: 0px 16px 24px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-}
-.dropdown-content a {
-	color: #fcfcfc;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-.dropdown-content a:hover {
-	background-color: black
-}
-.dropdown:hover .dropdown-content {
-	display: block;
-	right: 0;
-	left: auto;
-}
-.dropdown:hover .dropbtn {
-	background-color: #222222;
-}
-/*** profile header ***/
-.profileheader{
-	background-color: white;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	padding: 15px;
-	margin: 32px 0 32px 0;
-}
-.profilepicture{
-	display: inline-block;
-	margin-right: 20px;
-}
-.profileInfo{
-	display: inline-block;
-}
-.profileStats{
-	display: inline-block;
-}
-.followingnr{
-	display: inline-block;
-	padding: 5px;
-	margin-right: auto;
-}
-.followernr{
-	display: inline-block;
-	padding: 5px;
-	margin-left: auto;
-}
-/*** feed ***/
-.activityPreview{
-	background-color: white;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	padding: 25px;
-	margin: 32px 0 32px 0;
-}
-a.actTitle:link {
-	text-decoration: none;
-	color: black;
-}
-a.actTitle:visited {
-	text-decoration: none;
-	color: black;
-}
-a.actTitle:hover {
-	text-decoration: none;
-	color: #696969;
-}
-a.actTitle:active {
-	text-decoration: none;
-	color: #696969;
-}
-.actHeader{
-	margin-bottom: 15px;
-	display: flex;
-}
-.profilePicture{
-	display: inline-block;
-	margin-right: 20px;
-}
-.actName{
-	display: inline-block;
-}
-.title{
-	display: inline-block;
-}
-.sportIcon{
-	display: inline-block;
-	margin-left: auto;
-	margin-right: 0;
-}
-/*** social buttons ***/
-textarea.commentBox{
-	line-height: 1;
-	font-size: 12px;
-	border: none;
-}
-.commentForm{
-	display: inline-block;
-}
-.commentForm form{
-	display: inline-block;
-}
-.commentForm input{
-	display: inline-block;
-}
-#commentLine{
-	display: inline;
-}
-.likeButton{
-	display: inline-block;
-}
-/*** settings ***/
-.settingsForm{
-	background-color: white;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	padding: 15px;
-}
-form.settings{
-
-}
-a.settings:link {
-	text-decoration: none;
-	color: black;
-}
-a.settings:visited {
-	text-decoration: none;
-	color: black;
-}
-a.settings:hover {
-	text-decoration: none;
-	color: #696969;
-}
-a.settings:active {
-	text-decoration: none;
-	color: #696969;
-}
-a.delete{
-	margin-left: auto;
-	margin-right: auto;
-}
-/*** upload ***/
-.upload{
-	background-color: white;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	padding: 15px;
-}
-/*** google maps ***/
-#map{
-	height: 800px;
-	width: 100%;
-}
-/*** round images ***/
-.circle{
-	border-radius: 50%;
-}
-/*** chartjs ***/
-canvas.chart{
-	moz-user-select: none;
-	webkit-user-select: none;
-	ms-user-select: none;
-}
-/*** footer ***/
-footer{
-	position:absolute;
-	width: 100%;
-	height: 60px;
-	background-color: #222222;
-	margin: 0;
-	padding: 0;
-	bottom: 0;
-}
-footer div.iconCredit{	
-	color: #fcfcfc;
-}
-footer a{
-	color: #cecece;
+	h1.bright{
+		color: #EBEBEB;
+	}
+	input.start{
+		font-size: 24px;
+	}
+	a.start:link {
+		text-decoration: none;
+		color: #D5D5D5;
+	}
+	a.start:visited {
+		text-decoration: none;
+		color: #D5D5D5;
+	}
+	a.start:hover {
+		text-decoration: none;
+		color: #EBEBEB;
+	}
+	a.start:active {
+		text-decoration: none;
+		color: #EBEBEB;
+	}
+	/*** content ***/
+	body{
+		width: 100%;
+		margin: 0 auto;
+	}
+	#content{
+		width: 960px;
+		margin: auto;
+		padding-bottom:60px;
+	}
+	#con {
+		min-height:100%;
+		position:relative;
+	}
+	/*** header ***/
+	header{
+		width: 100%;
+		height: 60px;
+		background-color: #222222;
+		margin: 0;
+		padding: 0;
+	}
+	ul.header{
+		display: flex;
+		height: 45px;
+		list-style-type: none;
+		padding-top: 15px;
+	}
+	ul.header li{
+		display: inline-block;
+		font-size: 100%;
+		margin: 0 10px 0 10px;
+		display: inline-block;
+	}
+	ul.header li.right{
+		margin-left: auto;
+	}
+	ul.header li.left{
+		margin-right: auto;
+	}
+	ul.header li.center{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	ul.header li a.dropdwn{
+		color: #fcfcfc;
+	}
+	/*** Searchbar ***/
+	form.search{
+		text-align: center;
+	}
+	input.search{
+		width: auto;
+		font-size: 16px;
+		background-color: black;
+		color: #fcfcfc;
+		text-align: center;
+	}
+	/*** Profile dropdown ***/
+	.dropbtn {
+		color: #fcfcfc;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	}
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #222222;
+		min-width: 160px;
+		box-shadow: 0px 16px 24px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+	.dropdown-content a {
+		color: #fcfcfc;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	.dropdown-content a:hover {
+		background-color: black
+	}
+	.dropdown:hover .dropdown-content {
+		display: block;
+		right: 0;
+		left: auto;
+	}
+	.dropdown:hover .dropbtn {
+		background-color: #222222;
+	}
+	/*** profile header ***/
+	.profileheader{
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 15px;
+		margin: 32px 0 32px 0;
+	}
+	.profilepicture{
+		display: inline-block;
+		margin-right: 20px;
+	}
+	.profileInfo{
+		display: inline-block;
+	}
+	.profileStats{
+		display: inline-block;
+	}
+	.followingnr{
+		display: inline-block;
+		padding: 5px;
+		margin-right: auto;
+	}
+	.followernr{
+		display: inline-block;
+		padding: 5px;
+		margin-left: auto;
+	}
+	/*** feed ***/
+	.activityPreview{
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 25px;
+		margin: 32px 0 32px 0;
+	}
+	a.actTitle:link {
+		text-decoration: none;
+		color: black;
+	}
+	a.actTitle:visited {
+		text-decoration: none;
+		color: black;
+	}
+	a.actTitle:hover {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.actTitle:active {
+		text-decoration: none;
+		color: #696969;
+	}
+	.actHeader{
+		margin-bottom: 15px;
+		display: flex;
+	}
+	.profilePicture{
+		display: inline-block;
+		margin-right: 20px;
+	}
+	.actName{
+		display: inline-block;
+	}
+	.title{
+		display: inline-block;
+	}
+	.sportIcon{
+		display: inline-block;
+		margin-left: auto;
+		margin-right: 0;
+	}
+	/*** social buttons ***/
+	textarea.commentBox{
+		line-height: 1;
+		font-size: 12px;
+		border: none;
+	}
+	.commentForm{
+		display: inline-block;
+	}
+	.commentForm form{
+		display: inline-block;
+	}
+	.commentForm input{
+		display: inline-block;
+	}
+	#commentLine{
+		display: inline;
+	}
+	.likeButton{
+		display: inline-block;
+	}
+	/*** settings ***/
+	.settingsForm{
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 15px;
+	}
+	form.settings{
+	
+	}
+	a.settings:link {
+		text-decoration: none;
+		color: black;
+	}
+	a.settings:visited {
+		text-decoration: none;
+		color: black;
+	}
+	a.settings:hover {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.settings:active {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.delete{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*** upload ***/
+	.upload{
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 15px;
+	}
+	/*** google maps ***/
+	#map{
+		height: 800px;
+		width: 100%;
+	}
+	/*** round images ***/
+	.circle{
+		border-radius: 50%;
+	}
+	/*** chartjs ***/
+	canvas.chart{
+		moz-user-select: none;
+		webkit-user-select: none;
+		ms-user-select: none;
+	}
+	/*** footer ***/
+	footer{
+		position:absolute;
+		width: 100%;
+		height: 60px;
+		background-color: #222222;
+		margin: 0;
+		padding: 0;
+		bottom: 0;
+	}
+	footer div.iconCredit{	
+		color: #fcfcfc;
+	}
+	footer a{
+		color: #cecece;
+	}
 }

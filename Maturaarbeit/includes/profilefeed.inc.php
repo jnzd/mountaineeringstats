@@ -11,6 +11,7 @@
       $rows = resultToArray($result);
       $result->free();
       foreach($rows as $row) {
+        $filename = $row['filename'];
         $activityLink = "../activity.php?name=".$filename;
         include 'activityPreview.inc.php';
       }

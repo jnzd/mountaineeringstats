@@ -23,7 +23,7 @@
       $encodedCoords = Polyline::encode($track);
       $link = "https://maps.googleapis.com/maps/api/staticmap?size=850x400&center=".$latCenter.",".$longCenter."&path=weight:3%7Ccolor:blue%7Cenc:".$encodedCoords."&key=AIzaSyBh619HIPkaPOW76qYCe5_39VpnJRhWu2s";
     }
-    echo "<img src='".$link."'><br>";
+    echo "<img class='staticMap' src='".$link."'><br>";
     $link = "";
   ?>
 </div>
