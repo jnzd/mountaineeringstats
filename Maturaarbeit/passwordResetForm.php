@@ -61,5 +61,5 @@
     </div>
     <?php
   }
-  include 'footer.php';
+  include 'footerStart.php';
 ?>

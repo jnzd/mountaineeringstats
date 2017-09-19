@@ -1,10 +1,10 @@
 <?php
 	$title = "mountaineeringstats | Wilkommen";
 	include 'header.php';
-	/**
-	 * redirect to main page if user is already logged in
-	 */
 	if(isset($_SESSION['id'])){
+		/**
+		 * redirect to main page if user is already logged in
+		 */
 		header("location: index.php");
 	}
 ?>
@@ -16,10 +16,10 @@
 				<h1 class="start">Registrieren</h1>
 				<div id="error">
 					<?php
-					/**
-					 * output registration error from previous try
-					 */
 					if(isset($_SESSION['registrationError'])){
+						/**
+						 * output registration error from previous try
+						 */
 						echo $_SESSION['registrationError'];
 					}
 					?>
@@ -59,6 +59,6 @@
 			</div>
 		</div>
 	</div>
-</div>
-</body>
-</html>
+	<?php
+		include 'footerStart.php';
+	?>
