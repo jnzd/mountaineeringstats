@@ -10,6 +10,9 @@
     * .trim is needed in case a user only entered spaces, which should not be posted
     */
     if(jQuery.trim(commentText).length>0){
+      /**
+       * call comment.inc
+       */
       var username='<?php 
         $id=$_SESSION['id'];
         $sql="SELECT * FROM users WHERE id='$id'";
@@ -28,9 +31,11 @@
           commentText: commentText
         },
         complete: function(){
-          //display comment
+          /**
+           * display comment
+           * clear textbox
+           */
           $("#comments"+actid).append("<div id='commentLine'><p class='comment'><b>"+username+"</b> "+commentText);
-          //clear textbox
           document.getElementById("comment"+actid).value="";
         },
       });

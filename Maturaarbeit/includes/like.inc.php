@@ -1,4 +1,8 @@
 <?php
+	/**
+	 * receive data from likebutton
+	 * write like to database
+	 */
 	include '../db.php';
 	$userID = $_POST['userid'];
   $actID = $_POST['actid'];

@@ -1,4 +1,8 @@
 <?php
+ /**
+	* receive data from followbutton
+	* write follow relationship to database
+	*/
 	include '../db.php';
 	$followingID = $_POST['followingID'];
 	$followedID = $_POST['followedID'];

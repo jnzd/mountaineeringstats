@@ -1,4 +1,8 @@
 <?php
+  /**
+   * check if post has been liked
+   * display like button accordingly
+   */
   $userID = $_SESSION['id'];
   $likeCheck = "SELECT * FROM likes WHERE userID='$userID' AND actID='$actid'";
   $resultLikes = $conn->query($likeCheck);
@@ -16,6 +20,9 @@
 </div>
 <script>
   function like(actid){
+    /**
+     * call like.inc
+     */
     $.ajax({
       type:'post',
       url:'includes/like.inc.php',
@@ -25,13 +32,18 @@
         actid: actid
       },
       complete: function(){
-        //switch like button
+        /**
+         * switch like button
+         */
         $('#likeButton'+actid).html("<button type='button' onclick='unlike("+actid+")'>Gefällt mir nicht mehr</button>");
       },
     });
     return false;
   }
   function unlike(actid){
+    /**
+     * call unlike.inc
+     */
     $.ajax({
       type:'post',
       url:'includes/unlike.inc.php',
@@ -41,7 +53,9 @@
         actid: actid
       },
       complete: function(){
-        //switch like button
+        /**
+         * switch like button
+         */
         $('#likeButton'+actid).html("<button type='button' onclick='like("+actid+")'>Gefällt mir</button>");
       }
     });

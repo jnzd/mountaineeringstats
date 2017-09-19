@@ -1,7 +1,7 @@
 <?php
 	include '../db.php';
 	/**
-	 * receive comment from form
+	 * receive comment data from form
 	 * write comment to database
 	 */
 	$id = $_POST['id'];
