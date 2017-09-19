@@ -6,7 +6,7 @@
   function postComment(actid){
     var commentText=document.getElementById("comment"+actid).value;
     /**
-    * check wether the textbox is empty
+    * check whether the textbox is empty
     * .trim is needed in case a user only entered spaces, which should not be posted
     */
     if(jQuery.trim(commentText).length>0){

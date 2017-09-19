@@ -9,7 +9,7 @@ html, body {
    margin:0;
    padding:0;
 	 height:100%;
-	 background-color: #F4F4F4;
+	 /*background-color: #F4F4F4;*/
 }
 h3{
 	margin-top:10px;
@@ -28,7 +28,7 @@ input{
 	text-align: center;
 }
 /*** login/registration page ***/
-body.start{
+.startBackground{
 	background: url(icons/background.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

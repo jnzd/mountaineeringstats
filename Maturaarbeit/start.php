@@ -1,11 +1,11 @@
 <?php
-$title = "Hi";//Titel der Seite
-include 'header.php';
-if(isset($_SESSION['id'])){
-	header("location: index.php");
-}
+	$title = "mountaineeringstats | Wilkommen";//Titel der Seite
+	include 'header.php';
+	if(isset($_SESSION['id'])){
+		header("location: index.php");
+	}
 ?>
-<body class="start">
+<div class="startBackground">
 	<div class="outer">
 		<div class="middle">
 			<div class="inner">
@@ -50,5 +50,6 @@ if(isset($_SESSION['id'])){
 			</div>
 		</div>
 	</div>
+</div>
 </body>
 </html>

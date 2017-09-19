@@ -1,10 +1,13 @@
 <?php
-	//include important files
+	/**
+	 * include this file on every page
+	 * include important files
+	 * start session
+	 */
 	include 'db.php';
 	include 'vendor/autoload.php';
 	include 'includes/resultToArray.inc.php';
   use phpGPX\phpGPX;
-	//start session on every page
 	session_start();
 	if(!isset($title)){
 		$title='Mountaineeringstats';
@@ -19,29 +22,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="node_modules\jquery\dist\jquery.js"></script>
 </head>
+<body>
 <?php
-	//check if logged in
+	/**
+	 * check if user is logged in
+	 */
 	if(isset($_SESSION['id'])){
-		//if yes
+		/**
+		 * logged in
+		 * => get information from database
+		 * => check if account has been confirmed
+		 */
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM users WHERE id='$id'";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
-		//retrieve data about user from database
 		$username = $row['username'];
 		$profilepic = $row['pic_path'];
-		//check if account has been confirmed
 		if($row['confirmed']==0 && $_SERVER['REQUEST_URI']!='/verification.php'){
-			echo "<body>";
 			header("Location: verification.php");
 		}
-		//check if logged in, but url is from password reset, which is a contradiction...
+		/**
+		 * check if the url is for password reset, but the user is logged in
+		 * if so redirect to index.php, since the password doesn't seem to be forgotten
+		 */
 		if(isset($_SESSION['id'])&&$_SERVER['REQUEST_URI']=='/passwordResetForm.php'){
 			header("location: index.php");
 		}
-		//display header if logged in and confirmed
+		/**
+		 * display header
+		 */
 		?>
-		<body>
 		<header>
 			<!--navigation links-->
 			<ul class="header">
@@ -84,8 +95,12 @@
 		<div id="content">
 		<?php
 	}else{
-		//if not logged in
-		if($title != 'Hi' && $title != 'Willkommen'){
+		/**
+		 * if the user isn't logged in redirect to start.php
+		 * unless the user is already on start.php, verification.php, passwordReset.php or passwordResetForm.php
+		 * all these pages have the title "mountaineeringstats | Wilkommen"
+		 */
+		if($title != 'mountaineeringstats | Wilkommen'){
 			header('location: start.php');
 		}
 	}
