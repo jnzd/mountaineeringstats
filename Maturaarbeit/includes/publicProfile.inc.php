@@ -1,4 +1,7 @@
 <?php
+  /**
+   * polyline encoder needed for static map path
+   */
   require 'vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
   $sql = "SELECT * FROM users WHERE username='$publicUser'";
   $result = $conn->query($sql);

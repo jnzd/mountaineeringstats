@@ -1,6 +1,9 @@
 <h1>Meine Aktivitäten</h1>
 <div class="feed">
   <?php
+  /**
+   * polyline encoder needed for static map path
+   */
     require 'vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
     if(isset($_SESSION['id'])){
       include 'parsers/parse.gpx.php';
