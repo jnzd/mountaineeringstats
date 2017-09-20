@@ -2,9 +2,7 @@
   /**
    * users own activity
    */
-  include 'includes/activityHeader.inc.php';
-?>
-<a href="editAct.php?name=<?php echo $_GET['name']; ?>">Edit</a>
-<?php
-  include 'includes/activityFooter.inc.php';
+  $name = $_GET['name'];
+  $edit = "<a href='editAct.php?name=$name'>Edit</a>"
+  include 'includes/activityPublic.inc.php';
 ?>
