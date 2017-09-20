@@ -44,13 +44,6 @@
 			header("Location: verification.php");
 		}
 		/**
-		 * check if the url is for password reset, but the user is logged in
-		 * if so redirect to index.php, since the password doesn't seem to be forgotten
-		 */
-		if(isset($_SESSION['id'])&&$_SERVER['REQUEST_URI']=='/passwordResetForm.php'){
-			header("location: index.php");
-		}
-		/**
 		 * display header
 		 */
 		?>

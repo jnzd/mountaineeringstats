@@ -28,8 +28,8 @@ if(!empty($_POST['email'])){
 	$email = $conn->escape_string ($_POST['email']);
 }
 if(!empty($_POST['password'])){
-	if(md5($_POST['password'])==md5($_POST['confirmpassword'])){
-		$password = md5($_POST['password']);
+	if($_POST['password']=$_POST['confirmpassword']){
+		$password = password_hash($_POSt['password'], PASSWORD_DEFAULT);
 		$changed = true;
 	}
 	else{

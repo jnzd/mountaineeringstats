@@ -1,4 +1,9 @@
 <?php
+  /**
+   * logout if logged in
+   */
+  session_start();
+  session_destroy();
   $title = "mountaineeringstats | Wilkommen";
   include 'header.php';
   include 'db.php';
@@ -26,7 +31,7 @@
      * if the link doesn't match with an id and a corresponding hash
      * redirect to index.php
      */
-    header("location: index.php")
+    header("location: index.php");
   }else{
     /**
      * if data is correct
@@ -50,7 +55,7 @@
                 }
               ?>
             </div>
-            <form action= "includes/passwordResetForm.inc.php" method="post">
+            <form autocomplete="off" action= "includes/passwordResetForm.inc.php" method="post">
               <input class="start" type="password" name="password" placeholder="Passwort"><br>
               <input class="start" type="password" name="confirmpassword" placeholder="Passwort bestätigen"><br>
               <input class="start" type="submit" name="reset" value="Passwort zurücksetzen"><br><br>
