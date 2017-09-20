@@ -14,10 +14,12 @@
   $description = $row['description'];
 ?>
 <div class='actHeader'>
-<div class='title'>
-<h1><?php echo $title; ?></h1><br>
-</div>
-<?php
-    include 'includes/icons.inc.php';
-?>
-<p><?php echo $description; ?></p><br>
+  <div class='title'>
+    <h1><?php echo $title; ?></h1><br>
+  </div>
+  <?php
+      include 'includes/icons.inc.php';
+  ?>
+  <div class="actDescription">
+    <p><?php echo $description; ?></p>
+  </div>
