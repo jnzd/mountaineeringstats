@@ -214,10 +214,10 @@ input{
 		background-color: white;
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		padding: 25px;
-		margin: 32px 0 32px 0;
+		margin: 32px 20px 32px 20px;
 	}
 	.staticMap{
-		max-width: calc(100vw - 50px);
+		max-width: calc(100vw - 100px);
 	}
 	a.actTitle:link {
 		text-decoration: none;
@@ -522,7 +522,12 @@ input{
 		margin-left: auto;
 	}
 	/*** feed ***/
+	.feed{
+		width: 665px;
+		margin: auto;
+	}
 	.activityPreview{
+		width: 640px;
 		background-color: white;
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		padding: 25px;

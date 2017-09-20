@@ -1,4 +1,4 @@
-<div id="feed">
+<div class="feed">
   <?php
     include 'parsers/parse.gpx.php';
     require 'vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
