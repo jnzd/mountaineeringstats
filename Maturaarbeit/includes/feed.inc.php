@@ -38,4 +38,16 @@
   ?>
 </div>
 
+<script>
+  var username='<?php 
+    $id=$_SESSION['id'];
+    $sql="SELECT * FROM users WHERE id='$id'";
+    $result=$conn->query($sql);
+    $rowUser=$result->fetch_assoc();
+    $usernam=$rowUser['username'];
+    echo $username;
+  ?>';
+  var id='<?php echo $_SESSION['id']; ?>';
+</script>
+<script src="javascript/deleteComment.js"></script>
 <script src="javascript/comment.js"></script>

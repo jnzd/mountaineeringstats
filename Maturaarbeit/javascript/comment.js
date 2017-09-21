@@ -1,24 +1,32 @@
-function deleteComment(commentid){
+function postComment(actid){
+  var commentText=document.getElementById("comment"+actid).value;
   /**
-   * call deleteComment.inc
-   */
-  console.log(commentid);
-  $.ajax({
-    type: 'post',
-    url: 'includes/deleteComment.inc.php',
-    datatype: 'json',
-    data: {
-      commentID: commentid
-    },
-    complete: function(){
-      /**
-       * delete comment from screen
-       */
-      $("#commentLine"+commentid).html("");
-    },
-    success: function(data){
-      alert(data);
-    }
-  });
+  * check whether the textbox is empty
+  * .trim is needed in case a user only entered spaces, which should not be posted
+  */
+  if(jQuery.trim(commentText).length>0){
+    /**
+     * call comment.inc
+     */
+    $.ajax({
+      type: 'post',
+      url: 'includes/comment.inc.php',
+      datatype: 'json',
+      data: {
+        id: id,
+        actid: actid,
+        commentText: commentText
+      },
+      complete: function(data){
+        /**
+         * display comment
+         * clear textbox
+         */
+        var commentid=data;
+        $("#comments"+actid).append("<div id='commentLine'><p class='comment'><b>"+username+"</b> "+commentText+"<div id='deleteComment"+commentid+" class='deleteComment'> <button type='button' onclick='deleteComment("+commentid+")'>Kommentar löschen</button></div><script src='javascript/deleteComment.js'");
+        document.getElementById("comment"+actid).value="";
+      }
+    });
+  }
   return false;
 }
