@@ -15,7 +15,7 @@ function deleteComment(commentid){
        * delete comment from screen
        */
       $("#commentLine"+commentid).html("");
-      console.log(commentid+"&"+commentID);
+      console.log(commentid);
     }
   });
   return false;

@@ -19,7 +19,7 @@ function postComment(actid){
       },
       success: function(data){
         var commentid = data;
-        $("#comments"+actid).append("<div id='commentLine'><p class='comment'><b>"+username+"</b> "+commentText+"<div id='deleteComment"+commentid+" class='deleteComment'><button type='button' onclick='deleteComment("+commentid+")'>Kommentar löschen</button></div><script src='javascript/deleteComment.js'></script>");
+        $("#comments"+actid).append("<div id='commentLine"+commentid+"'><p class='comment'><b>"+username+"</b> "+commentText+"<div id='deleteComment"+commentid+" class='deleteComment'><button type='button' onclick='deleteComment("+commentid+")'>Kommentar löschen</button></div><script src='javascript/deleteComment.js'></script>");
         document.getElementById("comment"+actid).value="";
       }
     });
