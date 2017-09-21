@@ -37,9 +37,6 @@
            */
           $("#comments"+actid).append("<div id='commentLine'><p class='comment'><b>"+username+"</b> "+commentText);
           document.getElementById("comment"+actid).value="";
-        },
-        success: function(data) {
-          alert(data);
         }
       });
     }

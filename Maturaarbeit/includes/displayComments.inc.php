@@ -15,13 +15,11 @@
         $row = $result->fetch_assoc();
         $usernameComment = $row['username'];
         $commentUserID = $row['id'];      
-        echo '<div id="commentLine"><p class="comment"><b>'.$usernameComment.' </b>'.$commentText;
+        echo '<div id="commentLine'.$commentID.'><p class="comment"><b>'.$usernameComment.' </b>'.$commentText;
         if($commentUserID == $_SESSION['id']){
-          $url = $_SERVER['REQUEST_URI'];
-          echo " <a href='includes/deleteComment.inc.php?id=".$commentID."&url=".$url."'>löschen</a></p>";
-        }else{
-          echo '</p>';
+          include 'includes/deleteCommentButton.inc.php';
         }
+        echo '</p>';
         echo "</div>";
       }
     }
