@@ -19,46 +19,7 @@
   ?>
 </div>
 <script>
-  function like(actid){
-    /**
-     * call like.inc
-     */
-    $.ajax({
-      type:'post',
-      url:'includes/like.inc.php',
-      datatype: 'json',
-      data: {
-        userid: '<?php echo $userID; ?>',
-        actid: actid
-      },
-      complete: function(){
-        /**
-         * switch like button
-         */
-        $('#likeButton'+actid).html("<button type='button' onclick='unlike("+actid+")'>Gefällt mir nicht mehr</button>");
-      }
-    });
-    return false;
-  }
-  function unlike(actid){
-    /**
-     * call unlike.inc
-     */
-    $.ajax({
-      type:'post',
-      url:'includes/unlike.inc.php',
-      datatype: 'json',
-      data: {
-        userid: '<?php echo $userID; ?>',
-        actid: actid
-      },
-      complete: function(){
-        /**
-         * switch like button
-         */
-        $('#likeButton'+actid).html("<button type='button' onclick='like("+actid+")'>Gefällt mir</button>");
-      }
-    });
-    return false;
-  }
+  var userid = '<?php echo $userID; ?>';
 </script>
+<script src="javascript/like.js"></script>
+<script src="javascript/unlike.js"></script>
