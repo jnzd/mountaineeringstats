@@ -1,6 +1,6 @@
 <?php
   include '../db.php';
-  $commentID = $_GET['id'];
+  $commentID = $_POST['commentID'];
   $sql = "DELETE FROM comments WHERE commentID='$commentID'";
   $result = $conn->query($sql);
   printf("Errormessage: %s\n", $conn->error);

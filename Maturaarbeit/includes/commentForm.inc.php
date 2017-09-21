@@ -35,7 +35,8 @@
            * display comment
            * clear textbox
            */
-          $("#comments"+actid).append("<div id='commentLine'><p class='comment'><b>"+username+"</b> "+commentText);
+          var commentid = <?php $conn->insert_id; ?>
+          $("#comments"+actid).append("<div id='commentLine'><p class='comment'><b>"+username+"</b> "+commentText+"<div id='deleteComment"+commentid+" class='deleteComment'> <button type='button' onclick='deleteComment("+commentid+")'>Kommentar löschen</button></div>");
           document.getElementById("comment"+actid).value="";
         }
       });

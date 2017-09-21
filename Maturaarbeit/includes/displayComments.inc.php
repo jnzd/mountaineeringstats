@@ -7,7 +7,7 @@
       $rows = resultToArray($result);
       $result->free();
       foreach($rows as $row) {
-        $commentText = $row['text'];
+        $commentText = $row['commentText'];
         $userID = $row['userID'];
         $commentID = $row['commentID'];
         $sql = "SELECT * FROM users WHERE id='$userID'";

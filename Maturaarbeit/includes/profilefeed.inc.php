@@ -26,3 +26,5 @@
     }
   ?>
 </div>
+
+<script src="javascript/comment.js"></script>
