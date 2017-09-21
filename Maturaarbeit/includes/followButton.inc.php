@@ -2,8 +2,7 @@
   <?php
     /**
      * check if logged in user already follows the respective person
-     * display follow or unfollow button accordingly
-     */
+     * display follow or unfollow button accordingly     */
     $followingID = $_SESSION['id'];
     $followedID = $row['id'];
     $followingUser = $_SESSION['username'];
@@ -22,6 +21,9 @@
   <script>
     function follow(){
       var followernr = parseInt(document.getElementById('followernr').textContent)+1;
+      /**
+       * call like.inc
+       */
       $.ajax({
         type:'post',
         url:'includes/follow.inc.php',
@@ -40,11 +42,14 @@
            */
           $('#followButton').html('<button type="button" onclick="unfollow()">Abonniert</button>');
           $('#followernr').html(followernr);
-        },
+        }
       });
       return false;
     }
     function unfollow(){
+      /**
+       * call unfollow.inc
+       */
       var followernr = parseInt(document.getElementById('followernr').textContent)-1;
       $.ajax({
         type:'post',
