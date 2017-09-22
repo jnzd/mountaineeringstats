@@ -2,7 +2,6 @@ function deleteComment(commentid){
   /**
    * call deleteComment.inc
    */
-  console.log(commentid);
   $.ajax({
     type: 'post',
     url: 'includes/deleteComment.inc.php',

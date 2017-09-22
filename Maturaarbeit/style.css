@@ -492,8 +492,16 @@ textarea.commentBox{
 .commentForm input{
 	display: inline-block;
 }
-#commentLine{
-	display: inline;
+.commentLine{
+	display: flex;
+	border-bottom: thin dotted #000000;
+}
+.comment{
+	display: inline-block;
+}
+.deleteComment{
+	display: inline-block;
+	margin-left: 60%;
 }
 .likeButton{
 	display: inline-block;
