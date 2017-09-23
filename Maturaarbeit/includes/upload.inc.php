@@ -1,44 +1,45 @@
 <?php
-include '../header.php';
-include '../db.php';
-$_SESSION['uploadError'] = "";
-$user_id = $_SESSION['id'];
-$username = $_SESSION['username'];
-$sport = "";
-$actPath = "";
-$type = "";
-$thumbnail = "";
-$actTime = date("Y-m-d H:i:s");
-$dateTime = date("Y-m-d-H-i-s");//for file names, because file names can't contain :
-include '../db.php';
-if($_POST['sport'] != "null"){
-	if($_POST['sport'] == "jogging"){
-		$sport="jogging";
+	$urlInclude = true;
+	include '../header.php';
+	include '../db.php';
+	include '../parsers/parse.gpx.php';
+	$_SESSION['uploadError'] = "";
+	$user_id = $_SESSION['id'];
+	$username = $_SESSION['username'];
+	$sport = "";
+	$actPath = "";
+	$type = "";
+	$thumbnail = "";
+	$actTime = date("Y-m-d H:i:s");
+	$dateTime = date("Y-m-d-H-i-s");//for file names, because file names can't contain :
+	include '../db.php';
+	if($_POST['sport'] != "null"){
+		if($_POST['sport'] == "jogging"){
+			$sport="jogging";
+		}
+		if($_POST['sport'] == "hiking"){
+			$sport="hiking";
+		}
+		if($_POST['sport'] == "biking"){
+			$sport="biking";
+		}
+		if($_POST['sport'] == "skiing"){
+			$sport="skiing";
+		}
+		if($_POST['sport'] == "hochtour"){
+			$sport="hochtour";
+		}
+		if($_POST['sport'] == "skitour"){
+			$sport="skitour";
+		}
+		if($_POST['sport'] == "snowboard"){
+			$sport="snowboard";
+		}
+	}else{
+		$_SESSION['uploadError']="Keine Sportart ausgewählt";
+		header("Location: ../upload.php");
+		exit;
 	}
-	if($_POST['sport'] == "hiking"){
-		$sport="hiking";
-	}
-	if($_POST['sport'] == "biking"){
-		$sport="biking";
-	}
-	if($_POST['sport'] == "skiing"){
-		$sport="skiing";
-	}
-	if($_POST['sport'] == "hochtour"){
-		$sport="hochtour";
-	}
-	if($_POST['sport'] == "skitour"){
-		$sport="skitour";
-	}
-	if($_POST['sport'] == "snowboard"){
-		$sport="snowboard";
-	}
-}else{
-	$_SESSION['uploadError']="Keine Sportart ausgewählt";
-	header("Location: ../upload.php");
-	exit;
-}
-//if(isset($_POST['upload']) && isset($_FILES['xml'])){
 	$extension = pathinfo($_FILES['xml']['name'], PATHINFO_EXTENSION);
 	if($extension == "gpx"){
 		$type = "gpx";
@@ -65,11 +66,11 @@ if($_POST['sport'] != "null"){
 		header("Location: ../upload.php");
 		exit;
 	}
-
+	$values = gpx("../".$actPath);
+	$dateTime = $values['dateTime'];
+	$timestamp = $dateTime[0];
 	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description, filename) VALUES ('$sport', '$type', '$user_id', '$actTime', '$actPath', '$title', '$description', '$filename')";
-	$result = mysqli_query($conn, $sql);
-	include 'includes/thumbnailGenerator.inc.php';
-
+	$result = $conn->query($sql);
 	$_SESSION['uploadError']="";
 	header("Location: ../profile.php");
 ?>

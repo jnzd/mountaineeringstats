@@ -14,8 +14,13 @@
 		$actTime = $row['actTime'];
 		$filename = $row['filename'];
 		$description = $row['description'];
+		$values = gpx($row['actPath']);
+		$dateTime = $values['dateTime'];
 	?>
 	<div class='actHeader'>
+		<div class='date'>
+			<p><?php echo $dateTime[0]->format('d.m.Y H:i:s'); ?></p>
+		</div>
 		<div class='profilePicture'>
 			<a href='<?php echo $username; ?>'><img class='circle' src='<?php echo $picPath; ?>' height='40' width='40'></a>
 		</div>
@@ -36,7 +41,6 @@
 		</div>
 	</div>
 	<?php
-		$values = gpx($row['actPath']);
 		include 'includes/staticMap.inc.php';
 		//link comment section to according activity with actid
 		include 'includes/displayComments.inc.php';

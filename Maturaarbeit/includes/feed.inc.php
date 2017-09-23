@@ -20,6 +20,7 @@
           $sql .= " OR user_id='$followedID'";
         }
       }
+      $sql .= " ORDER BY actTime ASC";
       $result = $conn->query($sql);
       $rownr = $result->num_rows;
       if($rownr>0){

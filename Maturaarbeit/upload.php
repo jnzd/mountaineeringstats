@@ -2,6 +2,7 @@
 $title="GPX Upload";
 include 'header.php';
 include 'db.php';
+include 'parsers/parse.gpx.php';
 ?>
 <h1>GPX Upload</h1>
 <div class="Error">

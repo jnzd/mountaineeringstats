@@ -1,5 +1,9 @@
 <?php
-  include 'vendor/autoload.php';
+  if(isset($urlInclude)){
+    include '../vendor/autoload.php';
+  }else{
+    include 'vendor/autoload.php';
+  }
   use phpGPX\phpGPX;
   //include '../vendor/autoload.php';
   function bigger_than($testValue){

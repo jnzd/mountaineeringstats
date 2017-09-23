@@ -28,11 +28,10 @@
   $distanceTotal = $values['distanceTotal'];
   $duration = $values['duration'];
   $averageSpeed = $values['averageSpeed'];
-  $averageSpeed2 = $values['averageSpeed2'];
 ?>
 <div class="activity">
   <div class='date'>
-    <p><?php echo $dateTime[0]->format('d.m.Y H:i:s');; ?></p>
+    <p><?php echo $dateTime[0]->format('d.m.Y H:i:s'); ?></p>
   </div>
   <div class='actHeader'>
     <div class='titleLine'>
@@ -43,7 +42,7 @@
           include 'includes/icons.inc.php';
       ?>
       <?php
-        if($edit){
+        if(isset($edit)){
           echo "<div class='actEdit'>";
           echo "<a href='editAct.php?name=$name'>Edit</a>";
           echo "</div>";
