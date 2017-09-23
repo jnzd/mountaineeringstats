@@ -223,12 +223,16 @@ input{
 		margin-left: auto;
 		margin-right: 0;
 	}
+	.activity{
+		margin: 0 20px 0 20px;
+	}
 	/**
 	 * google maps
 	 * needs adjustment for mobile
 	 */
 	#map{
 		height: 800px;
+		max-height: 66vw;
 		width: 100%;
 	}
 	/**
@@ -425,7 +429,7 @@ input{
 	 * google maps
 	 */
 	#map{
-		height: 800px;
+		height: 640px;
 		width: 100%;
 	}
 	/**
@@ -477,11 +481,19 @@ input.search{
 	padding: 5px;
 	margin-left: auto;
 }
+/*** activity ***/
+.activity{
+	margin-bottom: 20px;
+}
 /*** social buttons ***/
 textarea.commentBox{
 	line-height: 1;
-	font-size: 12px;
+	font-size: 18px;
 	border: none;
+    border-bottom: 1px solid #000000;
+	resize: none;
+	width: 400px;
+	height: 18px;
 }
 .commentForm{
 	display: inline-block;
