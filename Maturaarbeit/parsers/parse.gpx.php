@@ -20,6 +20,9 @@
     $time = [];
     $difference = [];//maybe important
     $distance = [];//important
+    $distanceTotal = 0;
+    $averageSpeed = 0;
+    $duration = 0;
 
     foreach ($file->tracks as $track){
       $segment = $track->segments;
@@ -37,9 +40,22 @@
         $long_js = json_encode($longitude);
         $elevation_js = json_encode($elevation);
         $distance_js = json_encode($distance);
+        $stats = $segment->stats;
+        $averageSpeed = $stats->averageSpeed*3.6;
+        $distanceTotal = $stats->distance/1000;
+        $duration = $stats->duration;
       }
     }
-
+    if($duration>60){
+      $seconds = $duration%60;
+      $minutes = ($duration-$seconds)/60;
+      $duration = $minutes.":".$seconds."min";
+      if($minutes>60){
+        $hours = ($minutes-($minutes%60)/60);
+        $minutes = $minutes%60;
+        $duration = $hours.":".$minutes."h";
+      }
+    }
     $length = count($difference);
     $i = 1;
     $speed = [];
@@ -60,7 +76,7 @@
       array_push($time, $date);
     }
     $time_js = json_encode($time);
-    $values=array("latitude"=>$lat_js,"longitude"=>$long_js,"elevation"=>$elevation_js,"distance"=>$distance_js,"time"=>$time_js,"latitudePHP"=>$latitude,"longitudePHP"=>$longitude,"dateTime"=>$dateTime,"distancePHP"=>$distance,"speed"=>$speed_js);
+    $values=array("latitude"=>$lat_js,"longitude"=>$long_js,"elevation"=>$elevation_js,"distance"=>$distance_js,"time"=>$time_js,"latitudePHP"=>$latitude,"longitudePHP"=>$longitude,"dateTime"=>$dateTime,"distancePHP"=>$distance,"speed"=>$speed_js, "distanceTotal"=>$distanceTotal, "averageSpeed"=>$averageSpeed, "duration"=>$duration);
     //print_r($values);
     return $values;
   }

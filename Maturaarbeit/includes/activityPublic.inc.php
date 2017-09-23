@@ -25,12 +25,15 @@
   $latitude = $values['latitudePHP'];
   $dateTime = $values['dateTime'];
   $distance = $values['distancePHP'];
+  $distanceTotal = $values['distanceTotal'];
+  $duration = $values['duration'];
+  $averageSpeed = $values['averageSpeed'];
 ?>
 <div class="activity">
+  <div class='date'>
+    <p><?php echo $dateTime[0]->format('Y-m-d H:i:s');; ?></p>
+  </div>
   <div class='actHeader'>
-    <div class='date'>
-      <p><?php echo $dateTime[0]->format('Y-m-d H:i:s');; ?>
-    </div>
     <div class='title'>
       <h1><?php echo $title; ?></h1><br>
     </div>
@@ -47,8 +50,8 @@
     ?>
   </div>
   <div class="actDetails">
-    <p>Distanz: <?php echo $distance; ?><p>
-    <p>Geschwindigkeit: <?php echo $speed; ?><p>
+    <p>Distanz: <?php echo $distanceTotal; ?><p>
+    <p>Geschwindigkeit: <?php echo $averageSpeed; ?><p>
     <p>Dauer: <?php echo $duration; ?><p>
   </div>
   <?php
