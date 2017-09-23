@@ -12,9 +12,9 @@
 <div class="likeButton" id="likeButton<?php echo $actid; ?>">
   <?php
     if($liked>0){
-      echo "<button type='button' onclick='unlike(".$actid.")'>Gefällt mir nicht mehr</button>";
+      echo "<button class='unlike' type='button' onclick='unlike(".$actid.")'></button>";
     }else{
-      echo "<button type='button' onclick='like(".$actid.")'>Gefällt mir</button>";
+      echo "<button class='like' type='button' onclick='like(".$actid.")'></button>";
     }
   ?>
 </div>

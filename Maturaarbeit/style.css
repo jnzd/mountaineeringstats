@@ -250,6 +250,40 @@ input{
 		webkit-user-select: none;
 		ms-user-select: none;
 	}
+	/*** social buttons ***/
+	textarea.commentBox{
+		line-height: 1;
+		font-size: 18px;
+		border: none;
+		border-bottom: 1px solid #000000;
+		resize: none;
+		max-width: 40vw;
+		height: 18px;
+	}
+	.commentForm{
+		display: inline-block;
+	}
+	.commentForm form{
+		display: inline-block;
+	}
+	.commentForm input{
+		display: inline-block;
+	}
+	.commentLine{
+		display: flex;
+		border-bottom: thin dotted #000000;
+	}
+	.comment{
+		display: inline-block;
+		max-width: 100px;
+	}
+	.deleteComment{
+		display: inline-block;
+		margin-left: 60%;
+	}
+	.likeButton{
+		display: inline-block;
+	}
 }
 
 /*** desktop ***/
@@ -451,6 +485,40 @@ input{
 		webkit-user-select: none;
 		ms-user-select: none;
 	}
+	/*** social buttons ***/
+	textarea.commentBox{
+		line-height: 1;
+		font-size: 18px;
+		border: none;
+		border-bottom: 1px solid #000000;
+		resize: none;
+		width: 400px;
+		height: 18px;
+	}
+	.commentForm{
+		display: inline-block;
+	}
+	.commentForm form{
+		display: inline-block;
+	}
+	.commentForm input{
+		display: inline-block;
+	}
+	.commentLine{
+		display: flex;
+		border-bottom: thin dotted #000000;
+	}
+	.comment{
+		display: inline-block;
+		max-width: 100px;
+	}
+	.deleteComment{
+		display: inline-block;
+		margin-left: 60%;
+	}
+	.likeButton{
+		display: inline-block;
+	}
 }
 
 
@@ -495,40 +563,6 @@ input.search{
 /*** activity ***/
 .activity{
 	margin-bottom: 20px;
-}
-/*** social buttons ***/
-textarea.commentBox{
-	line-height: 1;
-	font-size: 18px;
-	border: none;
-    border-bottom: 1px solid #000000;
-	resize: none;
-	width: 400px;
-	height: 18px;
-}
-.commentForm{
-	display: inline-block;
-}
-.commentForm form{
-	display: inline-block;
-}
-.commentForm input{
-	display: inline-block;
-}
-.commentLine{
-	display: flex;
-	border-bottom: thin dotted #000000;
-}
-.comment{
-	display: inline-block;
-	max-width: 100px;
-}
-.deleteComment{
-	display: inline-block;
-	margin-left: 60%;
-}
-.likeButton{
-	display: inline-block;
 }
 /*** settings ***/
 .settingsForm{
@@ -602,4 +636,19 @@ footer div.iconCredit{
 }
 footer a{
 	color: #cecece;
+}
+.like{
+	background: url(icons/like.png);
+	height: 32px;
+	width: 32px;
+}
+.unlike{
+	background: url(icons/unlike.png);
+	height: 32px;
+	width: 32px;
+}
+.deleteCommentButton{
+	background: url(icons/delete.png);
+	height: 32px;
+	width: 32px;
 }

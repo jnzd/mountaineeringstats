@@ -14,7 +14,7 @@ function unlike(actid){
       /**
        * switch like button
        */
-      $('#likeButton'+actid).html("<button type='button' onclick='like("+actid+")'>Gefällt mir</button>");
+      $('#likeButton'+actid).html("<button class='like' type='button' onclick='like("+actid+")'></button>");
     }
   });
   return false;
