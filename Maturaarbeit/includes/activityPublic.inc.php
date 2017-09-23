@@ -28,26 +28,31 @@
   $distanceTotal = $values['distanceTotal'];
   $duration = $values['duration'];
   $averageSpeed = $values['averageSpeed'];
+  $averageSpeed2 = $values['averageSpeed2'];
 ?>
 <div class="activity">
   <div class='date'>
-    <p><?php echo $dateTime[0]->format('Y-m-d H:i:s');; ?></p>
+    <p><?php echo $dateTime[0]->format('d.m.Y H:i:s');; ?></p>
   </div>
   <div class='actHeader'>
-    <div class='title'>
-      <h1><?php echo $title; ?></h1><br>
+    <div class='titleLine'>
+      <div class='title'>
+        <h1><?php echo $title; ?></h1><br>
+      </div>
+      <?php
+          include 'includes/icons.inc.php';
+      ?>
+      <?php
+        if($edit){
+          echo "<div class='actEdit'>";
+          echo "<a href='editAct.php?name=$name'>Edit</a>";
+          echo "</div>";
+        }
+      ?>
     </div>
-    <?php
-        include 'includes/icons.inc.php';
-    ?>
     <div class="actDescription">
       <p><?php echo $description; ?></p>
     </div>
-    <?php
-      if(isset($edit)){
-        echo $edit;
-      }
-    ?>
   </div>
   <div class="actDetails">
     <p>Distanz: <?php echo $distanceTotal; ?><p>

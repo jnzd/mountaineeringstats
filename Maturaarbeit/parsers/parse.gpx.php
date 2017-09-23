@@ -70,8 +70,6 @@
       array_push($speed, $speedkmh);
       $i++;
     }
-    //$speedSorted = asort($speed);
-    //$median = $speedSorted[count($speedSorted)/2];
     $speedCleared = array_filter($speed, "bigger_than");
     $speed_js = json_encode($speed);
     foreach($dateTime as $moment){
@@ -80,7 +78,6 @@
     }
     $time_js = json_encode($time);
     $values=array("latitude"=>$lat_js,"longitude"=>$long_js,"elevation"=>$elevation_js,"distance"=>$distance_js,"time"=>$time_js,"latitudePHP"=>$latitude,"longitudePHP"=>$longitude,"dateTime"=>$dateTime,"distancePHP"=>$distance,"speed"=>$speed_js, "distanceTotal"=>$distanceTotal, "averageSpeed"=>$averageSpeed, "duration"=>$duration);
-    //print_r($values);
     return $values;
   }
 ?>

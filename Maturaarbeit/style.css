@@ -201,9 +201,15 @@ input{
 		text-decoration: none;
 		color: #696969;
 	}
+	.titleLine{
+		display: flex;
+	}
 	.actHeader{
 		margin-bottom: 15px;
-		display: flex;
+	}
+	.actEdit{
+		margin-left: auto;
+		margin-right: 0;
 	}
 	.actDescription{
 		
@@ -406,9 +412,15 @@ input{
 		text-decoration: none;
 		color: #696969;
 	}
+	.titleLine{
+		display: flex;
+	}
 	.actHeader{
 		margin-bottom: 15px;
-		display: flex;
+	}
+	.actEdit{
+		margin-left: auto;
+		margin-right: 0;
 	}
 	.profilePicture{
 		display: inline-block;
@@ -422,8 +434,7 @@ input{
 	}
 	.sportIcon{
 		display: inline-block;
-		margin-left: auto;
-		margin-right: 0;
+		margin-left: 15px;
 	}
 	/**
 	 * google maps
