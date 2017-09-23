@@ -41,19 +41,22 @@
         $elevation_js = json_encode($elevation);
         $distance_js = json_encode($distance);
         $stats = $segment->stats;
-        $averageSpeed = $stats->averageSpeed*3.6;
-        $distanceTotal = $stats->distance/1000;
+        $averageSpeed = floor(($stats->averageSpeed*3.6)*100)/100;
+        $averageSpeed .= " km/h";
+        $distanceTotal = floor(($stats->distance/1000)*100)/100;
+        $distanceTotal .= " km";
         $duration = $stats->duration;
       }
     }
     if($duration>60){
       $seconds = $duration%60;
       $minutes = ($duration-$seconds)/60;
-      $duration = $minutes.":".$seconds."min";
+      $duration = $minutes.":".$seconds." min";
       if($minutes>60){
-        $hours = ($minutes-($minutes%60)/60);
+        $minutesRemainder = $minutes%60;
+        $hours = ($minutes-$minutesRemainder)/60;
         $minutes = $minutes%60;
-        $duration = $hours.":".$minutes."h";
+        $duration = $hours.":".$minutesRemainder." h";
       }
     }
     $length = count($difference);
