@@ -271,7 +271,8 @@ input{
 	}
 	.commentLine{
 		display: flex;
-		border-bottom: thin dotted #000000;
+		border-bottom: 0.5px solid #000000;
+		margin-bottom: 5px;
 	}
 	.comment{
 		display: inline-block;
