@@ -498,6 +498,7 @@ textarea.commentBox{
 }
 .comment{
 	display: inline-block;
+	max-width: 100px;
 }
 .deleteComment{
 	display: inline-block;

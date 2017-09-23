@@ -34,20 +34,25 @@
     }else{
       header("location: start.php");
     }
-   
   ?>
 </div>
 
 <script>
   var username='<?php 
-    $id=$_SESSION['id'];
-    $sql="SELECT * FROM users WHERE id='$id'";
-    $result=$conn->query($sql);
-    $rowUser=$result->fetch_assoc();
-    $usernam=$rowUser['username'];
-    echo $username;
+    if(isset($_SESSION['id'])){
+      $id=$_SESSION['id'];
+      $sql="SELECT * FROM users WHERE id='$id'";
+      $result=$conn->query($sql);
+      $rowUser=$result->fetch_assoc();
+      $username=$rowUser['username'];
+      echo $username;
+    }
   ?>';
-  var id='<?php echo $_SESSION['id']; ?>';
+  var id='<?php 
+    if(isset($_SESSION['id'])){
+      echo $_SESSION['id'];
+    }
+  ?>';
 </script>
 <script src="javascript/deleteComment.js"></script>
 <script src="javascript/comment.js"></script>
