@@ -81,7 +81,7 @@
 						<!-- profile dropdown -->
 						<li>
 							<div class="dropdown">
-								<button class="dropdown headerButton" onclick="dropdown()"></button>
+								<button class="dropdown headerButton dropbtn" onclick="dropdown()"></button>
 								<style>
 									.dropdown{
 										background: url(<?php echo $profilepic; ?>);
@@ -93,9 +93,9 @@
 									}
 								</style>
 								<div class="dropdown-content" id="dropdown-content">
-									<a class="dropdwn" href="profile.php">Profil</a>
-									<a class="dropdwn" href="includes/logout.inc.php">Abmelden</a>
-									<a class="dropdwn" href="settings.php">Einstellungen</a>
+									<a class="dropdwnLink" href="profile.php">Profil</a>
+									<a class="dropdwnLink" href="includes/logout.inc.php">Abmelden</a>
+									<a class="dropdwnLink" href="settings.php">Einstellungen</a>
 								</div>
 							</div>
 							<script src="javascript/dropdown.js"></script>
