@@ -157,22 +157,25 @@ ul.header li.center{
 	display: inline-block;
 }
 .dropdown-content {
+	margin-top: -2px;
 	display: none;
 	position: absolute;
+	right: 0;
+	left: auto;
 	background-color: #222222;
 	min-width: 160px;
 	overflow: auto;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 }
-a.dropdownLink{
+a.dropdwnLink{
 	color: white;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
 }
 /* Change color of dropdown links on hover */
-a.dropdownLink:hover {
+a.dropdwnLink:hover {
 	background-color: #f1f1f1;
 }
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
