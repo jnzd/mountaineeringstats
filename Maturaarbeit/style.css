@@ -102,11 +102,19 @@ header{
 	margin: 0;
 	padding: 0;
 }
+.headerOuter{
+	display: table;
+	position: absolute;
+	height: 60px;
+	width: 100%;
+	z-index: 0;
+}
 ul.header{
+	display: table-cell;
+	vertical-align: middle;
 	display: flex;
-	height: 45px;
+	height: 60px;
 	list-style-type: none;
-	padding-top: 15px;
 }
 ul.header li{
 	display: inline-block;
@@ -140,7 +148,7 @@ ul.header li.center{
 	background-size: 30px 30px;
 	background-position: center;
 	height: 100%;
-	width: 45px;
+	width: 60px;
 }
 /*** feed ***/
 .feed{

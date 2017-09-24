@@ -48,46 +48,50 @@
 		 */
 		?>
 		<header>
-			<!--navigation links-->
-			<ul class="header">
-				<!--Logo-->
-				<li class="left">
-					<button class="logo headerButton" href="index.php"></button>
-				</li>
-				<!--searchbar-->
-				<li class="center">
-					<form class="search" action="includes/search.inc.php" method="post">
-						<input class="search" type="text" name="search" placeholder="Suchen">
-					</form>
-				</li>
-				<!-- upload button -->
-				<li class="right">
-					<button class="uploadButton headerButton" href="upload.php"></button>
-				</li>
-				<!-- notification dropdown -->
-				<li>
-					<?php 
-						include "includes/checkNotifications.inc.php";
-						if($notifications){
-							echo "<button onclick=notifications() class='notifications headerButton'></button>";
-						}else{
-							echo "<button onclick=noNotifications() class='noNotifications headerButton'></button>";
-						}
-					?>
-				</a></li>
-				<?php include 'includes/notifications.inc.php';?>
-				<!-- profile dropdown -->
-				<li>
-					<div class="dropdown">
-						<button class="dropdown headerButton" onclick="dropdown()"></button>
-						<style>
-							.dropdown{
-								background: url(<?php echo $profilepic; ?>);
-							}
-						</style>
-					</div>
-				</li>
-			</ul>			
+			<div class="headerOuter">
+				<div class="headerInner">
+					<!--navigation links-->
+					<ul class="header">
+						<!--Logo-->
+						<li class="left">
+							<button class="logo headerButton" href="index.php"></button>
+						</li>
+						<!--searchbar-->
+						<li class="center">
+							<form class="search" action="includes/search.inc.php" method="post">
+								<input class="search" type="text" name="search" placeholder="Suchen">
+							</form>
+						</li>
+						<!-- upload button -->
+						<li class="right">
+							<button class="uploadButton headerButton" href="upload.php"></button>
+						</li>
+						<!-- notification dropdown -->
+						<li>
+							<?php 
+								include "includes/checkNotifications.inc.php";
+								if($notifications){
+									echo "<button onclick=notifications() class='notifications headerButton'></button>";
+								}else{
+									echo "<button onclick=noNotifications() class='noNotifications headerButton'></button>";
+								}
+							?>
+						</a></li>
+						<?php include 'includes/notifications.inc.php';?>
+						<!-- profile dropdown -->
+						<li>
+							<div class="dropdown">
+								<button class="dropdown headerButton" onclick="dropdown()"></button>
+								<style>
+									.dropdown{
+										background: url(<?php echo $profilepic; ?>);
+									}
+								</style>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</header>
 		<div id="con">
 		<div id="content">
