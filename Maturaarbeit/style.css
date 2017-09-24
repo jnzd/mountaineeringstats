@@ -100,7 +100,7 @@ header{
 	height: 60px;
 	background-color: #222222;
 	margin: 0;
-	padding: 0;
+	padding: 0 15px 0 15px;
 }
 .headerOuter{
 	display: table;
@@ -150,6 +150,19 @@ ul.header li.center{
 	height: 100%;
 	width: 60px;
 	cursor: pointer;
+}
+/*** Searchbar ***/
+form.search{
+	text-align: center;
+}
+input.search{
+	width: auto;
+	font-size: 16px;
+	background-color: black;
+	color: #fcfcfc;
+	height: 30px;
+	margin-top: 15px;
+	text-align: center;
 }
 /*** dropdown ***/
 .dropdown {
@@ -307,17 +320,6 @@ textarea.commentBox{
 }
 .likeButton{
 	display: inline-block;
-}
-/*** Searchbar ***/
-form.search{
-	text-align: center;
-}
-input.search{
-	width: auto;
-	font-size: 16px;
-	background-color: black;
-	color: #fcfcfc;
-	text-align: center;
 }
 /*** profile header ***/
 .profileheader{

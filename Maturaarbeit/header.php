@@ -53,11 +53,11 @@
 					<!--navigation links-->
 					<ul class="header">
 						<!--Logo-->
-						<li class="left">
+						<li>
 							<button class="logo headerButton" href="index.php"></button>
 						</li>
 						<!--searchbar-->
-						<li class="center">
+						<li class="left">
 							<form class="search" action="includes/search.inc.php" method="post">
 								<input class="search" type="text" name="search" placeholder="Suchen">
 							</form>
