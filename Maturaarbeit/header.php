@@ -64,7 +64,7 @@
 						</li>
 						<!-- upload button -->
 						<li class="right">
-							<button class="uploadButton headerButton" href="upload.php"></button>
+							<button class="uploadButton headerButton" onclick="location.href='upload.php'"></button>
 						</li>
 						<!-- notification dropdown -->
 						<li>
@@ -85,9 +85,20 @@
 								<style>
 									.dropdown{
 										background: url(<?php echo $profilepic; ?>);
+										background-repeat: no-repeat;
+										background-size: 30px 30px;
+										background-position: center;
+										height: 100%;
+										width: 60px;
 									}
 								</style>
+								<div class="dropdown-content" id="dropdown-content">
+									<a class="dropdwn" href="profile.php">Profil</a>
+									<a class="dropdwn" href="includes/logout.inc.php">Abmelden</a>
+									<a class="dropdwn" href="settings.php">Einstellungen</a>
+								</div>
 							</div>
+							<script src="javascript/dropdown.js"></script>
 						</li>
 					</ul>
 				</div>
