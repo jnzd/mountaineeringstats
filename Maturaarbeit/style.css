@@ -175,6 +175,9 @@ ul.header li a.dropdwn{
 	padding: 25px;
 	margin: 32px 0 32px 0;
 }
+.staticMap{
+	margin-bottom: 5px;
+}
 a.actTitle:link {
 	text-decoration: none;
 	color: black;
@@ -249,11 +252,9 @@ textarea.commentBox{
 }
 .commentLine{
 	display: flex;
+	max-width: 100%;
 	border-bottom: 0.5px solid #999999;
 	margin-bottom: 5px;
-}
-.commentUsername{
-
 }
 .commentText{
 	max-width: 100%;
@@ -424,6 +425,7 @@ footer a{
 	}
 	/*** feed ***/
 	.activityPreview{
+		max-width: 82vw;
 		background-color: white;
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		padding: 25px;
