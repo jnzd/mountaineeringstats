@@ -249,7 +249,7 @@ textarea.commentBox{
 }
 .commentLine{
 	display: flex;
-	border-bottom: 0.5px solid #000000;
+	border-bottom: 0.5px solid #999999;
 	margin-bottom: 5px;
 }
 .comment{

@@ -13,7 +13,7 @@ function deleteComment(commentid){
       /**
        * delete comment from screen
        */
-      $("#commentLine"+commentid).html("");
+      $("#commentLine"+commentid).remove();
       console.log(commentid);
     }
   });
