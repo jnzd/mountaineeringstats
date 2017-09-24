@@ -252,13 +252,38 @@ textarea.commentBox{
 	border-bottom: 0.5px solid #999999;
 	margin-bottom: 5px;
 }
+.commentUsername{
+
+}
+.commentText{
+	max-width: 100%;
+	white-space: normal;
+	word-break: break-word;
+	padding-right: 10px;
+}
 .comment{
-	display: inline-block;
-	max-width: 100px;
+	display: flex;
 }
 .deleteComment{
 	display: inline-block;
-	margin-left: 60%;
+	margin-left: auto;
+	margin-right: 0;
+}
+.deleteCommentButton{
+	background: url(icons/delete.png);
+	background-size: 16px 16px;
+	height: 16px;
+	width: 16px;
+}
+.like{
+	background: url(icons/like.png);
+	height: 32px;
+	width: 32px;
+}
+.unlike{
+	background: url(icons/unlike.png);
+	height: 32px;
+	width: 32px;
 }
 .likeButton{
 	display: inline-block;
@@ -377,21 +402,6 @@ footer div.iconCredit{
 }
 footer a{
 	color: #cecece;
-}
-.like{
-	background: url(icons/like.png);
-	height: 32px;
-	width: 32px;
-}
-.unlike{
-	background: url(icons/unlike.png);
-	height: 32px;
-	width: 32px;
-}
-.deleteCommentButton{
-	background: url(icons/delete.png);
-	height: 32px;
-	width: 32px;
 }
 
 /*** mobile design ***/
