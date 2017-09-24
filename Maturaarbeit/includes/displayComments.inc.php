@@ -14,12 +14,8 @@
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         $usernameComment = $row['username'];
-        $commentUserID = $row['id'];      
-        echo '<div id="commentLine'.$commentID.'" class="commentLine"><p class="comment"><b>'.$usernameComment.' </b>'.$commentText. '</p>';
-        if($commentUserID == $_SESSION['id']){
-          include 'includes/deleteCommentButton.inc.php';
-        }
-        echo "</div>";
+        $commentUserID = $row['id'];
+        include 'includes/commentLine.inc.php';
       }
     }
   ?>
