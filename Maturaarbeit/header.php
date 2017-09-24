@@ -52,7 +52,7 @@
 			<ul class="header">
 				<!--Logo-->
 				<li class="left">
-					<a href="index.php" class="logo"><img src="icons/logo.png" height="30" width="30"></a>
+					<button class="logo headerButton" href="index.php"></button>
 				</li>
 				<!--searchbar-->
 				<li class="center">
@@ -61,26 +61,30 @@
 					</form>
 				</li>
 				<!-- upload button -->
-				<li class="right"><a href="upload.php"><img src="icons/upload.png" height="30" width="30"></a></li>
+				<li class="right">
+					<button class="uploadButton headerButton" href="upload.php"></button>
+				</li>
 				<!-- notification dropdown -->
-				<li><a href="javascript:notifications();" class="dropbtn"><?php 
-					include "includes/checkNotifications.inc.php";
-					if($notifications){
-						echo "<img src='icons/notifications.png' height='30' width='30'>";
-					}else{
-						echo "<img src='icons/noNotifications.png' height='30' width='30'>";
-					}
-				?>
+				<li>
+					<?php 
+						include "includes/checkNotifications.inc.php";
+						if($notifications){
+							echo "<button onclick=notifications() class='notifications headerButton'></button>";
+						}else{
+							echo "<button onclick=noNotifications() class='noNotifications headerButton'></button>";
+						}
+					?>
 				</a></li>
 				<?php include 'includes/notifications.inc.php';?>
 				<!-- profile dropdown -->
 				<li>
-					<div class="dropdown"><a class="dropbtn" href="profile.php"><img class="circle" src="<?php echo $profilepic; ?>" height="30" width="30"></a>
-						<div class="dropdown-content">
-							<a class="dropdwn" href="profile.php">Profil</a>
-							<a class="dropdwn" href="includes/logout.inc.php">Abmelden</a>
-							<a class="dropdwn" href="settings.php">Einstellungen</a>
-						</div>
+					<div class="dropdown">
+						<button class="dropdown headerButton" onclick="dropdown()"></button>
+						<style>
+							.dropdown{
+								background: url(<?php echo $profilepic; ?>);
+							}
+						</style>
 					</div>
 				</li>
 			</ul>			
