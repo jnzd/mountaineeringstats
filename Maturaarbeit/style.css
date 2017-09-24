@@ -100,7 +100,6 @@ header{
 	height: 60px;
 	background-color: #222222;
 	margin: 0;
-	padding: 0 15px 0 15px;
 }
 .headerOuter{
 	display: table;
@@ -115,6 +114,7 @@ ul.header{
 	display: flex;
 	height: 60px;
 	list-style-type: none;
+	padding: 0 100px 0 100px;
 }
 ul.header li{
 	display: inline-block;
