@@ -10,7 +10,6 @@
 	$actPath = "";
 	$type = "";
 	$thumbnail = "";
-	$actTime = date("Y-m-d H:i:s");
 	$dateTime = date("Y-m-d-H-i-s");//for file names, because file names can't contain :
 	include '../db.php';
 	if($_POST['sport'] != "null"){
@@ -68,8 +67,8 @@
 	}
 	$values = gpx("../".$actPath);
 	$dateTime = $values['dateTime'];
-	$timestamp = $dateTime[0];
-	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description, filename) VALUES ('$sport', '$type', '$user_id', '$actTime', '$actPath', '$title', '$description', '$filename')";
+	$timestamp = $dateTime[0]->format('Y-m-d h:m');
+	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description, filename) VALUES ('$sport', '$type', '$user_id', '$timestamp', '$actPath', '$title', '$description', '$filename')";
 	$result = $conn->query($sql);
 	$_SESSION['uploadError']="";
 	header("Location: ../profile.php");

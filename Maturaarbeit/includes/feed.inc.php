@@ -20,7 +20,7 @@
           $sql .= " OR user_id='$followedID'";
         }
       }
-      $sql .= " ORDER BY actTime ASC";
+      $sql .= " ORDER BY actTime DESC";
       $result = $conn->query($sql);
       $rownr = $result->num_rows;
       if($rownr>0){

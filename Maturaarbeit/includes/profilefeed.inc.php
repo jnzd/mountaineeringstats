@@ -8,7 +8,7 @@
     if(isset($_SESSION['id'])){
       include 'parsers/parse.gpx.php';
       $id = $_SESSION['id'];
-      $sql = "SELECT * FROM activities WHERE user_id='$id'";
+      $sql = "SELECT * FROM activities WHERE user_id='$id' ORDER BY actTime DESC";
       $result = $conn->query($sql);
       $rownr = $result->num_rows;
       if($rownr>0){
