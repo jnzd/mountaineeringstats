@@ -48,10 +48,6 @@ body{
 	margin: auto;
 	padding-bottom:60px;
 }
-#con {
-	min-height:100%;
-	position:relative;
-}
 .outer {
 	display: table;
 	position: absolute;
@@ -179,13 +175,14 @@ input.search{
 	min-width: 160px;
 	overflow: auto;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
+	z-index: 9999;
 }
 a.dropdwnLink{
 	color: white;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
+	z-index: 9999;
 }
 /* Change color of dropdown links on hover */
 a.dropdwnLink:hover {
@@ -285,7 +282,6 @@ textarea.commentBox{
 .commentLine{
 	display: flex;
 	max-width: 100%;
-	border-bottom: 0.5px solid #999999;
 	margin-bottom: 5px;
 }
 .commentText{
