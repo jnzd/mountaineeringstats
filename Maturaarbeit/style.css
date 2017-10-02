@@ -290,7 +290,7 @@ a.actTitle:active {
 }
 .infoPair{
 	display: inline;
-	margin-right: 20px;
+	margin-right: 25px;
 }
 .infoName{
 }
@@ -303,6 +303,7 @@ a.actTitle:active {
 #map{
 	height: 640px;
 	width: 100%;
+	margin-bottom: 15px;
 }
 /*** chartjs ***/
 canvas.chart{

@@ -1,7 +1,6 @@
 
 <div id="commentForm<?php echo $actid; ?>" class="commentForm">
-  <textarea class="commentBox" id="comment<?php echo $actid; ?>" placeholder="Kommentar schreiben" rows="1"></textarea>
-  <button type="button" onclick="postComment(<?php echo $actid; ?>)">Kommentieren</button>
+  <textarea class="commentBox" id="comment<?php echo $actid; ?>" onkeypress="submitCheck(<?php echo $actid; ?>);" placeholder="Kommentar schreiben" rows="1"></textarea>
 </div>
 <script src="javascript/autogrow.js" type="text/javascript"></script> 
 <script>
@@ -17,6 +16,13 @@
     echo $username;
   ?>';
   var id='<?php echo $_SESSION['id']; ?>';
+  function submitCheck(actid) {
+    var key = window.event.keyCode;
+    // If the user has pressed enter
+    if (key === 13) {
+      postComment(actid);
+    }
+  }
 </script>
 <script src="javascript/deleteComment.js"></script>
 <script src="javascript/comment.js"></script>
