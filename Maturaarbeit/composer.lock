@@ -1,0 +1,248 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e36a83d7b9025e40bba90f701dcda0fa",
+    "packages": [
+        {
+            "name": "craygl/phpgpx",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LiddleDev/PHPGPX.git",
+                "reference": "57253cf1ea0223831fa845e9e783ca0f3213f3e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LiddleDev/PHPGPX/zipball/57253cf1ea0223831fa845e9e783ca0f3213f3e8",
+                "reference": "57253cf1ea0223831fa845e9e783ca0f3213f3e8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Craig Liddle",
+                    "email": "craigliddle2@gmail.com",
+                    "homepage": "http://craygl.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple GPX Parser",
+            "homepage": "https://github.com/Crayg/PHPGPX",
+            "keywords": [
+                "gps",
+                "gpx"
+            ],
+            "time": "2016-02-03 21:32:31"
+        },
+        {
+            "name": "emcconville/google-map-polyline-encoding-tool",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/emcconville/google-map-polyline-encoding-tool.git",
+                "reference": "10f6554ee1a4425b9c441713d54a3c03c811725b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/emcconville/google-map-polyline-encoding-tool/zipball/10f6554ee1a4425b9c441713d54a3c03c811725b",
+                "reference": "10f6554ee1a4425b9c441713d54a3c03c811725b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*",
+                "satooshi/php-coveralls": "dev-master",
+                "squizlabs/php_codesniffer": "2.0.0a2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Polyline.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU"
+            ],
+            "authors": [
+                {
+                    "name": "Eric McConville",
+                    "email": "emcconville@emcconville.com"
+                }
+            ],
+            "description": "A simple class to handle polyline-encoding for Google Maps",
+            "keywords": [
+                "google",
+                "maps"
+            ],
+            "time": "2016-06-01 11:03:28"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "b704c49a3051536f67f2d39f13568f74615b9922"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b704c49a3051536f67f2d39f13568f74615b9922",
+                "reference": "b704c49a3051536f67f2d39f13568f74615b9922",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Monolog": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Logging for PHP 5.3",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "time": "2011-10-24T09:39:02+00:00"
+        },
+        {
+            "name": "nephre/php-dbus",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nephre/php-dbus.git",
+                "reference": "77fff229c8552b322b6b4b366c38d46e889a680f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nephre/php-dbus/zipball/77fff229c8552b322b6b4b366c38d46e889a680f",
+                "reference": "77fff229c8552b322b6b4b366c38d46e889a680f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xml": "*",
+                "lib-libxml": "*",
+                "php": ">=5.4"
+            },
+            "provide": {
+                "ext-xml": "*",
+                "lib-libxml": "*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "PHP-3.01"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Jeznach",
+                    "email": "djeznach@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Derick Rethans",
+                    "email": "derick@php.net",
+                    "homepage": "http://derickrethans.nl/",
+                    "role": "Author"
+                }
+            ],
+            "description": "DBUS bindings for PHP language",
+            "homepage": "http://pecl.php.net/rest/r/dbus/",
+            "keywords": [
+                "dbus",
+                "derick",
+                "extension",
+                "module",
+                "php",
+                "rethans"
+            ],
+            "time": "2014-08-14 11:35:07"
+        },
+        {
+            "name": "sibyx/phpgpx",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sibyx/phpGPX.git",
+                "reference": "ffd584d5a8b5dc861d299cf760225909efa8de1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sibyx/phpGPX/zipball/ffd584d5a8b5dc861d299cf760225909efa8de1f",
+                "reference": "ffd584d5a8b5dc861d299cf760225909efa8de1f",
+                "shasum": ""
+            },
+            "require": {
+                "lib-libxml": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "phpGPX": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Dubec",
+                    "email": "jakub.dubec@gmail.com",
+                    "homepage": "https://jakubdubec.me"
+                }
+            ],
+            "description": "A simple PHP library for GPX import/export",
+            "time": "2017-05-18 16:42:05"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "nephre/php-dbus": 20,
+        "sibyx/phpgpx": 20,
+        "craygl/phpgpx": 20,
+        "emcconville/google-map-polyline-encoding-tool": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
