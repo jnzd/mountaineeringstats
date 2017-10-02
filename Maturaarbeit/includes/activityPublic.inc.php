@@ -49,14 +49,27 @@
         }
       ?>
     </div>
-    <div class="actDescription">
-      <p><?php echo $description; ?></p>
-    </div>
+    <?php
+      if($description!=""){
+        echo '<div class="actDescription"><p>'.$description.'</p></div>';
+      }else{
+        echo "<a class='addDescription' href='editAct.php'>Beschreibung hinzufügen</a>";
+      }
+    ?>
   </div>
   <div class="actDetails">
-    <p>Distanz: <?php echo $distanceTotal; ?><p>
-    <p>Geschwindigkeit: <?php echo $averageSpeed; ?><p>
-    <p>Dauer: <?php echo $duration; ?><p>
+    <div class="infoPair">
+      <p class="infoName">Distanz: </p>
+      <p class="infoData"><?php echo $distanceTotal; ?><p>
+    </div>
+    <div class="infoPair">
+      <p class="infoName">Geschwindigkeit: </p>
+      <p class="infoData"><?php echo $averageSpeed; ?><p>
+    </div>
+    <div class="infoPair">
+      <p class="infoName">Dauer: </p>
+      <p class="infoData"><?php echo $duration; ?><p>
+    </div>
   </div>
   <?php
     include 'includes/charts.inc.php';

@@ -280,6 +280,23 @@ a.actTitle:active {
 	display: inline-block;
 	margin-left: 15px;
 }
+.actDescription{
+	padding-bottom: 5px;
+	border-bottom: .5px solid #747474;
+}
+.actDetails{
+	display: flex;
+	margin-bottom: 10px;
+}
+.infoPair{
+	display: inline;
+	margin-right: 20px;
+}
+.infoName{
+}
+.infoData{
+	font-size: 48px;
+}
 /**
 	* google maps
 	*/
