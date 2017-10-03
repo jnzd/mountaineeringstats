@@ -9,8 +9,8 @@
   $title = $row['title'];
   $description = $row['description'];
 ?>
-<h1>Aktivität bearbeiten</h1>
 <div class="upload">
+	<h1>Aktivität bearbeiten</h1>
 	<form action="includes/editAct.inc.php" method="post" enctype="multipart/form-data">
 		<div class="settingsBlock">
 			<label class="settingsLabel" for="title">Titel</label>

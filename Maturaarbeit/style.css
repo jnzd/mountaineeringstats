@@ -15,16 +15,18 @@ h3{
 	margin-top:10px;
 	text-align: center;
 }
-form{
+form.start{
 	text-align: center;
 }
 input{
-	width: auto;
 	font-size: 16px;
-	padding: 3px;
-	margin: 5px;
 	background-color: #222222;
 	color: #fcfcfc;
+	padding: 3px;
+	margin: 5px;
+}
+input.start{
+	width: auto;
 	text-align: center;
 }
 /*** login/registration page ***/
@@ -442,7 +444,7 @@ a.delete{
 }
 .settingsLabel{
   display: inline-block;
-  width: 256px;
+  width: 128px;
   text-align: right;
 }
 /*** upload ***/
