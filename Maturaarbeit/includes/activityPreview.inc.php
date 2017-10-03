@@ -24,7 +24,7 @@
 		include 'includes/icons.inc.php';
 	?>
 		<p><?php echo $description ?></p>
-		</div>
+	</div>
 	<?php
 		include 'includes/staticMap.inc.php';
 		include 'includes/likeCounter.inc.php';
