@@ -27,6 +27,7 @@
 		</div>
 	<?php
 		include 'includes/staticMap.inc.php';
+		include 'includes/likeCounter.inc.php';
 		include 'includes/displayComments.inc.php';
 		include 'includes/likeButton.inc.php';
 		include 'includes/commentForm.inc.php';
