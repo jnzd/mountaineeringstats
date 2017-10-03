@@ -5,7 +5,7 @@
   <div class="profileInfo">
     <?php
       $userID = $row['id'];
-      echo "<h1 class='username'>".$publicUser."</h1>";
+      echo "<a href=".$row['username']." class='profileLink'><h1 class='username'>".$publicUser."</h1></a>";
       include 'includes/followerNumbers.inc.php';
       include 'followButton.inc.php';
     ?>

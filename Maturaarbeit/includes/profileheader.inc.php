@@ -10,7 +10,7 @@
       $userID = $row['id'];
       $username = $row['username'];
     ?>
-    <h1 class="username"><?php echo $username; ?></h1>
+    <a href="profile.php" class="profileLink"><h1 class="username"><?php echo $username; ?></h1></a>
     <?php
       include 'includes/followerNumbers.inc.php';
     ?>

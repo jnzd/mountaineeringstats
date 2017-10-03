@@ -11,6 +11,5 @@
         echo "<b>".$likes."</b> Like";
       }
     }
-    echo $likes;
   ?>
 </div>

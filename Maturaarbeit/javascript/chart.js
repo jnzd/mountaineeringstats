@@ -58,7 +58,7 @@ options: {
 		}],
 		xAxes: [
 			{
-				display: true,
+				display: false,
 				scaleLabel: {
 					display: true,
 					labelString: 'Zeit'

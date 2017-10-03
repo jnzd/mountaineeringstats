@@ -184,19 +184,17 @@ input.search{
 	min-width: 160px;
 	overflow: auto;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 9999;
+	z-index: 1;
 }
 a.dropdwnLink{
 	color: white;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
-	z-index: 9999;
 }
 /* Change color of dropdown links on hover */
 a.dropdwnLink:hover {
 	background-color: #000000;
-	z-index: 9999;
 }
 .show {
 	display:block;
@@ -525,11 +523,29 @@ footer a{
 		list-style-type: none;
 		padding: 0;
 	}
+	input.search{
+		max-width: calc(100vw - 240px);
+	}
 	/*** feed ***/
-	
 	.profileheader{
 		max-width: calc(100vw - 100px);
 		margin: 32px auto;
+	}
+	a.profileLink{
+		text-decoration: none;
+		color: black;
+	}
+	a.profileLink:visited{
+		text-decoration: none;
+		color: black;
+	}
+	a.profileLink:hover {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.profileLink:active {
+		text-decoration: none;
+		color: #696969;
 	}
 	.activityPreview{
 		max-width: calc(100vw - 100px);
@@ -565,5 +581,22 @@ footer a{
 		resize: none;
 		max-width: 40vw;
 		height: 18px;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.activityPreview{
+		max-width: calc(100vw - 50px);
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 25px;
+		margin: 32px 0;
+	}
+	.profileheader{
+		max-width: calc(100vw - 50px);
+		margin: 32px 0;
+	}
+	.staticMap{
+		max-width: calc(100vw - 50px);
 	}
 }
