@@ -557,6 +557,9 @@ footer a{
 	.activity{
 		margin: 0 20px 0 20px;
 	}
+	.infoData{
+		font-size: 5vw;
+	}
 	/*** google maps ***/
 	#map{
 		height: 800px;

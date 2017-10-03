@@ -50,6 +50,7 @@
 	<?php
 		include 'includes/staticMap.inc.php';
 		//link comment section to according activity with actid
+		include 'includes/likeCounter.inc.php';
 		include 'includes/displayComments.inc.php';
 		include 'includes/likeButton.inc.php';
 		include 'includes/commentForm.inc.php';
