@@ -3,11 +3,9 @@
 	include 'header.php';
 	$id = $_SESSION['id'];
 ?>
-<?php
-	include 'includes/profileheader.inc.php';
-?>
-<div id="feed">
+<div class="feed">
 	<?php
+		include 'includes/profileheader.inc.php';
 		include 'includes/profilefeed.inc.php';
 	?>
 </div>

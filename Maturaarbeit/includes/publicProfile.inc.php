@@ -1,19 +1,17 @@
-<?php
-  /**
-   * polyline encoder needed for static map path
-   */
-  require 'vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
-  $sql = "SELECT * FROM users WHERE username='$publicUser'";
-  $result = $conn->query($sql);
-  $row = $result->fetch_assoc();
-  $id = $row['id'];
-  if($id == $_SESSION['id']){
-    header("Location: profile.php");
-  }
-  include 'includes/profileheaderPublic.inc.php';
-?>
 <div class="feed">
   <?php
+    /**
+    * polyline encoder needed for static map path
+    */
+    require 'vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
+    $sql = "SELECT * FROM users WHERE username='$publicUser'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $id = $row['id'];
+    if($id == $_SESSION['id']){
+      header("Location: profile.php");
+    }
+    include 'includes/profileheaderPublic.inc.php';
     include 'parsers/parse.gpx.php';
     $sql = "SELECT * FROM activities WHERE user_id='$id' ORDER BY actTime DESC";
     $result = $conn->query($sql);
