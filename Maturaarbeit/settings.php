@@ -55,7 +55,7 @@
 				<label class="settingsLabel" for="pic">Profilbild</label>
 				<input type="file" id="pic" name="pic" placeholder="Profilbild"><br>
 			</div>
-			<input type="submit" name="safe" placeholder="speichern"><br><br>
+			<input type="submit" name="safe" value="speichern"><br><br>
 		</form>
 		<a class="delete settings" href="includes/delete.inc.php">Account löschen</a>
 	</div>
