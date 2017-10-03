@@ -141,9 +141,6 @@ ul.header li.center{
 .noNotifications{
 	background: url(icons/noNotifications.png);
 }
-.logo{
-	background: url(icons/logo.png);
-}
 .headerButton{
 	background-repeat: no-repeat;
 	background-size: 30px 30px;
@@ -153,7 +150,10 @@ ul.header li.center{
 	cursor: pointer;
 }
 .logo{
+	background: url(icons/logo.png);
 	background-size: 214px 40px;
+	background-repeat: no-repeat;
+	background-position: center; 
 	width: 220px;
 }
 /*** Searchbar ***/
@@ -478,6 +478,9 @@ footer a{
 }
 
 /*** mobile design ***/
+@media screen and (max-width: 1200px){
+
+}
 @media screen and (max-width: 959px){
 	/*** general setup ***/
 	#content{
@@ -494,6 +497,21 @@ footer a{
 	h1.start{
 		text-align: center;
 		font-size: 10vw;
+	}
+	.logo{
+		background: url(icons/logoIcon.png);
+		background-size: 40px 40px;
+		background-repeat: no-repeat;
+		background-position: center; 
+		width: 40px;
+	}
+	ul.header{
+		display: table-cell;
+		vertical-align: middle;
+		display: flex;
+		height: 60px;
+		list-style-type: none;
+		padding: 0;
 	}
 	/*** feed ***/
 	.activityPreview{

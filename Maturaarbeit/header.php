@@ -54,7 +54,7 @@
 					<ul class="header">
 						<!--Logo-->
 						<li>
-							<button class="logo headerButton" href="index.php"></button>
+							<button class="logo headerButton" onclick="location.href='index.php'"></button>
 						</li>
 						<!--searchbar-->
 						<li class="left">
