@@ -59,15 +59,15 @@
   </div>
   <div class="actDetails">
     <div class="infoPair">
-      <p class="infoName">Distanz: </p>
+      <p class="infoName">Distanz </p>
       <p class="infoData"><?php echo $distanceTotal; ?><p>
     </div>
     <div class="infoPair">
-      <p class="infoName">Geschwindigkeit: </p>
+      <p class="infoName">Geschwindigkeit </p>
       <p class="infoData"><?php echo $averageSpeed; ?><p>
     </div>
     <div class="infoPair">
-      <p class="infoName">Dauer: </p>
+      <p class="infoName">Dauer </p>
       <p class="infoData"><?php echo $duration; ?><p>
     </div>
   </div>

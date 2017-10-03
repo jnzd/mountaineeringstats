@@ -152,6 +152,10 @@ ul.header li.center{
 	width: 60px;
 	cursor: pointer;
 }
+.logo{
+	background-size: 214px 40px;
+	width: 220px;
+}
 /*** Searchbar ***/
 form.search{
 	text-align: center;

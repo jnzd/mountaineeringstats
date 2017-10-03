@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="icon" href="icons/logo.png">
+	<link rel="icon" href="icons/logoIcon.png">
 	<title><?php echo $title; ?></title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
