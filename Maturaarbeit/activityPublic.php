@@ -10,10 +10,12 @@
     header("Location: profile.php");
   }
 ?>
-<div id="profileheader">
-	<?php
-		include 'includes/profileheaderPublic.inc.php';
-	?>
+<div class="feed"><!-- necessary to center header-->
+  <div id="profileheader">
+    <?php
+      include 'includes/profileheaderPublic.inc.php';
+    ?>
+  </div>
 </div>
 <div id="activity">
   <?php
