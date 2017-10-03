@@ -44,7 +44,7 @@
       <?php
         if(isset($edit)){
           echo "<div class='actEdit'>";
-          echo "<a href='editAct.php?name=$name'>Edit</a>";
+          echo "<a class='editAct' href='editAct.php?name=$name'></a>";
           echo "</div>";
         }
       ?>

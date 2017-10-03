@@ -237,6 +237,19 @@ a.actTitle:active {
 .actEdit{
 	margin-left: auto;
 	margin-right: 0;
+	display: block;
+	background: url(icons/wrench.png);
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+}
+/*** link ***/
+.editAct{
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 .postingHeader{
 	display: flex;
