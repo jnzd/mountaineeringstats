@@ -11,7 +11,7 @@
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	$recievingid = $row['user_id'];
-	$link = "activity.php?name=".$row['actPath'];
+	$link = "activity.php?name=".$row['filename'];
 	$sql = "INSERT INTO notifications (receivingID, sendingID, type, link) VALUES ('$recievingid','$userID','like','$link')";
 	$result = $conn->query($sql);
 	$notificationsid = $conn->insert_id;
