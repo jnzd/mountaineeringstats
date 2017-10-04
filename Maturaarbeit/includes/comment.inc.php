@@ -17,4 +17,5 @@
 	$notificationsid = $conn->insert_id;
 	$sql = "INSERT INTO comments (userID, actID, commentText, notificationsid)	VALUES ('$id', '$actid', '$commentText','$notificationsid')";
 	$result = $conn->query($sql);
+	echo $conn->insert_id;
 ?>
