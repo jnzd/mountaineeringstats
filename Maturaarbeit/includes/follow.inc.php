@@ -9,8 +9,9 @@
 	$followingID00followedID = $_POST['followingID00followedID'];
 	$followingUser = $_POST['followingUser'];
 	$followedUser = $_POST['followedUser'];
-	$sql = "INSERT INTO followers (followingUser, followedUser, followingID00followedID, followingID, followedID) VALUES ('$followingUser', '$followedUser', '$followingID00followedID', '$followingID', '$followedID')";
-	$result = $conn->query($sql);
 	$sql = "INSERT INTO notifications (receivingID, sendingID, type, link) VALUES ('$followedID','$followingID','follower','$followingUser')";
+	$result = $conn->query($sql);
+	$notificationsid = $conn->insert_id;
+	$sql = "INSERT INTO followers (followingUser, followedUser, followingID00followedID, followingID, followedID, notificationsid) VALUES ('$followingUser', '$followedUser', '$followingID00followedID', '$followingID', '$followedID','$notificationsid')";
 	$result = $conn->query($sql);
 ?>
