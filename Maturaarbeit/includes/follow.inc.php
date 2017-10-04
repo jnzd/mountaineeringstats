@@ -11,4 +11,6 @@
 	$followedUser = $_POST['followedUser'];
 	$sql = "INSERT INTO followers (followingUser, followedUser, followingID00followedID, followingID, followedID) VALUES ('$followingUser', '$followedUser', '$followingID00followedID', '$followingID', '$followedID')";
 	$result = $conn->query($sql);
+	$sql = "INSERT INTO notifications (receivingID, sendingID, type, link) VALUES ('$followedID','$followingID','follower','$followingUser')";
+	$result = $conn->query($sql);
 ?>
