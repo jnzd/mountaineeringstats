@@ -17,4 +17,14 @@
 	$notificationsid = $conn->insert_id;
 	$sql = "INSERT INTO likes (userID, actID, userID00actID, notificationsid) VALUES ('$userID', '$actID', '$userID00actID','$notificationsid')";
 	$result = $conn->query($sql);
+	// get number of likes from database
+	$sql = "SELECT * FROM likes WHERE actID='$actID'";
+	$result = $conn->query($sql);
+	$likes = $result->num_rows;
+	// echo statements get read by ajax
+	if($likes>1){
+		echo "<b>".$likes."</b> Likes";
+	}else{
+		echo "<b>".$likes."</b> Like";
+	}
 ?>

@@ -10,11 +10,12 @@ function like(actid){
       userid: userid,
       actid: actid
     },
-    complete: function(){
+    success: function(data){
       /**
        * switch like button
        */
       $('#likeButton'+actid).html("<button class='unlike' type='button' onclick='unlike("+actid+")'></button>");
+      $('#likeCounter'+actid).html(data);
     }
   });
   return false;

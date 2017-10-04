@@ -1,4 +1,4 @@
-<div class="likeCounter">
+<div id="likeCounter<?php echo $actid; ?>" class="likeCounter">
   <?php
     $likes = 0;
     $sql = "SELECT * FROM likes WHERE actID = '$actid'";

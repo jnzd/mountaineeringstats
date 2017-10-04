@@ -74,6 +74,7 @@
   <?php
     include 'includes/charts.inc.php';
     include 'includes/map.inc.php';
+		include 'includes/likeCounter.inc.php';
     include 'includes/displayComments.inc.php';
     include 'includes/likeButton.inc.php';
     include 'includes/commentForm.inc.php';
