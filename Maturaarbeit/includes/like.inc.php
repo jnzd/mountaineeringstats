@@ -22,9 +22,9 @@
 	$result = $conn->query($sql);
 	$likes = $result->num_rows;
 	// echo statements get read by ajax
-	if($likes>1){
-		echo "<b>".$likes."</b> Likes";
-	}else{
+	if($likes==1){
 		echo "<b>".$likes."</b> Like";
+	}else{
+		echo "<b>".$likes."</b> Likes";
 	}
 ?>
