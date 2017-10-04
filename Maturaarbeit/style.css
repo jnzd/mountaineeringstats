@@ -131,8 +131,16 @@ ul.header li.center{
 	margin-left: auto;
 	margin-right: auto;
 }
-.uploadButton{
+a.headerLink{
+	display: block;
+	height: 100%;
+}
+a.uploadLink{
 	background: url(icons/upload.png);
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 60px;
 }
 .notifications{
 	background: url(icons/notifications.png);
@@ -148,11 +156,11 @@ ul.header li.center{
 	width: 60px;
 	cursor: pointer;
 }
-.logo{
+a.logo{
 	background: url(icons/logo.png);
-	background-size: 214px 40px;
 	background-repeat: no-repeat;
-	background-position: center; 
+	background-position: center;
+	background-size: auto 40px;
 	width: 220px;
 }
 /*** Searchbar ***/
@@ -520,7 +528,7 @@ footer a{
 		text-align: center;
 		font-size: 10vw;
 	}
-	.logo{
+	a.logo{
 		background: url(icons/logoIcon.png);
 		background-size: 40px 40px;
 		background-repeat: no-repeat;

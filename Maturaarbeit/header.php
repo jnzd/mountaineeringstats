@@ -54,7 +54,7 @@
 					<ul class="header">
 						<!--Logo-->
 						<li>
-							<button class="logo headerButton" onclick="location.href='index.php'"></button>
+							<a class="logo headerLink" href="index.php"></a>
 						</li>
 						<!--searchbar-->
 						<li class="left">
@@ -64,7 +64,7 @@
 						</li>
 						<!-- upload button -->
 						<li class="right">
-							<button class="uploadButton headerButton" onclick="location.href='upload.php'"></button>
+							<a class="uploadLink headerLink"></a>
 						</li>
 						<!-- notification dropdown -->
 						<li>
@@ -76,7 +76,7 @@
 									echo "<button onclick=noNotifications() class='noNotifications headerButton'></button>";
 								}
 							?>
-						</a></li>
+						</li>
 						<?php include 'includes/notifications.inc.php';?>
 						<!-- profile dropdown -->
 						<li>
