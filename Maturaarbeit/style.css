@@ -148,6 +148,13 @@ a.uploadLink{
 .noNotifications{
 	background: url(icons/noNotifications.png);
 }
+.notificationLine{
+	display: flex;
+}
+img.notification{
+	display: inline;
+	vertical-align: center;
+}
 .headerButton{
 	background-repeat: no-repeat;
 	background-size: 30px 30px;
