@@ -36,7 +36,7 @@
   }else{
     $description="";
   }
-  $sql = "UPDATE activities SET title='$title', description='$description', sport='$sport' WHERE ranodmID='$randomid'";
+  $sql = "UPDATE activities SET title='$title', description='$description', sport='$sport' WHERE randomID='$randomid'";
   $result = $conn->query($sql);
 	$_SESSION['uploadError']="";
 	header("Location: ../activity.php?id=".$randomid);
