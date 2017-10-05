@@ -1,10 +1,14 @@
 <?php
   include 'header.php';
   include 'db.php';
-	$name = $_GET['name'];
-  $sql = "SELECT * FROM activities WHERE filename='$name'";
+	$id = $_GET['id'];
+  $sql = "SELECT * FROM activities WHERE randomID='$id'";
   $result = $conn->query($sql);
-  $row = $result->fetch_assoc();
+	$row = $result->fetch_assoc();
+	$postingid = $row['user_id'];
+	if($_SESSION['id']!=$postingid){
+		header("location: index.php");
+	}
   $sport = $row['sport'];
   $title = $row['title'];
   $description = $row['description'];
@@ -20,7 +24,6 @@
 			<label class="settingsLabel" for="description">Beschreibung</label>
 			<input class="uploadInput" type="text" id="description" name="description" placeholder="Beschreibung" value="<?php echo $description;?>"><br>
 		</div>
-			<input type="hidden" value="<?php echo $name;?>" name="name"/>
 		<div class="settingsBlock">
 			<label class="settingsLabel" for="sport">Sportart</label>
 			<select id="sport" name="sport">
