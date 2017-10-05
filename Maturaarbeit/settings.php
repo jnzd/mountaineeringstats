@@ -19,17 +19,17 @@
 		<div class="settingSelectors">
 			<ul class="settingsList">
 				<li class="selector">
-					<a class="selectionLink" onclick="profileSettings()" href="#">Profileinstellungen</a>
+					<a class="selectionLink" onclick="changeSettings('profilesettings')" href="#">Profileinstellungen</a>
 				</li>
 				<li class="selector">
-					<a class="selectionLink" onclick="profilepic()" href="#">Profilbild ändern</a>
+					<a class="selectionLink" onclick="changeSettings('changeProfilePicForm')" href="#">Profilbild ändern</a>
 				</li>
 				<li class="selector">
-					<a class="selectionLink" onclick="password()" href="#">Passwort ändern</a>
+					<a class="selectionLink" onclick="changeSettings('changePasswordForm')" href="#">Passwort ändern</a>
 				</li>
 			</ul>
+			<script src="javascript/settings.js"></script>
 		</div>
-		<script src="javascript/settings.js"></script>
 		<div class="settingsAside" id="settingsAside">
 			<?php
 				include 'includes/profilesettings.inc.php';
