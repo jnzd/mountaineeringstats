@@ -64,7 +64,7 @@
 						</li>
 						<!-- upload button -->
 						<li class="right">
-							<a class="uploadLink headerLink"></a>
+							<a href="upload.php" class="uploadLink headerLink"></a>
 						</li>
 						<!-- notification dropdown -->
 						<li>

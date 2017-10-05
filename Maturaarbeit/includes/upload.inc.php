@@ -68,7 +68,40 @@
 	$values = gpx("../".$actPath);
 	$dateTime = $values['dateTime'];
 	$timestamp = $dateTime[0]->format('Y-m-d h:m');
-	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description, filename) VALUES ('$sport', '$type', '$user_id', '$timestamp', '$actPath', '$title', '$description', '$filename')";
+	/**
+	 * generate random 9 character integer
+	 * check if it is already used
+	 */
+	$rownr = 1;
+	while($rownr>0){
+		//every digit must exist 9 times in the seed
+		$seed = str_split('0123456789'
+										 .'0123456789'
+										 .'0123456789'
+										 .'0123456789'
+										 .'0123456789'
+										 .'0123456789'
+										 .'0123456789'
+										 .'0123456789'
+										 .'0123456789');
+		shuffle($seed);
+		$rand = '';
+		foreach (array_rand($seed, 9) as $k){
+			$rand .= $seed[$k];
+		}
+		$sql = "SELECT * FROM activities WHERE randomID='$rand'";
+		$result = $conn->query($sql);
+		$rownr = $result->num_rows;
+		/**
+		 * check if first character is zero
+		 * if so $rand isn't an int
+		 */
+		$firstChar = $rand[0];
+		if($firstChar==0){
+			$rownr = 1;
+		}
+	}
+	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description, filename, randomID) VALUES ('$sport', '$type', '$user_id', '$timestamp', '$actPath', '$title', '$description', '$filename','$rand')";
 	$result = $conn->query($sql);
 	$_SESSION['uploadError']="";
 	header("Location: ../profile.php");
