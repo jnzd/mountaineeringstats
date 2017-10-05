@@ -19,7 +19,7 @@
 		<div class="settingSelectors">
 			<ul class="settingsList">
 				<li class="selector">
-					<a class="selectionLink" onclick="changeSettings('profilesettings')" href="#">Profileinstellungen</a>
+					<a class="selectionLink" onclick="changeSettings('profilesettingsPrepare')" href="#">Profileinstellungen</a>
 				</li>
 				<li class="selector">
 					<a class="selectionLink" onclick="changeSettings('changeProfilePicForm')" href="#">Profilbild ändern</a>
@@ -35,10 +35,14 @@
 				if(isset($_SESSION['error'])){
 					echo $_SESSION['error'];
 				}
-				if($_GET['sub']=="password"){
-					include 'includes/changePassword.inc.php';
-				}else if($_GET['sub']=="profilepic"){
-					include 'includes/changeProfilePicForm.inc.php';
+				if(isset($_GET['sub'])){
+					if($_GET['sub']=="password"){
+						include 'includes/changePassword.inc.php';
+					}else if($_GET['sub']=="profilepic"){
+						include 'includes/changeProfilePicForm.inc.php';
+					}else{
+						include 'includes/profilesettings.inc.php';
+					}
 				}else{
 					include 'includes/profilesettings.inc.php';
 				}
