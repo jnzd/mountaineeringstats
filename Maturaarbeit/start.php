@@ -14,7 +14,7 @@
 			<div class="inner">
 				<h1 class="start">Mountaineeringstats</h1>
 				<h1 class="start">Registrieren</h1>
-				<div id="error">
+				<div class="error">
 					<?php
 					if(isset($_SESSION['registrationError'])){
 						/**

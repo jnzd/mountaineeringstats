@@ -14,7 +14,6 @@
 ?>
 <div class="settings">
 	<h1 class="settingsTitle">Einstellungen</h1>
-	<a class="settings" href="profile.php">Zurück</a>
 	<div class="settingsForm">
 		<div class="settingSelectors">
 			<ul class="settingsList">
@@ -31,13 +30,17 @@
 			<script src="javascript/settings.js"></script>
 		</div>
 		<div class="settingsAside" id="settingsAside">
+			<div class="error">
+				<?php
+					if(isset($_SESSION['error'])){
+						echo $_SESSION['error'];
+					}
+				?>
+			</div>
 			<?php
-				if(isset($_SESSION['error'])){
-					echo $_SESSION['error'];
-				}
 				if(isset($_GET['sub'])){
 					if($_GET['sub']=="password"){
-						include 'includes/changePassword.inc.php';
+						include 'includes/changePasswordForm.inc.php';
 					}else if($_GET['sub']=="profilepic"){
 						include 'includes/changeProfilePicForm.inc.php';
 					}else{
