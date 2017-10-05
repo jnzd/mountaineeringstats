@@ -25,13 +25,13 @@ if(is_uploaded_file($_FILES['pic']['tmp_name'])){
 		}
 	}else{
     $_SESSION['error'] = "Datei ist kein Bild.";
-    header("location: settings.php?sub=profilepic");
+    header("location: ../settings.php?sub=profilepic");
 	}
 }
 if($changed){
 	$time = date("Y-m-d H:i:s");
+  $sql = "UPDATE users SET pic_path='$pic_path', dt_modified='$time' WHERE id = '$id'";
+  $result = $conn->query($sql);
+  header("Location: ../profile.php");
 }
-$sql = "UPDATE users SET pic_path='$pic_path', dt_modified='$time' WHERE id = '$id'";
-$result = $conn->query($sql);
-header("Location: ../profile.php");
 ?>

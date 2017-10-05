@@ -5,7 +5,7 @@
   </div>
   <div class="settingsBlock">
     <label class="settingsLabel" for="password">Passwort</label>
-    <input type="password" id="password" name="password" placeholder="Neues Passwort"><br>
+    <input type="password" id="newpassword" name="password" placeholder="Neues Passwort"><br>
   </div>
   <div class="settingsBlock">
     <label class="settingsLabel" for="confirmpassword">Passwort bestätigen</label>
