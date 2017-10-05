@@ -1,0 +1,48 @@
+<<<<<<< HEAD
+body{
+	/*background-color: black;*/
+	margin-left: auto;
+    margin-right: auto;
+}
+
+form{
+	/*color: white;*/
+	font-family: Arial, sans-serif;
+}
+p{
+	/*color: white;*/
+	font-family: Arial, sans-serif;
+}
+h1{
+	/*color: white;*/
+	font-family: Arial, sans-serif;
+}
+
+a{
+	/*color: white;*/
+	font-family: Arial, sans-serif;
+=======
+body{
+	/*background-color: black;*/
+	margin-left: auto;
+    margin-right: auto;
+}
+
+form{
+	/*color: white;*/
+	font-family: Arial, sans-serif;
+}
+p{
+	/*color: white;*/
+	font-family: Arial, sans-serif;
+}
+h1{
+	/*color: white;*/
+	font-family: Arial, sans-serif;
+}
+
+a{
+	/*color: white;*/
+	font-family: Arial, sans-serif;
+>>>>>>> a8805867178965b0e6156b6ee5705ccb208c1512
+}

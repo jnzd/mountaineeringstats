@@ -1,0 +1,625 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: 'Alegreya', sans-serif;	
+}
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+	/*background-color: #F4F4F4;*/
+}
+h3{
+	margin-top:10px;
+	text-align: center;
+}
+form.start{
+	text-align: center;
+}
+input{
+	font-size: 16px;
+	background-color: #222222;
+	color: #fcfcfc;
+	padding: 3px;
+	margin: 5px;
+}
+input.start{
+	width: auto;
+	text-align: center;
+}
+/*** login/registration page ***/
+.startBackground{
+	height: 100%;
+	width: 100%;
+	background: url(icons/background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	text-align: center;
+}
+/*** content ***/
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+#con {
+	min-height: calc(100vh - 60px);
+	position:relative;
+}
+#content{
+	width: 960px;
+	margin: auto;
+	padding-bottom:60px;
+}
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+.inner {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+h1.start{
+	text-align: center;
+	font-size: 80px;
+}
+h1.bright{
+	color: #EBEBEB;
+}
+input.start{
+	font-size: 24px;
+}
+a.start:link {
+	text-decoration: none;
+	color: #D5D5D5;
+}
+a.start:visited {
+	text-decoration: none;
+	color: #D5D5D5;
+}
+a.start:hover {
+	text-decoration: none;
+	color: #EBEBEB;
+}
+a.start:active {
+	text-decoration: none;
+	color: #EBEBEB;
+}
+/*** header ***/
+header{
+	width: 100%;
+	height: 60px;
+	background-color: #222222;
+	margin: 0;
+}
+.headerOuter{
+	display: table;
+	position: absolute;
+	height: 60px;
+	width: 100%;
+}
+ul.header{
+	display: table-cell;
+	vertical-align: middle;
+	display: flex;
+	height: 60px;
+	list-style-type: none;
+	padding: 0 100px 0 100px;
+}
+ul.header li{
+	display: inline-block;
+	font-size: 100%;
+	display: inline-block;
+}
+ul.header li.right{
+	margin-left: auto;
+}
+ul.header li.left{
+	margin-right: auto;
+}
+ul.header li.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+a.headerLink{
+	display: block;
+	height: 100%;
+}
+a.uploadLink{
+	background: url(icons/upload.png);
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 60px;
+}
+.notifications{
+	background: url(icons/notifications.png);
+}
+.noNotifications{
+	background: url(icons/noNotifications.png);
+}
+.headerButton{
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position: center;
+	height: 100%;
+	width: 60px;
+	cursor: pointer;
+}
+a.logo{
+	background: url(icons/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 40px;
+	width: 220px;
+}
+/*** Searchbar ***/
+form.search{
+	text-align: center;
+}
+input.search{
+	width: auto;
+	font-size: 16px;
+	background-color: black;
+	color: #fcfcfc;
+	height: 30px;
+	margin-top: 15px;
+	text-align: center;
+}
+/*** dropdown ***/
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content {
+	z-index: 1;
+	margin-top: -2px;
+	display: none;
+	position: absolute;
+	right: 0;
+	left: auto;
+	background-color: #222222;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+a.dropdwnLink{
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+/* Change color of dropdown links on hover */
+a.dropdwnLink:hover {
+	background-color: #000000;
+}
+.show {
+	display:block;
+}
+/*** feed ***/
+.feed{
+	width: 665px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.activityPreview{
+	width: 640px;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 25px;
+	margin: 32px 0;
+}
+.staticMap{
+	margin-bottom: 5px;
+}
+a.actTitle:link {
+	text-decoration: none;
+	color: black;
+}
+a.actTitle:visited {
+	text-decoration: none;
+	color: black;
+}
+a.actTitle:hover {
+	text-decoration: none;
+	color: #696969;
+}
+a.actTitle:active {
+	text-decoration: none;
+	color: #696969;
+}
+.titleLine{
+	display: flex;
+}
+.actHeader{
+	margin-bottom: 15px;
+}
+.actEdit{
+	margin-left: auto;
+	margin-right: 0;
+	display: block;
+	background: url(icons/wrench.png);
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+}
+/*** link ***/
+.editAct{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.postingHeader{
+	display: flex;
+	margin-right: 20px;
+}
+.postUserAndDate{
+	margin-left: 20px;
+}
+.profileLink{
+	text-decoration: none;
+	color: black;
+}
+.profileLink:hover{
+	text-decoration: none;
+	color: black;
+}
+.profileLink:visited{
+	text-decoration: none;
+	color: black;
+}
+.profileLink:active{
+	text-decoration: none;
+	color: black;
+}
+.postingUsername{
+	display: inline;
+}
+.postingPicture{
+	display: inline;
+}
+.date{
+	color: #919191;
+}
+.actName{
+	display: inline-block;
+}
+.title{
+	display: inline-block;
+}
+.sportIcon{
+	display: inline-block;
+	margin-left: 15px;
+}
+.actDescription{
+	padding-bottom: 5px;
+	border-bottom: .5px solid #747474;
+}
+.actDetails{
+	display: flex;
+	margin-bottom: 10px;
+}
+.infoPair{
+	display: inline;
+	margin-right: 25px;
+}
+.infoName{
+}
+.infoData{
+	font-size: 48px;
+}
+/**
+	* google maps
+	*/
+#map{
+	height: 640px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+/*** chartjs ***/
+canvas.chart{
+	moz-user-select: none;
+	webkit-user-select: none;
+	ms-user-select: none;
+}
+/*** social buttons ***/
+textarea.commentBox{
+	line-height: 1;
+	font-size: 18px;
+	border: none;
+	border-bottom: 1px solid #000000;
+	resize: none;
+	width: 400px;
+	height: 18px;
+}
+.commentForm{
+	display: inline-block;
+}
+.commentForm form{
+	display: inline-block;
+}
+.commentForm input{
+	display: inline-block;
+}
+.commentLine{
+	display: flex;
+	max-width: 100%;
+	margin-bottom: 5px;
+}
+.commentText{
+	max-width: 100%;
+	white-space: normal;
+	word-break: break-word;
+	padding-right: 10px;
+}
+.comment{
+	display: flex;
+}
+.deleteComment{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: 0;
+}
+.deleteCommentButton{
+	background: url(icons/delete.png);
+	background-size: 16px 16px;
+	height: 16px;
+	width: 16px;
+}
+.like{
+	background: url(icons/like.png);
+	height: 32px;
+	width: 32px;
+}
+.unlike{
+	background: url(icons/unlike.png);
+	height: 32px;
+	width: 32px;
+}
+.likeButton{
+	display: inline-block;
+}
+/*** profile header ***/
+.profileheader{
+	width: 640px;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 25px;
+	margin: 32px 0;
+}
+.profilepicture{
+	display: inline-block;
+	margin-right: 20px;
+}
+.profileInfo{
+	display: inline-block;
+}
+.profileStats{
+	display: inline-block;
+}
+.followingnr{
+	display: inline-block;
+	padding: 5px;
+	margin-right: auto;
+}
+.followernr{
+	display: inline-block;
+	padding: 5px;
+	margin-left: auto;
+}
+/*** activity ***/
+.activity{
+	margin-bottom: 20px;
+}
+/*** settings ***/
+.settingsForm{
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 15px;
+	text-align: left;
+}
+a.settings:link {
+	text-decoration: none;
+	color: black;
+}
+a.settings:visited {
+	text-decoration: none;
+	color: black;
+}
+a.settings:hover {
+	text-decoration: none;
+	color: #696969;
+}
+a.settings:active {
+	text-decoration: none;
+	color: #696969;
+}
+a.delete{
+	margin-left: auto;
+	margin-right: auto;
+}
+.settingsLabel{
+  display: inline-block;
+  width: 128px;
+  text-align: right;
+}
+/*** upload ***/
+.upload{
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 15px;
+}
+.uploadLabel{
+  display: inline-block;
+  width: 256px;
+	text-align: right;
+}
+/*** settings link ***/
+a.settings:link {
+	text-decoration: none;
+	color: black;
+}
+a.settings:visited {
+	text-decoration: none;
+	color: black;
+}
+a.settings:hover {
+	text-decoration: none;
+	color: #696969;
+}
+a.settings:active {
+	text-decoration: none;
+	color: #696969;
+}
+a.delete{
+	margin-left: auto;
+	margin-right: auto;
+}
+/*** round images ***/
+.circle{
+	border-radius: 50%;
+}
+/*** footer ***/
+footer{
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	background-color: #222222;
+	margin: 0;
+	padding: 0;
+	bottom: 0;
+}
+footer div.iconCredit{	
+	color: #fcfcfc;
+}
+footer a{
+	color: #cecece;
+}
+
+/*** mobile design ***/
+@media screen and (max-width: 959px){
+	/*** general setup ***/
+	#content{
+		width: 100%;
+		padding-bottom:60px;
+	}
+	.feed{
+		width: 100%;
+	}
+	/*** centered start pages layout ***/
+	.inner {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	h1.start{
+		text-align: center;
+		font-size: 10vw;
+	}
+	a.logo{
+		background: url(icons/logoIcon.png);
+		background-size: 40px 40px;
+		background-repeat: no-repeat;
+		background-position: center; 
+		width: 40px;
+	}
+	ul.header{
+		display: table-cell;
+		vertical-align: middle;
+		display: flex;
+		height: 60px;
+		list-style-type: none;
+		padding: 0;
+	}
+	input.search{
+		max-width: calc(100vw - 240px);
+	}
+	/*** feed ***/
+	.profileheader{
+		max-width: calc(100vw - 100px);
+		margin: 32px auto;
+	}
+	a.profileLink{
+		text-decoration: none;
+		color: black;
+	}
+	a.profileLink:visited{
+		text-decoration: none;
+		color: black;
+	}
+	a.profileLink:hover {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.profileLink:active {
+		text-decoration: none;
+		color: #696969;
+	}
+	.activityPreview{
+		max-width: calc(100vw - 100px);
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 25px;
+		margin: 32px auto;
+	}
+	.staticMap{
+		max-width: calc(100vw - 100px);
+	}
+	.activity{
+		margin: 0 20px 0 20px;
+	}
+	.infoData{
+		font-size: 5vw;
+	}
+	/*** google maps ***/
+	#map{
+		height: 800px;
+		max-height: 66vw;
+		width: 100%;
+	}
+	/*** chartjs ***/
+	canvas.chart{
+		moz-user-select: none;
+		webkit-user-select: none;
+		ms-user-select: none;
+	}
+	/*** social buttons ***/
+	textarea.commentBox{
+		line-height: 1;
+		font-size: 18px;
+		border: none;
+		border-bottom: 1px solid #000000;
+		resize: none;
+		max-width: 40vw;
+		height: 18px;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.activityPreview{
+		max-width: calc(100vw - 50px);
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 25px;
+		margin: 32px 0;
+	}
+	.profileheader{
+		max-width: calc(100vw - 50px);
+		margin: 32px 0;
+	}
+	.staticMap{
+		max-width: calc(100vw - 50px);
+	}
+}
