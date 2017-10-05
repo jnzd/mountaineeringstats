@@ -32,7 +32,16 @@
 		</div>
 		<div class="settingsAside" id="settingsAside">
 			<?php
-				include 'includes/profilesettings.inc.php';
+				if(isset($_SESSION['error'])){
+					echo $_SESSION['error'];
+				}
+				if($_GET['sub']=="password"){
+					include 'includes/changePassword.inc.php';
+				}else if($_GET['sub']=="profilepic"){
+					include 'includes/changeProfilePicForm.inc.php';
+				}else{
+					include 'includes/profilesettings.inc.php';
+				}
 			?>
 		</div>		
 	</div>

@@ -1,7 +1,7 @@
-<form class="settings" action="includes/changPassword.inc.php" method="post" enctype="multipart/form-data">
+<form class="settings" action="includes/changePassword.inc.php" method="post" enctype="multipart/form-data">
   <div class="settingsBlock">
     <label class="settingsLabel" for="oldPassword">Altes Passwort</label>
-    <input type="password" id="password" name="password" placeholder="Altes Passwort"><br>
+    <input type="password" id="oldpassword" name="oldpassword" placeholder="Altes Passwort"><br>
   </div>
   <div class="settingsBlock">
     <label class="settingsLabel" for="password">Passwort</label>
