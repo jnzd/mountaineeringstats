@@ -30,7 +30,7 @@
 			</ul>
 		</div>
 		<script src="javascript/settings.js"></script>
-		<div class="settingsAside" id="settingsAsid">
+		<div class="settingsAside" id="settingsAside">
 			<?php
 				include 'includes/profilesettings.inc.php';
 			?>
