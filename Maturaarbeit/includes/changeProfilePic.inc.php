@@ -6,8 +6,7 @@
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
   //stores the current database entries
-  $pic_path = $row['pic_path'];
-  $pic_path_old = $pic_path;
+  $pic_path_old = $row['pic_path'];
   $time = $row['dt_modified'];
   $changed = false;
   //if-Statements check wether certain changes were entered or not
@@ -16,11 +15,11 @@
     $pic_path='profilepics/'.$username.".".$extension;
     if(preg_match("!image!", $_FILES['pic']['type'])){
       $pic_path_inc = '../'.$pic_path;
-      copy($_FILES['pic']['tmp_name'], $pic_path_inc);
       if($pic_path_old != "profilepics/standard.png"){
         unlink('../'.$pic_path_old);
-        $changed = true;
       }
+      copy($_FILES['pic']['tmp_name'], $pic_path_inc);
+      $changed = true;
     }else{
       $_SESSION['error'] = "Datei ist kein Bild.";
       header("location: ../settings.php?sub=profilepic");
