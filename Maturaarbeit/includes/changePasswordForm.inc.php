@@ -12,5 +12,5 @@
     <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Bestätige neues Passwort"><br>
   </div>
   <input type="submit" name="safe" value="speichern"><br><br>
-  <!--<a href="passwordReset.php">Passwort vergessen</a>-->
+  <<a href="passwordResetTrue.php">Passwort vergessen</a>
 </form>
