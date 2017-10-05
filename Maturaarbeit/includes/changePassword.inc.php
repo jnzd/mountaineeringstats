@@ -12,8 +12,8 @@
   //if-Statements check wether certain changes were entered or not
   if(password_verify($_POST['oldpassword'], $password)){
     if(!empty($_POST['newpassword'])){
-      if($_POST['newpassword']=$_POST['confirmpassword']){
-        $password = password_hash($_POSt['password'], PASSWORD_DEFAULT);
+      if($_POST['newpassword']==$_POST['confirmpassword']){
+        $password = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);
         $changed = true;
       }
       else{
