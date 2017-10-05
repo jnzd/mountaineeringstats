@@ -1,0 +1,13 @@
+Maturaarbeit/profilepics/
+Maturaarbeit/activities/
+.metadata/
+Maturaarbeit/.settings
+Maturaarbeit/.buildpath
+Maturaarbeit/.project
+Maturaarbeit/icons/
+Maturaarbeit/composer.json
+Maturaarbeit/composer.phar
+Maturaarbeit/vendor/
+Maturaarbeit/error_log
+Maturaarbeit/includes/error_log
+Maturaarbeit/.htaccess

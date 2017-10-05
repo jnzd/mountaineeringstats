@@ -1,8 +1,9 @@
 <?php
   include 'db.php';
   include 'parsers/parse.gpx.php';
+  $name = $_GET['name'];
   // values from database
-  $sql = "SELECT * FROM activities WHERE randomID='$randomid'";
+  $sql = "SELECT * FROM activities WHERE filename='$name'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
   $title = $row['title'];
@@ -10,11 +11,10 @@
   $sport = $row['sport'];
   $path = $row['actPath'];
   $type = $row['type'];
-  $filename = $row['filename'];
   $actTime = $row['actTime'];
   $description = $row['description'];
   //values directly from gpx file
-  $values = gpx($path);
+  $values = gpx($row['actPath']);
   $lat_js = $values['latitude'];
   $long_js = $values['longitude'];
   $elevation_js = $values['elevation'];
@@ -42,9 +42,9 @@
           include 'includes/icons.inc.php';
       ?>
       <?php
-        if($owner){
+        if(isset($edit)){
           echo "<div class='actEdit'>";
-          echo "<a class='editAct' href='editAct.php?id=$randomid'></a>";
+          echo "<a class='editAct' href='editAct.php?name=$name'></a>";
           echo "</div>";
         }
       ?>
