@@ -181,7 +181,7 @@ input.search{
 	position: relative;
 	display: inline-block;
 }
-.dropdown-content {
+.dropdown-content, .notification-content{
 	z-index: 1;
 	margin-top: -2px;
 	display: none;
@@ -193,14 +193,14 @@ input.search{
 	overflow: auto;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-a.dropdwnLink{
+a.dropdwnLink, a.dropdwnLinkNotification{
 	color: white;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
 }
 /* Change color of dropdown links on hover */
-a.dropdwnLink:hover {
+a.dropdwnLink:hover, a.dropdwnLinkNotification:hover {
 	background-color: #000000;
 }
 .show {
