@@ -431,6 +431,30 @@ textarea.commentBox{
 	margin-bottom: 20px;
 }
 /*** settings ***/
+.settingsList{
+	list-style-type: none;
+}
+a.selectionLink{
+	text-decoration: none;
+	color: #000000;
+	display: block;
+	height: 30px;
+	width: 128px;
+}
+a.selectionLink:hover{
+	text-decoration: none;
+	color: #000000;
+	border-left: 5px solid #797979;
+}
+a.selectionLink:active{
+	text-decoration: none;
+	color: #000000;
+	border-left: 5px solid #000000;
+}
+a.selectionLink:visited{
+	text-decoration: none;
+	color: #000000;
+}
 .settingsForm{
 	background-color: white;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
