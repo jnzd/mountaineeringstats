@@ -177,7 +177,7 @@ input.search{
 	text-align: center;
 }
 /*** dropdown ***/
-.dropdown {
+.dropdown{
 	position: relative;
 	display: inline-block;
 }

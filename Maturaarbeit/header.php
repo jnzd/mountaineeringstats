@@ -68,25 +68,23 @@
 						</li>
 						<!-- notification dropdown -->
 						<li>
-							<div class="dropdown">
-								<?php 
-									include "includes/checkNotifications.inc.php";
-									if($notifications){
-										echo "<button onclick=notifications() class='notifications dropbtnNotification headerButton'></button>";
-									}else{
-										echo "<button onclick=notifications() class='noNotifications dropbtnNotification headerButton'></button>";
-									}
-								?>
-								<?php include 'includes/notifications.inc.php';?>
-							</div>
+							<?php 
+								include "includes/checkNotifications.inc.php";
+								if($notifications){
+									echo "<button onclick=notifications() class='notifications dropbtnNotification headerButton'></button>";
+								}else{
+									echo "<button onclick=notifications() class='noNotifications dropbtnNotification headerButton'></button>";
+								}
+								include 'includes/notifications.inc.php';
+							?>
 							<script src="javascript/notificationDropdown.js"></script>
 						</li>
 						<!-- profile dropdown -->
 						<li>
 							<div class="dropdown">
-								<button class="dropdown dropdownProfile headerButton dropbtn" onclick="dropdown()"></button>
+								<button class="dropdown headerButton dropbtn" onclick="dropdown()"></button>
 								<style>
-									.dropdownProfile{
+									.dropdown{
 										background: url(<?php echo $profilepic; ?>);
 										background-repeat: no-repeat;
 										background-size: 30px 30px;
