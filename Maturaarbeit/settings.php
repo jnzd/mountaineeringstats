@@ -14,8 +14,8 @@
 ?>
 <div class="settings">
 	<h1 class="settingsTitle">Einstellungen</h1>
-	 <div class="settingsForm">
-		<a class="settings" href="profile.php">Zurück</a>
+	<a class="settings" href="profile.php">Zurück</a>
+	<div class="settingsForm">
 		<div class="settingSelectors">
 			<ul class="settingsList">
 				<li class="selector">
@@ -30,9 +30,9 @@
 			</ul>
 		</div>
 		<div class="settingsAside">
-		 <?php
-		 	include 'includes/profilesettings.inc.php';
-		 ?>
+			<?php
+			include 'includes/profilesettings.inc.php';
+			?>
 		</div>		
 	</div>
 </div>
