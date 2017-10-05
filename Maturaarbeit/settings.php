@@ -18,13 +18,13 @@
 		<div class="settingSelectors">
 			<ul class="settingsList">
 				<li class="selector">
-					<a class="selectionLink" onclick="changeSettings('profilesettingsPrepare')" href="#">Profileinstellungen</a>
+					<a class="selectionLink" onclick="changeSettings('profilesettingsPrepare', 'profilesettings')" href="#">Profileinstellungen</a>
 				</li>
 				<li class="selector">
-					<a class="selectionLink" onclick="changeSettings('changeProfilePicForm')" href="#">Profilbild ändern</a>
+					<a class="selectionLink" onclick="changeSettings('changeProfilePicForm', 'profilepic')" href="#">Profilbild ändern</a>
 				</li>
 				<li class="selector">
-					<a class="selectionLink" onclick="changeSettings('changePasswordForm')" href="#">Passwort ändern</a>
+					<a class="selectionLink" onclick="changeSettings('changePasswordForm', 'password')" href="#">Passwort ändern</a>
 				</li>
 			</ul>
 			<script src="javascript/settings.js"></script>
@@ -43,7 +43,7 @@
 						include 'includes/changePasswordForm.inc.php';
 					}else if($_GET['sub']=="profilepic"){
 						include 'includes/changeProfilePicForm.inc.php';
-					}else{
+					}else if($_GET['sub']=="profilesettings"){
 						include 'includes/profilesettings.inc.php';
 					}
 				}else{
