@@ -53,7 +53,7 @@
       if($description!=""){
         echo '<div class="actDescription"><p>'.$description.'</p></div>';
       }else{
-        echo "<a class='addDescription' href='editAct.php'>Beschreibung hinzufügen</a>";
+        echo "<a class='addDescription' href='editAct.php?id=".$randomid."'>Beschreibung hinzufügen</a>";
       }
     ?>
   </div>

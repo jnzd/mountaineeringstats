@@ -1,8 +1,8 @@
 <?php
   include 'header.php';
   include 'db.php';
-	$id = $_GET['id'];
-  $sql = "SELECT * FROM activities WHERE randomID='$id'";
+	$randomid = $_GET['id'];
+  $sql = "SELECT * FROM activities WHERE randomID='$randomid'";
   $result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	$postingid = $row['user_id'];
@@ -18,12 +18,13 @@
 	<form action="includes/editAct.inc.php" method="post" enctype="multipart/form-data">
 		<div class="settingsBlock">
 			<label class="settingsLabel" for="title">Titel</label>
-			<input class="uploadInput" type="text" id="title" name="title" placeholder="Titel" value="<?php echo $title;?>"><br>
+			<input class="uploadInput" type="text" id="title" name="title" placeholder="Titel" value="<?php echo $title;?>" autocomplete="off"><br>
 		</div>
 		<div class="settingsBlock">
 			<label class="settingsLabel" for="description">Beschreibung</label>
-			<input class="uploadInput" type="text" id="description" name="description" placeholder="Beschreibung" value="<?php echo $description;?>"><br>
+			<input class="uploadInput" type="text" id="description" name="description" placeholder="Beschreibung" value="<?php echo $description;?>" autocomplete="off"><br>
 		</div>
+		<input type="hidden" value="<?php echo $randomid;?>" name="id"/>
 		<div class="settingsBlock">
 			<label class="settingsLabel" for="sport">Sportart</label>
 			<select id="sport" name="sport">

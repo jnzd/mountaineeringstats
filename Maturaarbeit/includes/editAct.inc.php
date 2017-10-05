@@ -1,10 +1,10 @@
 <?php
   include '../db.php';
-  $name = $conn->real_escape_string($_POST['name']);
-  $sql = "SELECT * FROM activities WHERE filename='$name'";
+  $randomid = $_POST['id'];
+  $sql = "SELECT * FROM activities WHERE randomID='$randomid'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc();
-  $sport = "";
+  $sport = $row['sport'];
   include '../db.php';
   if($_POST['sport'] != "null"){
     if($_POST['sport'] == "jogging"){
@@ -28,16 +28,16 @@
   }
   if(isset($_POST['title'])){
     $title=$_POST['title'];
-    if(isset($_POST['description'])){
-      $description=$conn->real_escape_string($_POST['description']);
-    }else{
-      $description="";
-    }
   }else{
     $title=$row['title'];
   }
-  $sql = "UPDATE activities SET title='$title', description='$description', sport='$sport' WHERE filename = '$name'";
+  if(isset($_POST['description'])){
+    $description=$conn->real_escape_string($_POST['description']);
+  }else{
+    $description="";
+  }
+  $sql = "UPDATE activities SET title='$title', description='$description', sport='$sport' WHERE ranodmID='$randomid'";
   $result = $conn->query($sql);
 	$_SESSION['uploadError']="";
-	header("Location: ../activity.php?name=".$name);
+	header("Location: ../activity.php?id=".$randomid);
 ?>
