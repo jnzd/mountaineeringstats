@@ -6,7 +6,7 @@ include 'parsers/parse.gpx.php';
 ?>
 <div class="upload">
 	<h1>GPX Upload</h1>
-	<div class="Error">
+	<div class="error">
 		<?php
 			if(isset($_SESSION['uploadError'])){
 				echo $_SESSION['uploadError'];

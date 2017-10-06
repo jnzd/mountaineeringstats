@@ -358,6 +358,7 @@ canvas.chart{
 	moz-user-select: none;
 	webkit-user-select: none;
 	ms-user-select: none;
+	margin-bottom: 15px;
 }
 /*** social buttons ***/
 textarea.commentBox{
@@ -488,6 +489,7 @@ a.selectionLink:visited{
 	color: #000000;
 }
 div.settings{
+	margin-top: 32px;
 	background-color: white;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	padding: 15px;
@@ -509,6 +511,7 @@ div.settings{
 }
 /*** upload ***/
 .upload{
+	margin-top: 32px;
 	width: 650px;
 	margin-left: auto;
 	margin-right: auto;
@@ -685,6 +688,9 @@ footer a{
 		display: block;
 	}
 	a.settings:link {
+		margin-left: 0;
+	}
+	.error{
 		margin-left: 0;
 	}
 	.settingsInput{
