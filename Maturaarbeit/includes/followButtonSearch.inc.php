@@ -1,8 +1,7 @@
-<div class="followButton" id="followButton<?php echo $followedID; ?>">
-  <?php
-    /**
-     * check if logged in user already follows the respective person
-     * display follow or unfollow button accordingly     */
+<?php
+  /**
+    * check if logged in user already follows the respective person
+    * display follow or unfollow button accordingly     */
     $followingID = $_SESSION['id'];
     $followedID = $row['id'];
     $followingUser = $_SESSION['username'];
@@ -12,6 +11,9 @@
     $resultFollowers = $conn->query($followSearch);
     $rowFollowers = $resultFollowers->fetch_assoc();
     $rownrFollowers = $resultFollowers->num_rows;
+?>
+<div class="followButton" id="followButton<?php echo $followedID; ?>">
+  <?php
     if($rownrFollowers>0){
       echo "<button type='button' onclick='unfollow(".$followedID.",\"".$followedUser."\",".$followingID00followedID.")'>Abonniert</button>";
     }else{
@@ -38,7 +40,7 @@
           /**
            * change followbutton
            */
-          $('#followButton'+followedID).html('<button type="button" onclick="unfollow('+followedID+',"'+followedUser+'",'+followingID00followedID+')">Abonniert</button>');
+          $('#followButton'+followedID).html('<button type="button" onclick="unfollow('+followedID+',\''+followedUser+'\','+followingID00followedID+')">Abonniert</button>');
         }
       });
       return false;
@@ -58,7 +60,7 @@
           /**
            * change followbutton
            */
-          $('#followButton'+followedID).html('<button type="button" onclick="follow('+followedID+',"'+followedUser+'",'+followingID00followedID+')">Folgen</button>');
+          $('#followButton'+followedID).html('<button type="button" onclick="follow('+followedID+',\''+followedUser+'\','+followingID00followedID+')">Folgen</button>');
         }
       });
       return false;
