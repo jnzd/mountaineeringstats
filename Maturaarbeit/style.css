@@ -511,6 +511,7 @@ a.delete{
 }
 /*** settings link ***/
 a.settings:link {
+	margin-left: 132px;
 	text-decoration: none;
 	color: black;
 }
