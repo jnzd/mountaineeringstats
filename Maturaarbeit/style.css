@@ -433,6 +433,12 @@ textarea.commentBox{
 /*** settings ***/
 .settingsList{
 	list-style-type: none;
+	padding-right: 10px;
+	height: 100%;
+	border-right: .5px solid #919191;
+}
+.settingsAside{
+	margin-left: 10px;
 }
 a.selectionLink{
 	text-decoration: none;
@@ -466,29 +472,6 @@ div.settings{
 }
 .settingSelectors{
 	display: inline;
-}
-.settingsAsid{
-	display: inline;
-}
-a.settings:link {
-	text-decoration: none;
-	color: black;
-}
-a.settings:visited {
-	text-decoration: none;
-	color: black;
-}
-a.settings:hover {
-	text-decoration: none;
-	color: #696969;
-}
-a.settings:active {
-	text-decoration: none;
-	color: #696969;
-}
-a.delete{
-	margin-left: auto;
-	margin-right: auto;
 }
 .error{
 	margin-left: 132px;
@@ -526,10 +509,6 @@ a.settings:hover {
 a.settings:active {
 	text-decoration: none;
 	color: #696969;
-}
-a.delete{
-	margin-left: auto;
-	margin-right: auto;
 }
 /*** round images ***/
 .circle{
@@ -665,5 +644,14 @@ footer a{
 	}
 	.staticMap{
 		max-width: calc(100vw - 50px);
+	}
+}
+@media screen and (max-width: 520px){
+	.settingsLabel{
+		text-align: left;
+		display: block;
+	}
+	a.settings:link {
+		margin-left: 0;
 	}
 }
