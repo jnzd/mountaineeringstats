@@ -490,6 +490,9 @@ a.delete{
 	margin-left: auto;
 	margin-right: auto;
 }
+.error{
+	margin-left: 132px;
+}
 .settingsLabel{
   display: inline-block;
   width: 128px;
