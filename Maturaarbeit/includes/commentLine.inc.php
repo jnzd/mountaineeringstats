@@ -1,9 +1,11 @@
 <div id="commentLine<?php echo $commentID; ?>">
 	<div class="commentLine">
 		<p class="comment">
-			<b class="commentUsername">
-				<?php echo $usernameComment; ?>
-			</b>
+			<a class="usernameLink" href="<?php echo $usernameComment; ?>">
+				<b class="commentUsername">
+					<?php echo $usernameComment; ?>
+				</b>
+			</a>
 			&nbsp;
 			<div class="commentText">
 				<?php echo $commentText; ?>

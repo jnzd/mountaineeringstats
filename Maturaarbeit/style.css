@@ -374,6 +374,10 @@ textarea.commentBox{
 .comment{
 	display: flex;
 }
+a.usernameLink, a.usernameLink:visited, a.usernameLink:hover, a.usernameLink:active{
+	text-decoration: none;
+	color: #000000;
+}
 .deleteComment{
 	display: inline-block;
 	margin-left: auto;
