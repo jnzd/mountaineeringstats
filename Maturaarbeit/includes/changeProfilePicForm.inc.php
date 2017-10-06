@@ -4,6 +4,9 @@
     <label class="settingsLabel" for="pic">Profilbild</label>
     <input type="file" id="pic" name="pic" placeholder="Profilbild"><br>
   </div>
-  <input type="submit" name="safe" value="speichern"><br><br>
+  <div class="settingsBlock">
+    <label class="settingsLabel" for="safe"></label>
+    <input type="submit" id="safe" name="safe" value="speichern"><br><br>
+  </div>
   <a class="settings" href="includes/deletePic.inc.php">Profilbild löschen</a>
 </form>

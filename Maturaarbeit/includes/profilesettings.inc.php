@@ -23,6 +23,9 @@
       <option value="female">weiblich</option>
     </select>
   </div>
-  <input type="submit" name="safe" value="speichern"><br><br>
+  <div class="settingsBlock">
+    <label class="settingsLabel" for="safe"></label>
+    <input type="submit" id="safe" name="safe" value="speichern"><br><br>
+  </div>
   <a class="delete settings" href="includes/delete.inc.php">Account löschen</a>
 </form>

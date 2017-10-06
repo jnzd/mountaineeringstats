@@ -11,7 +11,10 @@
     <label class="settingsLabel" for="confirmpassword">Neues Passwort bestätigen</label>
     <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Bestätige neues Passwort"><br>
   </div>
-  <input type="submit" name="safe" value="speichern"><br><br>
+  <div class="settingsBlock">
+    <label class="settingsLabel" for="safe"></label>
+    <input type="submit" id="safe" name="safe" value="speichern"><br><br>
+  </div>
   <a class="settings" onclick="passwordreset()" href="#">Passwort vergessen</a>
 </form>
 <script src="javascript/passwordreset.js"></script>
