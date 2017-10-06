@@ -185,6 +185,9 @@ input.search{
 }
 .searchresult{
 	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
 }
 .searchPic{
 	display: inline;
@@ -194,6 +197,9 @@ input.search{
 	display: inline;
 	text-decoration: none;
 	color: #000000;
+}
+.followSearch{
+	margin-left: 15px;
 }
 /*** dropdown ***/
 .dropdown{
@@ -509,7 +515,7 @@ div.settings{
 }
 .uploadLabel{
   display: inline-block;
-  width: 256px;
+  width: 128px;
 	text-align: right;
 }
 /*** settings link ***/
@@ -667,6 +673,10 @@ footer a{
 	}
 }
 @media screen and (max-width: 520px){
+	.uploadLabel{
+		text-align: left;
+		display: block;
+	}
 	.settingsLabel{
 		text-align: left;
 		display: block;

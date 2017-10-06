@@ -12,7 +12,7 @@
     $rowFollowers = $resultFollowers->fetch_assoc();
     $rownrFollowers = $resultFollowers->num_rows;
 ?>
-<div class="followButton" id="followButton<?php echo $followedID; ?>">
+<div class="followButton followSearch" id="followButton<?php echo $followedID; ?>">
   <?php
     if($rownrFollowers>0){
       echo "<button type='button' onclick='unfollow(".$followedID.",\"".$followedUser."\",".$followingID00followedID.")'>Abonniert</button>";

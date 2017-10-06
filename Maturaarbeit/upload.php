@@ -40,7 +40,10 @@ include 'parsers/parse.gpx.php';
 			<label class="uploadLabel" for="xml">GPX-Datei</label>
 			<input class="uploadInput" type="file" name="xml" id="xml" placeholder="Aktivität"><br>
 		</div>
-		<input class="uploadInput" type="submit" name="upload" value="hochladen"><br><br>
+		<div class="uploadBlock">
+			<label class="uploadLabel" for="upload"></label>
+		<input class="uploadInput" id="upload" type="submit" name="upload" value="hochladen"><br>
+		</div>
 	</form>
 </div>
 <?php
