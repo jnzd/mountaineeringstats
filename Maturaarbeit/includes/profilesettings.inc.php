@@ -1,19 +1,19 @@
 <form class="settings" action="includes/settings.inc.php" method="post" enctype="multipart/form-data">
   <div class="settingsBlock">
     <label class="settingsLabel" for="username">Benutzername</label>
-    <input type="text" id="username" name="username" placeholder="Benutzername" value="<?php echo $username; ?>"><br>
+    <input class="settingsInput" type="text" id="username" name="username" placeholder="Benutzername" value="<?php echo $username; ?>"><br>
   </div>
   <div class="settingsBlock">
     <label class="settingsLabel" for="email">E-Mail</label>
-    <input type="email" id="email" name="email" placeholder="E-Mail" value="<?php echo $email; ?>"><br>
+    <input class="settingsInput" type="email" id="email" name="email" placeholder="E-Mail" value="<?php echo $email; ?>"><br>
   </div>
   <div class="settingsBlock">
     <label class="settingsLabel" for="first">Vorname</label>
-    <input type="text" name="first" id="first" placeholder="Vorname" value="<?php echo $first; ?>"><br>
+    <input class="settingsInput" type="text" name="first" id="first" placeholder="Vorname" value="<?php echo $first; ?>"><br>
   </div>
   <div class="settingsBlock">
     <label class="settingsLabel" for="last">Nachname</label>
-    <input type="text" name="last" id="last" placeholder="Nachname" value="<?php echo $last; ?>"><br>
+    <input class="settingsInput" type="text" name="last" id="last" placeholder="Nachname" value="<?php echo $last; ?>"><br>
   </div>
   <div class="settingsBlock">
     <label class="settingsLabel" for="gender">Geschlecht</label>

@@ -1,7 +1,7 @@
 <form action= "includes/settingsPasswordReset.inc.php" method="post">
   <div class="settingsBlock">
     <label class="settingsLabel" for="email">E-Mail Adresse</label>
-    <input type="email" id="email" name="email" placeholder="E-Mail"><br>
+    <input class="settingsInput" type="email" id="email" name="email" placeholder="E-Mail"><br>
   </div>
   <div class="settingsBlock">
     <label class="settingsLabel" for="reset"></label>

@@ -654,4 +654,7 @@ footer a{
 	a.settings:link {
 		margin-left: 0;
 	}
+	.settingsInput{
+		max-width: calc(100vw - 180px);
+	}
 }
