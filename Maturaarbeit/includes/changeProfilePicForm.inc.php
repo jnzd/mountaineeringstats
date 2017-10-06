@@ -5,5 +5,5 @@
     <input type="file" id="pic" name="pic" placeholder="Profilbild"><br>
   </div>
   <input type="submit" name="safe" value="speichern"><br><br>
-  <a href="includes/deletePic.inc.php">Profilbild löschen</a>
+  <a class="settings" href="includes/deletePic.inc.php">Profilbild löschen</a>
 </form>
