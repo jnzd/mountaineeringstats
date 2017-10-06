@@ -40,7 +40,15 @@
 			<?php
 				if(isset($_GET['sub'])){
 					if($_GET['sub']=="password"){
-						include 'includes/changePasswordForm.inc.php';
+						if(isset($_GET['x'])){
+							if($_GET['x']=="reset"){
+								include 'includes/settingsPasswordReset.inc.php';
+							}else{
+								include 'includes/changePasswordForm.inc.php';
+							}
+						}else{
+							include 'includes/changePasswordForm.inc.php';
+						}
 					}else if($_GET['sub']=="profilepic"){
 						include 'includes/changeProfilePicForm.inc.php';
 					}else if($_GET['sub']=="profilesettings"){
