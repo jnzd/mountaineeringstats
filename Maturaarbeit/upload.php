@@ -4,15 +4,15 @@ include 'header.php';
 include 'db.php';
 include 'parsers/parse.gpx.php';
 ?>
-<h1>GPX Upload</h1>
-<div class="Error">
-	<?php
-		if(isset($_SESSION['uploadError'])){
-			echo $_SESSION['uploadError'];
-		}
-	?>
-</div>
 <div class="upload">
+	<h1>GPX Upload</h1>
+	<div class="Error">
+		<?php
+			if(isset($_SESSION['uploadError'])){
+				echo $_SESSION['uploadError'];
+			}
+		?>
+	</div>
 	<form action="includes/upload.inc.php" method="post" enctype="multipart/form-data">
 		<div class="uploadBlock">
 			<label class="uploadLabel" for="title">Titel</label>
