@@ -18,6 +18,7 @@ data: {
 	datasets: [
 		{
 			radius: 0,
+			hitRadius: 10,
 			yAxisID: 'A',
 			label: "Höhe",
 			borderColor: "#333333",
@@ -25,6 +26,7 @@ data: {
 		},
 		{
 			radius: 0,
+			hitRadius: 10,
 			yAxisID: 'B',
 			label: "Geschwindigkeit",
 			borderColor: "#adadad",
