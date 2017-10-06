@@ -183,6 +183,18 @@ input.search{
 	margin-top: 15px;
 	text-align: center;
 }
+.searchresult{
+	display: flex;
+}
+.searchPic{
+	display: inline;
+}
+.searchresultLink{
+	margin-left: 15px;
+	display: inline;
+	text-decoration: none;
+	color: #000000;
+}
 /*** dropdown ***/
 .dropdown{
 	position: relative;

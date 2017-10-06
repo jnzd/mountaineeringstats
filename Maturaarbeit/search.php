@@ -13,14 +13,16 @@
     $rows = resultToArray($result);
     $result->free();
     foreach($rows as $row) {
+      echo "<div class='searchresult'>";
       $username = $row['username'];
       $picPath = $row['pic_path'];
       $userID = $row['id'];
-      echo "<a href='".$username."'><img class='circle' src='".$picPath."' height='40' width='40'></a>";
-      echo "<h1><a href='".$username."'>".$username."</a></h1>";
-      /*if($_SESSION['id'] != $userID){
-        include 'includes/followButton.inc.php';
-      }*/
+      echo "<a class='searchresultLink' href='".$username."'><img class='circle searchPic' src='".$picPath."' height='40' width='40'>";
+      echo "<h1>".$username."</a></h1>";
+      if($_SESSION['id'] != $userID){
+        include 'includes/followButtonSearch.inc.php';
+      }
+      echo "</div>";
     }
   }
   include 'footer.php';
