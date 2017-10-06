@@ -1,4 +1,4 @@
-<div class="followButton" id="followButton">
+<div class="followButton" id="followButton<?php echo $followedID; ?>">
   <?php
     /**
      * check if logged in user already follows the respective person
@@ -13,13 +13,13 @@
     $rowFollowers = $resultFollowers->fetch_assoc();
     $rownrFollowers = $resultFollowers->num_rows;
     if($rownrFollowers>0){
-      echo "<button type='button' onclick='unfollow()'>Abonniert</button>";
+      echo "<button type='button' onclick='unfollow(".$followedID.",\"".$followedUser."\",".$followingID00followedID.")'>Abonniert</button>";
     }else{
-      echo "<button type='button' onclick='follow()'>Folgen</button>";
+      echo "<button type='button' onclick='follow(".$followedID.",\"".$followedUser."\",".$followingID00followedID.")'>Folgen</button>";
     }
   ?>
   <script>
-    function follow(){
+    function follow(followedID, followedUser, followingID00followedID){
       /**
        * call like.inc
        */
@@ -29,37 +29,36 @@
         datatype: 'json',
         data: {
           followingID: '<?php echo $followingID; ?>',
-          followedID: '<?php echo $followedID; ?>',
+          followedID: followedID,
           followingUser: '<?php echo $followingUser; ?>',
-          followedUser: '<?php echo $followedUser; ?>',
-          followingID00followedID: '<?php echo $followingID00followedID; ?>'
+          followedUser: followedUser,
+          followingID00followedID: followingID00followedID
         },
         complete: function(){
           /**
            * change followbutton
            */
-          $('#followButton').html('<button type="button" onclick="unfollow()">Abonniert</button>');
+          $('#followButton'+followedID).html('<button type="button" onclick="unfollow('+followedID+',"'+followedUser+'",'+followingID00followedID+')">Abonniert</button>');
         }
       });
       return false;
     }
-    function unfollow(){
+    function unfollow(followedID, followedUser, followingID00followedID){
       /**
        * call unfollow.inc
        */
-      var followernr = parseInt(document.getElementById('followernr').textContent)-1;
       $.ajax({
         type:'post',
         url:'includes/unfollow.inc.php',
         datatype: 'json',
         data: {
-          followingID00followedID: '<?php echo $followingID00followedID; ?>'
+          followingID00followedID: followingID00followedID
         },
         complete: function(){
           /**
            * change followbutton
            */
-          $('#followButton').html('<button type="button" onclick="follow()">Folgen</button>');
+          $('#followButton'+followedID).html('<button type="button" onclick="follow('+followedID+',"'+followedUser+'",'+followingID00followedID+')">Folgen</button>');
         }
       });
       return false;
