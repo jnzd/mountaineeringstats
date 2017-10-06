@@ -430,6 +430,10 @@ a.usernameLink, a.usernameLink:visited, a.usernameLink:hover, a.usernameLink:act
 	padding: 5px;
 	margin-left: auto;
 }
+a.profilepicturelink, a.profilepicturelink:visited, a.usernprofilepicturelinkameLink:hover, a.profilepicturelink:active{
+	text-decoration: none;
+	color: #B4B4B4;
+}
 /*** activity ***/
 .activity{
 	margin-bottom: 20px;
@@ -594,6 +598,11 @@ footer a{
 		text-decoration: none;
 		color: #696969;
 	}
+	a.profilepicturelink, a.profilepicturelink:visited, a.usernprofilepicturelinkameLink:hover, a.profilepicturelink:active{
+		display: block;
+		text-decoration: none;
+		color: #B4B4B4;
+	}
 	.activityPreview{
 		max-width: calc(100vw - 100px);
 		background-color: white;
@@ -633,17 +642,12 @@ footer a{
 		height: 18px;
 	}
 }
-
 @media screen and (max-width: 750px){
 	.activityPreview{
 		max-width: calc(100vw - 50px);
 		background-color: white;
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		padding: 25px;
-		margin: 32px 0;
-	}
-	.profileheader{
-		max-width: calc(100vw - 50px);
 		margin: 32px 0;
 	}
 	.staticMap{
@@ -660,5 +664,20 @@ footer a{
 	}
 	.settingsInput{
 		max-width: calc(100vw - 180px);
+	}
+	.profileheader{
+		max-width: calc(100vw - 50px);
+		margin: 32px 0;
+	}
+	.profilepicture{
+		max-width: calc(100vw - 300px);
+		max-height: calc(100vw - 300px);
+		min-width: 50px;
+		min-height: 50px;
+	}
+	.username{
+		font-size: 8vw;
+	}
+	.profileheader{
 	}
 }

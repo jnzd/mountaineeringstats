@@ -1,6 +1,6 @@
 <div class="profileheader">
   <div class="profilepicture">
-    <a href="profile.php"><img class="circle" src="<?php echo $profilepic;?>" height="120" width="120"></a>
+    <a href="profile.php"><img class="circle profilepicture" src="<?php echo $profilepic;?>" height="120" width="120"></a>
   </div>
   <div class="profileInfo">
     <?php
@@ -17,7 +17,7 @@
     <a href='settings.php'><img src="icons/gear.png" height="24" width="24"></a>
     <?php
       if($profilepic=="profilepics/standard.png"){
-        echo "<a href='settings.php?sub=profilepic'>Profilbild hinzufügen</a>";
+        echo "<a class='profilepicturelink' href='settings.php?sub=profilepic'>Profilbild hinzufügen</a>";
       }
     ?>
     <div class="bio">
