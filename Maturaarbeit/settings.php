@@ -42,7 +42,7 @@
 					if($_GET['sub']=="password"){
 						if(isset($_GET['x'])){
 							if($_GET['x']=="reset"){
-								include 'includes/settingsPasswordReset.inc.php';
+								include 'includes/settingsPasswordResetForm.inc.php';
 							}else{
 								include 'includes/changePasswordForm.inc.php';
 							}

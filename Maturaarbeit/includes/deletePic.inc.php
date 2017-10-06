@@ -18,5 +18,6 @@
     $sql = "UPDATE users SET pic_path='$pic_path', dt_modified='$time' WHERE id = '$id'";
     $result = $conn->query($sql);
   }
-  header("Location: ../profile.php");
+  $_SESSION['error'] = "Profilbild gelöscht";
+  header("Location: ../settings.php?sub=profilepic");
 ?>

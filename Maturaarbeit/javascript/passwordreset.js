@@ -1,7 +1,7 @@
 function passwordreset(){
   $.ajax({
     type:'post',
-    url: 'includes/settingsPasswordReset.inc.php',
+    url: 'includes/settingsPasswordResetForm.inc.php',
     datatype: 'json',
     success: function(data){
       $('#settingsAside').html(data);

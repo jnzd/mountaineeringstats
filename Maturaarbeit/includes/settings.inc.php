@@ -41,6 +41,7 @@ if($changed){
 	$time = date("Y-m-d H:i:s");
 	$sql = "UPDATE users SET username='$username', email='$email', first='$first', last='$last', gender='$gender', dt_modified='$time' WHERE id = '$id'";
 	$result = $conn->query($sql);
-	header("Location: ../profile.php");
+	$_SESSION['error'] = "Änderungen wurden gespeichert";
+	header("Location: ../settings.php");
 }
 ?>

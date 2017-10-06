@@ -29,6 +29,7 @@
     $time = date("Y-m-d H:i:s");
     $sql = "UPDATE users SET pic_path='$pic_path', dt_modified='$time' WHERE id = '$id'";
     $result = $conn->query($sql);
-    header("Location: ../profile.php");
+    $_SESSION['error'] = "Profilbild geändert";
+    header("Location: ../settings.php?sub=profilepic");
   }
 ?>
