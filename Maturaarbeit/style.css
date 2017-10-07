@@ -577,6 +577,9 @@ footer a{
 	.feed{
 		width: 100%;
 	}
+	.upload{
+		width: calc(100vw - 30px);
+	}
 	/*** centered start pages layout ***/
 	.inner {
 		margin-left: auto;
