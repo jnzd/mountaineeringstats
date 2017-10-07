@@ -9,6 +9,13 @@ $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 /**
  * validation for registration input
  */
+/**
+	* make sure username only contains A-Z, a-z, 0-9
+	*/
+if(!preg_match("/^[a-zA-Z0-9]+$/", $username)||preg_match("/\\s/", $username)){
+	$_SESSION['registrationError'] = "Der Benutzername enthält unzulässige Zeichen. Im Benutzernamen dürfen nur Gross- und Kleinbuchstaben sowie Ziffern von 0 bis 9 verwendet werden";
+	header("Location: ../start.php");
+}
 if($_POST['password'] != $_POST['confirmpassword']){
 	/**
 	 * passwords don't match
