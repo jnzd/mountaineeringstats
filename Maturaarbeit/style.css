@@ -368,7 +368,7 @@ textarea.commentBox{
 	border: none;
 	border-bottom: 1px solid #000000;
 	resize: none;
-	width: 400px;
+	width: 600px;
 	height: 18px;
 }
 .commentForm{
@@ -669,7 +669,6 @@ footer a{
 		border: none;
 		border-bottom: 1px solid #000000;
 		resize: none;
-		max-width: 40vw;
 		height: 18px;
 	}
 }
@@ -683,6 +682,12 @@ footer a{
 	}
 	.staticMap{
 		max-width: calc(100vw - 50px);
+	}
+}
+@media screen and (max-width: 700px){
+	textarea.commentBox{
+		max-width: 600px;
+		width: calc(100vw - 90px);
 	}
 }
 @media screen and (max-width: 520px){
@@ -701,7 +706,7 @@ footer a{
 		margin-left: 0;
 	}
 	.settingsInput{
-		max-width: calc(100vw - 180px);
+		max-width: calc(100vw - 190px);
 	}
 	.profileheader{
 		max-width: calc(100vw - 50px);
