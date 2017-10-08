@@ -9,30 +9,36 @@ $title = "Willkommen";
 </head>
 
 <body>
-<div class="outer">
-  <div class="middle">
-    <div class="inner">
+<div class="startBackground">
+	<div class="outer">
+		<div class="middle">
+			<div class="inner">
 			<div id="login">
-        <h1 class="start">E-Mail Adresse bestätigt</h1><br>
+				<h1 class="start">E-Mail Adresse bestätigt</h1><br>
 				<h1 class="start">Anmelden</h1>
-				<div id="error">
-					<?php
-					if(isset($_SESSION['loginError'])){
-						echo $_SESSION['loginError'];
-					}
-					?>
+					<div class="error">
+						<?php
+						/**
+						* output login error from previous try
+						*/
+						if(isset($_SESSION['loginError'])){
+							echo $_SESSION['loginError'];
+						}
+						?>
+					</div>
+					<!-- Anmeldeformular -->
+					<form action= "includes/login.inc.php" method="post">
+						<input class="start" type="email" name="email" placeholder="E-Mail"><br>
+						<input class="start" type="password" name="password" placeholder="Passwort"><br>
+						<!--<input type="checkbox" name="remember" value="remmber"><label>Angemeldet bleiben</label><br>-->
+						<input class="start" type="submit" name="anmelden" value="anmelden"><br><br>
+					</form>
+					<a class="start" href="passwordReset.php">Passwort vergessen</a>
 				</div>
-				<!-- Anmeldeformular -->
-				<form action= "includes/login.inc.php" method="post">
-					<input class="start" type="email" name="email" placeholder="E-Mail"><br>
-					<input class="start" type="password" name="password" placeholder="Passwort"><br>
-					<!--<input type="checkbox" name="remember" value="remmber"><label>Angemeldet bleiben</label><br>-->
-					<input class="start" type="submit" name="anmelden" value="anmelden"><br><br>
-				</form>
 			</div>
-    </div>
-  </div>
+		</div>
+	</div>
 </div>
 <?php
-  include 'footer.php';
+  include 'footerStart.php';
 ?>
