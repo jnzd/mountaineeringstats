@@ -9,7 +9,7 @@ html, body {
 	margin:0;
 	padding:0;
 	height:100%;
-	/*background-color: #F4F4F4;*/
+	background-color: #F4F4F4;
 }
 h3{
 	margin-top:10px;
@@ -532,11 +532,11 @@ div.settings{
 a.settings:link {
 	margin-left: 132px;
 	text-decoration: none;
-	color: black;
+	color: #3C5FBE;
 }
 a.settings:visited {
 	text-decoration: none;
-	color: black;
+	color: #3C5FBE;
 }
 a.settings:hover {
 	text-decoration: none;

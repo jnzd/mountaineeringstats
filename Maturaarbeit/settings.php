@@ -30,13 +30,6 @@
 			<script src="javascript/settings.js"></script>
 		</div>
 		<div class="settingsAside" id="settingsAside">
-			<div class="error">
-				<?php
-					if(isset($_SESSION['error'])){
-						echo $_SESSION['error'];
-					}
-				?>
-			</div>
 			<?php
 				if(isset($_GET['sub'])){
 					if($_GET['sub']=="password"){
@@ -58,7 +51,14 @@
 					include 'includes/profilesettings.inc.php';
 				}
 			?>
-		</div>		
+			<div class="error">
+				<?php
+					if(isset($_SESSION['error'])){
+						echo $_SESSION['error'];
+					}
+				?>
+			</div>
+		</div>
 	</div>
 </div>
 <?php
