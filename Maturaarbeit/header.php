@@ -67,18 +67,18 @@
 							<a href="upload.php" class="uploadLink headerLink"></a>
 						</li>
 						<!-- notification dropdown -->
-						<li>
+						<!--<li>
 							<?php 
-								include "includes/checkNotifications.inc.php";
+								/*include "includes/checkNotifications.inc.php";
 								if($notifications){
 									echo "<button onclick=notifications() class='notifications dropbtnNotification headerButton'></button>";
 								}else{
 									echo "<button onclick=notifications() class='noNotifications dropbtnNotification headerButton'></button>";
 								}
-								include 'includes/notifications.inc.php';
+								include 'includes/notifications.inc.php';*/
 							?>
 							<script src="javascript/notificationDropdown.js"></script>
-						</li>
+						</li>-->
 						<!-- profile dropdown -->
 						<li>
 							<div class="dropdown">

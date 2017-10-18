@@ -1,6 +1,7 @@
 <?php
   include '../header.php';
-  include '../db.php';
+	include '../db.php';
+	include 'images.inc.php';
   $id = $_SESSION['id'];
   $sql = "SELECT * FROM users WHERE id='$id'";
   $result = $conn->query($sql);
@@ -18,13 +19,10 @@
       if($pic_path_old != "profilepics/standard.png"){
         unlink('../'.$pic_path_old);
       }
+      // Initiate class
+      $ImageMaker = new ImageFactory();
       copy($_FILES['pic']['tmp_name'], $pic_path_inc);
-      $im = imagecreatefromstring($pic_path_inc);
-      $size = min(imagesx($im), imagesy($im));
-      $im2 = imagecrop($im, ['x' => 0, 'y' => 0, 'width' => $size, 'height' => $size]);
-      if ($im2 !== FALSE) {
-          $profilepic = imagejpeg($im2);
-      }
+      $ImageMaker->MakeThumb($pic_path_inc,150,150,$pic_path_inc);
       $changed = true;
     }else{
       $_SESSION['error'] = "Datei ist kein Bild.";
