@@ -1,6 +1,6 @@
 <?php
 	class ImageFactory{
-    public  function MakeThumb($thumb_target = '', $width = 60,$height = 60,$SetFileName = false, $quality = 80){
+    public  function MakeThumb($thumb_target = '', $width = 300,$height = 300,$SetFileName = false, $quality = 80){
       function imagecreatefromfile( $filename ) {
         if (!file_exists($filename)) {
             throw new InvalidArgumentException('File "'.$filename.'" not found.');

@@ -22,7 +22,7 @@
       // Initiate class
       $ImageMaker = new ImageFactory();
       copy($_FILES['pic']['tmp_name'], $pic_path_inc);
-      $ImageMaker->MakeThumb($pic_path_inc,150,150,$pic_path_inc);
+      $ImageMaker->MakeThumb($pic_path_inc,300,300,$pic_path_inc);
       $changed = true;
     }else{
       $_SESSION['error'] = "Datei ist kein Bild.";
