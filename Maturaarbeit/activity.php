@@ -17,7 +17,7 @@
     header("location: index.php");
   }
 ?>
-<div class="feed"><!-- necessary to center header-->
+<div class="feed">
   <div id="profileheader">
     <?php
       if($owner){
@@ -30,12 +30,9 @@
       }
     ?>
   </div>
-</div>
-<div id="activity">
   <?php
     include 'includes/activity.inc.php';
   ?>
-</div>
-<?php
-  include 'footer.php';
-?>
+  <?php
+    include 'footer.php';
+  ?>

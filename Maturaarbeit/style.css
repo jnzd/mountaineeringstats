@@ -346,13 +346,13 @@ a.actTitle:active {
 .infoName{
 }
 .infoData{
-	font-size: 48px;
+	font-size: 44px;
 }
 /**
 	* google maps
 	*/
 #map{
-	height: 640px;
+	height: 480px;
 	width: 100%;
 	margin-bottom: 15px;
 }
@@ -459,7 +459,10 @@ a.profilepicturelink, a.profilepicturelink:visited, a.usernprofilepicturelinkame
 /*** activity ***/
 .activity{
 	margin-bottom: 20px;
-	width: 665px;
+	width: 640px;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 25px;
 	margin-left: auto;
 	margin-right: auto;
 }
