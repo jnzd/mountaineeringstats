@@ -9,7 +9,7 @@ html, body {
 	margin:0;
 	padding:0;
 	height:100%;
-	background-color: #F4F4F4;
+	background-color: rgb(218, 218, 218);
 }
 h3{
 	margin-top:10px;
@@ -115,7 +115,7 @@ ul.header{
 	display: flex;
 	height: 60px;
 	list-style-type: none;
-	width: 750px;
+	width: 850px;
 	padding: 0;
 	margin: 0 auto;
 }
@@ -607,6 +607,7 @@ footer a{
 	}
 	ul.header{
 		display: table-cell;
+		width: auto;
 		vertical-align: middle;
 		display: flex;
 		height: 60px;
@@ -679,7 +680,7 @@ footer a{
 }
 @media screen and (max-width: 750px){
 	.activityPreview{
-		max-width: calc(100vw - 50px);
+		max-width: calc(100vw - 60px);
 		background-color: white;
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		padding: 25px;
