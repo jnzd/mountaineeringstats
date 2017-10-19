@@ -498,7 +498,8 @@ a.selectionLink:visited{
 	color: #000000;
 }
 div.settings{
-	margin-top: 32px;
+	width: 665px;
+	margin: 32px auto;
 	background-color: white;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	padding: 15px;
@@ -585,7 +586,7 @@ footer a{
 	.upload{
 		width: calc(100vw - 30px);
 	}
-	.activity{
+	.activity, div.settings{
 		max-width: 665px;
 		width: calc(100vw - 40px);
 		margin-left: auto;
@@ -682,7 +683,7 @@ footer a{
 	}
 }
 @media screen and (max-width: 750px){
-	.activityPreview{
+	.activityPreview, div.settings{
 		max-width: calc(100vw - 60px);
 		background-color: white;
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
