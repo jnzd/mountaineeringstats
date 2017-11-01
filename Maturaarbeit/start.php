@@ -39,12 +39,12 @@
 					<h1 class="start bright">Anmelden</h1>
 					<div class="error">
 						<?php
-						/**
-						 * output login error from previous try
-						 */
-						if(isset($_SESSION['loginError'])){
-							echo $_SESSION['loginError'];
-						}
+							/**
+							 * output login error from previous try
+							 */
+							if(isset($_SESSION['loginError'])){
+								echo $_SESSION['loginError'];
+							}
 						?>
 					</div>
 					<!-- Anmeldeformular -->

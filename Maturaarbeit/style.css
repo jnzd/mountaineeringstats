@@ -145,6 +145,13 @@ a.uploadLink{
 	background-position: center;
 	width: 60px;
 }
+a.discoverLink{
+	background: url(icons/discover.png);
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 60px;
+}
 .notifications{
 	background: url(icons/notifications.png);
 }
@@ -600,7 +607,7 @@ footer a{
 	}
 	h1.start{
 		text-align: center;
-		font-size: 10vw;
+		font-size: 8vw;
 	}
 	a.logo{
 		background: url(icons/logoIcon.png);
@@ -662,6 +669,11 @@ footer a{
 	}
 	/*** google maps ***/
 	#map{
+		height: 800px;
+		max-height: 66vw;
+		width: 100%;
+	}
+	#discover{
 		height: 800px;
 		max-height: 66vw;
 		width: 100%;

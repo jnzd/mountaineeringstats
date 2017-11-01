@@ -8,38 +8,41 @@ $row = $result->fetch_assoc();
 //stores the current database entries
 $username = $row['username'];
 $email = $row['email'];
-$first = $row['first'];
-$last = $row['last'];
-$gender = $row['gender'];
 $time = $row['dt_modified'];
 $changed = false;
 //if-Statements check wether certain changes were entered or not
 if(!empty($_POST['username'])){
-	$username = $conn->escape_string ($_POST['username']);
-	$changed = true;
+	if($_POST['username'] != $username){
+		$username = $conn->escape_string ($_POST['username']);
+		$sql = "SELECT * FROM users WHERE username='$username'";
+		$result = $conn->query($sql);
+		if($result->num_rows<0){
+			$changed = true;
+		}else{
+			$_SESSION['error'] = "Benutzername wird bereits verwendet";
+			header("Location: ../settings.php");
+		}
+	}
 }
 if(!empty($_POST['email'])){
-	$email = $conn->escape_string ($_POST['email']);
-}
-if($_POST['first'] != ""){
-	$first = $conn->escape_string ($_POST['first']);
-	$changed = true;
-}
-if($_POST['last'] != ""){
-	$last = $conn->escape_string ($_POST['last']);
-	$changed = true;
-}
-if($_POST['gender'] != "null"){
-	if($_POST['gender'] == "male"){
-		$gender="male";
+	if($_POST['email'] != $email){
+		$email = $conn->escape_string ($_POST['email']);
+		$sql = "SELECT * FROM users WHERE email='$email'";
+		$result = $conn->query($sql);
+		if($result->num_rows<0){
+			$changed = true;
+		}else{
+			$_SESSION['error'] .= "E-Mail-Adresse wird bereits verwendet";
+			header("Location: ../settings.php");
+		}
 	}else{
-		$gender="female";
+		$_SESSION['error'] = "Keine Änderungen vorgenommen";
+		header("Location: ../settings.php");
 	}
-	$changed = true;
 }
 if($changed){
 	$time = date("Y-m-d H:i:s");
-	$sql = "UPDATE users SET username='$username', email='$email', first='$first', last='$last', gender='$gender', dt_modified='$time' WHERE id = '$id'";
+	$sql = "UPDATE users SET username='$username', email='$email', dt_modified='$time' WHERE id = '$id'";
 	$result = $conn->query($sql);
 	$_SESSION['error'] = "Änderungen wurden gespeichert";
 	header("Location: ../settings.php");

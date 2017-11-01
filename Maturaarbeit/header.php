@@ -62,8 +62,12 @@
 								<input class="search" type="text" name="search" placeholder="Suchen">
 							</form>
 						</li>
-						<!-- upload button -->
+						<!-- discover button -->
 						<li class="right">
+							<a href="discover.php" class="discoverLink headerLink"></a>
+						</li>
+						<!-- upload button -->
+						<li>
 							<a href="upload.php" class="uploadLink headerLink"></a>
 						</li>
 						<!-- notification dropdown -->

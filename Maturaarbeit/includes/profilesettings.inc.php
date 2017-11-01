@@ -8,22 +8,6 @@
     <input class="settingsInput" type="email" id="email" name="email" placeholder="E-Mail" value="<?php echo $email; ?>"><br>
   </div>
   <div class="settingsBlock">
-    <label class="settingsLabel" for="first">Vorname</label>
-    <input class="settingsInput" type="text" name="first" id="first" placeholder="Vorname" value="<?php echo $first; ?>"><br>
-  </div>
-  <div class="settingsBlock">
-    <label class="settingsLabel" for="last">Nachname</label>
-    <input class="settingsInput" type="text" name="last" id="last" placeholder="Nachname" value="<?php echo $last; ?>"><br>
-  </div>
-  <div class="settingsBlock">
-    <label class="settingsLabel" for="gender">Geschlecht</label>
-    <select id="gender" name="gender">
-      <option selected="selected" value="<?php echo $gender; ?>">Bitte wählen</option>
-      <option value="male">männlich</option>
-      <option value="female">weiblich</option>
-    </select>
-  </div>
-  <div class="settingsBlock">
     <label class="settingsLabel" for="safe"></label>
     <input type="submit" id="safe" name="safe" value="speichern"><br><br>
   </div>

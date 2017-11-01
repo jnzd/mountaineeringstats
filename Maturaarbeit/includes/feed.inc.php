@@ -37,7 +37,6 @@
     }
   ?>
 </div>
-
 <script>
   var username='<?php 
     if(isset($_SESSION['id'])){

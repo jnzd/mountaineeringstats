@@ -30,9 +30,9 @@
       }
     ?>
   </div>
-  <?php
-    include 'includes/activity.inc.php';
-  ?>
-  <?php
-    include 'footer.php';
-  ?>
+<?php
+  include 'includes/activity.inc.php';
+?>
+<?php
+  include 'footer.php';
+?>
