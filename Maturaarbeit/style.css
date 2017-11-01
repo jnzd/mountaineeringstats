@@ -459,7 +459,7 @@ a.usernameLink, a.usernameLink:visited, a.usernameLink:hover, a.usernameLink:act
 	padding: 5px;
 	margin-left: auto;
 }
-a.profilepicturelink, a.profilepicturelink:visited, a.usernprofilepicturelinkameLink:hover, a.profilepicturelink:active{
+a.profilepicturelink, a.profilepicturelink:visited, a.usernprofilepicturelinkameLink:hover, a.profilepicturelink:active a.addDescription, a.addDescription:visited, a.addDescription:hover, a.addDescription:active{
 	text-decoration: none;
 	color: #B4B4B4;
 }
@@ -540,6 +540,10 @@ div.settings{
   display: inline-block;
   width: 128px;
 	text-align: right;
+}
+.upload a, .upload a:visited, .upload a:hover, .upload a:active{
+	text-decoration: none;
+	color: #ff8441;
 }
 /*** settings link ***/
 a.settings:link {

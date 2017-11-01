@@ -10,7 +10,11 @@
 	$email = $row['email'];
 	$time = $row['dt_modified'];
 	$changed = false;
-	//if-Statements check wether certain changes were entered or not
+	//check wether anything was changed
+	if($_POST['username'] == $username && $_POST['email'] == $email){
+		$_SESSION['error'] = "Keine Änderungen vorgenommen";
+		header("Location: ../settings.php");
+	}
 	if(!empty($_POST['username'])){ //check if username changed
 		if($_POST['username'] != $username){
 			$username = $conn->escape_string ($_POST['username']);
@@ -34,12 +38,9 @@
 			if($result->num_rows==0){
 				$changed = true;
 			}else{
-				$_SESSION['error'] .= "E-Mail-Adresse wird bereits verwendet";
+				$_SESSION['error'] = "E-Mail-Adresse wird bereits verwendet";
 				header("Location: ../settings.php");
 			}
-		}else{
-			$_SESSION['error'] = "Keine Änderungen vorgenommen";
-			header("Location: ../settings.php");
 		}
 	}
 	if($changed){

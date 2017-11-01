@@ -3,6 +3,11 @@
     include 'parsers/parse.gpx.php';
     require 'vendor/emcconville/google-map-polyline-encoding-tool/src/Polyline.php';
     if(isset($_SESSION['id'])){
+      
+      echo "<div class='activityPreview'>";
+      echo "<h2>Herzlich willkommen auf Mountaineeringstats</h2>";
+      echo "<p>Das ist die Startseite. Hier siehst du alle Aktivitäten von deinen Freunden zusammen mit deinen eigenen</p>";
+      echo "</div>";
       $id = $_SESSION['id'];
       $sql = "SELECT * FROM followers WHERE followingID='$id'";
       $result = $conn->query($sql);
@@ -30,7 +35,10 @@
           include 'includes/feedPreview.inc.php';
         }
       }else{
-        echo "<h2>Du hast noch keine Aktivitäten hochgeladen und du folgst noch niemandem</h2>";
+        echo "<div class='activityPreview'>";
+        echo "<p>Du hast noch keine Aktivitäten hochgeladen und du folgst noch niemandem</p>";
+        echo "<p>Lade deine erste Aktivität mit dem Plus-Icon im Header hoch oder suche deine Freunde über die Suchleiste</p>";
+        echo "</div>";
       }
     }else{
       header("location: start.php");

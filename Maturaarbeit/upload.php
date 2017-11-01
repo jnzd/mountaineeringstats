@@ -4,8 +4,13 @@ include 'header.php';
 include 'db.php';
 include 'parsers/parse.gpx.php';
 ?>
-<div class="upload">
+<div class='upload'>
 	<h1>GPX Upload</h1>
+	<p>Hier kannst du deine GPX-Dateien hochladen. Solltest du noch keine GPX-Dateien haben kannst du diese mit Diensten wie <a href='https://www.strava.com'>Strava</a>, <a href='https://wwww.runkeeper.com'>Runkeeper</a>, <a href='https://www.endomondo.com'>Endomondo</a>, <a href='https://www.movescount.com'>Movescount</a> oder <a href='https://fit.google.com'>Google Fit</a> aufzeichnen oder bestehende Aktivitäten von dort exportieren.</p>
+	<p>Wenn du GPS-Dateien in anderen Formaten als GPX hast kannst du diese mit <a href='http://www.gpsvisualizer.com/convert_input'>GPS Visualizer</a> versuchen zu konvertieren.</p>
+</div>
+
+<div class="upload">
 	<div class="error">
 		<?php
 			if(isset($_SESSION['uploadError'])){
@@ -19,7 +24,7 @@ include 'parsers/parse.gpx.php';
 			<input class="uploadInput" id="title" type="text" name="title" placeholder="Titel"><br>
 		</div>
 		<div class="uploadBlock">
-			<label class="uploadLabel" for="description">Beschreibung</label>
+			<label class="uploadLabel" for="description">Beschreibung (optional)</label>
 			<input class="uploadInput" id="description" type="text" name="description" placeholder="Beschreibung"><br>
 		</div>
 		<div class="uploadBlock">

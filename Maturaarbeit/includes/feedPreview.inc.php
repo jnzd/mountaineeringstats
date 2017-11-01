@@ -45,7 +45,9 @@
 		</div>
 	</div>
 	<?php
+		echo "<a href='../activity.php?id=".$randomid."'>";
 		include 'includes/staticMap.inc.php';
+		echo "</a>";
 		//link comment section to according activity with actid
 		include 'includes/likeCounter.inc.php';
 		include 'includes/displayComments.inc.php';
