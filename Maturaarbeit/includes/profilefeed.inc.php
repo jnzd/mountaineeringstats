@@ -18,8 +18,9 @@
         include 'activityPreview.inc.php';
       }
     }else{
-      echo "<p>Du hast noch keine Aktivitäten hochgeladen</p>";
-      echo "<a href='upload.php'>HOCHLADEN</a>";
+      echo "<div class='activityPreview'>";
+      echo "<p>Du hast noch keine Aktivitäten hochgeladen. Lade mit dem Plus-Icon im Header deine erste Aktivität hoch</p>";
+      echo "</div>";
     }
   }
 ?>

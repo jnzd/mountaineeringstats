@@ -25,7 +25,9 @@
         include 'activityPreview.inc.php';
       }
     }else{
-      echo "<br /><h2>Dieser User hat noch keine Aktivitäten hochgeladen</h2>";
+      echo "<div class='activityPreview'>";
+      echo "<p>Dieser Nutzer hat noch keine Aktivitäten hochgeladen</p>";
+      echo "</div>";
     }
   ?>
 </div>
