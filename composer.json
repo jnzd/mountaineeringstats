@@ -1,9 +1,0 @@
-{
-  "minimum-stability": "dev",
-  "require": {
-    "nephre/php-dbus":"dev-master",
-    "sibyx/phpgpx": "dev-master",
-    "craygl/phpgpx": "dev-master",
-    "emcconville/google-map-polyline-encoding-tool": "dev-master"
-  }
-}
