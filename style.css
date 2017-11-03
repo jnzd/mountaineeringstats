@@ -1,0 +1,770 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: 'Alegreya', sans-serif;	
+}
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+	background-color: #ededed;
+}
+h3{
+	margin-top:10px;
+	text-align: center;
+}
+form.start{
+	text-align: center;
+}
+input{
+	font-size: 16px;
+	background-color: #222222;
+	color: #fcfcfc;
+	padding: 3px;
+	margin: 5px;
+}
+input.start{
+	width: auto;
+	text-align: center;
+}
+/*** login/registration page ***/
+.startBackground{
+	height: 100%;
+	width: 100%;
+	background: url(icons/background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	text-align: center;
+}
+/*** content ***/
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+#con {
+	min-height: calc(100vh - 95px);
+	position:relative;
+}
+#content{
+	width: 960px;
+	margin: auto;
+	padding-bottom:60px;
+}
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+.inner {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+h1.start{
+	text-align: center;
+	font-size: 80px;
+}
+h1.bright{
+	color: #EBEBEB;
+}
+input.start{
+	font-size: 24px;
+}
+a.start:link {
+	text-decoration: none;
+	color: #D5D5D5;
+}
+a.start:visited {
+	text-decoration: none;
+	color: #D5D5D5;
+}
+a.start:hover {
+	text-decoration: none;
+	color: #EBEBEB;
+}
+a.start:active {
+	text-decoration: none;
+	color: #EBEBEB;
+}
+/*** header ***/
+header{
+	width: 100%;
+	height: 60px;
+	background-color: #222222;
+	border-bottom: 3px solid #ff8441;
+	margin: 0;
+}
+.headerOuter{
+	display: table;
+	position: absolute;
+	height: 60px;
+	width: 100%;
+}
+ul.header{
+	display: table-cell;
+	vertical-align: middle;
+	display: flex;
+	height: 60px;
+	list-style-type: none;
+	width: 850px;
+	padding: 0;
+	margin: 0 auto;
+}
+ul.header li{
+	display: inline-block;
+	font-size: 100%;
+	display: inline-block;
+}
+ul.header li.right{
+	margin-left: auto;
+}
+ul.header li.left{
+	margin-right: auto;
+}
+ul.header li.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+a.headerLink{
+	display: block;
+	height: 100%;
+}
+a.uploadLink{
+	background: url(icons/upload.png);
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 60px;
+}
+a.discoverLink{
+	background: url(icons/discover.png);
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 60px;
+}
+.notifications{
+	background: url(icons/notifications.png);
+}
+.noNotifications{
+	background: url(icons/noNotifications.png);
+}
+.notificationLine{
+	display: flex;
+}
+img.notification{
+	display: inline;
+	vertical-align: center;
+}
+.headerButton{
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position: center;
+	height: 100%;
+	width: 60px;
+	cursor: pointer;
+}
+a.logo{
+	background: url(icons/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 40px;
+	width: 220px;
+}
+/*** Searchbar ***/
+form.search{
+	text-align: center;
+}
+input.search{
+	width: auto;
+	font-size: 16px;
+	background-color: black;
+	color: #fcfcfc;
+	height: 30px;
+	margin-top: 15px;
+	text-align: center;
+}
+.searchresult{
+	display: flex;
+	margin: 10px auto;
+	padding: 5px 0 5px 0;
+	border-bottom: 1px solid black;
+}
+.searchPic{
+	display: inline;
+}
+.searchresultLink{
+	margin-left: 15px;
+	display: inline;
+	text-decoration: none;
+	color: #000000;
+}
+.followSearch{
+	margin-left: 15px;
+}
+/*** dropdown ***/
+.dropdown{
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content, .notification-content{
+	z-index: 1;
+	margin-top: -2px;
+	display: none;
+	position: absolute;
+	right: 0;
+	left: auto;
+	background-color: #222222;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+a.dropdwnLink, a.dropdwnLinkNotification{
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+/* Change color of dropdown links on hover */
+a.dropdwnLink:hover, a.dropdwnLinkNotification:hover {
+	background-color: #000000;
+}
+.show {
+	display:block;
+}
+/*** feed ***/
+.feed{
+	width: 665px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.activityPreview{
+	width: 640px;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 25px;
+	margin: 32px 0;
+}
+.staticMap{
+	margin-bottom: 5px;
+}
+a.actTitle:link {
+	text-decoration: none;
+	color: black;
+}
+a.actTitle:visited {
+	text-decoration: none;
+	color: black;
+}
+a.actTitle:hover {
+	text-decoration: none;
+	color: #696969;
+}
+a.actTitle:active {
+	text-decoration: none;
+	color: #696969;
+}
+.titleLine{
+	display: flex;
+}
+.actHeader{
+	margin-bottom: 15px;
+}
+.actEdit{
+	margin-left: auto;
+	margin-right: 0;
+	display: block;
+	background: url(icons/wrench.png);
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+}
+/*** link ***/
+.editAct{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.postingHeader{
+	display: flex;
+	margin-right: 20px;
+}
+.postUserAndDate{
+	margin-left: 20px;
+}
+.profileLink{
+	text-decoration: none;
+	color: black;
+}
+.profileLink:hover{
+	text-decoration: none;
+	color: black;
+}
+.profileLink:visited{
+	text-decoration: none;
+	color: black;
+}
+.profileLink:active{
+	text-decoration: none;
+	color: black;
+}
+.postingUsername{
+	display: inline;
+}
+.postingPicture{
+	display: inline;
+}
+.date{
+	color: #919191;
+}
+.actName{
+	display: inline-block;
+}
+.title{
+	display: inline-block;
+}
+.sportIcon{
+	display: inline-block;
+	margin-left: 15px;
+}
+.actDescription{
+	padding-bottom: 5px;
+	border-bottom: .5px solid #747474;
+}
+.actDetails{
+	display: flex;
+	margin-bottom: 10px;
+}
+.infoPair{
+	display: inline;
+	margin-right: 25px;
+}
+.infoName{
+}
+.infoData{
+	font-size: 44px;
+}
+/**
+	* google maps
+	*/
+#map{
+	height: 480px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+/*** chartjs ***/
+canvas.chart{
+	moz-user-select: none;
+	webkit-user-select: none;
+	ms-user-select: none;
+	margin-bottom: 15px;
+}
+/*** social buttons ***/
+textarea.commentBox{
+	line-height: 1;
+	font-size: 18px;
+	border: none;
+	border-bottom: 1px solid #000000;
+	resize: none;
+	width: 600px;
+	height: 18px;
+}
+.commentForm{
+	display: inline-block;
+}
+.commentForm form{
+	display: inline-block;
+}
+.commentForm input{
+	display: inline-block;
+}
+.commentLine{
+	display: flex;
+	max-width: 100%;
+	margin-bottom: 5px;
+}
+.commentText{
+	max-width: 100%;
+	white-space: normal;
+	word-break: break-word;
+	padding-right: 10px;
+}
+.comment{
+	display: flex;
+}
+a.usernameLink, a.usernameLink:visited, a.usernameLink:hover, a.usernameLink:active{
+	text-decoration: none;
+	color: #000000;
+}
+.deleteComment{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: 0;
+}
+.deleteCommentButton{
+	background: url(icons/delete.png);
+	background-size: 16px 16px;
+	height: 16px;
+	width: 16px;
+}
+.like{
+	background: url(icons/like.png);
+	height: 32px;
+	width: 32px;
+}
+.unlike{
+	background: url(icons/unlike.png);
+	height: 32px;
+	width: 32px;
+}
+.likeButton{
+	display: inline-block;
+}
+/*** profile header ***/
+.profileheader{
+	width: 640px;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 25px;
+	margin: 32px 0;
+}
+.profilepicture{
+	display: inline-block;
+	margin-right: 20px;
+}
+.profileInfo{
+	display: inline-block;
+}
+.profileStats{
+	display: inline-block;
+}
+.followingnr{
+	display: inline-block;
+	padding: 5px;
+	margin-right: auto;
+}
+.followernr{
+	display: inline-block;
+	padding: 5px;
+	margin-left: auto;
+}
+a.profilepicturelink, a.profilepicturelink:visited, a.usernprofilepicturelinkameLink:hover, a.profilepicturelink:active a.addDescription, a.addDescription:visited, a.addDescription:hover, a.addDescription:active{
+	text-decoration: none;
+	color: #B4B4B4;
+}
+/*** activity ***/
+.activity{
+	margin-bottom: 20px;
+	width: 640px;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*** settings ***/
+.settingsList{
+	list-style-type: none;
+	padding-right: 10px;
+	height: 100%;
+	border-right: .5px solid #919191;
+}
+.settingsAside{
+	margin-left: 10px;
+}
+a.selectionLink{
+	text-decoration: none;
+	color: #000000;
+	display: block;
+	height: 30px;
+	width: 128px;
+}
+a.selectionLink:hover{
+	text-decoration: none;
+	color: #000000;
+	border-left: 5px solid #797979;
+}
+a.selectionLink:active{
+	text-decoration: none;
+	color: #000000;
+	border-left: 5px solid #000000;
+}
+a.selectionLink:visited{
+	text-decoration: none;
+	color: #000000;
+}
+div.settings{
+	width: 665px;
+	margin: 32px auto;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 15px;
+	text-align: left;
+}
+.settingsForm{
+	display: flex;
+}
+.settingSelectors{
+	display: inline;
+}
+.error{
+	margin-left: 132px;
+}
+.settingsLabel{
+  display: inline-block;
+  width: 128px;
+  text-align: right;
+}
+/*** upload ***/
+.upload{
+	margin-top: 32px;
+	width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 15px;
+}
+.uploadLabel{
+  display: inline-block;
+  width: 128px;
+	text-align: right;
+}
+.upload a, .upload a:visited, .upload a:hover, .upload a:active{
+	text-decoration: none;
+	color: #ff8441;
+}
+/*** settings link ***/
+a.settings:link {
+	margin-left: 132px;
+	text-decoration: none;
+	color: #ff8441;
+}
+a.settings:visited {
+	text-decoration: none;
+	color: #ff8441;
+}
+a.settings:hover {
+	text-decoration: none;
+	color: #696969;
+}
+a.settings:active {
+	text-decoration: none;
+	color: #696969;
+}
+/*** round images ***/
+.circle{
+	border-radius: 50%;
+}
+/*** footer ***/
+footer{
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	background-color: #222222;
+	border-top: 3px solid #ff8441;
+	margin: 0;
+	padding: 0;
+	bottom: 0;
+}
+.iconCredit, .contact{	
+	color: #fcfcfc;
+	margin-left: auto;
+	margin-right: auro;
+	padding-top: 10px;
+}
+footer a{
+	color: #cecece;
+}
+.footer{
+	display: table-cell;
+	vertical-align: middle;
+	display: flex;
+	width: 850px;
+	padding: 0;
+	margin: 0 auto;
+}
+/*** mobile design ***/
+@media screen and (max-width: 959px){
+	/*** general setup ***/
+	#content{
+		width: 100%;
+		padding-bottom:60px;
+	}
+	.feed{
+		width: 100%;
+	}
+	.upload{
+		width: calc(100vw - 30px);
+	}
+	.activity, div.settings{
+		max-width: 665px;
+		width: calc(100vw - 40px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*** centered start pages layout ***/
+	.inner {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	h1.start{
+		text-align: center;
+		font-size: 8vw;
+	}
+	a.logo{
+		background: url(icons/logoIcon.png);
+		background-size: 40px 40px;
+		background-repeat: no-repeat;
+		background-position: center; 
+		width: 40px;
+	}
+	ul.header{
+		display: table-cell;
+		width: auto;
+		vertical-align: middle;
+		display: flex;
+		height: 60px;
+		list-style-type: none;
+		padding: 0;
+	}
+	input.search{
+		max-width: calc(100vw - 240px);
+	}
+	.footer{
+		display: table-cell;
+		width: auto;
+		vertical-align: middle;
+		display: flex;
+		padding: 0;
+	}
+	/*** feed ***/
+	.profileheader{
+		max-width: calc(100vw - 100px);
+		margin: 32px auto;
+	}
+	a.profileLink{
+		text-decoration: none;
+		color: black;
+	}
+	a.profileLink:visited{
+		text-decoration: none;
+		color: black;
+	}
+	a.profileLink:hover {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.profileLink:active {
+		text-decoration: none;
+		color: #696969;
+	}
+	a.profilepicturelink, a.profilepicturelink:visited, a.usernprofilepicturelinkameLink:hover, a.profilepicturelink:active{
+		display: block;
+		text-decoration: none;
+		color: #B4B4B4;
+	}
+	.activityPreview{
+		max-width: calc(100vw - 100px);
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 25px;
+		margin: 32px auto;
+	}
+	.staticMap{
+		max-width: calc(100vw - 100px);
+	}
+	.infoData{
+		font-size: 5vw;
+	}
+	/*** google maps ***/
+	#map{
+		height: 800px;
+		max-height: 66vw;
+		width: 100%;
+	}
+	#discover{
+		height: 800px;
+		max-height: 66vw;
+		width: 100%;
+	}
+	/*** chartjs ***/
+	canvas.chart{
+		moz-user-select: none;
+		webkit-user-select: none;
+		ms-user-select: none;
+	}
+	/*** social buttons ***/
+	textarea.commentBox{
+		line-height: 1;
+		font-size: 18px;
+		border: none;
+		border-bottom: 1px solid #000000;
+		resize: none;
+		height: 18px;
+	}
+}
+@media screen and (max-width: 750px){
+	.activityPreview, div.settings{
+		max-width: calc(100vw - 60px);
+		background-color: white;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		padding: 25px;
+		margin: 32px 0;
+	}
+	.staticMap{
+		max-width: calc(100vw - 50px);
+	}
+}
+@media screen and (max-width: 700px){
+	textarea.commentBox{
+		max-width: 600px;
+		width: calc(100vw - 100px);
+	}
+}
+@media screen and (max-width: 520px){
+	.uploadLabel{
+		text-align: left;
+		display: block;
+	}
+	.settingsLabel{
+		text-align: left;
+		display: block;
+	}
+	a.settings:link {
+		margin-left: 0;
+	}
+	.error{
+		margin-left: 0;
+	}
+	.settingsInput{
+		max-width: calc(100vw - 190px);
+	}
+	.profileheader{
+		max-width: calc(100vw - 50px);
+		margin: 32px 0;
+	}
+	.profilepicture{
+		max-width: calc(100vw - 300px);
+		max-height: calc(100vw - 300px);
+		min-width: 50px;
+		min-height: 50px;
+	}
+	.username{
+		font-size: 8vw;
+	}
+	.profileheader{
+	}
+}
