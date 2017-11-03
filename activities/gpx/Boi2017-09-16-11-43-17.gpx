@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="GPSies http://www.gpsies.com - GPSies Track" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>GPSies Track</name>
+    <link href="http://www.gpsies.com/">
+      <text>GPSies Track on GPSies.com</text>
+    </link>
+    <time>2017-09-16T17:41:50Z</time>
+  </metadata>
+  <wpt lat="47.01022565" lon="8.102416992">
+    <ele>831.00000</ele>
+    <name>Undefined</name>
+    <sym>Waypoint</sym>
+  </wpt>
+</gpx>
+
