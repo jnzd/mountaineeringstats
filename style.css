@@ -363,6 +363,10 @@ a.actTitle:active {
 	width: 100%;
 	margin-bottom: 15px;
 }
+#discover{
+	height: 70vh;
+	width: 100%;
+}
 /*** chartjs ***/
 canvas.chart{
 	moz-user-select: none;
@@ -538,9 +542,9 @@ div.settings{
 }
 .discover{
 	width: 100%;
+	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 32px;
 }
 .uploadLabel{
   display: inline-block;
@@ -698,11 +702,6 @@ footer a{
 	/*** google maps ***/
 	#map{
 		height: 800px;
-		max-height: 66vw;
-		width: 100%;
-	}
-	#discover{
-		height: 100vh;
 		max-height: 66vw;
 		width: 100%;
 	}

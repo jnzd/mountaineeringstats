@@ -67,6 +67,9 @@
 	}
 	$values = gpx("../".$actPath);
 	$dateTime = $values['dateTime'];
+	$longitude = $values['longitudePHP'];
+	$latitude = $values['latitudePHP'];
+	$latlng = "{lat: ".$latitude[0].", lng: ".$longitude[0]."}";
 	$timestamp = $dateTime[0]->format('Y-m-d h:m');
 	/**
 	 * generate random 9 character integer
@@ -101,7 +104,7 @@
 			$rownr = 1;
 		}
 	}
-	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description, filename, randomID) VALUES ('$sport', '$type', '$user_id', '$timestamp', '$actPath', '$title', '$description', '$filename','$rand')";
+	$sql = "INSERT INTO activities (sport, type, user_id, actTime, actPath, title, description, filename, randomID, coordinates) VALUES ('$sport', '$type', '$user_id', '$timestamp', '$actPath', '$title', '$description', '$filename','$rand','$latlng')";
 	$result = $conn->query($sql);
 	$_SESSION['uploadError']="";
 	header("Location: ../profile.php");
