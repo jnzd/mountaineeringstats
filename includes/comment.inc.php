@@ -5,7 +5,7 @@
 	 * write comment to database
 	 */
 	$id = $_POST['id'];
-  $actid = $_POST['actid'];
+	$actid = $_POST['actid'];
   $commentText = $conn->real_escape_string($_POST['commentText']);
 	$sql = "SELECT * FROM activities where id='$actid'";
 	$result = $conn->query($sql);
