@@ -9,7 +9,7 @@
 			var self         = this;
 			var $self        = $(self);
 			var minHeight    = $self.height();
-			var noFlickerPad = $self.hasClass('autogrow-short') ? 0 : parseInt($self.css('lineHeight')) || 0;
+			var noFlickerPad = $self.hasClass('autogrow-short')?0:parseInt($self.css('lineHeight'))||0;
 			var settings = $.extend({
 				preGrowCallback: null,
 				postGrowCallback: null
@@ -39,8 +39,8 @@
 														.replace(/ {2,}/g, function(space){ return times('&#xa0;',space.length-1)+' '});
 				// Did enter get pressed?  Resize in this keydown event so that the flicker doesn't occur.
 				shadow.css('width', $self.width());
-				shadow.html(val + (noFlickerPad === 0 ? '...' : '')); // Append '...' to resize pre-emptively.
-				var newHeight=Math.max(shadow.height() + noFlickerPad, minHeight);
+				shadow.html(val+(noFlickerPad===0?'...':'')); // Append '...' to resize pre-emptively.
+				var newHeight=Math.max(shadow.height()+noFlickerPad, minHeight);
 				if(settings.preGrowCallback!=null){
 					newHeight=settings.preGrowCallback($self,shadow,newHeight,minHeight);
 				}

@@ -1,6 +1,6 @@
 
 <div id="commentForm<?php echo $actid; ?>" class="commentForm">
-  <textarea class="commentBox" id="comment<?php echo $actid; ?>" onkeypress="submitCheck(<?php echo $actid; ?>);" placeholder="Kommentar schreiben" rows="1"></textarea>
+  <textarea class="commentBox autogrow-short" id="comment<?php echo $actid; ?>" onkeypress="submitCheck(<?php echo $actid; ?>);" placeholder="Kommentar schreiben" rows="1"></textarea>
 </div>
 <script src="javascript/autogrow.js" type="text/javascript"></script> 
 <script>
