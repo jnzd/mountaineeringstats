@@ -36,8 +36,7 @@
 														.replace(/>/g, '&gt;') // replace >
 														.replace(/\n$/, '<br/>&#xa0;') 
 														.replace(/\n/g, '<br/>')
-														.replace(/ {2,}/g, function(space){
-															return times('&#xa0;',space.length-1)+' '});
+														.replace(/ {2,}/g, function(space){ return times('&#xa0;',space.length-1)+' '});
 				// Did enter get pressed?  Resize in this keydown event so that the flicker doesn't occur.
 				shadow.css('width', $self.width());
 				shadow.html(val + (noFlickerPad === 0 ? '...' : '')); // Append '...' to resize pre-emptively.
