@@ -4,7 +4,7 @@
 	 * Auto-growing textareas; technique ripped from Facebook
 	 * http://github.com/jaz303/jquery-grab-bag/tree/master/javascripts/jquery.autogrow-textarea.js
 	 */
-	$.fn.autogrow = function(options){
+	$.fn.autogrow = function(){
 		return this.filter('textarea').each(function(){
 			var self         = this;
 			var $self        = $(self);
@@ -13,7 +13,7 @@
 			var settings = $.extend({
 				preGrowCallback: null,
 				postGrowCallback: null
-			}, options );
+			});
 			var shadow = $('<div></div>').css({
 				position:    'absolute',
 				top:         -10000,
@@ -24,19 +24,20 @@
 				fontWeight:  $self.css('fontWeight'),
 				lineHeight:  $self.css('lineHeight'),
 				resize:      'none',
-			'word-wrap': 'break-word'
+				'word-wrap': 'break-word'
 			}).appendTo(document.body);
-			var update = function(event){
+			var update = function(){
 				var times = function(string, number){
 					for (var i=0, r=''; i<number; i++) r += string;
 					return r;
 				};
-				var val = self.value.replace(/&/g, '&amp;')
-														.replace(/</g, '&lt;')
-														.replace(/>/g, '&gt;')
-														.replace(/\n$/, '<br/>&#xa0;')
+				var val = self.value.replace(/&/g, '&amp;') // replace &
+														.replace(/</g, '&lt;') // replace <
+														.replace(/>/g, '&gt;') // replace >
+														.replace(/\n$/, '<br/>&#xa0;') 
 														.replace(/\n/g, '<br/>')
-														.replace(/ {2,}/g, function(space){ return times('&#xa0;', space.length - 1) + ' ' });
+														.replace(/ {2,}/g, function(space){
+															return times('&#xa0;',space.length-1)+' '});
 				// Did enter get pressed?  Resize in this keydown event so that the flicker doesn't occur.
 				shadow.css('width', $self.width());
 				shadow.html(val + (noFlickerPad === 0 ? '...' : '')); // Append '...' to resize pre-emptively.
