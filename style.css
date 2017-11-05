@@ -536,6 +536,12 @@ div.settings{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	padding: 15px;
 }
+.discover{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 32px;
+}
 .uploadLabel{
   display: inline-block;
   width: 128px;
@@ -571,7 +577,7 @@ a.settings:active {
 footer{
 	position: absolute;
 	width: 100%;
-	height: 80px;
+	min-height: 80px;
 	background-color: #222222;
 	border-top: 3px solid #ff8441;
 	margin: 0;
@@ -696,7 +702,7 @@ footer a{
 		width: 100%;
 	}
 	#discover{
-		height: 800px;
+		height: 100vh;
 		max-height: 66vw;
 		width: 100%;
 	}

@@ -26,7 +26,7 @@
 		<p><?php echo $description ?></p>
 	</div>
 	<?php
-		echo "<a href='.$activityLink.'>";
+		echo "<a href='".$activityLink."'>";
 		include 'includes/staticMap.inc.php';
 		echo "</a>";
 		include 'includes/likeCounter.inc.php';

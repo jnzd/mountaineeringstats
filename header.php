@@ -63,9 +63,9 @@
 							</form>
 						</li>
 						<!-- discover button -->
-						<!-- <li class="right">
+						<li class="right">
 							<a href="discover.php" class="discoverLink headerLink"></a>
-						</li> -->
+						</li>
 						<!-- upload button -->
 						<li>
 							<a href="upload.php" class="uploadLink headerLink"></a>
