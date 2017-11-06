@@ -4,17 +4,18 @@ function initMap() {
     center: {lat: 46.8959, lng: 8.2457},
     zoom: 8
   });
-  foreach(){
-
-  }
-  var i = 1;
-  markers.forEach(function(activity){
+  var i = 0;
+  longitude.forEach(function(longitude){
     var marker = new google.maps.Marker({
-      position: activity,
+      position: {lat: latitude[i], lng: longitude},
       map: map,
-      title: i;
+      url: 'https://mountaineeringstats.com/activity.php?id='+randID[i],
+      title: title[i]
     });
     i++;
+    google.maps.event.addListener(marker, 'click', function() {
+      window.location.href = marker.url;
+    });
   });
   
 }

@@ -7,8 +7,5 @@
 	$row = $result->fetch_assoc();
 	$username = $row['username'];
 	$email = $row['email'];
-	$gender = $row['gender'];
-	$first = $row['first'];
-  $last = $row['last'];
   include 'profilesettings.inc.php'
 ?>
