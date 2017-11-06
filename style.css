@@ -551,7 +551,7 @@ div.settings{
   width: 128px;
 	text-align: right;
 }
-.upload a, .upload a:visited, .upload a:hover, .upload a:active{
+.upload a, .upload a:visited, .upload a:hover, .upload a:active, .feedInfo a, .feedInfo a:visited, .feedInfo a:hover, .feedInfo a:active{
 	text-decoration: none;
 	color: #ff8441;
 }

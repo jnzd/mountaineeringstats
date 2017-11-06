@@ -19,7 +19,7 @@
       }
     }else{
       echo "<div class='activityPreview'>";
-      echo "<p>Du hast noch keine Aktivitäten hochgeladen. Lade mit dem Plus-Icon im Header deine erste Aktivität hoch</p>";
+      echo "<div class='feedInfo'><p>Du hast noch keine Aktivitäten hochgeladen</p><br><p>Lade deine erste Aktivität hoch: <a href='upload.php'>Hochladen</a></p></div>";
       echo "</div>";
     }
   }

@@ -36,8 +36,7 @@
         }
       }else{
         echo "<div class='activityPreview'>";
-        echo "<p>Du hast noch keine Aktivitäten hochgeladen und folgst noch niemandem</p>";
-        echo "<p>Lade deine erste Aktivität mit dem Plus-Icon im Header hoch oder suche deine Freunde über die Suchleiste</p>";
+        echo "<div class='feedInfo'><p>Du hast noch keine Aktivitäten hochgeladen und folgst noch niemandem</p><br><p>Lade deine erste Aktivität hoch: <a href='upload.php'>Hochladen</a></p><br> <p>Entdecke neue Aktivitäten: <a href='discover.php'>Entdecken</a></p><br><p>Oder suche deine Freunde über die Suchleiste</p></div>";
         echo "</div>";
       }
     }else{
