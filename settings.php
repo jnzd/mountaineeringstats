@@ -8,9 +8,6 @@
 	$row = $result->fetch_assoc();
 	$username = $row['username'];
 	$email = $row['email'];
-	$gender = $row['gender'];
-	$first = $row['first'];
-	$last = $row['last'];
 ?>
 <div class="settings">
 	<h1 class="settingsTitle">Einstellungen</h1>

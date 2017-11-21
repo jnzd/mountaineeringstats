@@ -51,7 +51,7 @@
 					<form action= "includes/login.inc.php" method="post">
 						<input class="start" type="email" name="email" placeholder="E-Mail"><br>
 						<input class="start" type="password" name="password" placeholder="Passwort"><br>
-						<!--<input type="checkbox" name="remember" value="remmber"><label>Angemeldet bleiben</label><br>-->
+						<input type="checkbox" name="remember" value="remmber"><label>Angemeldet bleiben</label><br>
 						<input class="start" type="submit" name="anmelden" value="anmelden"><br><br>
 					</form>
 					<a class="start" href="passwordReset.php">Passwort vergessen</a>

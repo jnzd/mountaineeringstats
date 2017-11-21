@@ -34,6 +34,7 @@
 		 * => get information from database
 		 * => check if account has been confirmed
 		 */
+		echo "<script src='javascript/refresh.js'></script>";
 		$id = $_SESSION['id'];
 		$sql = "SELECT * FROM users WHERE id='$id'";
 		$result = $conn->query($sql);

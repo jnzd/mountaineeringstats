@@ -14,8 +14,20 @@ if(password_verify($_POST['password'], $hash)){
 	$_SESSION['id'] = $row['id'];
 	$_SESSION['username'] = $row['username'];
 	$_SESSION['email'] = $email;
-	header("Location: ../index.php");
-	}else{	$_SESSION['loginError']= "E-Mail oder Passwort ist falsch";
-		header("location: ../start.php");
+	if(isset($_POST['remember'])){
+		function onLogin($user) {
+			$token = GenerateRandomToken(); // generate a token, should be 128 - 256 bit
+			storeTokenForUser($user, $token);
+			$cookie = $user . ':' . $token;
+			$mac = hash_hmac('sha256', $cookie, SECRET_KEY);
+			$cookie .= ':' . $mac;
+			setcookie('rememberme', $cookie);
+		}
+
+		
 	}
+	header("Location: ../index.php");
+}else{	$_SESSION['loginError']= "E-Mail oder Passwort ist falsch";
+	header("location: ../start.php");
+}
 ?>
