@@ -66,6 +66,11 @@
 		exit;
 	}
 	$values = gpx("../".$actPath);
+	if(!$values){
+		$_SESSION['uploadError']="Die Datei enthält keine Zeit-Daten und ist deshalb nicht kompatibel mit Mountaineeringstats.";
+		header("Location: ../upload.php");
+		exit;
+	}
 	$dateTime = $values['dateTime'];
 	$longitude = $values['longitudePHP'];
 	$latitude = $values['latitudePHP'];

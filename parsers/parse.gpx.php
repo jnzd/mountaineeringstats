@@ -27,7 +27,6 @@
     $distanceTotal = 0;
     $averageSpeed = 0;
     $duration = 0;
-
     foreach ($file->tracks as $track){
       $segment = $track->segments;
         foreach ($segment as $segment) {
@@ -37,7 +36,11 @@
           array_push($latitude, $points->latitude);
           array_push($longitude, $points->longitude);
           array_push($elevation, $points->elevation);
-          array_push($dateTime, $points->time);
+          if(isset($points->time)){
+            array_push($dateTime, $points->time);
+          }else{
+            return false;
+          }
           array_push($difference, $points->difference);
         }
         $lat_js = json_encode($latitude);
@@ -58,6 +61,9 @@
       $duration = $minutes.":".$seconds." min";
       if($minutes>60){
         $minutesRemainder = $minutes%60;
+        if($minutesRemainder<10){
+          $minutesRemainder = "0".$minutesRemainder;
+        }
         $hours = ($minutes-$minutesRemainder)/60;
         $minutes = $minutes%60;
         $duration = $hours.":".$minutesRemainder." h";
@@ -66,23 +72,31 @@
     $length = count($difference);
     $i = 1;
     $speed = [];
-    while($i<$length){
-      $a = $dateTime[$i]->getTimestamp();
-      $b = $dateTime[$i-1]->getTimestamp();
-      $timeInterval = $a - $b;
-      $speedkmh = ($difference[$i]/$timeInterval)*3.6;
-      array_push($speed, $speedkmh);
-      $i++;
-    }
-    $speedCleared = array_filter($speed, "bigger_than");
-    $speed_js = json_encode($speed);
-    foreach($dateTime as $moment){
-      $date = $moment->format('Y-m-d H:i:s');
-      array_push($time, $date);
+    if(!is_int($dateTime[0])){
+      while($i<$length){
+        $a = $dateTime[$i]->getTimestamp();
+        $b = $dateTime[$i-1]->getTimestamp();
+        if($a!=$b){
+          $timeInterval = $a - $b;
+        }
+        $speedkmh = ($difference[$i]/$timeInterval)*3.6;
+        array_push($speed, $speedkmh);
+        $i++;
+      }
+      $speedCleared = array_filter($speed, "bigger_than");
+      $speed_js = json_encode($speed);
+      foreach($dateTime as $moment){
+        $date = $moment->format('Y-m-d H:i:s');
+        array_push($time, $date);
+      }
+    }else{
+      while($i<$length){
+        $dateTime[$i] = false;
+        $i++;
+      }
     }
     $time_js = json_encode($time);
     $values=array("latitude"=>$lat_js,"longitude"=>$long_js,"elevation"=>$elevation_js,"distance"=>$distance_js,"time"=>$time_js,"latitudePHP"=>$latitude,"longitudePHP"=>$longitude,"dateTime"=>$dateTime,"distancePHP"=>$distance,"speed"=>$speed_js, "distanceTotal"=>$distanceTotal, "averageSpeed"=>$averageSpeed, "duration"=>$duration);
     return $values;
   }
 ?>
-
