@@ -76,10 +76,12 @@
       while($i<$length){
         $a = $dateTime[$i]->getTimestamp();
         $b = $dateTime[$i-1]->getTimestamp();
-        if($a!=$b){
-          $timeInterval = $a - $b;
+        $timeInterval = $a - $b;
+        if($timeInterval>0){
+          $speedkmh = ($difference[$i]/$timeInterval)*3.6;
+        }else{
+          $speedkmh = 0;
         }
-        $speedkmh = ($difference[$i]/$timeInterval)*3.6;
         array_push($speed, $speedkmh);
         $i++;
       }
